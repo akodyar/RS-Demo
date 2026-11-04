@@ -1,0 +1,227 @@
+[
+  {
+    "path": "00-EVIDENCE-INDEX.md",
+    "sizeBytes": 5698,
+    "sha256": "201674c5d97f555d931a2aac84531599a3463307ccbc45b647527fd9c90c880e"
+  },
+  {
+    "path": "catalog/domain-indexes.json",
+    "sizeBytes": 1784,
+    "sha256": "d47c4128ff71e84b75bf7e531d1c47b69aa1353c0df8d3ce20e471b04eb90c9a"
+  },
+  {
+    "path": "catalog/domain-table-columns.json",
+    "sizeBytes": 14943,
+    "sha256": "22754c59288d5800f20c7f0dfc88ca50c2d0f1ff1b0241afd6d643998bfbfe01"
+  },
+  {
+    "path": "catalog/properties-catalog.json",
+    "sizeBytes": 3892,
+    "sha256": "e11bb79d1aabe94e6aa3e66a918937af30381b13df45533868eaebaed4aa07d0"
+  },
+  {
+    "path": "catalog/verification_records-catalog.json",
+    "sizeBytes": 3079,
+    "sha256": "0589819cb6f6932889cfe788335b429a8fafc486dba1cf24409f3128d7f1a1ee"
+  },
+  {
+    "path": "database-evidence/01-properties-live-state.json",
+    "sizeBytes": 4962,
+    "sha256": "7dfebf691d9c469a94e89c8c4702318b45d72e9dd3c0f8be72128b7daf7e1073"
+  },
+  {
+    "path": "database-evidence/02-verification-records-live-state.json",
+    "sizeBytes": 4634,
+    "sha256": "2d5d793b6d68f77d723bbd6d4e09781512f062875ec9258eaba902ec9ccd8237"
+  },
+  {
+    "path": "database-evidence/03-listings-live-state.json",
+    "sizeBytes": 3067,
+    "sha256": "1087698536223a197e16e4609878eee821cb0f6b190288b570dcba872e4ddabd"
+  },
+  {
+    "path": "database-evidence/04-management-agreements-live-state.json",
+    "sizeBytes": 4153,
+    "sha256": "fc723ba2e8869420e5580ad599b16e31d66211a9cfa693753892b179ab1ee797"
+  },
+  {
+    "path": "database-evidence/05-management-preference-distribution.json",
+    "sizeBytes": 1584,
+    "sha256": "16c62721994790647b9dbcc2bd31afabeef762437a1746693cca29725b70e146"
+  },
+  {
+    "path": "database-evidence/06-reconciliation-summary.json",
+    "sizeBytes": 3837,
+    "sha256": "d10357a7faa7b2fa39ccb0ab231c7bca4c67a28c9e13edff86d3ae2186494ade"
+  },
+  {
+    "path": "database-evidence/07-test-rows-attribution.json",
+    "sizeBytes": 24143,
+    "sha256": "367efec0e3c1e5f1fce8ae8e880112cc0c05da1f1d2e8e8df9d638c0b6c5e531"
+  },
+  {
+    "path": "DISCREPANCY_RESOLUTION_LOG.md",
+    "sizeBytes": 9478,
+    "sha256": "eee362d0157855a2b2585b666b3c0797726b012bf4fff3904ef3e90443654591"
+  },
+  {
+    "path": "git/GIT_DIFF_STAT.txt",
+    "sizeBytes": 822,
+    "sha256": "1454af47560101032e8f7346c37b055ef4ea3fbf520356798531d0957947e2b0"
+  },
+  {
+    "path": "git/GIT_HEAD.txt",
+    "sizeBytes": 40,
+    "sha256": "a5d9928f7abffb084eac6a1170a73182949f66ab5eac099376da91f4155a966d"
+  },
+  {
+    "path": "git/GIT_STAGED_AUDIT.txt",
+    "sizeBytes": 12350,
+    "sha256": "e79c81e94a44ed447ebdbcf30286dfade630021f0f0d17641187bc4dd9997f71"
+  },
+  {
+    "path": "git/GIT_STATUS.txt",
+    "sizeBytes": 31952,
+    "sha256": "cc7e4b1a5902a14711710f0bdedd70605576ae532a40c8c22e11f7dc0d6c0bbd"
+  },
+  {
+    "path": "git/GIT_UNSTAGED_AUDIT.txt",
+    "sizeBytes": 8390,
+    "sha256": "738fc82f9cab4cb09c98cab1cbc2aa623aae2bb014277ffda477d1c5ac989d8d"
+  },
+  {
+    "path": "git/GIT_UNTRACKED_AUDIT.txt",
+    "sizeBytes": 108574,
+    "sha256": "8fc66cb082547e8366a0a3b838d1e89fe54d04dd75e1926d37ed0a1a2b2e7ce2"
+  },
+  {
+    "path": "git/PROPERTY_VERIFICATION_DIFF.patch",
+    "sizeBytes": 194726,
+    "sha256": "4a9db986c49d672a496f38c26f3807841e5bc461c7d407fbc96324f7648c4b8d"
+  },
+  {
+    "path": "git/SCOPED_DOMAIN_INVENTORY.json",
+    "sizeBytes": 3783,
+    "sha256": "408c3369ab3e57b13129d2113338ab3d14e248a21d50a6eb23dd267522938efe"
+  },
+  {
+    "path": "logs/01-property-verification-and-owner-management-choice.log",
+    "sizeBytes": 4137,
+    "sha256": "4c954f5ae2d0515c9e6bd54e9cd16eb6b5309531d03eb110f3331498121948de"
+  },
+  {
+    "path": "logs/02-property-creation-validation.log",
+    "sizeBytes": 2083,
+    "sha256": "9c72ac50c7ed4210acc5bac460ef7d0b0921ac16f989c96aee43b52495ca5442"
+  },
+  {
+    "path": "logs/03-property-creation-idempotency.log",
+    "sizeBytes": 4182,
+    "sha256": "b4e30751295fb81b3f613592729a59787fef7f5113550dfefbae1c6afa565ad1"
+  },
+  {
+    "path": "logs/04-npm-build.log",
+    "sizeBytes": 549,
+    "sha256": "50246213fbde4c6216d7c539e3db627afb08eba115abcd5b8b21c40271330ec0"
+  },
+  {
+    "path": "manifests/SCHEMA_MIGRATIONS_MANIFEST.json",
+    "sizeBytes": 5111,
+    "sha256": "9a876cff07926acfcc5136b9ee2c3cd7c04cb6d1afda5b9a5b79b9643f2621e4"
+  },
+  {
+    "path": "manifests/TEST_SUITE_MANIFEST.json",
+    "sizeBytes": 1638,
+    "sha256": "21d90d57a7ea102155d247202025b15a8041dbee0fe48cea8d4191069ed96d89"
+  },
+  {
+    "path": "README.md",
+    "sizeBytes": 5062,
+    "sha256": "e7743c79f2b6475d897f6e0d8752f7430c1825a0c4f16027b6127ad27ff374cc"
+  },
+  {
+    "path": "ROLLOUT_AND_SAFETY_REVIEW.md",
+    "sizeBytes": 2079,
+    "sha256": "046e8ed0babf5ec45f2a9a11ac0c2e48d1c8fc92d5792dae84c6684144b4c8bd"
+  },
+  {
+    "path": "source-excerpts/0027_property_verification_and_management_choice.sql",
+    "sizeBytes": 1736,
+    "sha256": "926b42e29a6ea007c751b9aecbe7906814f9f7e5a44ec97dd7f1b61e451b2078"
+  },
+  {
+    "path": "source-excerpts/0028_property_management_preference_alignment.sql",
+    "sizeBytes": 1699,
+    "sha256": "7658ec2762d99a832ff5f84791a1e28dbf8a45bde6c3d0bb0ed2d384671aeb68"
+  },
+  {
+    "path": "source-excerpts/AddPropertyPage.tsx",
+    "sizeBytes": 126724,
+    "sha256": "8f1fb043e940ede60a621aff2caebe55eca0872f53d7ec122f194689831953cc"
+  },
+  {
+    "path": "source-excerpts/admin-routes.ts",
+    "sizeBytes": 41241,
+    "sha256": "0310ad53715f5a456ed68d6de14d5e067194c26e13d70d61258ec30bb19db1f1"
+  },
+  {
+    "path": "source-excerpts/AdminPropertiesModule.tsx",
+    "sizeBytes": 48225,
+    "sha256": "d94f0a97250df51c19d7ba9f9702d64ed4841432d3f52ed0d0985af559911001"
+  },
+  {
+    "path": "source-excerpts/Kaywan_Latest_Instructions.txt",
+    "sizeBytes": 385981,
+    "sha256": "a0326ec9504124cdd8f517925012ea36cdf101b28c3f482e5f10aa104bee142c"
+  },
+  {
+    "path": "source-excerpts/marketplace-routes.ts",
+    "sizeBytes": 8324,
+    "sha256": "2ad40db7baf1684172c0e0a54c5d613ea2d1554079d9fd7ca32250e5ed8465e9"
+  },
+  {
+    "path": "source-excerpts/OwnerWorkspace.tsx",
+    "sizeBytes": 230826,
+    "sha256": "d970c0d5350937609772ac56e94410d9fbab2d80b99ccfcef846a938a164d5c6"
+  },
+  {
+    "path": "source-excerpts/properties-repository.ts",
+    "sizeBytes": 61335,
+    "sha256": "a9192d10e5da24563dcd25be92bbe7eef80ea151c7391ac6802a0238fef192ee"
+  },
+  {
+    "path": "source-excerpts/properties-routes.ts",
+    "sizeBytes": 9033,
+    "sha256": "2e738015fb4ef861996fae21b87c70e6033382f6663a866278f5347fe836815b"
+  },
+  {
+    "path": "source-excerpts/property-creation-idempotency.test.ts",
+    "sizeBytes": 31288,
+    "sha256": "e34bc1e0f32d9c8fd1d2e8c9cacc27b9b205c46344c68897975a1a2e371b85dc"
+  },
+  {
+    "path": "source-excerpts/property-creation-validation.test.ts",
+    "sizeBytes": 19635,
+    "sha256": "afd3bb4ec1f3ee1e1a5a09b71f4d9d20fb3ee6be585f66e4064e8463508b7063"
+  },
+  {
+    "path": "source-excerpts/property-verification-and-owner-management-choice.test.ts",
+    "sizeBytes": 35712,
+    "sha256": "2f2a1645541f80f53262776045c9b4ada495fcc3a3de9ec473312af63a5e3854"
+  },
+  {
+    "path": "source-excerpts/reconcile-properties-db.ts",
+    "sizeBytes": 10159,
+    "sha256": "31b40be48e598c5202928d9be7a2a05795a30e857ad3a567e301e4c4edeba8ca"
+  },
+  {
+    "path": "source-excerpts/schema.ts",
+    "sizeBytes": 97415,
+    "sha256": "a6ab2d9fc887de37d7c37b6215bddca84f9ea62babfcc1c98a3cb6e6b1e31862"
+  },
+  {
+    "path": "source-excerpts/_journal.json",
+    "sizeBytes": 4452,
+    "sha256": "f9750fd4c1e19bdb4d0f470dd2e693e2af8ba6addfbcdbeab6a74c0568284452"
+  }
+]

@@ -1,0 +1,2990 @@
+[
+  {
+    "key": "currency.iqd",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "IQD"
+    ],
+    "arVal": "دينار عراقي"
+  },
+  {
+    "key": "integration.configure_keys",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Configure Keys"
+    ],
+    "arVal": "تهيئة المفاتيح"
+  },
+  {
+    "key": "integration.configured",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "CONFIGURED"
+    ],
+    "arVal": "مهيأ"
+  },
+  {
+    "key": "integration.email_notif",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "EMAIL NOTIFICATIONS"
+    ],
+    "arVal": "إشعارات البريد الإلكتروني"
+  },
+  {
+    "key": "integration.esignature",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "E-SIGNATURE"
+    ],
+    "arVal": "التوقيع الإلكتروني"
+  },
+  {
+    "key": "integration.manage_settings",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Manage Settings"
+    ],
+    "arVal": "إدارة الإعدادات"
+  },
+  {
+    "key": "integration.providers",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Providers"
+    ],
+    "arVal": "مقدمو الخدمات"
+  },
+  {
+    "key": "integration.sms_provider",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "SMS PROVIDER"
+    ],
+    "arVal": "مزود الرسائل القصيرة"
+  },
+  {
+    "key": "integration.subtitle",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Real-World Infrastructure & External APIs"
+    ],
+    "arVal": "البنية التحتية ومقدمو الخدمات الخارجيون"
+  },
+  {
+    "key": "maintenance.active_wos",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Active Work Orders"
+    ],
+    "arVal": "أوامر العمل النشطة"
+  },
+  {
+    "key": "maintenance.assigned_vendor",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Assigned Vendor:"
+    ],
+    "arVal": "الفني المعين:"
+  },
+  {
+    "key": "maintenance.control_center",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Maintenance Control Center"
+    ],
+    "arVal": "مركز تحكم الصيانة"
+  },
+  {
+    "key": "maintenance.details_actions",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Request Details & Actions"
+    ],
+    "arVal": "التفاصيل والإجراءات"
+  },
+  {
+    "key": "maintenance.error.approve",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Failed to approve quote"
+    ],
+    "arVal": "تعذر الموافقة على عرض السعر"
+  },
+  {
+    "key": "maintenance.error.fetch",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Failed to fetch queue"
+    ],
+    "arVal": "تعذر جلب قائمة الانتظار"
+  },
+  {
+    "key": "maintenance.no_requests",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "There are no active maintenance requests at this time."
+    ],
+    "arVal": "لا توجد طلبات صيانة نشطة حالياً."
+  },
+  {
+    "key": "maintenance.pending_quotes",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Pending Quotes"
+    ],
+    "arVal": "عروض الأسعار المعلقة"
+  },
+  {
+    "key": "maintenance.queue_empty",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Queue is empty"
+    ],
+    "arVal": "قائمة الانتظار فارغة"
+  },
+  {
+    "key": "maintenance.subtitle",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Manage work orders, triage requests, and review quotes"
+    ],
+    "arVal": "إدارة أوامر العمل وفرز الطلبات ومراجعة عروض الأسعار"
+  },
+  {
+    "key": "maintenance.wo",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "WO:"
+    ],
+    "arVal": "أمر العمل:"
+  },
+  {
+    "key": "status.new_request",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "NEW REQUEST"
+    ],
+    "arVal": "طلب جديد"
+  },
+  {
+    "key": "status.quote_ready",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "QUOTE READY"
+    ],
+    "arVal": "عرض السعر جاهز"
+  },
+  {
+    "key": "status.triaged",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "TRIAGED"
+    ],
+    "arVal": "تم الفرز"
+  },
+  {
+    "key": "status.work_order",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "WORK ORDER"
+    ],
+    "arVal": "أمر العمل"
+  },
+  {
+    "key": "vendor.id",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\MaintenanceWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Vendor ID:"
+    ],
+    "arVal": "رقم الفني:"
+  },
+  {
+    "key": "workspace.context",
+    "missingIn": [
+      "en",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\vendor\\VendorHeader.tsx"
+    ],
+    "defaultValues": [
+      "Workspaces"
+    ],
+    "arVal": "مساحات العمل"
+  },
+  {
+    "key": "Maintenance requested by Company Admin",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\PropertyCommandCenter.tsx"
+    ],
+    "defaultValues": [
+      "Maintenance requested by Company Admin"
+    ],
+    "arVal": "طلب صيانة مقدم من مدير الشركة",
+    "kuVal": "داواکاری چاکسازی لەلایەن بەڕێوەبەری کۆمپانیاوە نێردرا"
+  },
+  {
+    "key": "Management Agreement Active",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\PropertyCommandCenter.tsx"
+    ],
+    "defaultValues": [
+      "Management Agreement Active"
+    ],
+    "arVal": "اتفاقية الإدارة نشطة",
+    "kuVal": "ڕێککەوتنی بەڕێوەبردن چالاکە"
+  },
+  {
+    "key": "Recent Webhook Events",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Recent Webhook Events"
+    ],
+    "arVal": "أحداث الويب هوك الأخيرة",
+    "kuVal": "دوایین ڕووداوەکانی وێبهووک"
+  },
+  {
+    "key": "Signature Validation Active",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Signature Validation Active"
+    ],
+    "arVal": "التحقق من التوقيع نشط",
+    "kuVal": "پشکنینی واژۆ چالاکە"
+  },
+  {
+    "key": "Provider",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Provider"
+    ],
+    "arVal": "المزود",
+    "kuVal": "دابینکەر"
+  },
+  {
+    "key": "Event Type",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Event Type"
+    ],
+    "arVal": "نوع الحدث",
+    "kuVal": "جۆری ڕووداو"
+  },
+  {
+    "key": "Event ID",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Event ID"
+    ],
+    "arVal": "معرف الحدث",
+    "kuVal": "ناسنامەی ڕووداو"
+  },
+  {
+    "key": "Timestamp",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Timestamp"
+    ],
+    "arVal": "الطابع الزمني",
+    "kuVal": "کاتی ڕووداو"
+  },
+  {
+    "key": "INVALID_SIGNATURE",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "INVALID_SIGNATURE"
+    ],
+    "arVal": "توقيع غير صالح",
+    "kuVal": "واژۆی نادروست"
+  },
+  {
+    "key": "PROCESSED",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "PROCESSED"
+    ],
+    "arVal": "تمت المعالجة",
+    "kuVal": "جێبەجێکراوە"
+  },
+  {
+    "key": "Isolated Development Mode",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\DevAuthOverride.tsx"
+    ],
+    "defaultValues": [
+      "Isolated Development Mode"
+    ],
+    "arVal": "وضع التطوير المنعزل",
+    "kuVal": "دۆخی تاقیکردنەوەی ناوخۆیی"
+  },
+  {
+    "key": "Authentication is not configured. Select a test persona to view the UI.",
+    "missingIn": [
+      "en"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\DevAuthOverride.tsx"
+    ],
+    "defaultValues": [
+      "Authentication is not configured. Select a test persona to view the UI."
+    ],
+    "arVal": "المصادقة غير مهيأة. اختر شخصية اختبار لعرض واجهة المستخدم.",
+    "kuVal": "چوونەژوورەوەی ڕاستەقینە دیاری نەکراوە. کەسایەتییەکی تاقیکاری هەڵبژێرە بۆ گەڕان لە بەشەکانی پلاتفۆرمدا."
+  },
+  {
+    "key": "company.unnamed_company",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\company\\CompanyProfileCard.tsx"
+    ],
+    "defaultValues": [
+      "HomeHub Real Estate Agency"
+    ]
+  },
+  {
+    "key": "status.verified",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\company\\CompanyProfileCard.tsx"
+    ],
+    "defaultValues": [
+      "Verified"
+    ]
+  },
+  {
+    "key": "company.no_recent_activity",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\company\\CompanyRecentActivity.tsx"
+    ],
+    "defaultValues": [
+      "No recent activity recorded"
+    ]
+  },
+  {
+    "key": "company.activity_will_appear",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\company\\CompanyRecentActivity.tsx"
+    ],
+    "defaultValues": [
+      "Operational events, lease updates, and ledger transactions will appear here."
+    ]
+  },
+  {
+    "key": "company.notifications",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\company\\CompanyTopBar.tsx"
+    ],
+    "defaultValues": [
+      "Notifications"
+    ]
+  },
+  {
+    "key": "company.welcome_back_generic",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\company\\CompanyWelcomeArea.tsx"
+    ],
+    "defaultValues": [
+      "Welcome back!"
+    ]
+  },
+  {
+    "key": "settlements.missingRef",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "External confirmation reference is mandatory for COMPLETED payouts (Internal Finance Record only)."
+    ]
+  },
+  {
+    "key": "settlements.financeQueue",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "Payout Requests Queue"
+    ]
+  },
+  {
+    "key": "settlements.financeQueueDesc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "Manage owner payouts. External API transfers disabled; manual internal recording only."
+    ]
+  },
+  {
+    "key": "common.search",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "Search..."
+    ]
+  },
+  {
+    "key": "settlements.id",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "ID"
+    ]
+  },
+  {
+    "key": "settlements.amount",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "Amount (IQD)"
+    ]
+  },
+  {
+    "key": "settlements.emptyQueue",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "No payout requests found."
+    ]
+  },
+  {
+    "key": "settlements.refPlaceholder",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "Bank Ref # (Required)"
+    ]
+  },
+  {
+    "key": "settlements.markComplete",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "Mark Completed"
+    ]
+  },
+  {
+    "key": "common.reject",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx",
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Reject"
+    ]
+  },
+  {
+    "key": "settlements.ref",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\FinanceSettlementTab.tsx"
+    ],
+    "defaultValues": [
+      "Ref"
+    ]
+  },
+  {
+    "key": "common.close",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantCurrentHomeCard.tsx",
+      "src\\components\\tenant\\TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Close"
+    ]
+  },
+  {
+    "key": "tenant.depositRequired",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantDesktopSidebarWidgets.tsx"
+    ],
+    "defaultValues": [
+      "Required"
+    ]
+  },
+  {
+    "key": "tenant.depositCollected",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantDesktopSidebarWidgets.tsx"
+    ],
+    "defaultValues": [
+      "Collected"
+    ]
+  },
+  {
+    "key": "tenant.depositHeld",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantDesktopSidebarWidgets.tsx"
+    ],
+    "defaultValues": [
+      "Held (Escrow)"
+    ]
+  },
+  {
+    "key": "tenant.depositReleased",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantDesktopSidebarWidgets.tsx"
+    ],
+    "defaultValues": [
+      "Released"
+    ]
+  },
+  {
+    "key": "tenant.role",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantHeader.tsx"
+    ],
+    "defaultValues": [
+      "Account Role"
+    ]
+  },
+  {
+    "key": "tenant.pendingSignature",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Awaiting Your Acceptance"
+    ]
+  },
+  {
+    "key": "tenant.expired",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Expired"
+    ]
+  },
+  {
+    "key": "tenant.acceptLease",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Accept Lease"
+    ]
+  },
+  {
+    "key": "tenant.paymentStatus",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantModals.tsx"
+    ],
+    "defaultValues": [
+      "Status:"
+    ]
+  },
+  {
+    "key": "tenant.utilityBills",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\tenant\\TenantQuickActionsGrid.tsx"
+    ],
+    "defaultValues": [
+      "Utility Bills"
+    ]
+  },
+  {
+    "key": "vendor.language_selector",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\vendor\\VendorHeader.tsx"
+    ],
+    "defaultValues": [
+      "Localization Navigator"
+    ]
+  },
+  {
+    "key": "common.language",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\vendor\\VendorHeader.tsx",
+      "src\\components\\vendor\\VendorSidebar.tsx"
+    ],
+    "defaultValues": [
+      "Language"
+    ]
+  },
+  {
+    "key": "vendor.localization_title",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\vendor\\VendorSubViews.tsx"
+    ],
+    "defaultValues": [
+      "ڕێکخستنی زمان و ناوچە / Localization & Regional Preferences"
+    ]
+  },
+  {
+    "key": "vendor.localization_sub",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\components\\vendor\\VendorSubViews.tsx"
+    ],
+    "defaultValues": [
+      "Select your preferred operational language and layout direction"
+    ]
+  },
+  {
+    "key": "property.error.owner_id_required",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AddPropertyPage.tsx"
+    ],
+    "defaultValues": [
+      "Actual Owner User ID is required when selecting Individual."
+    ]
+  },
+  {
+    "key": "property.error.company_id_required",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AddPropertyPage.tsx"
+    ],
+    "defaultValues": [
+      "Actual Owner Company ID is required when selecting Company."
+    ]
+  },
+  {
+    "key": "property.currency_label",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AddPropertyPage.tsx"
+    ],
+    "defaultValues": [
+      "دراوی مامەڵە (Currency)"
+    ]
+  },
+  {
+    "key": "property.map_location",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AddPropertyPage.tsx"
+    ],
+    "defaultValues": [
+      "Select on Map"
+    ]
+  },
+  {
+    "key": "property.map_hint",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AddPropertyPage.tsx"
+    ],
+    "defaultValues": [
+      "Click on the map to pin the exact location of the property."
+    ]
+  },
+  {
+    "key": "admin.email_required",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AdminLoginPage.tsx"
+    ],
+    "defaultValues": [
+      "Please enter official admin email"
+    ]
+  },
+  {
+    "key": "autopilot.approved_success",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Action proposal approved successfully."
+    ]
+  },
+  {
+    "key": "autopilot.rejected_success",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Action proposal rejected."
+    ]
+  },
+  {
+    "key": "autopilot.executed_success",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Action successfully executed and verified."
+    ]
+  },
+  {
+    "key": "common.refresh",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Refresh"
+    ]
+  },
+  {
+    "key": "autopilot.run_auto_eligible",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Execute Auto-Eligible"
+    ]
+  },
+  {
+    "key": "analytics.db_not_configured_title",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Authoritative Database Not Configured (503)"
+    ]
+  },
+  {
+    "key": "analytics.db_not_configured_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "The PostgreSQL authoritative datastore is currently disconnected. AI Autopilot strictly enforces fail-closed operations. Mock data generation is prohibited."
+    ]
+  },
+  {
+    "key": "autopilot.active_automations",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Active Automations"
+    ]
+  },
+  {
+    "key": "autopilot.advisory_signals",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Advisory Signals"
+    ]
+  },
+  {
+    "key": "autopilot.total_actions",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Execution History"
+    ]
+  },
+  {
+    "key": "autopilot.tab_approvals",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Pending Approvals"
+    ]
+  },
+  {
+    "key": "autopilot.tab_automations",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Automations & Ready"
+    ]
+  },
+  {
+    "key": "autopilot.tab_advisory",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Advisory Recommendations"
+    ]
+  },
+  {
+    "key": "autopilot.tab_history",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Execution History & Audit"
+    ]
+  },
+  {
+    "key": "autopilot.tab_policies",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Policy & Ceilings"
+    ]
+  },
+  {
+    "key": "autopilot.no_pending",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "No Pending Approvals"
+    ]
+  },
+  {
+    "key": "autopilot.no_pending_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "All operational actions have either been reviewed or executed under current policy boundaries."
+    ]
+  },
+  {
+    "key": "autopilot.inspect",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Review Payload"
+    ]
+  },
+  {
+    "key": "autopilot.approve_action",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Sign & Approve"
+    ]
+  },
+  {
+    "key": "autopilot.no_automations",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "No Automations Currently Queued"
+    ]
+  },
+  {
+    "key": "autopilot.no_automations_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Autonomous low-risk tasks will appear here when triggered by operational schedules and policy checks."
+    ]
+  },
+  {
+    "key": "autopilot.execute_now",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Execute Now"
+    ]
+  },
+  {
+    "key": "autopilot.no_advisory",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "No Advisory Insights"
+    ]
+  },
+  {
+    "key": "autopilot.no_advisory_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Advisory recommendations (Class A) will be generated as portfolio intelligence and market data are refreshed."
+    ]
+  },
+  {
+    "key": "common.date",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Timestamp"
+    ]
+  },
+  {
+    "key": "autopilot.action_type",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Action Type"
+    ]
+  },
+  {
+    "key": "autopilot.class",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Class"
+    ]
+  },
+  {
+    "key": "common.status",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Status"
+    ]
+  },
+  {
+    "key": "autopilot.reference",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Execution Ref"
+    ]
+  },
+  {
+    "key": "autopilot.details",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Details"
+    ]
+  },
+  {
+    "key": "autopilot.no_history",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "No completed or historical action executions found."
+    ]
+  },
+  {
+    "key": "autopilot.policy_title",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Server-Enforced Autonomy Policy"
+    ]
+  },
+  {
+    "key": "autopilot.policy_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Autonomous Class B execution is strictly constrained by server-side policy thresholds, quiet hours, and category gating."
+    ]
+  },
+  {
+    "key": "autopilot.spending_ceiling",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Financial Execution Limit"
+    ]
+  },
+  {
+    "key": "autopilot.quiet_hours",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Quiet Hours Window"
+    ]
+  },
+  {
+    "key": "autopilot.autonomy_status",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Autonomous Engine State"
+    ]
+  },
+  {
+    "key": "autopilot.governance_version",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Active Policy Version"
+    ]
+  },
+  {
+    "key": "autopilot.confirm_approval",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Confirm Human Sign-off"
+    ]
+  },
+  {
+    "key": "autopilot.inspect_action",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Action Specification & Payload"
+    ]
+  },
+  {
+    "key": "autopilot.recommendation",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Recommendation"
+    ]
+  },
+  {
+    "key": "autopilot.rationale",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Operational Rationale"
+    ]
+  },
+  {
+    "key": "autopilot.payload",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Proposed Action Payload (Immutable)"
+    ]
+  },
+  {
+    "key": "autopilot.confirm_sign",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "I Authorize & Sign"
+    ]
+  },
+  {
+    "key": "autopilot.proceed_to_approve",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AutopilotWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Proceed to Sign"
+    ]
+  },
+  {
+    "key": "company.financial_overview",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "کورتەی دارایی پۆرتفۆلیۆ (Financial Overview)"
+    ]
+  },
+  {
+    "key": "company.ledger_balanced",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "دەفتەری هاوسەنگ (Double-Entry Balanced)"
+    ]
+  },
+  {
+    "key": "company.ledger_source_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "داتاکان بە شێوەیەکی فەرمی لە دەفتەری دارایی دوولایەنەی PostgreSQL وەرگیراون بەپێی تۆمارە پشتڕاستکراوەکان."
+    ]
+  },
+  {
+    "key": "company.collected_rent",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "کۆی کرێی کۆکراوە (Collected Rent)"
+    ]
+  },
+  {
+    "key": "company.confirmed_status",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "پشتڕاستکراوە"
+    ]
+  },
+  {
+    "key": "company.pending_rent",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "کرێی لە چاوەڕوانیدا (Pending Rent)"
+    ]
+  },
+  {
+    "key": "company.awaiting_collection",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "لە چاوەڕوانی وەرگرتندا"
+    ]
+  },
+  {
+    "key": "company.platform_fee",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "عمولەی پلاتفۆرم (HomeHub Platform Fee)"
+    ]
+  },
+  {
+    "key": "company.canonical_policy",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "تەنها لە کرێی کۆکراوە (Only on collected rent)"
+    ]
+  },
+  {
+    "key": "company.commission_earned",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "عمولەی بەڕێوەبردنی کۆمپانیا (Company Management Fee)"
+    ]
+  },
+  {
+    "key": "company.per_agreement",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "بەپێی ڕێککەوتننامەی بەڕێوەبردن"
+    ]
+  },
+  {
+    "key": "company.expenses_approved",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "خەرجی پەسەندکراوی چاککردنەوە (Maintenance Expenses)"
+    ]
+  },
+  {
+    "key": "company.paid_to_contractors",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "تەرخانکراو بۆ وەستاکان"
+    ]
+  },
+  {
+    "key": "company.owner_payable",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "شایستەی ماوەی خاوەن موڵک (Net Owner Settlement Payable)"
+    ]
+  },
+  {
+    "key": "company.post_commission_balance",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "پاش لێدەرکردنی عمولە و خەرجی پەسەندکراو"
+    ]
+  },
+  {
+    "key": "company.settlement_policy_title",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "ڕێسای فەرمی یەکلاکردنەوەی دارایی (Financial Settlement Invariants):"
+    ]
+  },
+  {
+    "key": "company.settlement_rule_1",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "عمولەی پلاتفۆرم و بەڕێوەبردن تەنها لە کرێی پشتڕاستکراوە کە بە تەواوی وەرگیراوە دەبڕدرێت (0% لەسەر کرێی وەرنەگیراو یان خەرجی چاککردنەوە)."
+    ]
+  },
+  {
+    "key": "company.settlement_rule_2",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "هیچ بارگرانییەکی زیادە (Surcharge) ناخرێتە سەر کرێچی."
+    ]
+  },
+  {
+    "key": "company.settlement_rule_3",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "پارەپێدانی کۆتایی بە خاوەن موڵک دەستبەجێ بەستراوەتەوە بە پشتڕاستکردنەوەی ڕەسەنی بانکی یان دەستی."
+    ]
+  },
+  {
+    "key": "company.invite_member_btn",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "بانگهێشتکردنی ئەندام"
+    ]
+  },
+  {
+    "key": "company.loading_members",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "بارکردنی ئەندامانی تیم..."
+    ]
+  },
+  {
+    "key": "company.suspend",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "ڕاگرتن"
+    ]
+  },
+  {
+    "key": "company.activate",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "چالاککردن"
+    ]
+  },
+  {
+    "key": "company.no_extra_members",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "هیچ ئەندامێکی تر هێشتا بانگهێشت نەکراوە. دەتوانیت لە ڕێگەی دوگمەی سەرەوە ئەندامانی تیم بانگهێشت بکەیت."
+    ]
+  },
+  {
+    "key": "company.authoritative_reports",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "ڕاپۆرتە بەڵگەدارەکان (Authoritative Reports)"
+    ]
+  },
+  {
+    "key": "company.historical_notice",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "بەپێی یاسای سیستەم: داتاکان تەنها لە تۆماری پشتڕاستکراوی پۆرتفۆلیۆ هەژمار دەکرێن، و لە کاتی نەبوونی داتا \"N/A\" نیشان دەدرێت."
+    ]
+  },
+  {
+    "key": "company.occupancy_rate",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "ڕێژەی پڕبوون (Occupancy Rate)"
+    ]
+  },
+  {
+    "key": "company.occupancy_calc_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "کرێچی چالاک بەرامبەر موڵکە بەڕێوەبراوەکان"
+    ]
+  },
+  {
+    "key": "company.collection_rate",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "ڕێژەی کۆکردنەوەی کرێ (Collection Rate)"
+    ]
+  },
+  {
+    "key": "company.collection_calc_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "کرێی کۆکراوە بەرامبەر کۆی چاوەڕوانکراو"
+    ]
+  },
+  {
+    "key": "company.from_confirmed_ledger",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "لە دەفتەری پشتڕاستکراوە"
+    ]
+  },
+  {
+    "key": "company.maintenance_load",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "بارگرانی چاککردنەوە (Maintenance Load)"
+    ]
+  },
+  {
+    "key": "company.maintenance_load_desc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "داواکارییە کراوەکان بەرامبەر خەرجی پەسەندکراو"
+    ]
+  },
+  {
+    "key": "company.open_tickets",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "کراوە"
+    ]
+  },
+  {
+    "key": "company.ai_insights_title",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\CompanyWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "ڕێنمایی و شیکاری ژیری دەستکرد (AI Advisory & Insights)"
+    ]
+  },
+  {
+    "key": "action.view",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\OwnerWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "View Property"
+    ]
+  },
+  {
+    "key": "common.fee",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\OwnerWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Fee"
+    ]
+  },
+  {
+    "key": "common.net",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\OwnerWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Net"
+    ]
+  },
+  {
+    "key": "analytics.forbidden",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\PortfolioWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Forbidden: Your role does not have permission to view portfolio analytics."
+    ]
+  },
+  {
+    "key": "analytics.load_error",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\PortfolioWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "Failed to load portfolio analytics data."
+    ]
+  },
+  {
+    "key": "analytics.export_notice",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\PortfolioWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "ڕاپۆرتی پۆرتفۆلیۆ (${format}) بە سەرکەوتوویی ئامادەکرا."
+    ]
+  },
+  {
+    "key": "core.error",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\PortfolioWorkspacePage.tsx"
+    ],
+    "defaultValues": [
+      "هەڵە لە بارکردنی داتا"
+    ]
+  },
+  {
+    "key": "lease.tenant",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\PropertyCommandCenter.tsx"
+    ],
+    "defaultValues": [
+      "Tenant"
+    ]
+  },
+  {
+    "key": "marketplace.insights.schools",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Schools"
+    ]
+  },
+  {
+    "key": "marketplace.insights.safety",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Safety"
+    ]
+  },
+  {
+    "key": "marketplace.insights.transport",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Transport"
+    ]
+  },
+  {
+    "key": "marketplace.insights.shopping",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Shopping"
+    ]
+  },
+  {
+    "key": "marketplace.insights.quietness",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Quietness"
+    ]
+  },
+  {
+    "key": "marketplace.ai_search.placeholder",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Try '3-bedroom villa in Erbil under $1500'"
+    ]
+  },
+  {
+    "key": "marketplace.ai_search.toggle",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Toggle AI Search"
+    ]
+  },
+  {
+    "key": "marketplace.action.view_details",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "View Details"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.compare_property",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Compare Property"
+    ]
+  },
+  {
+    "key": "marketplace.social.viewing",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "people viewing this"
+    ]
+  },
+  {
+    "key": "marketplace.social_proof.rare_find",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Rare Find! Highly Demanded"
+    ]
+  },
+  {
+    "key": "marketplace.social_proof.viewing",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "people are viewing this right now. Listed"
+    ]
+  },
+  {
+    "key": "marketplace.social_proof.hours_ago",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "hours ago."
+    ]
+  },
+  {
+    "key": "marketplace.insights.neighborhood",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Neighborhood Insights"
+    ]
+  },
+  {
+    "key": "marketplace.scheduler.select_datetime",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Select Date & Time"
+    ]
+  },
+  {
+    "key": "marketplace.scheduler.available_days",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Available Days"
+    ]
+  },
+  {
+    "key": "marketplace.scheduler.available_times",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Available Times"
+    ]
+  },
+  {
+    "key": "marketplace.scheduler.success",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Viewing scheduled for ${selectedDate} at ${selectedTime}. The agent will confirm shortly."
+    ]
+  },
+  {
+    "key": "marketplace.scheduler.confirm_viewing",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Confirm Viewing"
+    ]
+  },
+  {
+    "key": "marketplace.scheduler.schedule_viewing",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Schedule Viewing"
+    ]
+  },
+  {
+    "key": "marketplace.actions.apply_demo_success",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "[DEMO] Mock application submitted! Real applications require a full form."
+    ]
+  },
+  {
+    "key": "common.error",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "An error occurred"
+    ]
+  },
+  {
+    "key": "marketplace.actions.apply_for_rent",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Apply for Rent"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.selected",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Selected"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.max",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Select up to 3 properties to compare"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.clear_all",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Clear all"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.compare_now",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Compare Now"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.title",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Property Comparison"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.features",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Features"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.price",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Price"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.location",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Location"
+    ]
+  },
+  {
+    "key": "marketplace.filters.property_type",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Type"
+    ]
+  },
+  {
+    "key": "marketplace.modal.area_label",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Area"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.more",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "more"
+    ]
+  },
+  {
+    "key": "marketplace.comparison.empty",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "No properties selected for comparison."
+    ]
+  },
+  {
+    "key": "tenant.dashboard.my_applications",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\TenantWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "My Rental Applications"
+    ]
+  }
+]

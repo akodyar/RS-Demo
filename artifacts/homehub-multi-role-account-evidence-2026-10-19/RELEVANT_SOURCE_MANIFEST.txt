@@ -1,0 +1,48 @@
+# HOMEHUB MULTI-ROLE RELEVANT SOURCE MANIFEST
+# Repository Root: C:/Users/zakar/Downloads/real-estate-ecosystem-platform (1)
+# Head Commit SHA: 43175adaf6f04491e1d74e1f728a4561b7ede097
+# Source Bundle Destination: artifacts/homehub-multi-role-account-evidence-2026-10-19/source_bundle/
+# Hash Algorithm: SHA-256 (64-character hexadecimal digest)
+# Verification Status: 100% Byte-for-Byte Checksum Match Verified
+
+----------------------------------------------------------------------------------------------------------------------------------
+SHA-256 CHECKSUM                                                  RELATIVE PATH IN REPOSITORY & DESCRIPTION
+----------------------------------------------------------------------------------------------------------------------------------
+6937c92570c21688fd181c19a8fe866bbf6e0c71474d45d9fbf49ccad271c075  src/db/schema.ts
+   [Description: Authoritative PostgreSQL table schemas for users, organizations, organization_members, ownership_records, management_agreements, leases, lease_tenants, agent_profiles, agent_property_assignments, vendor_profiles, work_orders, password_reset_tokens]
+
+92a256d1003fc16ac8598af299423c0b4693d254ef4c1645b8e9550973585de6  src/server/routes/auth.ts
+   [Description: Express authentication routes implementing /me, /register (single role, duplicate email check), /login (Argon2id, signs JWT), /logout (bumps token_version), /forgot-password, /reset-password, and /sync]
+
+90419fafac7189c853b49b034368644432faf7fdfa240ad02d0316b77f4b3e4b  src/server/utils/auth.ts
+   [Description: Cryptographic security utility defining AuthTokenPayload interface, Argon2id hashing parameters (19 MiB memory, 2 time cost), verifyPassword, and HS256 JWT signAuthToken/verifyAuthToken]
+
+ab7ec1b9f90d140ef866011634af6d619ea67d202b8369abf1e1353f2d2887bf  src/server/middleware/auth.ts
+   [Description: Fail-closed authentication and authorization middleware implementing requireAuth (JWT & token_version verification against users table), requireRole, and requirePropertyPermission (relational DB checks for Owner, Company, Tenant, Agent, Vendor)]
+
+6dbe7f4cf967d93f9ee8956bd170bc6863bf119481216e32ec6b4e6b7f3f8bec  src/components/AuthProvider.tsx
+   [Description: React Context AuthProvider managing client session state, login (calls /api/auth/login), signup (calls /api/auth/register), logout (clears localStorage, calls /api/auth/logout), and session restoration]
+
+345199d386aa1ad74a30e5da0f8959be3a6447601329eee831c5b070406906e3  src/components/onboarding/OnboardingWorkflow.tsx
+   [Description: State machine governing onboarding and authentication navigation; contains handleLoginSubmit (currently defaults silently to roles[0]), navigateByRole, and getDestinationForRole]
+
+0d0085a5c75496758b4132f7d97ec59dee5b407da60d3f9d441628a691371293  src/components/onboarding/ScreenLogin.tsx
+   [Description: User interface component for email/password sign-in with Kurdish Sorani labels, form validation, error handling, and create account navigation]
+
+c12767cf1215046df062c7ae644da29c81f1d2af2e92862b613b63ea229680c6  src/components/onboarding/Screen3Purpose.tsx
+   [Description: Registration purpose and role-selection screen defining canonical ROLE_DEFINITIONS for Owner, Tenant, Agent, and Vendor with trilingual localization keys]
+
+c15dbdf8848521330fc07a18bb99d495764b076d6d4800b4695b966dbd236e92  src/components/onboarding/Screen6RoleConfirmation.tsx
+   [Description: User interface component for confirming and previewing role capability cards in responsive multi-column layout]
+
+859c6cd3885bfb346b677d68a1dcc8031ee135b3cb303e89b71b9370d5ee9947  src/types/index.ts
+   [Description: Master authority model and foundation domain types defining UserRole, CompanyRole, AuthorityStatus, Permission enums, and User interface with multi-role definition]
+
+9d47447ce23ab89a81b819121a41bcb73a61dc20bf13dae71986e39c2305e7fa  tests/role-selection-enforcement.test.tsx
+   [Description: Test suite covering role selection enforcement during registration onboarding flow, role definitions, and navigation integrity; 56 passed assertions]
+
+8f1130bf8fb75f8c6a7927e9c8e24028d5a262447a15343337cf983d53571d7e  tests/native-auth-security.test.ts
+   [Description: Integration test suite validating native PostgreSQL Argon2id hashing, registration duplicate rejection (409), role escalation demotion, session token version revocation, and password recovery; 33 passed assertions]
+----------------------------------------------------------------------------------------------------------------------------------
+TOTAL FILES IN MANIFEST: 12
+TOTAL CHECKSUM MATCH VERIFICATION: 100% SUCCESSFUL

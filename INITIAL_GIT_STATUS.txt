@@ -1,0 +1,1184 @@
+﻿On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   AGENTS.md
+	new file:   add_success_translations.cjs
+	new file:   adversarial-utility.ts
+	modified:   docs/HOMEHUB_MASTER_CONTEXT.md
+	modified:   docs/architecture/DECISIONS.md
+	modified:   docs/business/BUSINESS_RULES.md
+	modified:   docs/finance/FINANCIAL_POLICY.md
+	new file:   drizzle/0010_tiny_master_mold.sql
+	new file:   drizzle/0011_fixed_rocket_racer.sql
+	new file:   drizzle/0012_clear_arclight.sql
+	new file:   drizzle/0013_opposite_exodus.sql
+	new file:   drizzle/0014_cold_tempest.sql
+	new file:   drizzle/0015_harsh_abomination.sql
+	new file:   drizzle/meta/0010_snapshot.json
+	new file:   drizzle/meta/0011_snapshot.json
+	new file:   drizzle/meta/0012_snapshot.json
+	new file:   drizzle/meta/0013_snapshot.json
+	new file:   drizzle/meta/0014_snapshot.json
+	new file:   drizzle/meta/0015_snapshot.json
+	modified:   drizzle/meta/_journal.json
+	new file:   extract_i18n.cjs
+	new file:   extract_i18n.py
+	new file:   find_missing.cjs
+	new file:   fix-5-percent.cjs
+	new file:   fix-tenant-test-v2.cjs
+	new file:   fix-tenant-test.cjs
+	new file:   fix-tests.cjs
+	new file:   fix_homepage.cjs
+	deleted:    flutter_homehub/lib/screens/ai_autopilot_screen.dart
+	new file:   inject_i18n.cjs
+	new file:   missing.txt
+	new file:   playwright-report/data/0300b03343fa3029e5c9571d799c5c2a53e7c9f7.md
+	new file:   playwright-report/data/28c2887bb17bd01173def70abb40bd4e613beae7.png
+	new file:   playwright-report/data/358c418a93a214f02fa7d3db0404952bfdd89081.png
+	new file:   playwright-report/data/36102ff40fe841041a9186bc375ef9a76c272491.md
+	new file:   playwright-report/data/3bc8f83d9e69c4af52e6c3b057f02c44aae8e03c.png
+	new file:   playwright-report/data/50c53a8f78989545ab8bb64216b905519f3fb49e.webm
+	new file:   playwright-report/data/586b50a4730ce9d8b91e2db83f80484a58e3366e.png
+	new file:   playwright-report/data/59b3aad112f14d37b8db7bfaf250087dc52189ed.md
+	new file:   playwright-report/data/806cddc81427a5669d53bd7b87a8188eda1568ba.webm
+	new file:   playwright-report/data/84cf23688578fe43f68259e52f62e5f046db6495.webm
+	new file:   playwright-report/data/beba65f3cb5a43c87008559d8faf9cd633f47fcc.png
+	new file:   playwright-report/data/c936c32e7cf33e43f911c2d828997b5087f47ff5.png
+	new file:   playwright-report/index.html
+	new file:   playwright.config.ts
+	new file:   remove_calculator.cjs
+	new file:   remove_calculator.py
+	new file:   replace_text.cjs
+	new file:   scan-legacy.ts
+	new file:   scratch/add_beds_baths.cjs
+	new file:   scratch/add_description.cjs
+	new file:   scratch/add_description2.cjs
+	new file:   scratch/add_docs.cjs
+	new file:   scratch/add_docs_review.cjs
+	new file:   scratch/add_extra_fields.cjs
+	new file:   scratch/add_map.cjs
+	new file:   scratch/cleanup_payload.cjs
+	new file:   scratch/fix.cjs
+	new file:   scratch/fix.py
+	new file:   scratch/fix_add_docs.cjs
+	new file:   scratch/fix_doc_upload.cjs
+	new file:   scratch/fix_documents_state.cjs
+	new file:   scratch/fix_fee_rules.cjs
+	new file:   scratch/fix_map_injection.cjs
+	new file:   scratch/fix_stepper.cjs
+	new file:   scratch/fix_steps.cjs
+	new file:   scratch/fix_syntax.cjs
+	modified:   scratch/home_1024x768_ku.png
+	modified:   scratch/home_1280x800_ku.png
+	modified:   scratch/home_1366x768_ku.png
+	modified:   scratch/home_1440x900_ar.png
+	modified:   scratch/home_1440x900_en.png
+	modified:   scratch/home_1440x900_ku.png
+	new file:   scratch/inject_desc_i18n.cjs
+	new file:   scratch/inject_docs_i18n.cjs
+	new file:   scratch/inject_i18n.cjs
+	new file:   scratch/inject_map_exact.cjs
+	new file:   scratch/inject_step4_i18n.cjs
+	new file:   scratch/localize_step8.cjs
+	new file:   scratch/move_model.cjs
+	new file:   scratch/remove_sale.cjs
+	new file:   scratch/update_agent_listed_text.cjs
+	new file:   scratch/update_agent_operated_text.cjs
+	new file:   scratch/update_fully_managed_text.cjs
+	new file:   scratch/update_map_provider.cjs
+	new file:   scratch/update_operating_model.cjs
+	new file:   scratch/update_operating_model2.cjs
+	new file:   scratch/update_submit_payload.cjs
+	new file:   screenshots/fee-model/ar-no-commission-calculator.png
+	new file:   screenshots/fee-model/ar-property-registration.png
+	new file:   screenshots/fee-model/en-no-commission-calculator.png
+	new file:   screenshots/fee-model/en-property-registration.png
+	new file:   screenshots/fee-model/ku-no-commission-calculator.png
+	new file:   screenshots/fee-model/ku-property-registration.png
+	new file:   screenshots/homehub-full-audit/deposit/fully-held.png
+	new file:   screenshots/homehub-full-audit/deposit/fully-released.png
+	new file:   screenshots/homehub-full-audit/deposit/no-deposit.png
+	new file:   screenshots/homehub-full-audit/deposit/partial-held.png
+	new file:   screenshots/homehub-full-audit/deposit/partial-release.png
+	new file:   screenshots/homehub-full-audit/deposit/unpaid-deposit.png
+	new file:   screenshots/homehub-full-audit/errors/403-forbidden-unauthorized.png
+	new file:   screenshots/homehub-full-audit/errors/validation-error-negative-fee.png
+	new file:   screenshots/homehub-full-audit/fees/admin-platform-fee-3-percent-persisted.png
+	new file:   screenshots/homehub-full-audit/fees/admin-platform-fee-3-percent.png
+	new file:   screenshots/homehub-full-audit/fees/admin-tiered-pricing-module.png
+	new file:   screenshots/homehub-full-audit/fees/property-empty-rent-management-fees.png
+	new file:   screenshots/homehub-full-audit/fees/property-fees-persisted.png
+	new file:   screenshots/homehub-full-audit/fees/property-fees-populated.png
+	new file:   screenshots/homehub-full-audit/localization/owner-health-ar.png
+	new file:   screenshots/homehub-full-audit/localization/owner-health-en.png
+	new file:   screenshots/homehub-full-audit/localization/owner-health-ku.png
+	new file:   screenshots/homehub-full-audit/management/agent-managed-property.png
+	new file:   screenshots/homehub-full-audit/management/cross-agent-denied.png
+	new file:   screenshots/homehub-full-audit/management/platform-managed-property.png
+	new file:   screenshots/homehub-full-audit/property-health/attention-property.png
+	new file:   screenshots/homehub-full-audit/property-health/critical-property.png
+	new file:   screenshots/homehub-full-audit/property-health/healthy-property.png
+	new file:   screenshots/homehub-full-audit/property-health/outstanding-financial-health.png
+	new file:   screenshots/homehub-full-audit/rental-models/management-services-overview.png
+	new file:   screenshots/homehub-full-audit/rental-models/model-a-fully-managed.png
+	new file:   screenshots/homehub-full-audit/rental-models/model-b-agent-listed-platform-managed.png
+	new file:   screenshots/homehub-full-audit/rental-models/model-c-agent-operated.png
+	new file:   screenshots/homehub-full-audit/responsive/dashboard-desktop.png
+	new file:   screenshots/homehub-full-audit/responsive/dashboard-mobile.png
+	new file:   screenshots/homehub-full-audit/responsive/dashboard-tablet.png
+	new file:   screenshots/homehub-full-audit/responsive/tenant-mobile.png
+	new file:   screenshots/homehub-full-audit/roles/agent-registration-entity-selection.png
+	new file:   screenshots/homehub-full-audit/roles/buy-sell-disabled-marketplace.png
+	new file:   screenshots/homehub-full-audit/roles/clean-workspaces-navigation.png
+	new file:   screenshots/homehub-full-audit/roles/owner-registration-entity-selection.png
+	new file:   screenshots/homehub-full-audit/tenant/active-tenant-dashboard.png
+	new file:   screenshots/homehub-full-audit/tenant/expired-lease.png
+	new file:   screenshots/homehub-full-audit/tenant/no-active-lease.png
+	new file:   screenshots/homehub-full-audit/utilities/cash-collection-confirmation.png
+	new file:   screenshots/homehub-full-audit/utilities/owner-unpaid-bill-breakdown.png
+	new file:   screenshots/homehub-full-audit/utilities/utility-billing-paid.png
+	new file:   screenshots/homehub-full-audit/utilities/utility-billing-unpaid.png
+	new file:   screenshots/homehub-visual-fix-audit/after/tenant-rent-payment.png
+	new file:   screenshots/homehub-visual-fix-audit/before/tenant-rent-payment-before.png
+	new file:   screenshots/homehub-visual-fix-audit/before/tenant-rent-payment.png
+	new file:   scripts/mock_tenant_rent.ts
+	new file:   scripts/screenshot_tenant.ts
+	new file:   scripts/strip_5_percent.cjs
+	new file:   scripts/test_final_audit.ts
+	new file:   scripts/test_property_creation.ts
+	new file:   scripts/test_security_audit.ts
+	modified:   scripts/verify-workflows.ts
+	new file:   seed.ts
+	modified:   src/App.tsx
+	modified:   src/components/AuthProvider.tsx
+	new file:   src/components/ErrorBoundary.tsx
+	modified:   src/components/Layout.tsx
+	modified:   src/components/OwnerSettlementTab.tsx
+	new file:   src/components/PropertyWizardLayout.tsx
+	modified:   src/components/admin/AdminBottomNav.tsx
+	modified:   src/components/admin/AdminHeader.tsx
+	modified:   src/components/admin/AdminMoreMenuModal.tsx
+	modified:   src/components/admin/modules/AdminFinanceModule.tsx
+	new file:   src/components/admin/modules/AdminPricingModule.tsx
+	modified:   src/components/admin/modules/AdminSettingsModule.tsx
+	modified:   src/components/company/CashCollectionModal.tsx
+	modified:   src/components/company/CompanyModals.tsx
+	modified:   src/components/onboarding/OnboardingCards.tsx
+	modified:   src/components/onboarding/OnboardingShell.tsx
+	modified:   src/components/onboarding/OnboardingWorkflow.tsx
+	modified:   src/components/onboarding/Screen1Welcome.tsx
+	modified:   src/components/onboarding/Screen2Capabilities.tsx
+	modified:   src/components/onboarding/Screen3Purpose.tsx
+	modified:   src/components/onboarding/Screen4Signup.tsx
+	modified:   src/components/onboarding/Screen6RoleConfirmation.tsx
+	modified:   src/components/onboarding/Screen9Success.tsx
+	modified:   src/components/onboarding/ScreenLogin.tsx
+	new file:   src/components/owner/OwnerUtilityBills.tsx
+	new file:   src/components/shared/PropertyHealthDashboard.tsx
+	modified:   src/components/tenant/TenantDesktopSidebarWidgets.tsx
+	modified:   src/components/tenant/TenantModals.tsx
+	modified:   src/components/tenant/TenantQuickActionsGrid.tsx
+	modified:   src/components/tenant/TenantRentDueCard.tsx
+	new file:   src/components/tenant/TenantUtilityBillsView.tsx
+	modified:   src/db/schema.ts
+	modified:   src/i18n/I18nProvider.tsx
+	modified:   src/main.tsx
+	modified:   src/pages/AccountantWorkspace.tsx
+	modified:   src/pages/AddPropertyPage.tsx
+	new file:   src/pages/AddPropertyPage.tsx.bak
+	modified:   src/pages/AdminTrustWorkspace.tsx
+	modified:   src/pages/AgentWorkspace.tsx
+	modified:   src/pages/BuyerWorkspace.tsx
+	modified:   src/pages/CompanyCRMWorkspace.tsx
+	modified:   src/pages/CompanyIntelligenceWorkspace.tsx
+	modified:   src/pages/CompanyOnboarding.tsx
+	modified:   src/pages/CompanyProfilePage.tsx
+	modified:   src/pages/CompanyWorkspace.tsx
+	modified:   src/pages/HomePage.tsx
+	modified:   src/pages/MarketplacePage.tsx
+	modified:   src/pages/OwnerWorkspace.tsx
+	modified:   src/pages/PlatformAdminWorkspace.tsx
+	modified:   src/pages/PromptsPage.tsx
+	modified:   src/pages/PropertyCommandCenter.tsx
+	modified:   src/pages/SearchExplorerPage.tsx
+	modified:   src/pages/TenantWorkspace.tsx
+	modified:   src/pages/VendorWorkspace.tsx
+	modified:   src/server/middleware/auth.ts
+	modified:   src/server/repositories/company.ts
+	modified:   src/server/repositories/leases.ts
+	modified:   src/server/repositories/management.ts
+	modified:   src/server/repositories/owner.ts
+	modified:   src/server/repositories/properties.ts
+	modified:   src/server/repositories/tenant.ts
+	new file:   src/server/repositories/utility-bills.ts
+	modified:   src/server/routes/admin.ts
+	modified:   src/server/routes/agent.ts
+	modified:   src/server/routes/api.ts
+	modified:   src/server/routes/auth.ts
+	modified:   src/server/routes/leases.ts
+	modified:   src/server/routes/marketplace.ts
+	modified:   src/server/routes/owner.ts
+	modified:   src/server/routes/properties.ts
+	modified:   src/server/routes/tenant.ts
+	modified:   src/server/services/agent.ts
+	modified:   src/server/services/buyer.ts
+	modified:   src/server/services/commission.ts
+	modified:   src/server/services/finance.ts
+	new file:   src/server/services/pricing.ts
+	new file:   src/server/services/propertyHealth.ts
+	modified:   src/server/services/vendor.ts
+	modified:   src/types/company.ts
+	modified:   src/types/owner.ts
+	modified:   src/types/tenant.ts
+	new file:   src/utils/featureFlags.ts
+	new file:   test-results/.last-run.json
+	new file:   test-results/property-fee-configuration-22d70-y-Calculator-is-NOT-visible-chromium/test-finished-1.png
+	new file:   test-results/property-fee-configuration-3c8a2-y-Calculator-is-NOT-visible-chromium/test-finished-1.png
+	new file:   test-results/property-fee-configuration-7c1db-ty-Registration-and-Details-chromium/error-context.md
+	new file:   test-results/property-fee-configuration-7c1db-ty-Registration-and-Details-chromium/test-failed-1.png
+	new file:   test-results/property-fee-configuration-7c1db-ty-Registration-and-Details-chromium/video.webm
+	new file:   test-results/property-fee-configuration-91a6c-ty-Registration-and-Details-chromium/error-context.md
+	new file:   test-results/property-fee-configuration-91a6c-ty-Registration-and-Details-chromium/test-failed-1.png
+	new file:   test-results/property-fee-configuration-91a6c-ty-Registration-and-Details-chromium/video.webm
+	new file:   test-results/property-fee-configuration-d90ba-y-Calculator-is-NOT-visible-chromium/test-finished-1.png
+	new file:   test-results/property-fee-configuration-f6f48-ty-Registration-and-Details-chromium/error-context.md
+	new file:   test-results/property-fee-configuration-f6f48-ty-Registration-and-Details-chromium/test-failed-1.png
+	new file:   test-results/property-fee-configuration-f6f48-ty-Registration-and-Details-chromium/video.webm
+	new file:   test_api_matrix.ts
+	new file:   test_concurrency.ts
+	new file:   test_defects.ts
+	new file:   test_evidence.ts
+	new file:   test_financials.ts
+	new file:   test_management_auth.ts
+	new file:   test_tenant_api_lifecycle.ts
+	new file:   test_tenant_lifecycle.ts
+	modified:   tests/agent-domain-adversary.test.ts
+	modified:   tests/buyer-domain-adversary.test.ts
+	modified:   tests/buyer-workflow-persistence.test.ts
+	modified:   tests/company-workflow-persistence.test.ts
+	new file:   tests/e2e/buy-sell-disabled-workspaces.spec.ts
+	new file:   tests/e2e/capture-audit-visuals.spec.ts
+	new file:   tests/e2e/fees-and-pricing.spec.ts
+	new file:   tests/e2e/management-assignment.spec.ts
+	new file:   tests/e2e/operating-models-services.spec.ts
+	new file:   tests/e2e/property-fee-configuration.spec.ts
+	new file:   tests/e2e/property-health.spec.ts
+	new file:   tests/e2e/rental-only-localization.spec.ts
+	new file:   tests/e2e/security-deposit.spec.ts
+	new file:   tests/e2e/tenant-domain.spec.ts
+	new file:   tests/e2e/utility-billing-visual.spec.ts
+	new file:   tests/e2e/utility-billing.spec.ts
+	modified:   tests/finance-domain-adversary.test.ts
+	modified:   tests/finding4-filters.test.ts
+	modified:   tests/forensic-remediation-master-verification.test.ts
+	new file:   tests/gap-closure-pricing.test.ts
+	new file:   tests/operating-model-fee-routing.test.ts
+	new file:   tests/pricing-tier-resolution.test.ts
+	new file:   tests/property-health-adversary.test.ts
+	modified:   tests/step13-rental-verification.test.ts
+	modified:   tests/step14-f1-authorization.test.ts
+	modified:   tests/step15-rental-lifecycle.test.ts
+	modified:   tests/step16-adversarial.test.ts
+	modified:   tests/step17-final.test.ts
+	modified:   tests/tenant-domain-adversary.test.ts
+	new file:   tests/tenant-real-postgres.test.ts
+	new file:   tests/tier-transition.test.ts
+	new file:   tests/utility-billing.test.ts
+	modified:   tests/vendor-domain-adversary.test.ts
+	new file:   update-frontend-pricing.cjs
+	new file:   validation_completed.txt
+	new file:   verify-3-fee.ts
+	new file:   verify-lease-bills.ts
+	new file:   verify-registration-fees.ts
+	new file:   verify-rental-tenant.ts
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .env.example
+	modified:   AGENTS.md
+	modified:   audit_ui.ts
+	modified:   docs/HOMEHUB_DOMAIN_STATUS.md
+	modified:   docs/HOMEHUB_MASTER_CONTEXT.md
+	modified:   docs/architecture/DECISIONS.md
+	modified:   docs/business/BUSINESS_RULES.md
+	modified:   docs/security/SECURITY_MODEL.md
+	modified:   drizzle.config.ts
+	modified:   drizzle/meta/_journal.json
+	modified:   dump-outage.ts
+	modified:   flutter_homehub/lib/screens/owner_dashboard.dart
+	modified:   package-lock.json
+	modified:   package.json
+	deleted:    playwright-report/data/0300b03343fa3029e5c9571d799c5c2a53e7c9f7.md
+	deleted:    playwright-report/data/28c2887bb17bd01173def70abb40bd4e613beae7.png
+	deleted:    playwright-report/data/358c418a93a214f02fa7d3db0404952bfdd89081.png
+	deleted:    playwright-report/data/36102ff40fe841041a9186bc375ef9a76c272491.md
+	deleted:    playwright-report/data/3bc8f83d9e69c4af52e6c3b057f02c44aae8e03c.png
+	deleted:    playwright-report/data/50c53a8f78989545ab8bb64216b905519f3fb49e.webm
+	deleted:    playwright-report/data/586b50a4730ce9d8b91e2db83f80484a58e3366e.png
+	deleted:    playwright-report/data/59b3aad112f14d37b8db7bfaf250087dc52189ed.md
+	deleted:    playwright-report/data/806cddc81427a5669d53bd7b87a8188eda1568ba.webm
+	deleted:    playwright-report/data/84cf23688578fe43f68259e52f62e5f046db6495.webm
+	deleted:    playwright-report/data/beba65f3cb5a43c87008559d8faf9cd633f47fcc.png
+	deleted:    playwright-report/data/c936c32e7cf33e43f911c2d828997b5087f47ff5.png
+	modified:   playwright-report/index.html
+	modified:   playwright.config.ts
+	deleted:    screenshots/fee-model/ar-no-commission-calculator.png
+	deleted:    screenshots/fee-model/ar-property-registration.png
+	deleted:    screenshots/fee-model/en-no-commission-calculator.png
+	deleted:    screenshots/fee-model/en-property-registration.png
+	deleted:    screenshots/fee-model/ku-no-commission-calculator.png
+	deleted:    screenshots/fee-model/ku-property-registration.png
+	deleted:    screenshots/homehub-full-audit/deposit/fully-held.png
+	deleted:    screenshots/homehub-full-audit/deposit/fully-released.png
+	deleted:    screenshots/homehub-full-audit/deposit/no-deposit.png
+	deleted:    screenshots/homehub-full-audit/deposit/partial-held.png
+	deleted:    screenshots/homehub-full-audit/deposit/partial-release.png
+	deleted:    screenshots/homehub-full-audit/deposit/unpaid-deposit.png
+	deleted:    screenshots/homehub-full-audit/errors/403-forbidden-unauthorized.png
+	deleted:    screenshots/homehub-full-audit/errors/validation-error-negative-fee.png
+	modified:   screenshots/homehub-full-audit/fees/admin-platform-fee-3-percent-persisted.png
+	modified:   screenshots/homehub-full-audit/fees/admin-platform-fee-3-percent.png
+	modified:   screenshots/homehub-full-audit/fees/admin-tiered-pricing-module.png
+	deleted:    screenshots/homehub-full-audit/fees/property-empty-rent-management-fees.png
+	modified:   screenshots/homehub-full-audit/fees/property-fees-persisted.png
+	deleted:    screenshots/homehub-full-audit/fees/property-fees-populated.png
+	deleted:    screenshots/homehub-full-audit/localization/owner-health-ar.png
+	deleted:    screenshots/homehub-full-audit/localization/owner-health-en.png
+	deleted:    screenshots/homehub-full-audit/localization/owner-health-ku.png
+	deleted:    screenshots/homehub-full-audit/management/agent-managed-property.png
+	deleted:    screenshots/homehub-full-audit/management/cross-agent-denied.png
+	deleted:    screenshots/homehub-full-audit/management/platform-managed-property.png
+	deleted:    screenshots/homehub-full-audit/property-health/attention-property.png
+	deleted:    screenshots/homehub-full-audit/property-health/critical-property.png
+	deleted:    screenshots/homehub-full-audit/property-health/healthy-property.png
+	deleted:    screenshots/homehub-full-audit/property-health/outstanding-financial-health.png
+	deleted:    screenshots/homehub-full-audit/rental-models/management-services-overview.png
+	deleted:    screenshots/homehub-full-audit/rental-models/model-a-fully-managed.png
+	deleted:    screenshots/homehub-full-audit/rental-models/model-b-agent-listed-platform-managed.png
+	deleted:    screenshots/homehub-full-audit/rental-models/model-c-agent-operated.png
+	deleted:    screenshots/homehub-full-audit/responsive/dashboard-desktop.png
+	deleted:    screenshots/homehub-full-audit/responsive/dashboard-mobile.png
+	deleted:    screenshots/homehub-full-audit/responsive/dashboard-tablet.png
+	deleted:    screenshots/homehub-full-audit/responsive/tenant-mobile.png
+	modified:   screenshots/homehub-full-audit/roles/agent-registration-entity-selection.png
+	modified:   screenshots/homehub-full-audit/roles/buy-sell-disabled-marketplace.png
+	modified:   screenshots/homehub-full-audit/roles/clean-workspaces-navigation.png
+	modified:   screenshots/homehub-full-audit/roles/owner-registration-entity-selection.png
+	deleted:    screenshots/homehub-full-audit/tenant/active-tenant-dashboard.png
+	deleted:    screenshots/homehub-full-audit/tenant/expired-lease.png
+	deleted:    screenshots/homehub-full-audit/tenant/no-active-lease.png
+	deleted:    screenshots/homehub-full-audit/utilities/cash-collection-confirmation.png
+	deleted:    screenshots/homehub-full-audit/utilities/owner-unpaid-bill-breakdown.png
+	deleted:    screenshots/homehub-full-audit/utilities/utility-billing-paid.png
+	deleted:    screenshots/homehub-full-audit/utilities/utility-billing-unpaid.png
+	deleted:    screenshots/homehub-visual-fix-audit/after/tenant-rent-payment.png
+	deleted:    screenshots/homehub-visual-fix-audit/before/tenant-rent-payment-before.png
+	deleted:    screenshots/homehub-visual-fix-audit/before/tenant-rent-payment.png
+	modified:   scripts/backup.ts
+	modified:   scripts/bootstrap-roles.ts
+	modified:   scripts/capture_vendor.ts
+	modified:   scripts/check_1024.ts
+	modified:   scripts/migrate.ts
+	modified:   scripts/mock_tenant_rent.ts
+	modified:   scripts/restore.ts
+	modified:   scripts/screenshot_tenant.ts
+	modified:   scripts/verify-domain-isolation.ts
+	modified:   scripts/verify-ui-cash.ts
+	modified:   scripts/verify-ui.ts
+	modified:   scripts/verify_home_page.cjs
+	modified:   scripts/verify_vendor_workspace.ts
+	modified:   seed.ts
+	modified:   server.ts
+	modified:   src/App.tsx
+	modified:   src/components/AuthProvider.tsx
+	modified:   src/components/Layout.tsx
+	modified:   src/components/PropertyWizardLayout.tsx
+	modified:   src/components/RequireAuth.tsx
+	modified:   src/components/admin/AdminAnalyticsSection.tsx
+	modified:   src/components/admin/AdminBottomNav.tsx
+	modified:   src/components/admin/AdminHeader.tsx
+	modified:   src/components/admin/AdminMetricsRow.tsx
+	modified:   src/components/admin/AdminMoreMenuModal.tsx
+	modified:   src/components/admin/AdminNotificationsModal.tsx
+	modified:   src/components/admin/AdminQuickActions.tsx
+	modified:   src/components/admin/AdminRecentActivityAndAlerts.tsx
+	modified:   src/components/admin/modules/AdminCommunicationsModule.tsx
+	modified:   src/components/admin/modules/AdminPricingModule.tsx
+	modified:   src/components/admin/modules/AdminPropertiesModule.tsx
+	modified:   src/components/admin/modules/AdminSettingsModule.tsx
+	modified:   src/components/admin/modules/AdminUsersModule.tsx
+	modified:   src/components/company/CompanyKpiGrid.tsx
+	modified:   src/components/company/CompanyModals.tsx
+	modified:   src/components/company/CompanyQuickActions.tsx
+	modified:   src/components/company/CompanyTopBar.tsx
+	modified:   src/components/onboarding/FormControls.tsx
+	modified:   src/components/onboarding/LanguageSelector.tsx
+	modified:   src/components/onboarding/OnboardingCards.tsx
+	modified:   src/components/onboarding/OnboardingHeader.tsx
+	modified:   src/components/onboarding/OnboardingShell.tsx
+	modified:   src/components/onboarding/OnboardingWorkflow.tsx
+	modified:   src/components/onboarding/ProgressIndicator.tsx
+	modified:   src/components/onboarding/Screen1Welcome.tsx
+	modified:   src/components/onboarding/Screen2Capabilities.tsx
+	modified:   src/components/onboarding/Screen3Purpose.tsx
+	modified:   src/components/onboarding/Screen4Signup.tsx
+	modified:   src/components/onboarding/Screen5Verification.tsx
+	modified:   src/components/onboarding/Screen6RoleConfirmation.tsx
+	modified:   src/components/onboarding/Screen7ProfileSetup.tsx
+	modified:   src/components/onboarding/Screen8ProfileReview.tsx
+	modified:   src/components/onboarding/Screen9Success.tsx
+	modified:   src/components/onboarding/ScreenLogin.tsx
+	modified:   src/components/owner/OwnerUtilityBills.tsx
+	modified:   src/components/shared/PropertyHealthDashboard.tsx
+	modified:   src/components/tenant/TenantCurrentHomeCard.tsx
+	modified:   src/components/tenant/TenantDesktopSidebarWidgets.tsx
+	modified:   src/components/tenant/TenantHeader.tsx
+	modified:   src/components/tenant/TenantLeaseView.tsx
+	modified:   src/components/tenant/TenantMessagesView.tsx
+	modified:   src/components/tenant/TenantModals.tsx
+	modified:   src/components/tenant/TenantPaymentsView.tsx
+	modified:   src/components/tenant/TenantQuickActionsGrid.tsx
+	modified:   src/components/tenant/TenantQuickStatsRow.tsx
+	modified:   src/components/tenant/TenantRecentActivityList.tsx
+	modified:   src/components/tenant/TenantRentDueCard.tsx
+	modified:   src/components/tenant/TenantRentSummaryGrid.tsx
+	modified:   src/components/tenant/TenantUtilityBillsView.tsx
+	modified:   src/components/vendor/VendorDashboardWidgets.tsx
+	modified:   src/components/vendor/VendorHeader.tsx
+	modified:   src/components/vendor/VendorKpiGrid.tsx
+	modified:   src/components/vendor/VendorModals.tsx
+	modified:   src/components/vendor/VendorSidebar.tsx
+	modified:   src/components/vendor/VendorSubViews.tsx
+	modified:   src/db/index.ts
+	modified:   src/db/schema.ts
+	modified:   src/i18n/I18nProvider.tsx
+	modified:   src/index.css
+	modified:   src/pages/AccountantWorkspace.tsx
+	modified:   src/pages/AddPropertyPage.tsx
+	deleted:    src/pages/AddPropertyPage.tsx.bak
+	modified:   src/pages/AdminLoginPage.tsx
+	modified:   src/pages/AdminTrustWorkspace.tsx
+	modified:   src/pages/AgentWorkspace.tsx
+	deleted:    src/pages/AutopilotWorkspace.tsx
+	modified:   src/pages/BuyerWorkspace.tsx
+	modified:   src/pages/CompanyCRMWorkspace.tsx
+	modified:   src/pages/CompanyProfilePage.tsx
+	modified:   src/pages/CompanyWorkspace.tsx
+	modified:   src/pages/HomePage.tsx
+	modified:   src/pages/IntegrationsAdminWorkspace.tsx
+	modified:   src/pages/MaintenanceWorkspacePage.tsx
+	modified:   src/pages/MarketplacePage.tsx
+	modified:   src/pages/OwnerWorkspace.tsx
+	modified:   src/pages/PlatformAdminWorkspace.tsx
+	modified:   src/pages/PortfolioWorkspacePage.tsx
+	modified:   src/pages/PromptsPage.tsx
+	modified:   src/pages/PropertyCommandCenter.tsx
+	modified:   src/pages/PropertyPassport.tsx
+	modified:   src/pages/SearchExplorerPage.tsx
+	modified:   src/pages/TenantMaintenanceRequest.tsx
+	modified:   src/pages/TenantOnboarding.tsx
+	modified:   src/pages/TenantWorkspace.tsx
+	modified:   src/pages/VendorWorkspace.tsx
+	modified:   src/server/config/env.ts
+	modified:   src/server/middleware/auth.ts
+	modified:   src/server/repositories/agent.ts
+	deleted:    src/server/repositories/ai-autopilot.ts
+	modified:   src/server/repositories/company.ts
+	modified:   src/server/repositories/finance.ts
+	modified:   src/server/repositories/leases.ts
+	modified:   src/server/repositories/maintenance.ts
+	modified:   src/server/repositories/owner.ts
+	modified:   src/server/repositories/properties.ts
+	modified:   src/server/repositories/rental-acquisition.ts
+	modified:   src/server/repositories/tenant.ts
+	modified:   src/server/repositories/utility-bills.ts
+	modified:   src/server/routes/admin.ts
+	modified:   src/server/routes/agent.ts
+	modified:   src/server/routes/api.ts
+	modified:   src/server/routes/auth.ts
+	deleted:    src/server/routes/autopilot.ts
+	modified:   src/server/routes/company.ts
+	modified:   src/server/routes/financials.ts
+	modified:   src/server/routes/leases.ts
+	modified:   src/server/routes/maintenance.ts
+	modified:   src/server/routes/marketplace.ts
+	modified:   src/server/routes/owner.ts
+	modified:   src/server/routes/properties.ts
+	modified:   src/server/routes/rental-acquisition.ts
+	modified:   src/server/routes/storage.ts
+	modified:   src/server/routes/tenant.ts
+	modified:   src/server/routes/vendor.ts
+	deleted:    src/server/services/ai-autopilot.ts
+	deleted:    src/server/services/ai-policy.ts
+	modified:   src/server/services/audit.ts
+	modified:   src/server/services/commission.ts
+	modified:   src/server/services/cron.ts
+	modified:   src/server/services/finance.ts
+	modified:   src/server/services/propertyHealth.ts
+	modified:   src/server/services/storage-service.ts
+	modified:   src/types/admin.ts
+	deleted:    src/types/ai-autopilot.ts
+	modified:   src/types/communications-crm.ts
+	modified:   src/types/company.ts
+	modified:   src/types/index.ts
+	modified:   src/types/owner.ts
+	modified:   src/types/tenant.ts
+	modified:   src/utils/formatters.ts
+	modified:   test-results/.last-run.json
+	deleted:    test-results/property-fee-configuration-22d70-y-Calculator-is-NOT-visible-chromium/test-finished-1.png
+	deleted:    test-results/property-fee-configuration-3c8a2-y-Calculator-is-NOT-visible-chromium/test-finished-1.png
+	deleted:    test-results/property-fee-configuration-7c1db-ty-Registration-and-Details-chromium/error-context.md
+	deleted:    test-results/property-fee-configuration-7c1db-ty-Registration-and-Details-chromium/test-failed-1.png
+	deleted:    test-results/property-fee-configuration-7c1db-ty-Registration-and-Details-chromium/video.webm
+	deleted:    test-results/property-fee-configuration-91a6c-ty-Registration-and-Details-chromium/error-context.md
+	deleted:    test-results/property-fee-configuration-91a6c-ty-Registration-and-Details-chromium/test-failed-1.png
+	deleted:    test-results/property-fee-configuration-91a6c-ty-Registration-and-Details-chromium/video.webm
+	deleted:    test-results/property-fee-configuration-d90ba-y-Calculator-is-NOT-visible-chromium/test-finished-1.png
+	deleted:    test-results/property-fee-configuration-f6f48-ty-Registration-and-Details-chromium/error-context.md
+	deleted:    test-results/property-fee-configuration-f6f48-ty-Registration-and-Details-chromium/test-failed-1.png
+	deleted:    test-results/property-fee-configuration-f6f48-ty-Registration-and-Details-chromium/video.webm
+	modified:   tests/activation-concurrency.test.ts
+	modified:   tests/agent-domain-adversary.test.ts
+	deleted:    tests/ai-autopilot-domain-adversary.test.ts
+	modified:   tests/e2e/buy-sell-disabled-workspaces.spec.ts
+	modified:   tests/e2e/fees-and-pricing.spec.ts
+	modified:   tests/e2e/management-assignment.spec.ts
+	modified:   tests/e2e/property-fee-configuration.spec.ts
+	modified:   tests/e2e/property-health.spec.ts
+	modified:   tests/e2e/rental-only-localization.spec.ts
+	modified:   tests/e2e/security-deposit.spec.ts
+	modified:   tests/e2e/tenant-domain.spec.ts
+	modified:   tests/e2e/utility-billing.spec.ts
+	modified:   tests/finance-domain-adversary.test.ts
+	modified:   tests/forensic-remediation-master-verification.test.ts
+	modified:   tests/real-postgres-integration.test.ts
+	modified:   tests/stage12-infrastructure-smoke.test.ts
+	modified:   tests/step15-rental-lifecycle.test.ts
+	modified:   tests/storage-signing-security.test.ts
+	modified:   tests/tenant-domain-adversary.test.ts
+	modified:   tests/tenant-real-postgres.test.ts
+	modified:   tests/vendor-domain-adversary.test.ts
+	modified:   tsconfig.json
+	modified:   verify-dashboards.ts
+	modified:   verify-outage.ts
+	modified:   verify-owner-ui.ts
+	modified:   verify-ui.ts
+	modified:   vite.config.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.agents/
+	AUTHORIZATION_IDOR_AUDIT_HANDOFF.md
+	AUTHORIZATION_IDOR_CHANGE_INVENTORY.md
+	AUTHORIZATION_IDOR_EVIDENCE_APPENDIX.md
+	COMPANY_AUTHORIZATION_REGRESSION_MATRIX.csv
+	COMPANY_WORKSPACE_SECURITY_FIX_REPORT.md
+	CROSS_DOMAIN_ACTION_SCREENSHOT_RECONCILIATION.csv
+	CROSS_DOMAIN_DEFECTS_AND_REGRESSION_RESULTS.md
+	CROSS_DOMAIN_FINAL_EVIDENCE_RECONCILIATION.md
+	CROSS_DOMAIN_FINAL_VERIFICATION.md
+	CROSS_DOMAIN_LISTING_CARDINALITY_INVESTIGATION.md
+	CROSS_DOMAIN_PAYMENT_RECONFIRMATION_AUDIT.md
+	CROSS_DOMAIN_PROPERTY_DEFECTS.md
+	CROSS_DOMAIN_PROPERTY_E2E_AUDIT.md
+	CROSS_DOMAIN_PROPERTY_EXECUTION_EVIDENCE.md
+	CROSS_DOMAIN_PROPERTY_WORKFLOW_MATRIX.csv
+	CROSS_DOMAIN_SCREENSHOT_INVENTORY.csv
+	CROSS_DOMAIN_SCREENSHOT_REVIEW.md
+	HOMEHUB_COMPREHENSIVE_AUDIT_PLAN.md
+	HOMEHUB_CROSS_WORKSPACE_TEST_MATRIX.md
+	HOMEHUB_DESIGN_DEFECT_REGISTER.md
+	HOMEHUB_DESIGN_SCREENSHOT_INDEX.md
+	HOMEHUB_DESIGN_SYSTEM.md
+	HOMEHUB_DESIGN_SYSTEM_AUDIT.md
+	HOMEHUB_FINANCIAL_AND_OPERATING_MODEL_AUDIT.md
+	HOMEHUB_KURDISH_LOCALIZATION_AUDIT.md
+	HOMEHUB_PHASE5_PROGRESS_LEDGER.md
+	HOMEHUB_PHASE6_PROGRESS_LEDGER.md
+	HOMEHUB_PHASE7_PROGRESS_LEDGER.md
+	HOMEHUB_POINTS_LEDGER_TRIGGER_VERIFICATION.md
+	HOMEHUB_ROUTE_AND_CONTROL_INVENTORY.md
+	HOMEHUB_SCREENSHOT_INDEX.md
+	HOMEHUB_UI_AUDIT_RESUME_STATUS.md
+	HOMEHUB_UI_DEFECT_REGISTER.md
+	HomeHub_Audit_Evidence_2026-10-27.zip
+	HomeHub_Audit_Evidence_Corrected_2026-10-27.zip
+	HomeHub_F001_Final_Verification_2026-10-27.zip
+	INITIAL_GIT_STATUS.txt
+	Kaywan_Latest_Instructions.txt
+	REVIEW_AND_RATING_CHANGE_INVENTORY.md
+	REVIEW_AND_RATING_EVIDENCE_APPENDIX.md
+	REVIEW_AND_RATING_IMPLEMENTATION_REPORT.md
+	TEST_EXECUTION_EVIDENCE.md
+	artifacts/
+	audit-followup.ts
+	audit-lease-data.ts
+	audit-results.txt
+	docs/audits/
+	docs/testing/
+	drizzle/0016_currency_support.sql
+	drizzle/0017_extended_currency_checks.sql
+	drizzle/0018_native_auth_support.sql
+	drizzle/0019_unit_unique_constraint.sql
+	drizzle/0020_rental_application_consumption.sql
+	drizzle/0021_property_creation_idempotency.sql
+	drizzle/0022_lease_deposit_reconciliation_status.sql
+	drizzle/0023_correct_historical_deposit_reconciliation.sql
+	drizzle/0024_move_out_inspections_and_deductions.sql
+	drizzle/0025_tenant_notice_dispute_deadline.sql
+	drizzle/0026_review_and_rating_system.sql
+	drizzle/0027_property_verification_and_management_choice.sql
+	drizzle/0028_property_management_preference_alignment.sql
+	drizzle/0029_points_and_promotions.sql
+	drizzle/0030_points_transactions_append_only.sql
+	drizzle/meta/0029_snapshot.json
+	fix_net.cjs
+	fix_net_finance.cjs
+	fix_tests.cjs
+	header-design-options/
+	homehub-admin-fees-and-property-verification-evidence.zip
+	homehub-db-safety-audit-package.zip
+	homehub-db-safety-audit-package/
+	homehub-db-safety-phase-64-4.zip
+	homehub-db-safety-phase-64-4/
+	homehub-db-safety-phase-64-5.zip
+	homehub-db-safety-phase-64-5/
+	homehub-db-safety-phase-64-6.zip
+	homehub-db-safety-phase-64-6/
+	homehub-db-safety-phase-64-7.zip
+	homehub-db-safety-phase-64-7/
+	homehub-lease-renewal-corrected-evidence.zip
+	homehub-lease-renewal-corrected-evidence/
+	homehub-lease-renewal-evidence.zip
+	homehub-lease-renewal-evidence/
+	homehub-multi-role-enrollment-evidence.zip
+	homehub-points-ledger-audit.zip
+	homehub-points-ledger-trigger-patch.zip
+	homehub-points-ledger-trigger-verified.zip
+	homehub-property-verification-and-owner-management-choice-evidence.zip
+	homehub-property-verification-and-owner-management-choice-remediated-evidence.zip
+	modify-finance-test-2.cjs
+	modify-finance-test.cjs
+	modify-test-2.cjs
+	modify-test-3.cjs
+	modify-test-4.cjs
+	modify-test-5.cjs
+	modify-test.cjs
+	partial_payment_renewal_audit.md
+	playwright-report/data/2799559c8802ebe056a7bac20ea3b5f3900b1f36.png
+	playwright-report/data/9ff2e8d4e72335ecefe528e045fcdedc543d138b.png
+	public/images/
+	replace.cjs
+	replace2.cjs
+	scratch/ENTRYPOINT_COVERAGE_MATRIX_PHASE64_4.md
+	scratch/HomeHub_Audit_Evidence_2026-10-27/
+	scratch/HomeHub_Audit_Evidence_Corrected_2026-10-27/
+	scratch/HomeHub_F001_Final_Verification_2026-10-27/
+	scratch/add-consent-translations.ts
+	scratch/add-missing-translations.ts
+	scratch/add-property-before.png
+	scratch/analyze-matrix.cjs
+	scratch/append_comprehensive_audit.cjs
+	scratch/append_ui_backend_verification.cjs
+	scratch/append_verification_report.cjs
+	scratch/apply-phase50-localization.ts
+	scratch/apply_add_property_fix.cjs
+	scratch/apply_maintain_and_delete_corrections.cjs
+	scratch/audit-exit.ts
+	scratch/audit_maintain_and_tables.cjs
+	scratch/build-f001-package.ts
+	scratch/build-final-reconciled-package.cjs
+	scratch/build-package.ts
+	scratch/build-validated-package.cjs
+	scratch/capture-all-wizard-steps.ts
+	scratch/capture-current-add-prop.ts
+	scratch/capture-option4-screens.ts
+	scratch/capture-remaining-screenshots.ts
+	scratch/check-browser-evidence.cjs
+	scratch/check-coa.ts
+	scratch/check-cols.js
+	scratch/check-constraint-error.ts
+	scratch/check-db-counts.ts
+	scratch/check-db-schema.ts
+	scratch/check-keys.ts
+	scratch/check-localization-scope.ts
+	scratch/check-tenant-pay.ts
+	scratch/copy-and-update-validated.cjs
+	scratch/count-domain-assertions.ts
+	scratch/create-portable-zip.ps1
+	scratch/deep-audit-matrix.cjs
+	scratch/execute-comprehensive-browser-verification.ts
+	scratch/execute-exhaustive-ui-audit.ts
+	scratch/execute-traceability-audit.ts
+	scratch/extract-db-evidence.ts
+	scratch/extract-portable-zip.ps1
+	scratch/find-i18n-duplicates.cjs
+	scratch/find-i18n-structure.cjs
+	scratch/find-lines.ts
+	scratch/fix-exits.ts
+	scratch/gateway-worker-runner.ts
+	scratch/generate-corrected-evidence.cjs
+	scratch/generate-coverage-matrix.cjs
+	scratch/generate-evidence-report.cjs
+	scratch/generate-inventory-doc.cjs
+	scratch/generate-package-checksums.cjs
+	scratch/generate-phase64_4-checksums.cjs
+	scratch/generate-phase64_4-manifest.cjs
+	scratch/generate-phase64_5-checksums.cjs
+	scratch/generate-phase64_5-matrix.cjs
+	scratch/generate-phase64_6-manifest-and-checksums.cjs
+	scratch/generate-phase64_6-matrix.cjs
+	scratch/generate-phase64_7-manifest-and-checksums.cjs
+	scratch/git-status-full.txt
+	scratch/grant-permissions.ts
+	scratch/init-evidence-dirs.ts
+	scratch/inspect-created-user.ts
+	scratch/inspect-csv.cjs
+	scratch/inspect-db-state.ts
+	scratch/inspect-db.ts
+	scratch/inspect-i18n-dupes.cjs
+	scratch/inspect-portable-zip.ps1
+	scratch/inspect-purpose.ts
+	scratch/inventory-analysis.json
+	scratch/inventory-db-entrypoints.ts
+	scratch/list-scenarios.cjs
+	scratch/list-zip.ps1
+	scratch/phase64_4_diff.patch
+	scratch/post-creation-mgmt.png
+	scratch/prepare-lease-renewal-evidence-package.cjs
+	scratch/prepare-phase64_5-package.cjs
+	scratch/prepare-phase64_6-package.cjs
+	scratch/prepare-phase64_7-package.cjs
+	scratch/replace.js
+	scratch/report_2889.md
+	scratch/report_3269.md
+	scratch/report_3317.md
+	scratch/run-test-migration.ts
+	scratch/scan-all-code-keys.ts
+	scratch/step0-initial.png
+	scratch/step0-selected.png
+	scratch/step1-basic-info.png
+	scratch/step2-location.png
+	scratch/step3-details.png
+	scratch/step4-amenities.png
+	scratch/step5-photos.png
+	scratch/step6-ownership.png
+	scratch/step7-operating-model.png
+	scratch/step8-review.png
+	scratch/sync_instructions_root.cjs
+	scratch/test-app-insert.ts
+	scratch/test-dev-validation.ts
+	scratch/test-effective-target.ts
+	scratch/test-je.ts
+	scratch/test-pool-timing.ts
+	scratch/test-screen4-keys.ts
+	scratch/test-validation-logic.ts
+	scratch/test_marketplace.mjs
+	scratch/transform-add-property.ts
+	scratch/update-coverage-matrix.cjs
+	scratch/validate-zip.ts
+	scratch/verify-final-package.cjs
+	scratch/verify-png-decoding.ts
+	scratch/verify-property-click-experience.ts
+	scratch/verify-search-panel-border.ts
+	scratch/worker-safety-test.ts
+	scratch_check_orgs.ts
+	scratch_check_prop.ts
+	scratch_cleanup.ts
+	scratch_test_create.ts
+	screenshots/New folder/
+	screenshots/f001-after-sorani-rtl-percentage-100.png
+	screenshots/f001-after-sorani-rtl-percentage-50.png
+	screenshots/f001-after-sorani-rtl-review-card.png
+	screenshots/homehub-agent-domain-comprehensive-audit/
+	screenshots/homehub-comprehensive-financial-ui-localization-audit-2026-10-26/
+	screenshots/homehub-cross-domain-integration-audit/
+	screenshots/homehub-deep-quality-cross-domain-localization-audit-2026-10-26/
+	screenshots/homehub-end-to-end-rental-lifecycle/
+	screenshots/homehub-full-audit/fees/property-step3-details-cleaned.png
+	screenshots/homehub-full-audit/points-promotion-comprehensive/
+	screenshots/homehub-full-audit/points-promotion-ui/
+	screenshots/homehub-full-audit/points-promotion/
+	screenshots/homehub-global-dark-premium-design-system/
+	screenshots/homehub-kurdish-arabic-localization-audit/
+	screenshots/homehub-midnight-gold-redesign/
+	screenshots/homehub-new-english-homepage-design/
+	screenshots/homehub-notifications-communications-activity-audit/
+	screenshots/homehub-owner-financial-reporting-audit/
+	screenshots/homehub-property-bills-utility-payments-audit/
+	screenshots/homehub-property-discovery-sponsored-points-audit/
+	screenshots/homehub-property-discovery-sponsored-points-comprehensive-audit/
+	screenshots/homehub-rental-ecosystem-simplicity-audit/
+	screenshots/homehub-rental-property-tenant-management-audit/
+	screenshots/homehub-security-deposits-collateral-audit/
+	screenshots/homehub-user-registration-permissions-security-audit/
+	screenshots/homehub-vendor-property-maintenance-audit/
+	screenshots/homehub-whole-system-ui-audit/
+	screenshots/homepage-redesign/
+	screenshots/kurdish-localization-audit/
+	screenshots/lease-renewal-expiry-deep-audit/
+	screenshots/notifications-communications-crm-localization-deep-audit/
+	screenshots/owner-financial-dashboard-three-fee-audit/
+	screenshots/property-bills-utilities-maintenance-deep-audit/
+	screenshots/property-registration-admin-approval/
+	screenshots/rent-schedule-payment-reversal-deep-audit/
+	screenshots/rent_management_page_ar_desktop.png
+	screenshots/rent_management_page_en_desktop.png
+	screenshots/rent_management_page_ku_desktop.png
+	screenshots/rent_management_page_mobile_ku.png
+	screenshots/review_and_rating_modal_en.png
+	screenshots/review_and_rating_modal_ku.png
+	screenshots/review_and_rating_property_command_center.png
+	screenshots/review_and_rating_tenant_lease_view_en.png
+	screenshots/review_and_rating_tenant_lease_view_ku.png
+	screenshots/security-deposits-bonds-refunds/
+	screenshots/tenant-lease-lifecycle-deep-audit/
+	screenshots/ui-deep-audit-points-property-localization/
+	scripts/analyze-clean-keys.mjs
+	scripts/apply-synchronized-translations.ts
+	scripts/apply-translations-accurately.mjs
+	scripts/audit-all-pages-direction.ts
+	scripts/audit-all-t-calls.mjs
+	scripts/audit-db-accounting-invariants.ts
+	scripts/audit-i18n-keys.mjs
+	scripts/audit-missing-keys.json
+	scripts/audit-rewards.ts
+	scripts/audit-screenshot-discrepancy.ts
+	scripts/build-complete-dictionary.mjs
+	scripts/build-evidence-zip.ts
+	scripts/build-reconciliation-artifacts.mjs
+	scripts/capture-agent-comm.ts
+	scripts/capture-all-fixed-screens.ts
+	scripts/capture-all-ui-audit-evidence.ts
+	scripts/capture-deposit-kurdish.ts
+	scripts/capture-enrollment-db-evidence.ts
+	scripts/capture-localization-audit.mjs
+	scripts/capture-midnight-gold-redesign.mjs
+	scripts/capture-new-english-homepage.mjs
+	scripts/capture-points-modal-kurdish.mjs
+	scripts/capture-screenshot.ts
+	scripts/check-duplicates.mjs
+	scripts/check-home-keys.mjs
+	scripts/check-leases-schema-and-migrations.ts
+	scripts/check-migrations.ts
+	scripts/check-orgs.ts
+	scripts/check-phase50-in-map.mjs
+	scripts/check-seed-data.cjs
+	scripts/clean-and-sync-i18n.ts
+	scripts/create-all-roles-and-capture-credentials.ts
+	scripts/diagnose-keys.mjs
+	scripts/download-homepage-assets.mjs
+	scripts/dump-catalog.ts
+	scripts/ensure-active-campaigns.mjs
+	scripts/execute-cross-domain-e2e-audit.ts
+	scripts/execute-phase63-audit.ts
+	scripts/execute-phase63-expansion.ts
+	scripts/execute-phase64-master.ts
+	scripts/generate-audit-index.cjs
+	scripts/generate-manifests.ts
+	scripts/generate-screenshot-inventory.mjs
+	scripts/generate-synchronized-translations.ts
+	scripts/headed-live-demonstration.ts
+	scripts/homepage-screenshot.mjs
+	scripts/inspect-all-screenshots.ts
+	scripts/inspect-db-catalog.ts
+	scripts/inspect-properties-columns.ts
+	scripts/inspect-recent-properties.ts
+	scripts/inspect.mjs
+	scripts/interactive-browser-tour.ts
+	scripts/interactive-browser-verification.ts
+	scripts/merge-phase50-data.mjs
+	scripts/merge-translations.mjs
+	scripts/new-translations-data.mjs
+	scripts/open-browser-persistent.ts
+	scripts/package-e2e-audit-evidence.ts
+	scripts/package-portable-evidence-zip.ts
+	scripts/package-property-verification-evidence.ts
+	scripts/package-property-verification-remediated-evidence.ts
+	scripts/patch-localization-defects.cjs
+	scripts/patch-owner-utility-bills.cjs
+	scripts/patch-owner-workspace.cjs
+	scripts/patch-remaining-defects.cjs
+	scripts/print-phase50-en.mjs
+	scripts/qa-evidence-capturer.ts
+	scripts/reconcile-properties-db.ts
+	scripts/reconcile-timeline.ts
+	scripts/remediate-localization-dictionaries.ts
+	scripts/reproduce-renewal-reversal-defect.ts
+	scripts/run-e2e-single-property-lifecycle.ts
+	scripts/scratch-query-listings.ts
+	scripts/screenshot-analysis.json
+	scripts/seed-demo-data.ts
+	scripts/showcase-option-c.ts
+	scripts/take-services-screenshot.ts
+	scripts/test-localhost.ts
+	scripts/test-promo-query.ts
+	scripts/test-property-search-and-form.ts
+	scripts/test-safe-test-env-negative.ts
+	scripts/test-search-filter-live.ts
+	scripts/test-take-screenshot.ts
+	scripts/test-unified-dictionary.mjs
+	scripts/verify-3-operating-models.ts
+	scripts/verify-adversarial-security.ts
+	scripts/verify-agent-vendor-switcher-playwright.ts
+	scripts/verify-all-3-models-ledger.ts
+	scripts/verify-company-authority-playwright.ts
+	scripts/verify-company-switcher-playwright.ts
+	scripts/verify-find01-playwright.ts
+	scripts/verify-issue-b-localization.ts
+	scripts/verify-issue-c-database.ts
+	scripts/verify-localization-fixes.ts
+	scripts/verify-multi-role-playwright.ts
+	scripts/verify-owner-switcher-playwright.ts
+	scripts/verify-phase1-schema.ts
+	scripts/verify-rtl-ltr-screenshots.ts
+	scripts/verify-screenshot-integrity.ts
+	scripts/verify-tenant-switcher-playwright.ts
+	scripts/verify-workspace-switcher-enrollment-playwright.ts
+	scripts/verify-zip-contents.ts
+	scripts/verify-zip.ps1
+	src/components/admin/modules/AdminPromotionModerationModule.tsx
+	src/components/common/
+	src/components/onboarding/ScreenSelectWorkspace.tsx
+	src/components/owner/DepositInspectionModal.tsx
+	src/components/points/
+	src/components/promotions/
+	src/components/tenant/TenantDepositDisputeModal.tsx
+	src/components/tenant/TenantPropertyReviewModal.tsx
+	src/components/tenant/TenantWorkspaceSwitcherModal.tsx
+	src/data/
+	src/pages/CompanyDashboard.tsx
+	src/pages/PropertyDetailPage.tsx
+	src/pages/RentManagementPage.tsx
+	src/pages/RentalsPage.tsx
+	src/pages/ServicesPage.tsx
+	src/server/middleware/authRateLimit.ts
+	src/server/repositories/promotion-campaign.ts
+	src/server/repositories/reviews.ts
+	src/server/routes/points.ts
+	src/server/routes/promotions.ts
+	src/server/routes/reviews.ts
+	src/server/services/idempotency.ts
+	src/server/services/move-out-inspection.ts
+	src/server/services/points-engine.ts
+	src/server/services/promotion-campaign.ts
+	src/server/services/security-deposit-deduction.ts
+	src/server/utils/auth.ts
+	src/types/review.ts
+	test-audit.cjs
+	test-date.ts
+	test-debug.cjs
+	test-duplicate.cjs
+	test-duplicate.ts
+	test-lease-overlap.ts
+	test-lease-unit.ts
+	test-owner-finance-confirmed.cjs
+	test-owner-finance.cjs
+	test-partial-payment-renewal.cjs
+	test-partially-paid-tenant.cjs
+	test-recovery-failure.ts
+	test-renewal-bug.cjs
+	test-renewal-bug2.cjs
+	test-renewal-mid-fix.cjs
+	test-renewal-mid.cjs
+	test-results/f001-sorani-rtl-percentage-29f0e-o-50-and-persists-to-Review-chromium/
+	test-results/f001-sorani-rtl-percentage-cf083--50-in-English-LTR-baseline-chromium/
+	test-reversal-atomicity.ts
+	test-reversal-cancelled-schedule.cjs
+	test-reversal-renewal-bug.cjs
+	tests/active-untranslated.json
+	tests/add-property-details-step-removal.test.ts
+	tests/admin-dashboard-and-accountant-audit.test.ts
+	tests/admin-fee-management.test.ts
+	tests/agent-dashboard-ui-modernization.test.ts
+	tests/agent-vendor-active-role-guard.test.ts
+	tests/agent-vendor-workspace-switcher.test.tsx
+	tests/application-workflow.test.ts
+	tests/atomic-payment-reversal-boundary.test.ts
+	tests/audit-dict-sync.ts
+	tests/audit-localization.ts
+	tests/auth-rate-limiting-brute-force.test.ts
+	tests/auth-security-remediation.test.ts
+	tests/auth-security-reproduction.test.ts
+	tests/autopilot-removal-verification.test.ts
+	tests/categorize-keys.ts
+	tests/check-empty.ts
+	tests/check-ku-values.ts
+	tests/check-seed-data.ts
+	tests/check-vendor-key.ts
+	tests/co-tenant-schedule-visibility.test.ts
+	tests/code-keys-output.json
+	tests/code-keys-output.jsonl
+	tests/company-fabrication-audit.test.ts
+	tests/company-financial-overview-integrity.test.ts
+	tests/company-lease-approval-bypass.test.ts
+	tests/company-workspace-authority-remediation.test.ts
+	tests/company-workspace-switcher.test.tsx
+	tests/compare-crm-blocks.ts
+	tests/compare-existing.ts
+	tests/comprehensive-cross-domain-verification.ts
+	tests/concurrency-audit.test.ts
+	tests/concurrency-audit.ts
+	tests/concurrency.ts
+	tests/cross-domain-end-to-end-lifecycle.test.ts
+	tests/currency-lifecycle-integrity.test.ts
+	tests/database-gateway-fail-closed.test.ts
+	tests/def-10-date-formatting-defensive.test.ts
+	tests/demo-seed-integrity.test.ts
+	tests/deposit-deduction-accounting.test.ts
+	tests/dictionary-sync-audit.json
+	tests/digital-payment-confirmation.test.ts
+	tests/domain-details.txt
+	tests/dump-domain-details.ts
+	tests/e2e/add-property-step3-details-screenshot.spec.ts
+	tests/e2e/comprehensive-audit-evidence-capture.spec.ts
+	tests/e2e/comprehensive-audit-expansion.spec.ts
+	tests/e2e/comprehensive-property-wizard-audit.spec.ts
+	tests/e2e/dedicated-advertising-placements.spec.ts
+	tests/e2e/deep-audit-localization-recapture.spec.ts
+	tests/e2e/f001-sorani-rtl-percentage-rendering.spec.ts
+	tests/e2e/homehub-admin-fees-and-property-verification.spec.ts
+	tests/e2e/homehub-agent-domain-audit.spec.ts
+	tests/e2e/homehub-cross-domain-integration-audit.spec.ts
+	tests/e2e/homehub-deep-quality-audit-2026.spec.ts
+	tests/e2e/homehub-design-system-audit.spec.ts
+	tests/e2e/homehub-end-to-end-rental-lifecycle.spec.ts
+	tests/e2e/homehub-kurdish-arabic-localization.spec.ts
+	tests/e2e/homehub-new-english-homepage.spec.ts
+	tests/e2e/homehub-notifications-communications-activity-audit.spec.ts
+	tests/e2e/homehub-owner-financial-reporting-audit.spec.ts
+	tests/e2e/homehub-property-bills-utility-payments-audit.spec.ts
+	tests/e2e/homehub-property-discovery-sponsored-points-audit.spec.ts
+	tests/e2e/homehub-rental-ecosystem-simplicity-audit.spec.ts
+	tests/e2e/homehub-rental-property-tenant-management-audit.spec.ts
+	tests/e2e/homehub-security-deposits-collateral-audit.spec.ts
+	tests/e2e/homehub-user-registration-permissions-security-audit.spec.ts
+	tests/e2e/homehub-vendor-property-maintenance-audit.spec.ts
+	tests/e2e/homehub-whole-system-ui-audit.spec.ts
+	tests/e2e/lease-renewal-expiry-deep-audit.spec.ts
+	tests/e2e/localization-comprehensive-matrix.spec.ts
+	tests/e2e/marketplace-promotion-ranking.spec.ts
+	tests/e2e/master-ui-role-access-audit.spec.ts
+	tests/e2e/notifications-communications-crm-deep-audit.spec.ts
+	tests/e2e/owner-financial-dashboard-three-fee-audit.spec.ts
+	tests/e2e/phase58-adversarial-ui.spec.ts
+	tests/e2e/phase58-business-workflows-e2e.spec.ts
+	tests/e2e/phase58-role-lifecycle-e2e.spec.ts
+	tests/e2e/points-promotion-authorization.spec.ts
+	tests/e2e/points-sponsorship-comprehensive-audit.spec.ts
+	tests/e2e/points-sponsorship-ui-integration.spec.ts
+	tests/e2e/property-bills-utilities-maintenance-deep-audit.spec.ts
+	tests/e2e/property-ownership-and-management-consolidation.spec.ts
+	tests/e2e/property-registration-admin-approval-audit.spec.ts
+	tests/e2e/rent-management-page-visual.spec.ts
+	tests/e2e/rent-schedule-payment-reversal-deep-audit.spec.ts
+	tests/e2e/review-and-rating-visual.spec.ts
+	tests/e2e/security-deposits-bonds-refunds-deep-audit.spec.ts
+	tests/e2e/smoke.spec.ts
+	tests/e2e/tenant-lease-lifecycle-deep-audit.spec.ts
+	tests/e2e/verify-invalid-owner-fix-and-localization.spec.ts
+	tests/f001-ownership-percentage-rtl.test.ts
+	tests/find-active-untranslated.ts
+	tests/find-line.ts
+	tests/find01-active-workspace-guard.test.ts
+	tests/focused-lease-renewal-payment-reversal.test.ts
+	tests/generate-completion-list.ts
+	tests/historical-deposit-reconciliation-semantics.test.ts
+	tests/inspect-dict-only.ts
+	tests/inspect-discrepancies.ts
+	tests/keys-needing-completion.json
+	tests/lease-activation-overlap.test.ts
+	tests/lease-concurrency-postgres.test.ts
+	tests/lease-creation-authorization.test.ts
+	tests/lease-creation-integrity.test.ts
+	tests/lease-physical-space-overlap.test.ts
+	tests/lease-renewal-audit.test.ts
+	tests/lease-renewal-duplicate-check.test.ts
+	tests/lease-renewal-regression.test.ts
+	tests/lease-renewal-rejection-and-validation.test.ts
+	tests/lease-renewal-reversal-integrated.test.ts
+	tests/lease-shortening-integrity.test.ts
+	tests/listing-wizard-reuse-regression.test.ts
+	tests/localization-consistency-phase50.test.ts
+	tests/localization-discrepancies.json
+	tests/maintenance-authorization-idor.test.ts
+	tests/manager-payment-f02-remediation.test.ts
+	tests/move-out-deposit-reconciliation.test.ts
+	tests/move-out-inspection-deposit-deduction-schema.test.ts
+	tests/move-out-inspection-service.test.ts
+	tests/multi-role-account-integrity.test.ts
+	tests/multi-role-concurrency-and-vendor-auth.test.ts
+	tests/multi-role-ui.test.tsx
+	tests/native-auth-security.test.ts
+	tests/new-translations-map.json
+	tests/owner-dashboard-monthly-revenue.test.ts
+	tests/owner-dashboard-ui-modernization.test.ts
+	tests/owner-finance-confirmed-collection.test.ts
+	tests/owner-listing-rental-only.test.ts
+	tests/owner-three-fee-model-integrity.test.ts
+	tests/owner-workspace-switcher.test.tsx
+	tests/ownership-and-management-consolidation.test.ts
+	tests/payment-confirmation-authorization-idor.test.ts
+	tests/payment-reversal-integrity.test.ts
+	tests/payment-reversal-lease-renewal-integrity.test.ts
+	tests/payment-reversal-terminal-state.test.ts
+	tests/points-ledger-integrity.test.ts
+	tests/points-promotion-security-audit.test.ts
+	tests/points-promotions-routes.test.ts
+	tests/print-code-keys.ts
+	tests/promotion-campaign-lifecycle.test.ts
+	tests/promotion-expiry-scheduler.test.ts
+	tests/promotion-marketplace-ranking.test.ts
+	tests/property-bills-maintenance-integrity.test.ts
+	tests/property-command-center-financials.test.ts
+	tests/property-creation-audit.test.ts
+	tests/property-creation-error-classification.test.ts
+	tests/property-creation-idempotency.test.ts
+	tests/property-creation-validation.test.ts
+	tests/property-discovery-sponsored-points-lifecycle.test.ts
+	tests/property-verification-and-owner-management-choice.test.ts
+	tests/public-landing-navigation.test.ts
+	tests/real-postgres-safety-harness.test.ts
+	tests/registration-token-active-role.test.ts
+	tests/rent-management-page-audit.test.ts
+	tests/rent-marketplace-modernization.test.ts
+	tests/rental-application-consumption.test.ts
+	tests/rental-application-submission-audit.test.ts
+	tests/rental-property-tenant-management-lifecycle.test.ts
+	tests/rentals-consolidation-regression.test.ts
+	tests/reversal-fallback-fee-integrity.test.ts
+	tests/review-and-rating-extended-qa.test.ts
+	tests/review-and-rating.test.ts
+	tests/role-selection-enforcement.test.tsx
+	tests/safe-test-env.ts
+	tests/scratch-search-check.ts
+	tests/security-deposit-authorization.test.ts
+	tests/security-deposit-deduction-service.test.ts
+	tests/sequential-defect.test.ts
+	tests/simulate-merge.ts
+	tests/storage-route-identity.test.ts
+	tests/submit-application.test.ts
+	tests/tenant-authorization-audit.test.ts
+	tests/tenant-document-privacy-audit.test.ts
+	tests/tenant-fabrication-audit.test.ts
+	tests/tenant-inspection-visibility-boundary.test.ts
+	tests/tenant-partial-payment.test.ts
+	tests/tenant-payment-status-navigation.test.ts
+	tests/tenant-ui-fabrication.test.ts
+	tests/tenant-unconfirmed-payment-financial-integrity.test.ts
+	tests/tenant-workspace-switcher.test.tsx
+	tests/ui-audit-wiring-and-invariants.test.ts
+	tests/ui-defect-fixes-verification.test.ts
+	tests/ui-to-backend-integration-verification.test.ts
+	tests/unified-lease-creation-security.test.ts
+	tests/unit-creation-authorization-integrity.test.ts
+	tests/untranslated-ku.json
+	tests/user-registration-permissions-security-lifecycle.test.ts
+	tests/verify-coverage.ts
+	tests/workspace-switcher-multi-role-enrollment.test.tsx
+	verify-owner-finance.cjs
+	verify-reversal-healing.ts
+

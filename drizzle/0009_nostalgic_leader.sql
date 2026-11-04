@@ -1,0 +1,1 @@
+ALTER TABLE "rent_schedules" ADD CONSTRAINT "rent_schedules_lease_period_idx" UNIQUE("lease_id","period_start");

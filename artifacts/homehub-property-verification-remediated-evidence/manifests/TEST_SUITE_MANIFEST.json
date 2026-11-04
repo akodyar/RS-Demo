@@ -1,0 +1,41 @@
+[
+  {
+    "testId": "SUITE-01",
+    "file": "tests/property-verification-and-owner-management-choice.test.ts",
+    "command": "npx tsx --test tests/property-verification-and-owner-management-choice.test.ts",
+    "subtestsPassed": 13,
+    "totalPassed": 14,
+    "failed": 0,
+    "exitCode": 0,
+    "description": "Comprehensive verification lifecycle, admin approval/rejection, rejection reasons, resubmissions, material re-review, 3 choices, canonical agent eligibility across valid/invalid statuses, operating model preservation across transitions, fee model preservation, and decision history"
+  },
+  {
+    "testId": "SUITE-02",
+    "file": "tests/property-creation-validation.test.ts",
+    "command": "npx tsx --test tests/property-creation-validation.test.ts",
+    "subtestsPassed": 10,
+    "totalPassed": 11,
+    "failed": 0,
+    "exitCode": 0,
+    "description": "Server-side property creation validation, field requirements, city/address trimming, rental-only invariants, and rollback atomicity"
+  },
+  {
+    "testId": "SUITE-03",
+    "file": "tests/property-creation-idempotency.test.ts",
+    "command": "npx tsx --test tests/property-creation-idempotency.test.ts",
+    "subtestsPassed": 13,
+    "totalPassed": 14,
+    "failed": 0,
+    "exitCode": 0,
+    "description": "Property creation request-level idempotency, concurrent duplicate handling, transaction rollback, and replay guards"
+  },
+  {
+    "testId": "BUILD-01",
+    "file": "dist/server.cjs & dist/index.html",
+    "command": "npm run build",
+    "passed": "OK",
+    "failed": 0,
+    "exitCode": 0,
+    "description": "Vite client build and esbuild server bundle"
+  }
+]

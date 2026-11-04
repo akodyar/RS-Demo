@@ -1,0 +1,6 @@
+{
+  "name": "HomeHub — پلاتفۆرمی مۆدێرنی خانووبەرە",
+  "description": "پلاتفۆڕمێکی مۆدێرنی فرە-بەکارھێنەر بۆ کڕین، فرۆشتن، کرێ، بەڕێوەبردنی موڵک و خزمەتگوزاری بە کوردی و سۆرانی.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

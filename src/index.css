@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  /* Midnight Slate & Champagne Gold Brand Tokens */
+  --hh-color-navy-950: #070B14;
+  --hh-color-navy-900: #0C1322;
+  --hh-color-navy-850: #111B2E;
+  --hh-color-navy-800: #17243A;
+  --hh-color-navy-700: #24334A;
+
+  --hh-color-gold-300: #FFD04A;
+  --hh-color-gold-400: #F5B900;
+  --hh-color-gold-500: #D4AF37;
+  --hh-color-gold-600: #C59B27;
+
+  --hh-color-text-primary: #F7F9FC;
+  --hh-color-text-secondary: #AAB6C9;
+  --hh-color-text-muted: #64748B;
+  --hh-color-border: #1E293B;
+  --hh-color-border-subtle: rgba(255, 255, 255, 0.08);
+  --hh-color-border-gold: rgba(245, 185, 0, 0.25);
+
+  --hh-radius-sm: 8px;
+  --hh-radius-md: 12px;
+  --hh-radius-lg: 16px;
+  --hh-radius-xl: 22px;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    background-color: var(--hh-color-navy-950);
+    color: var(--hh-color-text-primary);
+  }
+  
+  [dir="rtl"] {
+    font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+  }
+}
+
+.font-arabic {
+  font-family: 'Noto Sans Arabic', system-ui, sans-serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Reusable Option 4 Design Tokens & Utilities */
+.hh-bg-canvas {
+  background-color: #070B14;
+}
+
+.hh-bg-card {
+  background-color: #0C1322;
+}
+
+.hh-bg-elevated {
+  background-color: #111B2E;
+}
+
+.hh-border-default {
+  border-color: #1E293B;
+}
+
+.hh-border-gold {
+  border-color: rgba(245, 185, 0, 0.25);
+}
+
+.hh-gold-gradient-btn {
+  background: linear-gradient(to right, #D4AF37, #E5C158, #C59B27);
+  color: #070B14;
+  font-weight: 800;
+}
+
+.hh-gold-glow {
+  box-shadow: 0 0 12px rgba(245, 185, 0, 0.2);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

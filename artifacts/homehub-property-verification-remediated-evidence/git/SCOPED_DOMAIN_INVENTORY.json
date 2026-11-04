@@ -1,0 +1,81 @@
+{
+  "domain": "Property Verification & Owner Management Choice",
+  "auditTimestamp": "2026-10-21T15:20:59.495Z",
+  "gitHead": "43175adaf6f04491e1d74e1f728a4561b7ede097",
+  "trackedModifiedFiles": [
+    {
+      "file": "Kaywan_Latest_Instructions.txt",
+      "scope": "DOMAIN_AUTHORITATIVE_CONTEXT",
+      "status": "Modified (Unstaged)",
+      "description": "Reconciled database backfill numbers (1,294 pre-migration rows across 620/48/626 branches), 4-concept architecture separation, canonical eligibility, and test manifests"
+    },
+    {
+      "file": "drizzle/meta/_journal.json",
+      "scope": "DOMAIN_MIGRATION_JOURNAL",
+      "status": "Modified (Unstaged)",
+      "description": "Registered entry 28 for migration 0028_property_management_preference_alignment.sql"
+    },
+    {
+      "file": "src/db/schema.ts",
+      "scope": "DOMAIN_DATABASE_SCHEMA",
+      "status": "Modified (Staged & Unstaged)",
+      "description": "Updated managementPreference to .default(\"SELF_MANAGED\").notNull()"
+    },
+    {
+      "file": "src/server/repositories/properties.ts",
+      "scope": "DOMAIN_REPOSITORY",
+      "status": "Modified (Staged & Unstaged)",
+      "description": "Canonical agent eligibility predicate, removed operatingModel mutations from setManagementPreference, removed inference from createProperty"
+    },
+    {
+      "file": "src/server/routes/properties.ts",
+      "scope": "DOMAIN_API_ROUTES",
+      "status": "Modified (Staged & Unstaged)",
+      "description": "Unified GET /api/properties/eligible-agents to call propertyRepository.getEligibleAgents()"
+    }
+  ],
+  "newDomainDeliverables": [
+    {
+      "file": "drizzle/0028_property_management_preference_alignment.sql",
+      "scope": "DATABASE_MIGRATION",
+      "status": "New Migration File (Applied to homehub_test)",
+      "description": "Backfilled 1,294 pre-migration rows across 3 branches, set DEFAULT SELF_MANAGED, NOT NULL, and check constraint"
+    },
+    {
+      "file": "tests/property-verification-and-owner-management-choice.test.ts",
+      "scope": "REGRESSION_TEST_SUITE",
+      "status": "New Test File",
+      "description": "14 passing tests: verification lifecycle, admin review, rejection reasons, resubmissions, material re-review, 3 choices, canonical agent eligibility, operating model preservation across transitions, fee model preservation, and decision history"
+    },
+    {
+      "file": "tests/property-creation-validation.test.ts",
+      "scope": "REGRESSION_TEST_SUITE",
+      "status": "New Test File",
+      "description": "11 passing tests: server-side validation, field requirements, city/address trimming, rental-only invariants, and rollback atomicity"
+    },
+    {
+      "file": "tests/property-creation-idempotency.test.ts",
+      "scope": "REGRESSION_TEST_SUITE",
+      "status": "New Test File",
+      "description": "14 passing tests: property creation request-level idempotency, concurrent duplicate handling, transaction rollback, and replay guards"
+    },
+    {
+      "file": "scripts/package-property-verification-remediated-evidence.ts",
+      "scope": "TOOLING_AND_PACKAGING",
+      "status": "New Tooling Script",
+      "description": "Evidence packaging and validation pipeline"
+    },
+    {
+      "file": "scripts/reconcile-properties-db.ts",
+      "scope": "DATABASE_AUDITING",
+      "status": "New Auditing Script",
+      "description": "Read-only database auditing and cross-tabulation verification"
+    }
+  ],
+  "preExistingUnrelatedFilesCount": {
+    "staged": 290,
+    "unstaged": 189,
+    "untracked": 1617
+  },
+  "preservationStatement": "All pre-existing changes across tenant, finance, onboarding, AI autopilot, and deferred payment-reversal/lease-renewal domains have been strictly preserved untouched without clean, reset, or overwrite."
+}

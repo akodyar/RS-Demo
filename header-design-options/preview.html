@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeHub Header & Navigation Design Options</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 32px 20px;
+    }
+    .container { max-width: 1300px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 40px; }
+    header h1 { font-size: 2.2rem; font-weight: 800; color: #38bdf8; margin-bottom: 12px; }
+    header p { font-size: 1.1rem; color: #94a3b8; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 48px; }
+    .card {
+      background: #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+    }
+    .card-img {
+      width: 100%;
+      display: block;
+      background: #0b0f19;
+    }
+    .card-body { padding: 24px 28px; }
+    .card-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+    .badge-1 { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .badge-2 { background: rgba(34, 211, 238, 0.15); color: #22d3ee; border: 1px solid rgba(34, 211, 238, 0.3); }
+    .badge-3 { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.3); }
+    .badge-4 { background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); }
+    .card-title { font-size: 1.5rem; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+    .card-desc { font-size: 1rem; line-height: 1.6; color: #cbd5e1; margin-bottom: 16px; }
+    .card-features {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+    }
+    .card-features li {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      padding-left: 20px;
+      position: relative;
+    }
+    .card-features li::before {
+      content: "•";
+      color: #38bdf8;
+      position: absolute;
+      left: 6px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>HomeHub Header & Navigation Bar Design Options</h1>
+      <p>Compare the 4 high-fidelity design directions aligned with HomeHub's Kurdish Sorani RTL layout and luxury rental branding.</p>
+    </header>
+
+    <div class="grid">
+      <!-- Option 1 -->
+      <div class="card">
+        <a href="option-1-floating-glassmorphism.jpg" target="_blank">
+          <img class="card-img" src="option-1-floating-glassmorphism.jpg" alt="Option 1: Floating Frosted Glassmorphism Header">
+        </a>
+        <div class="card-body">
+          <span class="card-badge badge-1">Option 1</span>
+          <h2 class="card-title">Floating Frosted Glassmorphism (Modern & Elevated)</h2>
+          <p class="card-desc">A floating island container with rounded corners and translucent frosted glass hovering smoothly over the residential hero background.</p>
+          <ul class="card-features">
+            <li>Floating rounded island (rounded-2xl) with subtle outer glow</li>
+            <li>Semi-transparent frosted glass with backdrop blur</li>
+            <li>Soft glowing blue pill for active tab سەرەکی</li>
+            <li>Translucent language pill with globe icon and sapphire blue sign-in button</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Option 2 -->
+      <div class="card">
+        <a href="option-2-seamless-cinematic.jpg" target="_blank">
+          <img class="card-img" src="option-2-seamless-cinematic.jpg" alt="Option 2: Seamless Cinematic Dark Header">
+        </a>
+        <div class="card-body">
+          <span class="card-badge badge-2">Option 2</span>
+          <h2 class="card-title">Seamless Cinematic Dark Header (Integrated & Immersive)</h2>
+          <p class="card-desc">Directly integrated into the dark residential hero background with a subtle gradient vignette, removing the harsh white box entirely.</p>
+          <ul class="card-features">
+            <li>Zero visual boundary — flows directly into hero photo</li>
+            <li>Glowing cyan underline indicator on active tab سەرەکی</li>
+            <li>Frosted glass outlined + زیادکردنی موڵکی نوێ button</li>
+            <li>Illuminated turquoise emblem and electric blue sign-in button</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Option 3 -->
+      <div class="card">
+        <a href="option-3-elevated-luxury.jpg" target="_blank">
+          <img class="card-img" src="option-3-elevated-luxury.jpg" alt="Option 3: Elevated Architectural White Header">
+        </a>
+        <div class="card-body">
+          <span class="card-badge badge-3">Option 3</span>
+          <h2 class="card-title">Elevated Architectural White Header (Crisp & Editorial)</h2>
+          <p class="card-desc">Pure white luxury architectural header with curved lower corners, soft multi-layer drop shadow, and refined micro-pill accents.</p>
+          <ul class="card-features">
+            <li>Curved bottom corners extending over the hero</li>
+            <li>Deep navy solid pill for سەرەکی for high contrast</li>
+            <li>Kurdish flag icon inside the custom language selector</li>
+            <li>Soft blue tinted + زیادکردنی موڵکی نوێ pill and rich cobalt blue button</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Option 4 -->
+      <div class="card">
+        <a href="option-4-midnight-gold.jpg" target="_blank">
+          <img class="card-img" src="option-4-midnight-gold.jpg" alt="Option 4: Midnight Slate & Champagne Gold Header">
+        </a>
+        <div class="card-body">
+          <span class="card-badge badge-4">Option 4</span>
+          <h2 class="card-title">Midnight Slate & Champagne Gold Header (VIP & Exclusive)</h2>
+          <p class="card-desc">Ultra-luxury dark midnight navy header with razor-thin champagne gold trim and warm amber highlights, matching the Sponsored Properties aesthetic.</p>
+          <ul class="card-features">
+            <li>Deep #0c1222 midnight navy matching the HomeHub footer</li>
+            <li>Champagne gold hairline metallic trim along bottom edge</li>
+            <li>Warm ambient amber/gold glow under سەرەکی</li>
+            <li>Metallic framed + زیادکردنی موڵکی نوێ button and royal blue button</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

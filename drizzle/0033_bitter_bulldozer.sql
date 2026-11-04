@@ -1,0 +1,3 @@
+ALTER TABLE "leases" ADD CONSTRAINT "leases_status_check" CHECK ("leases"."status" IN ('DRAFT', 'PENDING_APPROVAL', 'PENDING_SIGNATURE', 'ACTIVE', 'EXPIRING', 'EXPIRED', 'TERMINATED', 'CANCELLED'));--> statement-breakpoint
+ALTER TABLE "payment_records" ADD CONSTRAINT "payment_records_status_check" CHECK ("payment_records"."status" IN ('PENDING', 'RECORDED', 'CONFIRMED', 'SETTLED', 'FAILED', 'CANCELLED', 'REFUNDED', 'REVERSED'));--> statement-breakpoint
+ALTER TABLE "security_deposits" ADD CONSTRAINT "security_deposits_status_check" CHECK ("security_deposits"."status" IN ('PENDING', 'PARTIALLY_COLLECTED', 'HELD', 'PARTIALLY_REFUNDED', 'REFUNDED', 'DEDUCTED'));

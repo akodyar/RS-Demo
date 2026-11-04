@@ -1,0 +1,1 @@
+ALTER TABLE "security_deposits" ADD COLUMN "released_amount" numeric DEFAULT '0';

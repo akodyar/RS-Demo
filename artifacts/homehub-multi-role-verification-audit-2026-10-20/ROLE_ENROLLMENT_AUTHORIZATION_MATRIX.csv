@@ -1,0 +1,17 @@
+Role,Endpoint,SelfEnrollAllowed,HttpCode,ErrorCode,ProfileInitialized,InitialStatus,SupportingTable,SubsequentRestrictions,TransactionAtomic,Idempotent,VerificationStatus
+TENANT,/api/auth/roles/enroll,YES,200,NONE,NONE,ACTIVE,none,"Requires active leaseTenants record for lease access",YES,YES,VERIFIED
+PROPERTY_OWNER (Individual),/api/auth/roles/enroll,YES,200,NONE,NONE,ACTIVE,none,"Requires ownershipRecords record for property mutation",YES,YES,VERIFIED
+PROPERTY_OWNER (Company),/api/auth/roles/enroll,YES,200,NONE,ORGANIZATION,PENDING_VERIFICATION,"organizations, organization_members","Organization requires admin verification; company management requires verified status",YES,YES,VERIFIED
+AGENT_BROKER,/api/auth/roles/enroll,YES,200,NONE,AGENT_PROFILE,PENDING_VERIFICATION,agent_profiles,"Cannot publish public listings or act as verified agent (requireActiveAgent returns 403 AGENT_VERIFICATION_REQUIRED)",YES,YES,VERIFIED
+VENDOR,/api/auth/roles/enroll,YES,200,NONE,VENDOR_PROFILE,PENDING,vendor_profiles,"Cannot update work orders, submit quotes, or issue invoices (requireApprovedVendor returns 403 VENDOR_VERIFICATION_REQUIRED)",YES,YES,VERIFIED
+BUYER,/api/auth/roles/enroll,YES,200,NONE,NONE,ACTIVE,none,"Dormant feature: FeatureFlags.BUY_SELL_ENABLED === false redirects to /rentals",YES,YES,VERIFIED
+PLATFORM_ADMIN,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; system administrator provisioning only",YES,YES,VERIFIED
+SUPER_ADMIN,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; database seed / super admin only",YES,YES,VERIFIED
+ADMIN,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; administrative provisioning only",YES,YES,VERIFIED
+FINANCE_ADMIN,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; administrative provisioning only",YES,YES,VERIFIED
+COMPLIANCE_ADMIN,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; administrative provisioning only",YES,YES,VERIFIED
+OPERATIONS_ADMIN,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; administrative provisioning only",YES,YES,VERIFIED
+SECURITY_ADMIN,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; administrative provisioning only",YES,YES,VERIFIED
+AUDITOR,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; administrative provisioning only",YES,YES,VERIFIED
+READ_ONLY_ADMIN,/api/auth/roles/enroll,NO,403,FORBIDDEN_PRIVILEGED_ROLE,NONE,NONE,none,"Self-enrollment prohibited; administrative provisioning only",YES,YES,VERIFIED
+MALFORMED_ROLE,/api/auth/roles/enroll,NO,400,INVALID_ROLE,NONE,NONE,none,"Rejected by schema enum validation guard",YES,YES,VERIFIED

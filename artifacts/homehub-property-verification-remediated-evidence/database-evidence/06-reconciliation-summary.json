@@ -1,0 +1,135 @@
+{
+  "currentTotalProperties": 1379,
+  "nullManagementPreferenceCount": 0,
+  "catalogConstraints": {
+    "columnName": "management_preference",
+    "isNullable": "NO",
+    "columnDefault": "'SELF_MANAGED'::text",
+    "checkConstraintDefinition": "CHECK ((management_preference = ANY (ARRAY['SELF_MANAGED'::text, 'HOMEHUB_MANAGED'::text, 'AGENT_MANAGED'::text])))"
+  },
+  "historicalTimeline": {
+    "preMigrationCount": 1294,
+    "migration0028Timestamp": "2026-10-21T13:34:36.000Z",
+    "backfillBranch1_HomehubManaged": 620,
+    "backfillBranch2_AgentManaged": 48,
+    "backfillBranch3_SelfManaged": 626,
+    "totalBackfilledByMigration0028": 1294,
+    "arithmeticTypoExplanation": "The legacy 1,283 figure originated in an early post-backfill query log (task-1472.log) summing the non-agent-operated rows (613 null + 595 FULLY_MANAGED + 33 ALPM + 21 SELF_MANAGED + 21 DIRECT_RENTAL = 1,283), which omitted the 48 AGENT_OPERATED properties (1,283 + 48 = 1,331). A prior report incorrectly claimed 1,283 resulted from 620 + 626 (which actually equals 1,246). The verified migration arithmetic is Branch 1 (620) + Branch 2 (48) + Branch 3 (626) = 1294."
+  },
+  "postMigrationTestAttribution": {
+    "totalTestRowsCreated": 85,
+    "breakdownBySuite": [
+      {
+        "source": "SUITE-02: property-creation-validation.test.ts",
+        "count": 54
+      },
+      {
+        "source": "SUITE-01: property-verification-and-owner-management-choice.test.ts",
+        "count": 19
+      },
+      {
+        "source": "OTHER_TEST_ACTIVITY",
+        "count": 12
+      }
+    ]
+  },
+  "currentDistribution": {
+    "byPreference": [
+      {
+        "preference": "SELF_MANAGED",
+        "count": 689
+      },
+      {
+        "preference": "HOMEHUB_MANAGED",
+        "count": 634
+      },
+      {
+        "preference": "AGENT_MANAGED",
+        "count": 56
+      }
+    ],
+    "byOperatingModel": [
+      {
+        "model": null,
+        "count": 639
+      },
+      {
+        "model": "FULLY_MANAGED",
+        "count": 609
+      },
+      {
+        "model": "AGENT_OPERATED",
+        "count": 51
+      },
+      {
+        "model": "AGENT_LISTED_PLATFORM_MANAGED",
+        "count": 38
+      },
+      {
+        "model": "SELF_MANAGED",
+        "count": 21
+      },
+      {
+        "model": "DIRECT_RENTAL",
+        "count": 21
+      }
+    ],
+    "crossTabulation": [
+      {
+        "model": "(NULL)",
+        "preference": "SELF_MANAGED",
+        "arrangementStatus": "NOT_APPLICABLE",
+        "count": 634
+      },
+      {
+        "model": "FULLY_MANAGED",
+        "preference": "HOMEHUB_MANAGED",
+        "arrangementStatus": "AWAITING_ONBOARDING",
+        "count": 601
+      },
+      {
+        "model": "AGENT_OPERATED",
+        "preference": "AGENT_MANAGED",
+        "arrangementStatus": "AWAITING_AGREEMENT",
+        "count": 51
+      },
+      {
+        "model": "AGENT_LISTED_PLATFORM_MANAGED",
+        "preference": "HOMEHUB_MANAGED",
+        "arrangementStatus": "AWAITING_ONBOARDING",
+        "count": 33
+      },
+      {
+        "model": "DIRECT_RENTAL",
+        "preference": "SELF_MANAGED",
+        "arrangementStatus": "NOT_APPLICABLE",
+        "count": 21
+      },
+      {
+        "model": "SELF_MANAGED",
+        "preference": "SELF_MANAGED",
+        "arrangementStatus": "NOT_APPLICABLE",
+        "count": 21
+      },
+      {
+        "model": "FULLY_MANAGED",
+        "preference": "SELF_MANAGED",
+        "arrangementStatus": "NOT_APPLICABLE",
+        "count": 8
+      },
+      {
+        "model": "AGENT_LISTED_PLATFORM_MANAGED",
+        "preference": "SELF_MANAGED",
+        "arrangementStatus": "NOT_APPLICABLE",
+        "count": 5
+      },
+      {
+        "model": "(NULL)",
+        "preference": "AGENT_MANAGED",
+        "arrangementStatus": "AWAITING_AGREEMENT",
+        "count": 5
+      }
+    ]
+  },
+  "domainRuleAnomaliesCount": 0
+}

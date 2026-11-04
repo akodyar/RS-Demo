@@ -1,0 +1,157 @@
+[
+  {
+    "path": "00-EVIDENCE-INDEX.md",
+    "sizeBytes": 3792,
+    "sha256": "17f34886c4858f93e3fa1cbb199f43de8e1636a56889943d913cfaf052d8e7eb"
+  },
+  {
+    "path": "catalog/domain-indexes.json",
+    "sizeBytes": 1784,
+    "sha256": "d47c4128ff71e84b75bf7e531d1c47b69aa1353c0df8d3ce20e471b04eb90c9a"
+  },
+  {
+    "path": "catalog/domain-table-columns.json",
+    "sizeBytes": 14926,
+    "sha256": "aa8b070ce3e028698304dc40ca31798fafb07265218eef9be611db9499f8740f"
+  },
+  {
+    "path": "catalog/properties-catalog.json",
+    "sizeBytes": 3875,
+    "sha256": "6d9b941d60e81b56cc8927a81ee4f1e8badb7449f190ba3afbf988aadd02e15d"
+  },
+  {
+    "path": "catalog/verification_records-catalog.json",
+    "sizeBytes": 3079,
+    "sha256": "0589819cb6f6932889cfe788335b429a8fafc486dba1cf24409f3128d7f1a1ee"
+  },
+  {
+    "path": "database-evidence/01-properties-live-state.json",
+    "sizeBytes": 4862,
+    "sha256": "bfa985df22d830f1ca0bbc576630383be73cd4cafca4997cfc2c1b02b17acfb1"
+  },
+  {
+    "path": "database-evidence/02-verification-records-live-state.json",
+    "sizeBytes": 4634,
+    "sha256": "300cf4d4af27aaa58d9dfa03f864e72f0f49e59d87d365d440224eeba4e6b06d"
+  },
+  {
+    "path": "database-evidence/03-listings-live-state.json",
+    "sizeBytes": 3066,
+    "sha256": "818f36f067e9824d58a392fea4c1f0e654e569c312cac4757545deaddc1ef952"
+  },
+  {
+    "path": "database-evidence/04-management-agreements-live-state.json",
+    "sizeBytes": 4153,
+    "sha256": "fc723ba2e8869420e5580ad599b16e31d66211a9cfa693753892b179ab1ee797"
+  },
+  {
+    "path": "git/GIT_DIFF_STAT.txt",
+    "sizeBytes": 6426,
+    "sha256": "48d48653732062dbf23bd146a6735dfea1190fec4756b884e4886033f5259950"
+  },
+  {
+    "path": "git/GIT_HEAD.txt",
+    "sizeBytes": 40,
+    "sha256": "a5d9928f7abffb084eac6a1170a73182949f66ab5eac099376da91f4155a966d"
+  },
+  {
+    "path": "git/GIT_STATUS.txt",
+    "sizeBytes": 31631,
+    "sha256": "6e4e6778aaf8718322115eb124079906287eaad7466e3de4fa37129f6ba48072"
+  },
+  {
+    "path": "git/PROPERTY_VERIFICATION_DIFF.patch",
+    "sizeBytes": 494150,
+    "sha256": "a18cc01674b044149101f98dd0ebfd3ea69eb23e19b7298bdcbd27a798080943"
+  },
+  {
+    "path": "logs/01-property-verification-and-owner-management-choice.log",
+    "sizeBytes": 3238,
+    "sha256": "d2303635908270a813a310c356d1c261b622cc22501efec9e9a8d2f2b0e9e816"
+  },
+  {
+    "path": "logs/02-property-creation-validation.log",
+    "sizeBytes": 2086,
+    "sha256": "3f30e3cf2b6482b8d492b533b2025f60dfa268913ee57d1e97da57e9d30a6e79"
+  },
+  {
+    "path": "logs/03-property-creation-idempotency.log",
+    "sizeBytes": 4191,
+    "sha256": "edecd5f1c2cc2d3d5eab2941fc5d4309f41519a1fc2c38603fa1c072acf454bb"
+  },
+  {
+    "path": "logs/04-npm-build.log",
+    "sizeBytes": 550,
+    "sha256": "9da83d1fc35393abd5db61aec878485decef2e11e5d1c872e8171dd8ec586802"
+  },
+  {
+    "path": "manifests/SCHEMA_MIGRATIONS_MANIFEST.json",
+    "sizeBytes": 1507,
+    "sha256": "73a770bb3d770281d90b1d29fb2e55d7456cd7ab30515af32801668b4f74c203"
+  },
+  {
+    "path": "manifests/TEST_SUITE_MANIFEST.json",
+    "sizeBytes": 1404,
+    "sha256": "dad07e0e6d7054433462448b1b957c41f7622c7af7253d0264fe9cee2b2c3761"
+  },
+  {
+    "path": "README.md",
+    "sizeBytes": 2982,
+    "sha256": "50f545d55fcbefc29e16080d65fe893c7a60afc5b6d124bb28f3c1276a2fd305"
+  },
+  {
+    "path": "ROLLOUT_AND_SAFETY_REVIEW.md",
+    "sizeBytes": 1736,
+    "sha256": "161431d2a9e431f0f2cc5f90c09d233d5bcb938cf39e7834d7c557c2f5caf9dd"
+  },
+  {
+    "path": "source-excerpts/0027_property_verification_and_management_choice.sql",
+    "sizeBytes": 1736,
+    "sha256": "926b42e29a6ea007c751b9aecbe7906814f9f7e5a44ec97dd7f1b61e451b2078"
+  },
+  {
+    "path": "source-excerpts/AddPropertyPage.tsx",
+    "sizeBytes": 126724,
+    "sha256": "8f1fb043e940ede60a621aff2caebe55eca0872f53d7ec122f194689831953cc"
+  },
+  {
+    "path": "source-excerpts/admin-routes.ts",
+    "sizeBytes": 41241,
+    "sha256": "0310ad53715f5a456ed68d6de14d5e067194c26e13d70d61258ec30bb19db1f1"
+  },
+  {
+    "path": "source-excerpts/AdminPropertiesModule.tsx",
+    "sizeBytes": 48225,
+    "sha256": "d94f0a97250df51c19d7ba9f9702d64ed4841432d3f52ed0d0985af559911001"
+  },
+  {
+    "path": "source-excerpts/Kaywan_Latest_Instructions.txt",
+    "sizeBytes": 381803,
+    "sha256": "33bb8565fb5fc0e49bbb0ed37a072c86f7ab5862062ad33403f20eb3755304cd"
+  },
+  {
+    "path": "source-excerpts/marketplace-routes.ts",
+    "sizeBytes": 8324,
+    "sha256": "2ad40db7baf1684172c0e0a54c5d613ea2d1554079d9fd7ca32250e5ed8465e9"
+  },
+  {
+    "path": "source-excerpts/OwnerWorkspace.tsx",
+    "sizeBytes": 230826,
+    "sha256": "d970c0d5350937609772ac56e94410d9fbab2d80b99ccfcef846a938a164d5c6"
+  },
+  {
+    "path": "source-excerpts/properties-repository.ts",
+    "sizeBytes": 59081,
+    "sha256": "8b054c97a74f913f66afcd021191dbe1c2781ad8f715f9adc038c41abc5f1ae3"
+  },
+  {
+    "path": "source-excerpts/properties-routes.ts",
+    "sizeBytes": 9226,
+    "sha256": "38892ba89a3fc5b47491354992e9708e9bcb346a6ed4f31201dcdd21ba43ba61"
+  },
+  {
+    "path": "source-excerpts/property-verification-and-owner-management-choice.test.ts",
+    "sizeBytes": 24373,
+    "sha256": "b7cb8232bdc310db8cd0b89b8b6c6805abb5c3fc921da08dd2f1b1ca7a704d83"
+  }
+]

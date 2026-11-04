@@ -1,0 +1,716 @@
+[
+  {
+    "key": "common.selected",
+    "files": [
+      "src/components/common/WorkspaceSwitcherModal.tsx"
+    ],
+    "defaultValues": [
+      "دیاریکراو"
+    ]
+  },
+  {
+    "key": "workspace.agent_individual",
+    "files": [
+      "src/components/common/WorkspaceSwitcherModal.tsx"
+    ],
+    "defaultValues": [
+      "ئەگێنتی سەربەخۆ"
+    ]
+  },
+  {
+    "key": "workspace.agent_company",
+    "files": [
+      "src/components/common/WorkspaceSwitcherModal.tsx"
+    ],
+    "defaultValues": [
+      "کۆمپانیای دەڵاڵی / ئاژانس"
+    ]
+  },
+  {
+    "key": "workspace.agent_company_name_placeholder",
+    "files": [
+      "src/components/common/WorkspaceSwitcherModal.tsx"
+    ],
+    "defaultValues": [
+      "بۆ نموونە: ئاژانسی بەغداد بۆ خانووبەرە"
+    ]
+  },
+  {
+    "key": "common.continue",
+    "files": [
+      "src/components/onboarding/Screen6RoleConfirmation.tsx",
+      "src/components/onboarding/Screen7ProfileSetup.tsx"
+    ],
+    "defaultValues": [
+      "بەردەوام بە"
+    ]
+  },
+  {
+    "key": "common.skip_later",
+    "files": [
+      "src/components/onboarding/Screen6RoleConfirmation.tsx"
+    ],
+    "defaultValues": [
+      "دواتر ئەنجام دەدەم"
+    ]
+  },
+  {
+    "key": "onboard.step1",
+    "files": [
+      "src/components/onboarding/Screen7ProfileSetup.tsx"
+    ],
+    "defaultValues": [
+      "هەڵبژێرە"
+    ]
+  },
+  {
+    "key": "onboard.step2",
+    "files": [
+      "src/components/onboarding/Screen7ProfileSetup.tsx"
+    ],
+    "defaultValues": [
+      "هەژمار"
+    ]
+  },
+  {
+    "key": "onboard.step3",
+    "files": [
+      "src/components/onboarding/Screen7ProfileSetup.tsx"
+    ],
+    "defaultValues": [
+      "پرۆفایل"
+    ]
+  },
+  {
+    "key": "profile.language.label",
+    "files": [
+      "src/components/onboarding/Screen7ProfileSetup.tsx"
+    ],
+    "defaultValues": [
+      "زمانی پەسەندکراو"
+    ]
+  },
+  {
+    "key": "profile.currency.label",
+    "files": [
+      "src/components/onboarding/Screen7ProfileSetup.tsx"
+    ],
+    "defaultValues": [
+      "دراوی پەسەندکراو"
+    ]
+  },
+  {
+    "key": "onboarding.consent.title",
+    "files": [
+      "src/components/onboarding/Screen7ProfileSetup.tsx"
+    ],
+    "defaultValues": [
+      "من مەرج و ڕێنمایەکان پەسەند دەکەم"
+    ]
+  },
+  {
+    "key": "onboarding.consent.terms_link",
+    "files": [
+      "src/components/onboarding/Screen7ProfileSetup.tsx"
+    ],
+    "defaultValues": [
+      "بینینی مەرج و ڕێنمایەکان"
+    ]
+  },
+  {
+    "key": "common.edit",
+    "files": [
+      "src/components/onboarding/Screen8ProfileReview.tsx"
+    ],
+    "defaultValues": [
+      "گۆڕانکاری"
+    ]
+  },
+  {
+    "key": "reviews.propertyRatingHeading",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Property Rating & Resident Experience"
+    ]
+  },
+  {
+    "key": "reviews.propertyRatingSub",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Verified resident feedback on maintenance, amenities, and living conditions."
+    ]
+  },
+  {
+    "key": "reviews.reviewsCount",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "reviews"
+    ]
+  },
+  {
+    "key": "reviews.noReviewsYet",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "No resident reviews yet"
+    ]
+  },
+  {
+    "key": "reviews.yourReview",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Your Submitted Review"
+    ]
+  },
+  {
+    "key": "reviews.editReview",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Edit Review"
+    ]
+  },
+  {
+    "key": "reviews.managementResponse",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Response from Property Management"
+    ]
+  },
+  {
+    "key": "reviews.shareYourThoughts",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "How is your living experience at this property?"
+    ]
+  },
+  {
+    "key": "reviews.helpCommunity",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Your honest review helps future residents and helps management improve building services."
+    ]
+  },
+  {
+    "key": "reviews.writeReview",
+    "files": [
+      "src/components/tenant/TenantLeaseView.tsx"
+    ],
+    "defaultValues": [
+      "Write a Review"
+    ]
+  },
+  {
+    "key": "reviews.invalidRating",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Please select an overall rating between 1 and 5 stars."
+    ]
+  },
+  {
+    "key": "reviews.commentMinLength",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Review comment must be at least 5 characters long."
+    ]
+  },
+  {
+    "key": "reviews.commentMaxLength",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Review comment cannot exceed 2000 characters."
+    ]
+  },
+  {
+    "key": "reviews.updateSuccess",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Your review has been updated."
+    ]
+  },
+  {
+    "key": "reviews.submitSuccess",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Thank you! Your review has been published."
+    ]
+  },
+  {
+    "key": "reviews.editTitle",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Edit Your Review"
+    ]
+  },
+  {
+    "key": "reviews.newTitle",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Rate & Review Property"
+    ]
+  },
+  {
+    "key": "reviews.overallRating",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Overall Rating"
+    ]
+  },
+  {
+    "key": "reviews.aspectRatings",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Aspect Ratings (Optional)"
+    ]
+  },
+  {
+    "key": "reviews.cleanliness",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Cleanliness & Upkeep"
+    ]
+  },
+  {
+    "key": "reviews.maintenance",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Maintenance Responsiveness"
+    ]
+  },
+  {
+    "key": "reviews.communication",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Landlord / Management Communication"
+    ]
+  },
+  {
+    "key": "reviews.location",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Location & Neighborhood"
+    ]
+  },
+  {
+    "key": "reviews.headline",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Review Headline"
+    ]
+  },
+  {
+    "key": "common.optional",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Optional"
+    ]
+  },
+  {
+    "key": "reviews.headlinePlaceholder",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "e.g. Quiet neighborhood, excellent management"
+    ]
+  },
+  {
+    "key": "reviews.feedback",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Your Honest Experience"
+    ]
+  },
+  {
+    "key": "reviews.feedbackPlaceholder",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Share details about the property condition, building amenities, utilities, noise levels, and overall living experience..."
+    ]
+  },
+  {
+    "key": "reviews.privacyNotice",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "HomeHub enforces verified reviews. Your review will be published as a Verified Resident with your name abbreviated to protect your privacy."
+    ]
+  },
+  {
+    "key": "common.saving",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx",
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "Saving...",
+      "پاشەکەوت دەکرێت..."
+    ]
+  },
+  {
+    "key": "reviews.updateReviewBtn",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Update Review"
+    ]
+  },
+  {
+    "key": "reviews.publishReviewBtn",
+    "files": [
+      "src/components/tenant/TenantPropertyReviewModal.tsx"
+    ],
+    "defaultValues": [
+      "Publish Review"
+    ]
+  },
+  {
+    "key": "Today, 10:15 AM",
+    "files": [
+      "src/pages/IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Today, 10:15 AM"
+    ]
+  },
+  {
+    "key": "Yesterday, 04:30 PM",
+    "files": [
+      "src/pages/IntegrationsAdminWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Yesterday, 04:30 PM"
+    ]
+  },
+  {
+    "key": "property.error.access_title",
+    "files": [
+      "src/pages/PropertyCommandCenter.tsx"
+    ],
+    "defaultValues": [
+      "Property Management Command Center"
+    ]
+  },
+  {
+    "key": "property.error.auth_restricted",
+    "files": [
+      "src/pages/PropertyCommandCenter.tsx"
+    ],
+    "defaultValues": [
+      "Access to internal property analytics and financial operations requires an authorized Owner or Property Manager session."
+    ]
+  },
+  {
+    "key": "property.action.view_public_listing",
+    "files": [
+      "src/pages/PropertyCommandCenter.tsx"
+    ],
+    "defaultValues": [
+      "View Public Rental Listing"
+    ]
+  },
+  {
+    "key": "property.action.sign_in_owner",
+    "files": [
+      "src/pages/PropertyCommandCenter.tsx"
+    ],
+    "defaultValues": [
+      "Sign In as Owner"
+    ]
+  },
+  {
+    "key": "marketplace.actions.apply_success",
+    "files": [
+      "src/pages/SearchExplorerPage.tsx"
+    ],
+    "defaultValues": [
+      "Rental application submitted successfully! Check your tenant workspace."
+    ]
+  },
+  {
+    "key": "tenant.onboarding.title",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ڕێکخستنی پڕۆفایلی کرێچی | Tenant Profile Setup"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.subtitle",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "پڕۆفایلەکەت تەواو بکە بۆ داواکردنی موڵک یان بەڕێوەبردنی گرێبەستی کرێداریت."
+    ]
+  },
+  {
+    "key": "tenant.onboarding.welcome_title",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "بەخێربێن بۆ پۆڕتاڵی کرێچی"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.welcome_desc",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ئێمە یارمەتیت دەدەین لە ڕێکخستنی خێرای هەژمارەکەت تا بتوانیت داواکاری کرێداری بنێریت، کرێ بە ئۆنلاین بدەیت، و داواکاری چاککردنەوە تۆمار بکەیت."
+    ]
+  },
+  {
+    "key": "tenant.onboarding.personal_profile",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "زانیاری کەسیی کرێچی"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.first_name",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ناوی یەکەم"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.last_name",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ناوی دووەم و نازناو"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.phone",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ژمارەی مۆبایل"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.preferences_title",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "هەڵبژاردنی تایبەتمەندی و شوێن"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.desired_bedrooms",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ژمارەی ژووری خەوتن"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.opt_studio",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ستۆدیۆ / یەک ژوور"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.opt_1bed",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "١ ژووری خەوتن"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.opt_2bed",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "٢ ژووری خەوتن"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.opt_3bed_plus",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "٣+ ژووری خەوتن"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.preferred_location",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "شوێنی دڵخواز (گەڕەک یان پڕۆژە)"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.location_placeholder",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "بۆ نموونە: ئیمپایەر، دریم ستی، بەختیاری"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.documents_title",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "بەڵگەنامە و پێناسە پێویستەکان"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.docs_note_title",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "تێبینی دەربارەی بارکردنی دۆکیومێنت:"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.docs_note_body",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "دەتوانیت لەم قۆناغەدا بارکردنی پەڕگەکان تێپەڕێنیت و ڕاستەوخۆ لە کاتی واژووکردنی گرێبەست لەگەڵ خاوەن موڵک یان بریکار پێشکەشی بکەیت."
+    ]
+  },
+  {
+    "key": "tenant.onboarding.review_title",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "پێداچوونەوەی کۆتایی و تۆمارکردن"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.name",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ناو"
+    ]
+  },
+  {
+    "key": "common.not_provided",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "دیاری نەکراوە"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.target_bedrooms",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "ژمارەی ژوور"
+    ]
+  },
+  {
+    "key": "common.back",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "گەڕانەوە"
+    ]
+  },
+  {
+    "key": "common.next",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "دواتر"
+    ]
+  },
+  {
+    "key": "tenant.onboarding.complete_btn",
+    "files": [
+      "src/pages/TenantOnboarding.tsx"
+    ],
+    "defaultValues": [
+      "تەواوکردنی پڕۆفایل"
+    ]
+  }
+]

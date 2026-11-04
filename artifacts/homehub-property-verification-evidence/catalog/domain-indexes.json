@@ -1,0 +1,47 @@
+[
+  {
+    "tablename": "properties",
+    "indexname": "properties_mgmt_arr_idx",
+    "indexdef": "CREATE INDEX properties_mgmt_arr_idx ON public.properties USING btree (management_arrangement_status)"
+  },
+  {
+    "tablename": "properties",
+    "indexname": "properties_mgmt_pref_idx",
+    "indexdef": "CREATE INDEX properties_mgmt_pref_idx ON public.properties USING btree (management_preference)"
+  },
+  {
+    "tablename": "properties",
+    "indexname": "properties_pkey",
+    "indexdef": "CREATE UNIQUE INDEX properties_pkey ON public.properties USING btree (id)"
+  },
+  {
+    "tablename": "properties",
+    "indexname": "properties_verification_status_idx",
+    "indexdef": "CREATE INDEX properties_verification_status_idx ON public.properties USING btree (verification_status)"
+  },
+  {
+    "tablename": "verification_records",
+    "indexname": "ver_rec_org_idx",
+    "indexdef": "CREATE INDEX ver_rec_org_idx ON public.verification_records USING btree (organization_id)"
+  },
+  {
+    "tablename": "verification_records",
+    "indexname": "ver_rec_prop_idx",
+    "indexdef": "CREATE INDEX ver_rec_prop_idx ON public.verification_records USING btree (property_id)"
+  },
+  {
+    "tablename": "verification_records",
+    "indexname": "ver_rec_status_idx",
+    "indexdef": "CREATE INDEX ver_rec_status_idx ON public.verification_records USING btree (status)"
+  },
+  {
+    "tablename": "verification_records",
+    "indexname": "ver_rec_subject_idx",
+    "indexdef": "CREATE INDEX ver_rec_subject_idx ON public.verification_records USING btree (subject_type, subject_id)"
+  },
+  {
+    "tablename": "verification_records",
+    "indexname": "verification_records_pkey",
+    "indexdef": "CREATE UNIQUE INDEX verification_records_pkey ON public.verification_records USING btree (id)"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "list-401",
+    "title": "شوقەی نوێ لە گوندی ئیتاڵی ۲",
+    "propertyType": "Residential Apartment",
+    "city": "هەولێر",
+    "listingType": "FOR_RENT",
+    "price": 850,
+    "currency": "USD",
+    "status": "PUBLISHED",
+    "viewingsCount": 38,
+    "offersCount": 5,
+    "agentName": "فەرهاد عیزەت",
+    "createdAt": "2024-03-05"
+  },
+  {
+    "id": "list-402",
+    "title": "نووسینگەی فەرمی لە سەر شەقامی ٦٠ مەتری",
+    "propertyType": "Commercial Office",
+    "city": "سلێمانی",
+    "listingType": "FOR_RENT",
+    "price": 1800,
+    "currency": "USD",
+    "status": "APPROVED",
+    "viewingsCount": 12,
+    "offersCount": 2,
+    "agentName": "ئاراس حەسەن",
+    "createdAt": "2024-03-11"
+  },
+  {
+    "id": "list-403",
+    "title": "ڤێلای هاوچەرخ لە باخی گشتی",
+    "propertyType": "Residential Villa",
+    "city": "دهۆک",
+    "listingType": "FOR_SALE",
+    "price": 360000,
+    "currency": "USD",
+    "status": "PENDING_REVIEW",
+    "viewingsCount": 4,
+    "offersCount": 0,
+    "agentName": "شڤان بەرواری",
+    "createdAt": "2024-03-15"
+  }
+]

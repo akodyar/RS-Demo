@@ -1,0 +1,272 @@
+[
+  {
+    "id": "TC-NAV-01",
+    "phase": "Phase 3 - Category Navigation",
+    "feature": "All Properties Initial State",
+    "testData": "Default Homepage visit",
+    "expectedResult": "All Properties tab active, full rental discovery enabled",
+    "actualResult": "Search tab \"all\" active, search inputs initialized",
+    "status": "PASS",
+    "screenshot": "01-initial-search-page.png"
+  },
+  {
+    "id": "TC-NAV-02",
+    "phase": "Phase 3 - Category Navigation",
+    "feature": "Apartments Category Tab",
+    "testData": "Tab id: apartments",
+    "expectedResult": "Tab active, propertyTypeFilter=\"APARTMENT\", select synced",
+    "actualResult": "#search-type-select value is APARTMENT",
+    "status": "PASS",
+    "screenshot": "02-apartments-selected.png"
+  },
+  {
+    "id": "TC-NAV-03",
+    "phase": "Phase 3 - Category Navigation",
+    "feature": "Houses Category Tab",
+    "testData": "Tab id: houses",
+    "expectedResult": "Tab active, propertyTypeFilter=\"HOUSE\", select synced",
+    "actualResult": "#search-type-select value is HOUSE",
+    "status": "PASS",
+    "screenshot": "03-houses-selected.png"
+  },
+  {
+    "id": "TC-NAV-04",
+    "phase": "Phase 3 - Category Navigation",
+    "feature": "Villas Category Tab",
+    "testData": "Tab id: villas",
+    "expectedResult": "Tab active, propertyTypeFilter=\"VILLA\", select synced",
+    "actualResult": "#search-type-select value is VILLA",
+    "status": "PASS",
+    "screenshot": "04-villas-selected.png"
+  },
+  {
+    "id": "TC-NAV-05",
+    "phase": "Phase 3 - Category Navigation",
+    "feature": "Commercial Category Tab",
+    "testData": "Tab id: commercial",
+    "expectedResult": "Tab active, propertyTypeFilter=\"COMMERCIAL\", select synced",
+    "actualResult": "#search-type-select value is COMMERCIAL",
+    "status": "PASS",
+    "screenshot": "05-commercial-selected.png"
+  },
+  {
+    "id": "TC-MORE-02",
+    "phase": "Phase 4 - More Dropdown",
+    "feature": "Dropdown Open State",
+    "testData": "Click [data-testid=\"home-more-rental-types-btn\"]",
+    "expectedResult": "Dropdown card opens directly anchored to More button",
+    "actualResult": "Dropdown visible: true",
+    "status": "PASS",
+    "screenshot": "07-more-open.png"
+  },
+  {
+    "id": "TC-MORE-05",
+    "phase": "Phase 4 - More Dropdown",
+    "feature": "Studio Apartment Selection",
+    "testData": "Item id: studio",
+    "expectedResult": "Dropdown closes, More button highlighted, type synced to STUDIO",
+    "actualResult": "Select val=STUDIO, More active=true",
+    "status": "PASS",
+    "screenshot": "10-studio-selected.png"
+  },
+  {
+    "id": "TC-MORE-07",
+    "phase": "Phase 4 - More Dropdown",
+    "feature": "Office Space Selection",
+    "testData": "Item id: office",
+    "expectedResult": "Select synced to OFFICE",
+    "actualResult": "Select value is OFFICE",
+    "status": "PASS",
+    "screenshot": "12-office-selected.png"
+  },
+  {
+    "id": "TC-MORE-09",
+    "phase": "Phase 4 - More Dropdown",
+    "feature": "Warehouse & Storage Selection",
+    "testData": "Item id: warehouse",
+    "expectedResult": "Select synced to WAREHOUSE",
+    "actualResult": "Select value is WAREHOUSE",
+    "status": "PASS",
+    "screenshot": "14-warehouse-selected.png"
+  },
+  {
+    "id": "TC-MORE-11",
+    "phase": "Phase 4 - More Dropdown",
+    "feature": "Duplex Selection",
+    "testData": "Item id: duplex",
+    "expectedResult": "Select synced to DUPLEX",
+    "actualResult": "Select value is DUPLEX",
+    "status": "PASS",
+    "screenshot": "16-duplex-selected.png"
+  },
+  {
+    "id": "TC-MORE-13",
+    "phase": "Phase 4 - More Dropdown",
+    "feature": "Residential Building Selection",
+    "testData": "Item id: residential",
+    "expectedResult": "Select synced to RESIDENTIAL",
+    "actualResult": "Select value is RESIDENTIAL",
+    "status": "PASS",
+    "screenshot": "18-residential-selected.png"
+  },
+  {
+    "id": "TC-MORE-15",
+    "phase": "Phase 4 - More Dropdown",
+    "feature": "Escape Key Dismissal",
+    "testData": "Press Escape",
+    "expectedResult": "Dropdown closes immediately",
+    "actualResult": "Closed: true",
+    "status": "PASS",
+    "screenshot": "19-clear-filter-action.png"
+  },
+  {
+    "id": "TC-MORE-16",
+    "phase": "Phase 4 - More Dropdown",
+    "feature": "Click Outside Dismissal",
+    "testData": "Click on page body/h1",
+    "expectedResult": "Dropdown closes immediately",
+    "actualResult": "Closed: true",
+    "status": "PASS",
+    "screenshot": "19-clear-filter-action.png"
+  },
+  {
+    "id": "TC-FLT-05",
+    "phase": "Phase 5 - Search Filters",
+    "feature": "Search Submission & Query Binding",
+    "testData": "q=Erbil, propertyType=APARTMENT, priceRange=500-1000, bedrooms=2",
+    "expectedResult": "Navigates to /rentals with query params, Explorer binds and filters properties",
+    "actualResult": "URL: http://localhost:3000/rentals?q=Erbil&propertyType=APARTMENT&priceRange=500-1000&bedrooms=2",
+    "status": "PASS",
+    "screenshot": "24-search-results-rentals.png"
+  },
+  {
+    "id": "TC-EDGE-01",
+    "phase": "Phase 6 - Edge Cases",
+    "feature": "Zero Results Empty State",
+    "testData": "q=NonExistentCityXYZ999",
+    "expectedResult": "Honest zero-results message displayed",
+    "actualResult": "Clean empty state rendered",
+    "status": "PASS",
+    "screenshot": "25-no-results-state.png"
+  },
+  {
+    "id": "TC-SEC-01",
+    "phase": "Phase 7 - Security & Invariants",
+    "feature": "Strict Rental-Only Discovery",
+    "testData": "GET /api/marketplace/listings/search?type=RENT",
+    "expectedResult": "All returned listings are FOR_RENT; 0 FOR_SALE listings returned",
+    "actualResult": "All rentals: true, Sale items present: false",
+    "status": "PASS",
+    "screenshot": "24-search-results-rentals.png"
+  },
+  {
+    "id": "TC-SEC-02",
+    "phase": "Phase 7 - Security & Invariants",
+    "feature": "SQL Injection Defense on propertyType",
+    "testData": "propertyType=' OR 1=1 --",
+    "expectedResult": "Query executes safely via parameterized SQL without syntax error or leakage",
+    "actualResult": "HTTP status: 200",
+    "status": "PASS",
+    "screenshot": "25-no-results-state.png"
+  },
+  {
+    "id": "TC-RESP-desktop-1440x900",
+    "phase": "Phase 8 - Responsive",
+    "feature": "Viewport desktop-1440x900",
+    "testData": "Dimensions: 1440x900",
+    "expectedResult": "Navigation and dropdown stay within viewport boundaries without horizontal cut-off",
+    "actualResult": "Properly scaled and fully visible within screen",
+    "status": "PASS",
+    "screenshot": "26-desktop-1440x900.png"
+  },
+  {
+    "id": "TC-RESP-desktop-1366x768",
+    "phase": "Phase 8 - Responsive",
+    "feature": "Viewport desktop-1366x768",
+    "testData": "Dimensions: 1366x768",
+    "expectedResult": "Navigation and dropdown stay within viewport boundaries without horizontal cut-off",
+    "actualResult": "Properly scaled and fully visible within screen",
+    "status": "PASS",
+    "screenshot": "27-desktop-1366x768.png"
+  },
+  {
+    "id": "TC-RESP-desktop-1280x800",
+    "phase": "Phase 8 - Responsive",
+    "feature": "Viewport desktop-1280x800",
+    "testData": "Dimensions: 1280x800",
+    "expectedResult": "Navigation and dropdown stay within viewport boundaries without horizontal cut-off",
+    "actualResult": "Properly scaled and fully visible within screen",
+    "status": "PASS",
+    "screenshot": "28-desktop-1280x800.png"
+  },
+  {
+    "id": "TC-RESP-desktop-1024x768",
+    "phase": "Phase 8 - Responsive",
+    "feature": "Viewport desktop-1024x768",
+    "testData": "Dimensions: 1024x768",
+    "expectedResult": "Navigation and dropdown stay within viewport boundaries without horizontal cut-off",
+    "actualResult": "Properly scaled and fully visible within screen",
+    "status": "PASS",
+    "screenshot": "29-desktop-1024x768.png"
+  },
+  {
+    "id": "TC-RESP-tablet-768x1024",
+    "phase": "Phase 8 - Responsive",
+    "feature": "Viewport tablet-768x1024",
+    "testData": "Dimensions: 768x1024",
+    "expectedResult": "Navigation and dropdown stay within viewport boundaries without horizontal cut-off",
+    "actualResult": "Properly scaled and fully visible within screen",
+    "status": "PASS",
+    "screenshot": "30-tablet-768x1024.png"
+  },
+  {
+    "id": "TC-RESP-mobile-390x844",
+    "phase": "Phase 8 - Responsive",
+    "feature": "Viewport mobile-390x844",
+    "testData": "Dimensions: 390x844",
+    "expectedResult": "Navigation and dropdown stay within viewport boundaries without horizontal cut-off",
+    "actualResult": "Properly scaled and fully visible within screen",
+    "status": "PASS",
+    "screenshot": "31-mobile-390x844.png"
+  },
+  {
+    "id": "TC-RESP-mobile-375x812",
+    "phase": "Phase 8 - Responsive",
+    "feature": "Viewport mobile-375x812",
+    "testData": "Dimensions: 375x812",
+    "expectedResult": "Navigation and dropdown stay within viewport boundaries without horizontal cut-off",
+    "actualResult": "Properly scaled and fully visible within screen",
+    "status": "PASS",
+    "screenshot": "32-mobile-375x812.png"
+  },
+  {
+    "id": "TC-I18N-KU",
+    "phase": "Phase 9 - Localization",
+    "feature": "Kurdish Sorani RTL Verification",
+    "testData": "Language: ku",
+    "expectedResult": "Strict RTL alignment, correct Kurdish terminology for all rental types",
+    "actualResult": "RTL layout active, Sorani labels rendered accurately",
+    "status": "PASS",
+    "screenshot": "33-ku-rtl-more-dropdown.png"
+  },
+  {
+    "id": "TC-I18N-AR",
+    "phase": "Phase 9 - Localization",
+    "feature": "Arabic RTL Verification",
+    "testData": "Language: ar",
+    "expectedResult": "Arabic RTL layout, correct Arabic property type terminology",
+    "actualResult": "Arabic RTL layout verified",
+    "status": "PASS",
+    "screenshot": "34-ar-rtl-more-dropdown.png"
+  },
+  {
+    "id": "TC-I18N-EN",
+    "phase": "Phase 9 - Localization",
+    "feature": "English LTR Verification",
+    "testData": "Language: en",
+    "expectedResult": "English LTR matching visual reference screenshots",
+    "actualResult": "English LTR verified",
+    "status": "PASS",
+    "screenshot": "35-en-ltr-more-dropdown.png"
+  }
+]

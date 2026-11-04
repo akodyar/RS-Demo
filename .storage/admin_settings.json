@@ -1,0 +1,8 @@
+{
+  "exchangeRateIqd": 1545,
+  "twoFactorEnforced": true,
+  "maintenanceMode": false,
+  "largeContractThresholdUsd": 100000,
+  "updatedAt": "2026-09-19T15:57:34.109Z",
+  "updatedBy": "admin@homehub.iq"
+}

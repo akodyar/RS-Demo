@@ -1,0 +1,77 @@
+[
+  {
+    "key": "admin.instant_bypass_btn",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\AdminLoginPage.tsx"
+    ],
+    "defaultValues": [
+      "Enter as Platform Admin (Development Bypass)"
+    ]
+  },
+  {
+    "key": "workspace.company",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\HomePage.tsx"
+    ],
+    "defaultValues": [
+      "Company Workspace"
+    ]
+  },
+  {
+    "key": "common.no_data",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\TenantWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "No Lease Records"
+    ]
+  },
+  {
+    "key": "tenant.noLeaseDesc",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\TenantWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Please contact support or browse available properties."
+    ]
+  },
+  {
+    "key": "common.browse_properties",
+    "missingIn": [
+      "en",
+      "ar",
+      "ku"
+    ],
+    "inCode": true,
+    "files": [
+      "src\\pages\\TenantWorkspace.tsx"
+    ],
+    "defaultValues": [
+      "Browse Properties"
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "migrationFile": "drizzle/0027_property_verification_and_management_choice.sql",
+  "appliedAt": "2026-10-21T11:45:00Z",
+  "targetDatabase": "homehub_test (PostgreSQL 17 on 127.0.0.1:5432)",
+  "executionDurationMs": 297,
+  "columnsAdded": [
+    {
+      "table": "properties",
+      "column": "verification_status",
+      "type": "text",
+      "default": "'PENDING_VERIFICATION'",
+      "nullable": false
+    },
+    {
+      "table": "properties",
+      "column": "rejection_reason",
+      "type": "text",
+      "nullable": true
+    },
+    {
+      "table": "properties",
+      "column": "verified_at",
+      "type": "timestamp",
+      "nullable": true
+    },
+    {
+      "table": "properties",
+      "column": "verified_by",
+      "type": "text",
+      "references": "users(id)",
+      "nullable": true
+    },
+    {
+      "table": "properties",
+      "column": "management_preference",
+      "type": "text",
+      "default": "'SELF_MANAGED'",
+      "nullable": false
+    },
+    {
+      "table": "properties",
+      "column": "management_arrangement_status",
+      "type": "text",
+      "default": "'NOT_APPLICABLE'",
+      "nullable": false
+    }
+  ],
+  "indexesCreated": [
+    "idx_properties_verification_status ON properties(verification_status)",
+    "idx_properties_management_preference ON properties(management_preference)"
+  ],
+  "legacyBackfillStatus": "Completed (All existing properties marked VERIFIED and SELF_MANAGED)",
+  "productionSafety": "Zero migrations run against homehub_production"
+}

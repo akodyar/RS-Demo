@@ -1,0 +1,137 @@
+[
+  {
+    "id": "ca4fdf17-ec96-466c-9f60-620f58e8b5d5",
+    "property_id": "5e601153-9cbc-4676-a9ad-58810087d29b",
+    "company_id": "org_mgmt_cde2e_1792551646611_nrmt",
+    "owner_id": "usr_owner_cde2e_1792551646611_nrmt",
+    "status": "ACTIVE",
+    "start_date": "2026-01-01",
+    "end_date": null,
+    "granted_permissions": [
+      "VIEW_PROPERTY",
+      "MANAGE_LEASES",
+      "COLLECT_RENT",
+      "MANAGE_FINANCIALS",
+      "EDIT_PROPERTY"
+    ],
+    "created_at": "2026-10-21T03:00:46.662Z"
+  },
+  {
+    "id": "15d01b74-92ed-463e-9682-099d00eaa8b0",
+    "property_id": "e5d51011-f799-4d7b-817d-84a76283a15b",
+    "company_id": "org_mgmt_cde2e_1792551356048_8hhy",
+    "owner_id": "usr_owner_cde2e_1792551356048_8hhy",
+    "status": "ACTIVE",
+    "start_date": "2026-01-01",
+    "end_date": null,
+    "granted_permissions": [
+      "VIEW_PROPERTY",
+      "MANAGE_LEASES",
+      "COLLECT_RENT",
+      "MANAGE_FINANCIALS",
+      "EDIT_PROPERTY"
+    ],
+    "created_at": "2026-10-21T02:55:56.095Z"
+  },
+  {
+    "id": "76ea166b-0d7f-417a-aace-d47b1f2ddd14",
+    "property_id": "ce87113c-071e-47f8-9d36-48dc900bff08",
+    "company_id": "appr_sec_1792422209068_company_A",
+    "owner_id": "appr_sec_1792422209068_owner_A",
+    "status": "ACTIVE",
+    "start_date": "2026-01-01",
+    "end_date": "2030-12-31",
+    "granted_permissions": [
+      "VIEW_PROPERTY",
+      "EDIT_PROPERTY",
+      "MANAGE_LEASES",
+      "COLLECT_RENT"
+    ],
+    "created_at": "2026-10-19T15:03:29.741Z"
+  },
+  {
+    "id": "27424ce7-2d8d-49a1-af4f-67d4b33bb67a",
+    "property_id": "31f4aadf-cbe2-4947-953c-d3447cac46b6",
+    "company_id": "appr_sec_1792419697691_company_A",
+    "owner_id": "appr_sec_1792419697691_owner_A",
+    "status": "ACTIVE",
+    "start_date": "2026-01-01",
+    "end_date": "2030-12-31",
+    "granted_permissions": [
+      "VIEW_PROPERTY",
+      "EDIT_PROPERTY",
+      "MANAGE_LEASES",
+      "COLLECT_RENT"
+    ],
+    "created_at": "2026-10-19T14:21:38.427Z"
+  },
+  {
+    "id": "mgmt1_p44_mvf42c2v_2zxt",
+    "property_id": "prop1_p44_mvf42c2v_2zxt",
+    "company_id": "org_p44_mvf42c2v_2zxt",
+    "owner_id": "owner_p44_mvf42c2v_2zxt",
+    "status": "ACTIVE",
+    "start_date": "2026-01-01",
+    "end_date": null,
+    "granted_permissions": [
+      "MANAGE_LEASES",
+      "VIEW_PROPERTY"
+    ],
+    "created_at": "2026-10-19T10:28:02.757Z"
+  },
+  {
+    "id": "1a606d75-2fc8-4450-b073-f5ed62f1adab",
+    "property_id": "7f6e50e8-0de7-49f2-be9c-90733689f696",
+    "company_id": "sd_company_1_fixed",
+    "owner_id": "user_owner_01",
+    "status": "ACTIVE",
+    "start_date": "2026-10-19T09:02:13.157Z",
+    "end_date": null,
+    "granted_permissions": null,
+    "created_at": "2026-10-19T09:02:13.157Z"
+  },
+  {
+    "id": "a3987d5d-4a63-4c24-a4c8-230f5320ebff",
+    "property_id": "68efcae8-23fd-4efd-b37c-d9cd67a2dcc8",
+    "company_id": "sd_company_1_fixed",
+    "owner_id": "user_owner_01",
+    "status": "ACTIVE",
+    "start_date": "2026-10-19T09:02:13.150Z",
+    "end_date": null,
+    "granted_permissions": null,
+    "created_at": "2026-10-19T09:02:13.152Z"
+  },
+  {
+    "id": "59082576-1a65-4f4c-9037-2e064f34922c",
+    "property_id": "f5d26486-6351-4fbb-b2fe-737cd7f6f3cf",
+    "company_id": "sd_company_1_fixed",
+    "owner_id": "user_owner_01",
+    "status": "ACTIVE",
+    "start_date": "2026-10-19T09:02:13.144Z",
+    "end_date": null,
+    "granted_permissions": null,
+    "created_at": "2026-10-19T09:02:13.145Z"
+  },
+  {
+    "id": "932bd8be-2480-4875-aa71-bb44f6c7a845",
+    "property_id": "d5d48308-5d13-4e7e-972a-d8a66a222011",
+    "company_id": "sd_company_1_fixed",
+    "owner_id": "user_owner_01",
+    "status": "ACTIVE",
+    "start_date": "2026-10-19T09:02:13.140Z",
+    "end_date": null,
+    "granted_permissions": null,
+    "created_at": "2026-10-19T09:02:13.140Z"
+  },
+  {
+    "id": "88a57497-2fc2-422c-92a7-22adff231609",
+    "property_id": "95359f58-3c26-4b03-b58d-ddfd8e65a835",
+    "company_id": "sd_company_1_fixed",
+    "owner_id": "user_owner_01",
+    "status": "ACTIVE",
+    "start_date": "2026-10-19T09:02:13.117Z",
+    "end_date": null,
+    "granted_permissions": null,
+    "created_at": "2026-10-19T09:02:13.117Z"
+  }
+]

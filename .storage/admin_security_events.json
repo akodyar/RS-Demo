@@ -1,0 +1,33 @@
+[
+  {
+    "id": "sec-801",
+    "type": "FAILED_LOGIN_SPIKE",
+    "severity": "WARNING",
+    "description": "پێنج هەوڵی سەرنەکەوتوو بۆ هەژماری ئەدمین لە یەک ناونیشانی IP",
+    "actor": "admin-candidate@external.net",
+    "ipAddress": "185.190.22.4",
+    "timestamp": "پێش ٢٢ خولەک",
+    "resolved": true,
+    "status": "MITIGATED"
+  },
+  {
+    "id": "sec-802",
+    "type": "ROLE_ELEVATION",
+    "severity": "INFO",
+    "description": "بەرزکردنەوەی ڕۆڵی بەڕێوەبەر بۆ OPERATIONS_ADMIN لەلایەن SuperAdmin",
+    "actor": "superadmin@homehub.iq",
+    "ipAddress": "82.145.210.12",
+    "timestamp": "پێش ٤ کاتژمێر",
+    "resolved": true
+  },
+  {
+    "id": "sec-803",
+    "type": "UNAUTHORIZED_TAPU_ATTEMPT",
+    "severity": "CRITICAL",
+    "description": "هەوڵی گۆڕینی خاوەنداریەتی موڵک بەبێ نۆتێری فەرمی ڕەتکرایەوە",
+    "actor": "untrusted-client",
+    "ipAddress": "149.255.33.1",
+    "timestamp": "دوێنێ",
+    "resolved": true
+  }
+]

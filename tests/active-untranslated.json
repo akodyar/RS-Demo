@@ -1,0 +1,1667 @@
+[
+  {
+    "key": "admin.footer_note",
+    "kuVal": "HomeHub Real Estate Enterprise Platform • Kurdistan • Admin Management Portal",
+    "enVal": "HomeHub Real Estate Enterprise Platform • Kurdistan • Admin Management Portal"
+  },
+  {
+    "key": "admin.trust_disputes",
+    "kuVal": "Trust & Disputes",
+    "enVal": "Trust & Disputes"
+  },
+  {
+    "key": "agent.table.actions",
+    "kuVal": "ACTIONS",
+    "enVal": "ACTIONS"
+  },
+  {
+    "key": "agent.table.address",
+    "kuVal": "LOCATION",
+    "enVal": "LOCATION"
+  },
+  {
+    "key": "agent.table.leads_offers",
+    "kuVal": "AGENCY ASSIGNMENT",
+    "enVal": "AGENCY ASSIGNMENT"
+  },
+  {
+    "key": "agent.table.price_rent",
+    "kuVal": "PRICE / RENT",
+    "enVal": "PRICE / RENT"
+  },
+  {
+    "key": "agent.table.property",
+    "kuVal": "PROPERTY",
+    "enVal": "PROPERTY"
+  },
+  {
+    "key": "agent.table.status",
+    "kuVal": "STATUS",
+    "enVal": "STATUS"
+  },
+  {
+    "key": "agent.tabs.commissions",
+    "kuVal": "Commissions",
+    "enVal": "Commissions"
+  },
+  {
+    "key": "agent.tabs.leads",
+    "kuVal": "Leads CRM",
+    "enVal": "Leads CRM"
+  },
+  {
+    "key": "agent.tabs.listings",
+    "kuVal": "Listings",
+    "enVal": "Listings"
+  },
+  {
+    "key": "agent.tabs.offers",
+    "kuVal": "Offers",
+    "enVal": "Offers"
+  },
+  {
+    "key": "agent.tabs.portfolio",
+    "kuVal": "Assigned Portfolio",
+    "enVal": "Assigned Portfolio"
+  },
+  {
+    "key": "agent.tabs.viewings",
+    "kuVal": "Viewings",
+    "enVal": "Viewings"
+  },
+  {
+    "key": "auth.reg.social_apple",
+    "kuVal": "چوونەژوورەوە بە Apple لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە.",
+    "enVal": "چوونەژوورەوە بە Apple لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە."
+  },
+  {
+    "key": "auth.reg.social_facebook",
+    "kuVal": "چوونەژوورەوە بە Facebook لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە.",
+    "enVal": "چوونەژوورەوە بە Facebook لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە."
+  },
+  {
+    "key": "auth.reg.social_google",
+    "kuVal": "چوونەژوورەوە بە Google لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە.",
+    "enVal": "چوونەژوورەوە بە Google لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە."
+  },
+  {
+    "key": "category.electrical",
+    "kuVal": "Electrical",
+    "enVal": "Electrical"
+  },
+  {
+    "key": "category.hvac",
+    "kuVal": "HVAC & Cooling",
+    "enVal": "HVAC & Cooling"
+  },
+  {
+    "key": "category.plumbing",
+    "kuVal": "Plumbing",
+    "enVal": "Plumbing"
+  },
+  {
+    "key": "category.structural",
+    "kuVal": "Carpentry & Structural",
+    "enVal": "Carpentry & Structural"
+  },
+  {
+    "key": "company.back_to_marketplace",
+    "kuVal": "back to marketplace",
+    "enVal": "back to marketplace"
+  },
+  {
+    "key": "company.badge_for_rent",
+    "kuVal": "badge for rent",
+    "enVal": "badge for rent"
+  },
+  {
+    "key": "company.badge_for_sale",
+    "kuVal": "badge for sale",
+    "enVal": "badge for sale"
+  },
+  {
+    "key": "company.city_fallback",
+    "kuVal": "city fallback",
+    "enVal": "city fallback"
+  },
+  {
+    "key": "company.country_fallback",
+    "kuVal": "country fallback",
+    "enVal": "country fallback"
+  },
+  {
+    "key": "company.error_prefix",
+    "kuVal": "error prefix",
+    "enVal": "error prefix"
+  },
+  {
+    "key": "company.for_rent_title",
+    "kuVal": "for rent title",
+    "enVal": "for rent title"
+  },
+  {
+    "key": "company.for_sale_title",
+    "kuVal": "for sale title",
+    "enVal": "for sale title"
+  },
+  {
+    "key": "company.fully_managed_only",
+    "kuVal": "تەنها لە مۆدێلی بەڕێوەبردنی تەواو (Fully Managed only)",
+    "enVal": "تەنها لە مۆدێلی بەڕێوەبردنی تەواو (Fully Managed only)"
+  },
+  {
+    "key": "company.listings_count",
+    "kuVal": "listings count",
+    "enVal": "listings count"
+  },
+  {
+    "key": "company.loading",
+    "kuVal": "loading",
+    "enVal": "loading"
+  },
+  {
+    "key": "company.no_rentals",
+    "kuVal": "no rentals",
+    "enVal": "no rentals"
+  },
+  {
+    "key": "company.no_sales",
+    "kuVal": "no sales",
+    "enVal": "no sales"
+  },
+  {
+    "key": "company.not_found",
+    "kuVal": "not found",
+    "enVal": "not found"
+  },
+  {
+    "key": "company.per_month",
+    "kuVal": "per month",
+    "enVal": "per month"
+  },
+  {
+    "key": "company.rent_fee",
+    "kuVal": "عمولەی کرێ (HomeHub Rent Fee)",
+    "enVal": "عمولەی کرێ (HomeHub Rent Fee)"
+  },
+  {
+    "key": "company.status_error",
+    "kuVal": "داتای هاوسەنگی بەردەست نییە (Reconciliation Unavailable)",
+    "enVal": "داتای هاوسەنگی بەردەست نییە (Reconciliation Unavailable)"
+  },
+  {
+    "key": "company.status_loading",
+    "kuVal": "لە پشکنینی هاوسەنگیدایە... (Verifying Reconciliation...)",
+    "enVal": "لە پشکنینی هاوسەنگیدایە... (Verifying Reconciliation...)"
+  },
+  {
+    "key": "company.status_no_data",
+    "kuVal": "هیچ چالاکییەکی دارایی نییە (No Financial Activity)",
+    "enVal": "هیچ چالاکییەکی دارایی نییە (No Financial Activity)"
+  },
+  {
+    "key": "company.status_pending",
+    "kuVal": "لە چاوەڕوانی تۆمارکردنی دەفتەردایە (Pending Ledger Posting)",
+    "enVal": "لە چاوەڕوانی تۆمارکردنی دەفتەردایە (Pending Ledger Posting)"
+  },
+  {
+    "key": "company.status_unreconciled",
+    "kuVal": "ناهەوسەنگی لە دەفتەردا هەیە (Reconciliation Discrepancy)",
+    "enVal": "ناهەوسەنگی لە دەفتەردا هەیە (Reconciliation Discrepancy)"
+  },
+  {
+    "key": "company.verified_badge",
+    "kuVal": "verified badge",
+    "enVal": "verified badge"
+  },
+  {
+    "key": "company.view_details",
+    "kuVal": "view details",
+    "enVal": "view details"
+  },
+  {
+    "key": "crm.workspaceTitle",
+    "kuVal": "workspaceTitle",
+    "enVal": "workspaceTitle"
+  },
+  {
+    "key": "crm.workspaceSubtitle",
+    "kuVal": "workspaceSubtitle",
+    "enVal": "workspaceSubtitle"
+  },
+  {
+    "key": "crm.newContact",
+    "kuVal": "newContact",
+    "enVal": "newContact"
+  },
+  {
+    "key": "crm.proposal",
+    "kuVal": "proposal",
+    "enVal": "proposal"
+  },
+  {
+    "key": "crm.agreementsTab",
+    "kuVal": "agreementsTab",
+    "enVal": "agreementsTab"
+  },
+  {
+    "key": "crm.contactsTab",
+    "kuVal": "contactsTab",
+    "enVal": "contactsTab"
+  },
+  {
+    "key": "crm.notificationsTab",
+    "kuVal": "notificationsTab",
+    "enVal": "notificationsTab"
+  },
+  {
+    "key": "crm.tasksTab",
+    "kuVal": "tasksTab",
+    "enVal": "tasksTab"
+  },
+  {
+    "key": "crm.timelineTab",
+    "kuVal": "timelineTab",
+    "enVal": "timelineTab"
+  },
+  {
+    "key": "crm.tenantsTab",
+    "kuVal": "tenantsTab",
+    "enVal": "tenantsTab"
+  },
+  {
+    "key": "crm.preferencesTab",
+    "kuVal": "preferencesTab",
+    "enVal": "preferencesTab"
+  },
+  {
+    "key": "crm.searchPlaceholder",
+    "kuVal": "searchPlaceholder",
+    "enVal": "searchPlaceholder"
+  },
+  {
+    "key": "crm.noAgreements",
+    "kuVal": "noAgreements",
+    "enVal": "noAgreements"
+  },
+  {
+    "key": "crm.noAgreementsDesc",
+    "kuVal": "noAgreementsDesc",
+    "enVal": "noAgreementsDesc"
+  },
+  {
+    "key": "crm.spendingLimitLabel",
+    "kuVal": "spendingLimitLabel",
+    "enVal": "spendingLimitLabel"
+  },
+  {
+    "key": "crm.acceptAgreement",
+    "kuVal": "acceptAgreement",
+    "enVal": "acceptAgreement"
+  },
+  {
+    "key": "crm.declineAgreement",
+    "kuVal": "declineAgreement",
+    "enVal": "declineAgreement"
+  },
+  {
+    "key": "crm.preferencesSaved",
+    "kuVal": "preferencesSaved",
+    "enVal": "preferencesSaved"
+  },
+  {
+    "key": "crm.recordedOn",
+    "kuVal": "recordedOn",
+    "enVal": "recordedOn"
+  },
+  {
+    "key": "crm.noContacts",
+    "kuVal": "noContacts",
+    "enVal": "noContacts"
+  },
+  {
+    "key": "crm.noContactsDesc",
+    "kuVal": "noContactsDesc",
+    "enVal": "noContactsDesc"
+  },
+  {
+    "key": "crm.markAsRead",
+    "kuVal": "markAsRead",
+    "enVal": "markAsRead"
+  },
+  {
+    "key": "crm.noNotifications",
+    "kuVal": "noNotifications",
+    "enVal": "noNotifications"
+  },
+  {
+    "key": "crm.noNotificationsDesc",
+    "kuVal": "noNotificationsDesc",
+    "enVal": "noNotificationsDesc"
+  },
+  {
+    "key": "crm.dueDateLabel",
+    "kuVal": "dueDateLabel",
+    "enVal": "dueDateLabel"
+  },
+  {
+    "key": "crm.completeTask",
+    "kuVal": "completeTask",
+    "enVal": "completeTask"
+  },
+  {
+    "key": "crm.noTasks",
+    "kuVal": "noTasks",
+    "enVal": "noTasks"
+  },
+  {
+    "key": "crm.noTasksDesc",
+    "kuVal": "noTasksDesc",
+    "enVal": "noTasksDesc"
+  },
+  {
+    "key": "crm.noTimeline",
+    "kuVal": "noTimeline",
+    "enVal": "noTimeline"
+  },
+  {
+    "key": "crm.propertyLabel",
+    "kuVal": "propertyLabel",
+    "enVal": "propertyLabel"
+  },
+  {
+    "key": "crm.rentAmountLabel",
+    "kuVal": "rentAmountLabel",
+    "enVal": "rentAmountLabel"
+  },
+  {
+    "key": "crm.leaseStatusLabel",
+    "kuVal": "leaseStatusLabel",
+    "enVal": "leaseStatusLabel"
+  },
+  {
+    "key": "crm.noTenants",
+    "kuVal": "noTenants",
+    "enVal": "noTenants"
+  },
+  {
+    "key": "crm.noTenantsDesc",
+    "kuVal": "noTenantsDesc",
+    "enVal": "noTenantsDesc"
+  },
+  {
+    "key": "crm.preferencesTitle",
+    "kuVal": "preferencesTitle",
+    "enVal": "preferencesTitle"
+  },
+  {
+    "key": "crm.preferencesSubtitle",
+    "kuVal": "preferencesSubtitle",
+    "enVal": "preferencesSubtitle"
+  },
+  {
+    "key": "crm.channels",
+    "kuVal": "channels",
+    "enVal": "channels"
+  },
+  {
+    "key": "crm.channelInApp",
+    "kuVal": "channelInApp",
+    "enVal": "channelInApp"
+  },
+  {
+    "key": "crm.channelEmail",
+    "kuVal": "channelEmail",
+    "enVal": "channelEmail"
+  },
+  {
+    "key": "crm.channelSms",
+    "kuVal": "channelSms",
+    "enVal": "channelSms"
+  },
+  {
+    "key": "crm.channelPush",
+    "kuVal": "channelPush",
+    "enVal": "channelPush"
+  },
+  {
+    "key": "crm.addContactTitle",
+    "kuVal": "addContactTitle",
+    "enVal": "addContactTitle"
+  },
+  {
+    "key": "crm.allCaughtUp",
+    "kuVal": "All caught up!",
+    "enVal": "All caught up!"
+  },
+  {
+    "key": "crm.allCaughtUpDesc",
+    "kuVal": "No unread notifications at this time.",
+    "enVal": "No unread notifications at this time."
+  },
+  {
+    "key": "crm.cancel",
+    "kuVal": "cancel",
+    "enVal": "cancel"
+  },
+  {
+    "key": "crm.directMessages",
+    "kuVal": "directMessages",
+    "enVal": "directMessages"
+  },
+  {
+    "key": "crm.firstName",
+    "kuVal": "firstName",
+    "enVal": "firstName"
+  },
+  {
+    "key": "crm.lastName",
+    "kuVal": "lastName",
+    "enVal": "lastName"
+  },
+  {
+    "key": "crm.ownerEmail",
+    "kuVal": "ownerEmail",
+    "enVal": "ownerEmail"
+  },
+  {
+    "key": "crm.propertyName",
+    "kuVal": "propertyName",
+    "enVal": "propertyName"
+  },
+  {
+    "key": "crm.proposalNotice",
+    "kuVal": "proposalNotice",
+    "enVal": "proposalNotice"
+  },
+  {
+    "key": "crm.proposalTitle",
+    "kuVal": "proposalTitle",
+    "enVal": "proposalTitle"
+  },
+  {
+    "key": "crm.prospect",
+    "kuVal": "prospect",
+    "enVal": "prospect"
+  },
+  {
+    "key": "crm.quietEnd",
+    "kuVal": "quietEnd",
+    "enVal": "quietEnd"
+  },
+  {
+    "key": "crm.quietHours",
+    "kuVal": "quietHours",
+    "enVal": "quietHours"
+  },
+  {
+    "key": "crm.quietHoursDesc",
+    "kuVal": "quietHoursDesc",
+    "enVal": "quietHoursDesc"
+  },
+  {
+    "key": "crm.quietStart",
+    "kuVal": "quietStart",
+    "enVal": "quietStart"
+  },
+  {
+    "key": "crm.relationship",
+    "kuVal": "relationship",
+    "enVal": "relationship"
+  },
+  {
+    "key": "crm.savePreferences",
+    "kuVal": "savePreferences",
+    "enVal": "savePreferences"
+  },
+  {
+    "key": "crm.sendProposal",
+    "kuVal": "sendProposal",
+    "enVal": "sendProposal"
+  },
+  {
+    "key": "crm.spendingLimit",
+    "kuVal": "spendingLimit",
+    "enVal": "spendingLimit"
+  },
+  {
+    "key": "crm.tenant",
+    "kuVal": "tenant",
+    "enVal": "tenant"
+  },
+  {
+    "key": "crm.typeReply",
+    "kuVal": "typeReply",
+    "enVal": "typeReply"
+  },
+  {
+    "key": "crm.vendor",
+    "kuVal": "vendor",
+    "enVal": "vendor"
+  },
+  {
+    "key": "deduction.approve_btn",
+    "kuVal": "Approve",
+    "enVal": "Approve"
+  },
+  {
+    "key": "deduction.category",
+    "kuVal": "Category",
+    "enVal": "Category"
+  },
+  {
+    "key": "deduction.confirm_rejection",
+    "kuVal": "Confirm Rejection",
+    "enVal": "Confirm Rejection"
+  },
+  {
+    "key": "deduction.desc_evidence",
+    "kuVal": "Deduction Description & Repair Evidence",
+    "enVal": "Deduction Description & Repair Evidence"
+  },
+  {
+    "key": "deduction.desc_ph",
+    "kuVal": "Explain rationale, repair estimates, or contractor invoice details...",
+    "enVal": "Explain rationale, repair estimates, or contractor invoice details..."
+  },
+  {
+    "key": "deduction.evidence_ref",
+    "kuVal": "Evidence Reference (Path)",
+    "enVal": "Evidence Reference (Path)"
+  },
+  {
+    "key": "deduction.link_item",
+    "kuVal": "Link Damage Item",
+    "enVal": "Link Damage Item"
+  },
+  {
+    "key": "deduction.no_records",
+    "kuVal": "No security deposit deductions proposed for this lease.",
+    "enVal": "No security deposit deductions proposed for this lease."
+  },
+  {
+    "key": "deduction.none_general",
+    "kuVal": "None (General deduction)",
+    "enVal": "None (General deduction)"
+  },
+  {
+    "key": "deduction.notice_status",
+    "kuVal": "Notice: {status}",
+    "enVal": "Notice: {status}"
+  },
+  {
+    "key": "deduction.notify_tenant",
+    "kuVal": "Dispatch formal notice to tenant",
+    "enVal": "Dispatch formal notice to tenant"
+  },
+  {
+    "key": "deduction.owner_req",
+    "kuVal": "Owner Approval Required",
+    "enVal": "Owner Approval Required"
+  },
+  {
+    "key": "deduction.propose_title",
+    "kuVal": "Propose Deposit Deduction",
+    "enVal": "Propose Deposit Deduction"
+  },
+  {
+    "key": "deduction.reason_label",
+    "kuVal": "Reason: {reason}",
+    "enVal": "Reason: {reason}"
+  },
+  {
+    "key": "deduction.reject_btn",
+    "kuVal": "Reject",
+    "enVal": "Reject"
+  },
+  {
+    "key": "deduction.reject_ph",
+    "kuVal": "State why this deduction was rejected...",
+    "enVal": "State why this deduction was rejected..."
+  },
+  {
+    "key": "deduction.reject_proposal_title",
+    "kuVal": "Reject Deduction Proposal",
+    "enVal": "Reject Deduction Proposal"
+  },
+  {
+    "key": "deduction.rejection_reason_label",
+    "kuVal": "Rejection Reason: {reason}",
+    "enVal": "Rejection Reason: {reason}"
+  },
+  {
+    "key": "deduction.submit_proposal",
+    "kuVal": "Submit Deduction Proposal",
+    "enVal": "Submit Deduction Proposal"
+  },
+  {
+    "key": "deduction.subtitle",
+    "kuVal": "Propose repair deductions against held funds. Subject to verified owner approval.",
+    "enVal": "Propose repair deductions against held funds. Subject to verified owner approval."
+  },
+  {
+    "key": "deduction.tenant_dispute_active",
+    "kuVal": "Tenant Dispute Active",
+    "enVal": "Tenant Dispute Active"
+  },
+  {
+    "key": "deduction.window_unstarted",
+    "kuVal": "Dispute window unstarted (awaiting delivery)",
+    "enVal": "Dispute window unstarted (awaiting delivery)"
+  },
+  {
+    "key": "deposit.active_reservations_warn",
+    "kuVal": "Active reservations ({amount}) must be resolved or settled before full release.",
+    "enVal": "Active reservations ({amount}) must be resolved or settled before full release."
+  },
+  {
+    "key": "deposit.active_reserved",
+    "kuVal": "Active Reserved",
+    "enVal": "Active Reserved"
+  },
+  {
+    "key": "deposit.amount_to_collect",
+    "kuVal": "Amount to Collect",
+    "enVal": "Amount to Collect"
+  },
+  {
+    "key": "deposit.amount_to_release",
+    "kuVal": "Amount to Release",
+    "enVal": "Amount to Release"
+  },
+  {
+    "key": "deposit.deductions_held_note",
+    "kuVal": "Deductions & disputes held",
+    "enVal": "Deductions & disputes held"
+  },
+  {
+    "key": "deposit.eligible_return_note",
+    "kuVal": "Eligible for return / release",
+    "enVal": "Eligible for return / release"
+  },
+  {
+    "key": "deposit.escrow_recorded",
+    "kuVal": "Recorded in Escrow",
+    "enVal": "Recorded in Escrow"
+  },
+  {
+    "key": "deposit.escrow_standard_footer",
+    "kuVal": "HomeHub Custodial Escrow Standard • 0% Platform / Rent / Management Fees",
+    "enVal": "HomeHub Custodial Escrow Standard • 0% Platform / Rent / Management Fees"
+  },
+  {
+    "key": "deposit.fixed_custodial_req",
+    "kuVal": "Fixed custodial requirement",
+    "enVal": "Fixed custodial requirement"
+  },
+  {
+    "key": "deposit.held_no_fees",
+    "kuVal": "Held without fees (0% 3-Fee Model)",
+    "enVal": "Held without fees (0% 3-Fee Model)"
+  },
+  {
+    "key": "deposit.required_deposit",
+    "kuVal": "Required Deposit",
+    "enVal": "Required Deposit"
+  },
+  {
+    "key": "deposit.unreserved_available",
+    "kuVal": "Unreserved Available",
+    "enVal": "Unreserved Available"
+  },
+  {
+    "key": "fee.current_rate",
+    "kuVal": "ڕێژەی ئێستای تۆمارکراو (Persisted Current Rate)",
+    "enVal": "ڕێژەی ئێستای تۆمارکراو (Persisted Current Rate)"
+  },
+  {
+    "key": "fee.err_invalid_number",
+    "kuVal": "Rate must be a valid number",
+    "enVal": "Rate must be a valid number"
+  },
+  {
+    "key": "fee.err_max",
+    "kuVal": "Rate cannot exceed 50% (0.50)",
+    "enVal": "Rate cannot exceed 50% (0.50)"
+  },
+  {
+    "key": "fee.err_negative",
+    "kuVal": "Rate cannot be negative",
+    "enVal": "Rate cannot be negative"
+  },
+  {
+    "key": "fee.err_precision",
+    "kuVal": "Rate precision cannot exceed 4 decimal places",
+    "enVal": "Rate precision cannot exceed 4 decimal places"
+  },
+  {
+    "key": "fee.err_required",
+    "kuVal": "Platform fee rate is required",
+    "enVal": "Platform fee rate is required"
+  },
+  {
+    "key": "fee.not_applicable",
+    "kuVal": "(Not Applicable)",
+    "enVal": "(Not Applicable)"
+  },
+  {
+    "key": "fee.not_configured",
+    "kuVal": "(Not Configured)",
+    "enVal": "(Not Configured)"
+  },
+  {
+    "key": "inspection.add_item",
+    "kuVal": "Add Damage Item",
+    "enVal": "Add Damage Item"
+  },
+  {
+    "key": "inspection.baseline_exists",
+    "kuVal": "Move-In Baseline Exists (Never fabricate)",
+    "enVal": "Move-In Baseline Exists (Never fabricate)"
+  },
+  {
+    "key": "inspection.baseline_ref",
+    "kuVal": "Move-In Baseline Reference",
+    "enVal": "Move-In Baseline Reference"
+  },
+  {
+    "key": "inspection.complete_btn",
+    "kuVal": "Complete Inspection",
+    "enVal": "Complete Inspection"
+  },
+  {
+    "key": "inspection.component",
+    "kuVal": "Component",
+    "enVal": "Component"
+  },
+  {
+    "key": "inspection.condition",
+    "kuVal": "Condition",
+    "enVal": "Condition"
+  },
+  {
+    "key": "inspection.confirm_start",
+    "kuVal": "Confirm & Start Inspection",
+    "enVal": "Confirm & Start Inspection"
+  },
+  {
+    "key": "inspection.estimated_cost",
+    "kuVal": "Estimated Cost",
+    "enVal": "Estimated Cost"
+  },
+  {
+    "key": "inspection.evidence_count",
+    "kuVal": "📷 {count} Evidence file(s)",
+    "enVal": "📷 {count} Evidence file(s)"
+  },
+  {
+    "key": "inspection.evidence_ref",
+    "kuVal": "Evidence Ref (Storage Key)",
+    "enVal": "Evidence Ref (Storage Key)"
+  },
+  {
+    "key": "inspection.general_notes",
+    "kuVal": "General Notes",
+    "enVal": "General Notes"
+  },
+  {
+    "key": "inspection.general_notes_ph",
+    "kuVal": "Walkthrough observations, keys returned, meter readings...",
+    "enVal": "Walkthrough observations, keys returned, meter readings..."
+  },
+  {
+    "key": "inspection.initiate_title",
+    "kuVal": "Initiate Move-Out Inspection",
+    "enVal": "Initiate Move-Out Inspection"
+  },
+  {
+    "key": "inspection.itemized_findings",
+    "kuVal": "Itemized Inspection Findings",
+    "enVal": "Itemized Inspection Findings"
+  },
+  {
+    "key": "inspection.no_records",
+    "kuVal": "No move-out inspections recorded for this lease.",
+    "enVal": "No move-out inspections recorded for this lease."
+  },
+  {
+    "key": "inspection.record_item_title",
+    "kuVal": "Record Damage / Inspection Item",
+    "enVal": "Record Damage / Inspection Item"
+  },
+  {
+    "key": "inspection.records_desc",
+    "kuVal": "Document property condition, record damages, and upload verified evidence.",
+    "enVal": "Document property condition, record damages, and upload verified evidence."
+  },
+  {
+    "key": "inspection.save_item",
+    "kuVal": "Save Item",
+    "enVal": "Save Item"
+  },
+  {
+    "key": "inspection.tenant_present",
+    "kuVal": "Tenant Present During Walkthrough",
+    "enVal": "Tenant Present During Walkthrough"
+  },
+  {
+    "key": "login.email_placeholder",
+    "kuVal": "name@example.com",
+    "enVal": "name@example.com"
+  },
+  {
+    "key": "marketplace.badge.sponsored",
+    "kuVal": "sponsored",
+    "enVal": "sponsored"
+  },
+  {
+    "key": "marketplace.filter.reset_all",
+    "kuVal": "reset all",
+    "enVal": "reset all"
+  },
+  {
+    "key": "marketplace.pagination.page_of",
+    "kuVal": "page of",
+    "enVal": "page of"
+  },
+  {
+    "key": "marketplace.sort.newest",
+    "kuVal": "newest",
+    "enVal": "newest"
+  },
+  {
+    "key": "marketplace.sort.price_asc",
+    "kuVal": "price asc",
+    "enVal": "price asc"
+  },
+  {
+    "key": "marketplace.sort.price_desc",
+    "kuVal": "price desc",
+    "enVal": "price desc"
+  },
+  {
+    "key": "marketplace.sort.promoted",
+    "kuVal": "promoted",
+    "enVal": "promoted"
+  },
+  {
+    "key": "owner.accounting",
+    "kuVal": "accounting",
+    "enVal": "accounting"
+  },
+  {
+    "key": "owner.action.settlements",
+    "kuVal": "settlements",
+    "enVal": "settlements"
+  },
+  {
+    "key": "owner.all_cities",
+    "kuVal": "All Cities",
+    "enVal": "All Cities"
+  },
+  {
+    "key": "owner.all_status",
+    "kuVal": "All Status",
+    "enVal": "All Status"
+  },
+  {
+    "key": "owner.analytics.avg_lease_duration",
+    "kuVal": "Average Lease Duration",
+    "enVal": "Average Lease Duration"
+  },
+  {
+    "key": "owner.analytics.based_confirmed_rent",
+    "kuVal": "Based on confirmed rent",
+    "enVal": "Based on confirmed rent"
+  },
+  {
+    "key": "owner.analytics.calculated_verified",
+    "kuVal": "Calculated on verified properties",
+    "enVal": "Calculated on verified properties"
+  },
+  {
+    "key": "owner.analytics.collection_rate",
+    "kuVal": "Collection Rate",
+    "enVal": "Collection Rate"
+  },
+  {
+    "key": "owner.analytics.confirmed_collections",
+    "kuVal": "Confirmed Collections",
+    "enVal": "Confirmed Collections"
+  },
+  {
+    "key": "owner.analytics.gross_yield",
+    "kuVal": "Gross Rental Yield",
+    "enVal": "Gross Rental Yield"
+  },
+  {
+    "key": "owner.analytics.no_active_leases",
+    "kuVal": "No active leases",
+    "enVal": "No active leases"
+  },
+  {
+    "key": "owner.analytics.no_operational_revenue",
+    "kuVal": "No operational revenue",
+    "enVal": "No operational revenue"
+  },
+  {
+    "key": "owner.analytics.no_registered_props",
+    "kuVal": "No registered properties",
+    "enVal": "No registered properties"
+  },
+  {
+    "key": "owner.analytics.noi",
+    "kuVal": "Net Operating Income (NOI)",
+    "enVal": "Net Operating Income (NOI)"
+  },
+  {
+    "key": "owner.analytics.subtitle",
+    "kuVal": "Comprehensive yield metrics, vacancy rates, and historical collection trends",
+    "enVal": "Comprehensive yield metrics, vacancy rates, and historical collection trends"
+  },
+  {
+    "key": "owner.companies.approval_threshold",
+    "kuVal": "Owner Approval Threshold:",
+    "enVal": "Owner Approval Threshold:"
+  },
+  {
+    "key": "owner.companies.assigned_prop",
+    "kuVal": "Assigned Property:",
+    "enVal": "Assigned Property:"
+  },
+  {
+    "key": "owner.companies.delegated_company",
+    "kuVal": "Delegated Company:",
+    "enVal": "Delegated Company:"
+  },
+  {
+    "key": "owner.companies.direct_signoff",
+    "kuVal": "100% Direct Sign-off",
+    "enVal": "100% Direct Sign-off"
+  },
+  {
+    "key": "owner.companies.granted_perms",
+    "kuVal": "Granted Permissions:",
+    "enVal": "Granted Permissions:"
+  },
+  {
+    "key": "owner.companies.name_or_license",
+    "kuVal": "Company Name or License",
+    "enVal": "Company Name or License"
+  },
+  {
+    "key": "owner.companies.name_or_license_ph",
+    "kuVal": "e.g. Al-Nomou Real Estate Co.",
+    "enVal": "e.g. Al-Nomou Real Estate Co."
+  },
+  {
+    "key": "owner.companies.owner_direct",
+    "kuVal": "None (Owner Direct)",
+    "enVal": "None (Owner Direct)"
+  },
+  {
+    "key": "owner.companies.select_prop_ph",
+    "kuVal": "Select property to delegate...",
+    "enVal": "Select property to delegate..."
+  },
+  {
+    "key": "owner.companies.self_managed_props",
+    "kuVal": "Self-Managed Properties:",
+    "enVal": "Self-Managed Properties:"
+  },
+  {
+    "key": "owner.companies.send_invitation",
+    "kuVal": "Send Invitation",
+    "enVal": "Send Invitation"
+  },
+  {
+    "key": "owner.companies.sending",
+    "kuVal": "Sending...",
+    "enVal": "Sending..."
+  },
+  {
+    "key": "owner.companies.spending_limit_hint",
+    "kuVal": "Quotes exceeding this amount require explicit Owner approval before contractor dispatch.",
+    "enVal": "Quotes exceeding this amount require explicit Owner approval before contractor dispatch."
+  },
+  {
+    "key": "owner.companies.spending_limit_label",
+    "kuVal": "Approved Spending Limit (IQD)",
+    "enVal": "Approved Spending Limit (IQD)"
+  },
+  {
+    "key": "owner.companies.valid_through",
+    "kuVal": "Agreement valid through 2027",
+    "enVal": "Agreement valid through 2027"
+  },
+  {
+    "key": "owner.companies.zero_delegation",
+    "kuVal": "Zero management delegation",
+    "enVal": "Zero management delegation"
+  },
+  {
+    "key": "owner.documents.doc_title",
+    "kuVal": "Document Title",
+    "enVal": "Document Title"
+  },
+  {
+    "key": "owner.documents.doc_title_ph",
+    "kuVal": "e.g. Official Deed ERB-2024-9981",
+    "enVal": "e.g. Official Deed ERB-2024-9981"
+  },
+  {
+    "key": "owner.documents.doc_type",
+    "kuVal": "Document Type",
+    "enVal": "Document Type"
+  },
+  {
+    "key": "owner.documents.inspection_option",
+    "kuVal": "Inspection Report",
+    "enVal": "Inspection Report"
+  },
+  {
+    "key": "owner.documents.lease_option",
+    "kuVal": "Lease Agreement",
+    "enVal": "Lease Agreement"
+  },
+  {
+    "key": "owner.documents.management_option",
+    "kuVal": "Management Agreement",
+    "enVal": "Management Agreement"
+  },
+  {
+    "key": "owner.documents.select_file",
+    "kuVal": "Select Document File",
+    "enVal": "Select Document File"
+  },
+  {
+    "key": "owner.documents.tapu_option",
+    "kuVal": "Official Title Deed (Tapu)",
+    "enVal": "Official Title Deed (Tapu)"
+  },
+  {
+    "key": "owner.documents.upload_btn",
+    "kuVal": "Upload Document",
+    "enVal": "Upload Document"
+  },
+  {
+    "key": "owner.documents.uploading",
+    "kuVal": "Uploading...",
+    "enVal": "Uploading..."
+  },
+  {
+    "key": "owner.kpi.overdue_payments",
+    "kuVal": "overdue payments",
+    "enVal": "overdue payments"
+  },
+  {
+    "key": "owner.leases.choose_property_ph",
+    "kuVal": "Choose property...",
+    "enVal": "Choose property..."
+  },
+  {
+    "key": "owner.leases.col_actions",
+    "kuVal": "Actions",
+    "enVal": "Actions"
+  },
+  {
+    "key": "owner.leases.col_dates",
+    "kuVal": "Term Dates",
+    "enVal": "Term Dates"
+  },
+  {
+    "key": "owner.leases.col_deposit",
+    "kuVal": "Deposit (0% fee)",
+    "enVal": "Deposit (0% fee)"
+  },
+  {
+    "key": "owner.leases.col_property",
+    "kuVal": "Property",
+    "enVal": "Property"
+  },
+  {
+    "key": "owner.leases.col_rent",
+    "kuVal": "Monthly Rent",
+    "enVal": "Monthly Rent"
+  },
+  {
+    "key": "owner.leases.col_status",
+    "kuVal": "Payment Status",
+    "enVal": "Payment Status"
+  },
+  {
+    "key": "owner.leases.col_tenant",
+    "kuVal": "Tenant Name",
+    "enVal": "Tenant Name"
+  },
+  {
+    "key": "owner.leases.create_and_send",
+    "kuVal": "Create & Send Lease",
+    "enVal": "Create & Send Lease"
+  },
+  {
+    "key": "owner.leases.creating",
+    "kuVal": "Creating...",
+    "enVal": "Creating..."
+  },
+  {
+    "key": "owner.leases.end_date",
+    "kuVal": "End Date",
+    "enVal": "End Date"
+  },
+  {
+    "key": "owner.leases.fee_notice",
+    "kuVal": "Note: HomeHub fee applies solely to confirmed monthly rent. Security deposits incur 0% commission.",
+    "enVal": "Note: HomeHub fee applies solely to confirmed monthly rent. Security deposits incur 0% commission."
+  },
+  {
+    "key": "owner.leases.monthly_rent",
+    "kuVal": "Monthly Rent (IQD)",
+    "enVal": "Monthly Rent (IQD)"
+  },
+  {
+    "key": "owner.leases.security_deposit",
+    "kuVal": "Security Deposit (IQD)",
+    "enVal": "Security Deposit (IQD)"
+  },
+  {
+    "key": "owner.leases.select_property",
+    "kuVal": "Select Property",
+    "enVal": "Select Property"
+  },
+  {
+    "key": "owner.leases.start_date",
+    "kuVal": "Start Date",
+    "enVal": "Start Date"
+  },
+  {
+    "key": "owner.leases.tenant_name_ph",
+    "kuVal": "Full legal name",
+    "enVal": "Full legal name"
+  },
+  {
+    "key": "owner.maintenance.desc_label",
+    "kuVal": "Issue Description",
+    "enVal": "Issue Description"
+  },
+  {
+    "key": "owner.maintenance.desc_ph",
+    "kuVal": "Describe the problem in detail...",
+    "enVal": "Describe the problem in detail..."
+  },
+  {
+    "key": "owner.maintenance.issue_category",
+    "kuVal": "Issue Category",
+    "enVal": "Issue Category"
+  },
+  {
+    "key": "owner.maintenance.select_property",
+    "kuVal": "Select Property",
+    "enVal": "Select Property"
+  },
+  {
+    "key": "owner.maintenance.select_property_ph",
+    "kuVal": "Select a property...",
+    "enVal": "Select a property..."
+  },
+  {
+    "key": "owner.maintenance.submit_btn",
+    "kuVal": "Submit Request",
+    "enVal": "Submit Request"
+  },
+  {
+    "key": "owner.maintenance.submitting",
+    "kuVal": "Submitting...",
+    "enVal": "Submitting..."
+  },
+  {
+    "key": "owner.maintenance.title_ph",
+    "kuVal": "e.g. Water leak in kitchen pipe",
+    "enVal": "e.g. Water leak in kitchen pipe"
+  },
+  {
+    "key": "owner.management_label",
+    "kuVal": "Management:",
+    "enVal": "Management:"
+  },
+  {
+    "key": "owner.nav.reports",
+    "kuVal": "reports",
+    "enVal": "reports"
+  },
+  {
+    "key": "owner.policy.fee",
+    "kuVal": "HomeHub Fee",
+    "enVal": "HomeHub Fee"
+  },
+  {
+    "key": "owner.policy.net",
+    "kuVal": "Owner Net",
+    "enVal": "Owner Net"
+  },
+  {
+    "key": "owner.policy.tenant",
+    "kuVal": "Tenant",
+    "enVal": "Tenant"
+  },
+  {
+    "key": "owner.search_property_ph",
+    "kuVal": "Search property...",
+    "enVal": "Search property..."
+  },
+  {
+    "key": "payment.status.cancelled",
+    "kuVal": "cancelled",
+    "enVal": "cancelled"
+  },
+  {
+    "key": "payment.status.confirmed",
+    "kuVal": "Collected",
+    "enVal": "Collected"
+  },
+  {
+    "key": "payment.status.failed",
+    "kuVal": "failed",
+    "enVal": "failed"
+  },
+  {
+    "key": "payment.status.overdue",
+    "kuVal": "Overdue",
+    "enVal": "Overdue"
+  },
+  {
+    "key": "payment.status.partially_paid",
+    "kuVal": "Partially Collected",
+    "enVal": "Partially Collected"
+  },
+  {
+    "key": "payment.status.pending",
+    "kuVal": "pending",
+    "enVal": "pending"
+  },
+  {
+    "key": "payment.status.recorded",
+    "kuVal": "Recorded",
+    "enVal": "Recorded"
+  },
+  {
+    "key": "payment.status.refunded",
+    "kuVal": "Refunded",
+    "enVal": "Refunded"
+  },
+  {
+    "key": "payment.status.reversed",
+    "kuVal": "Reversed",
+    "enVal": "Reversed"
+  },
+  {
+    "key": "payment.status.unknown",
+    "kuVal": "Unknown",
+    "enVal": "Unknown"
+  },
+  {
+    "key": "payment.status.upcoming",
+    "kuVal": "Upcoming",
+    "enVal": "Upcoming"
+  },
+  {
+    "key": "payout.assign_lease",
+    "kuVal": "Assign or activate a lease to track scheduled rent and owner payouts.",
+    "enVal": "Assign or activate a lease to track scheduled rent and owner payouts."
+  },
+  {
+    "key": "payout.collections_appear",
+    "kuVal": "Rent collections will appear here once confirmed in the system.",
+    "enVal": "Rent collections will appear here once confirmed in the system."
+  },
+  {
+    "key": "payout.entitlement_recorded",
+    "kuVal": "net owner entitlement recorded",
+    "enVal": "net owner entitlement recorded"
+  },
+  {
+    "key": "payout.gateway_notice",
+    "kuVal": "Disbursement gateway in pre-integration. Settlement payouts are managed via Owner Finances.",
+    "enVal": "Disbursement gateway in pre-integration. Settlement payouts are managed via Owner Finances."
+  },
+  {
+    "key": "payout.no_active_lease",
+    "kuVal": "No Active Lease Recorded",
+    "enVal": "No Active Lease Recorded"
+  },
+  {
+    "key": "payout.none_awaiting",
+    "kuVal": "No Confirmed Collections Awaiting Payout",
+    "enVal": "No Confirmed Collections Awaiting Payout"
+  },
+  {
+    "key": "payout.view_finances",
+    "kuVal": "View Finances →",
+    "enVal": "View Finances →"
+  },
+  {
+    "key": "payout.view_settlements",
+    "kuVal": "View Settlements →",
+    "enVal": "View Settlements →"
+  },
+  {
+    "key": "pricing.back_to_dashboard",
+    "kuVal": "Back to Dashboard",
+    "enVal": "Back to Dashboard"
+  },
+  {
+    "key": "pricing.cancel",
+    "kuVal": "Cancel",
+    "enVal": "Cancel"
+  },
+  {
+    "key": "pricing.create_success",
+    "kuVal": "Pricing tier created successfully!",
+    "enVal": "Pricing tier created successfully!"
+  },
+  {
+    "key": "pricing.create_tier",
+    "kuVal": "Create New Tier",
+    "enVal": "Create New Tier"
+  },
+  {
+    "key": "pricing.err_max_invalid",
+    "kuVal": "Max properties must be a valid number",
+    "enVal": "Max properties must be a valid number"
+  },
+  {
+    "key": "pricing.err_max_less_min",
+    "kuVal": "Max properties cannot be less than min properties",
+    "enVal": "Max properties cannot be less than min properties"
+  },
+  {
+    "key": "pricing.err_mgmt_rate",
+    "kuVal": "Management fee rate must be between 0 and 1 (or 0% to 100%)",
+    "enVal": "Management fee rate must be between 0 and 1 (or 0% to 100%)"
+  },
+  {
+    "key": "pricing.err_min_invalid",
+    "kuVal": "Min properties must be 0 or greater",
+    "enVal": "Min properties must be 0 or greater"
+  },
+  {
+    "key": "pricing.err_name_required",
+    "kuVal": "Tier name is required",
+    "enVal": "Tier name is required"
+  },
+  {
+    "key": "pricing.err_prio",
+    "kuVal": "Priority must be an integer",
+    "enVal": "Priority must be an integer"
+  },
+  {
+    "key": "pricing.err_rent_rate",
+    "kuVal": "Rent fee rate must be between 0 and 1 (or 0% to 100%)",
+    "enVal": "Rent fee rate must be between 0 and 1 (or 0% to 100%)"
+  },
+  {
+    "key": "pricing.max_props",
+    "kuVal": "Max Properties",
+    "enVal": "Max Properties"
+  },
+  {
+    "key": "pricing.max_props_hint",
+    "kuVal": "(Optional)",
+    "enVal": "(Optional)"
+  },
+  {
+    "key": "pricing.mgmt_fee_rate",
+    "kuVal": "Management Fee Rate:",
+    "enVal": "Management Fee Rate:"
+  },
+  {
+    "key": "pricing.min_props",
+    "kuVal": "Min Properties",
+    "enVal": "Min Properties"
+  },
+  {
+    "key": "pricing.modal_title",
+    "kuVal": "Create New Pricing Tier",
+    "enVal": "Create New Pricing Tier"
+  },
+  {
+    "key": "pricing.no_tiers",
+    "kuVal": "No pricing tiers configured.",
+    "enVal": "No pricing tiers configured."
+  },
+  {
+    "key": "pricing.no_tiers_hint",
+    "kuVal": "Click \"Create New Tier\" to define the first pricing bracket.",
+    "enVal": "Click \"Create New Tier\" to define the first pricing bracket."
+  },
+  {
+    "key": "pricing.priority",
+    "kuVal": "Priority",
+    "enVal": "Priority"
+  },
+  {
+    "key": "pricing.property_range",
+    "kuVal": "Property Range:",
+    "enVal": "Property Range:"
+  },
+  {
+    "key": "pricing.rent_fee_rate",
+    "kuVal": "Rent Fee Rate:",
+    "enVal": "Rent Fee Rate:"
+  },
+  {
+    "key": "pricing.save_tier",
+    "kuVal": "Save Tier",
+    "enVal": "Save Tier"
+  },
+  {
+    "key": "pricing.saving",
+    "kuVal": "Creating...",
+    "enVal": "Creating..."
+  },
+  {
+    "key": "pricing.subtitle",
+    "kuVal": "Manage platform fee tiers, property boundaries, and priority rankings.",
+    "enVal": "Manage platform fee tiers, property boundaries, and priority rankings."
+  },
+  {
+    "key": "pricing.tier_name",
+    "kuVal": "Tier Name",
+    "enVal": "Tier Name"
+  },
+  {
+    "key": "pricing.title",
+    "kuVal": "Tiered Pricing Configuration",
+    "enVal": "Tiered Pricing Configuration"
+  },
+  {
+    "key": "property.active_lease",
+    "kuVal": "Active Lease",
+    "enVal": "Active Lease"
+  },
+  {
+    "key": "property.collection_breakdown",
+    "kuVal": "Collection Breakdown",
+    "enVal": "Collection Breakdown"
+  },
+  {
+    "key": "property.download_receipt",
+    "kuVal": "Download Receipt",
+    "enVal": "Download Receipt"
+  },
+  {
+    "key": "property.due_date",
+    "kuVal": "Due Date",
+    "enVal": "Due Date"
+  },
+  {
+    "key": "property.financial_error",
+    "kuVal": "Authoritative financial records are temporarily unavailable. Data is not fabricated.",
+    "enVal": "Authoritative financial records are temporarily unavailable. Data is not fabricated."
+  },
+  {
+    "key": "property.form_name",
+    "kuVal": "Property Name",
+    "enVal": "Property Name"
+  },
+  {
+    "key": "property.mgmt_fee_agreed",
+    "kuVal": "Agreed Management Fee Rate",
+    "enVal": "Agreed Management Fee Rate"
+  },
+  {
+    "key": "property.mgmt_fee_desc",
+    "kuVal": "Property-specific fee for day-to-day operations.",
+    "enVal": "Property-specific fee for day-to-day operations."
+  },
+  {
+    "key": "property.no_active_lease",
+    "kuVal": "No Active Lease",
+    "enVal": "No Active Lease"
+  },
+  {
+    "key": "property.no_schedule",
+    "kuVal": "No Schedule",
+    "enVal": "No Schedule"
+  },
+  {
+    "key": "property.owner_net",
+    "kuVal": "Owner Receives (Net)",
+    "enVal": "Owner Receives (Net)"
+  },
+  {
+    "key": "property.paid_date",
+    "kuVal": "Paid Date",
+    "enVal": "Paid Date"
+  },
+  {
+    "key": "property.rent_amount",
+    "kuVal": "Rent Amount",
+    "enVal": "Rent Amount"
+  },
+  {
+    "key": "property.rent_breakdown",
+    "kuVal": "Rent Collection & Payout",
+    "enVal": "Rent Collection & Payout"
+  },
+  {
+    "key": "property.rent_fee_agreed",
+    "kuVal": "Agreed Rent Fee Rate",
+    "enVal": "Agreed Rent Fee Rate"
+  },
+  {
+    "key": "property.rent_fee_desc",
+    "kuVal": "Property-specific fee for tenant leasing.",
+    "enVal": "Property-specific fee for tenant leasing."
+  },
+  {
+    "key": "property.select_city",
+    "kuVal": "select city",
+    "enVal": "select city"
+  },
+  {
+    "key": "property.select_state",
+    "kuVal": "select state",
+    "enVal": "select state"
+  },
+  {
+    "key": "property.total_collected",
+    "kuVal": "Total Rent Collected (Confirmed)",
+    "enVal": "Total Rent Collected (Confirmed)"
+  },
+  {
+    "key": "property.total_fees",
+    "kuVal": "Total Applicable Fees",
+    "enVal": "Total Applicable Fees"
+  },
+  {
+    "key": "property.vacant",
+    "kuVal": "Vacant / No Active Lease",
+    "enVal": "Vacant / No Active Lease"
+  },
+  {
+    "key": "property.validation.name_required",
+    "kuVal": "Property name is required and cannot be empty.",
+    "enVal": "Property name is required and cannot be empty."
+  },
+  {
+    "key": "property.view_statement",
+    "kuVal": "View Full Statement",
+    "enVal": "View Full Statement"
+  },
+  {
+    "key": "receipt.none",
+    "kuVal": "No confirmed payment receipt is available for this period.",
+    "enVal": "No confirmed payment receipt is available for this period."
+  },
+  {
+    "key": "receipt.notice",
+    "kuVal": "Payment receipt record verified (${rcpNum}). Formal PDF document download is pending banking/accounting export service integration.",
+    "enVal": "Payment receipt record verified (${rcpNum}). Formal PDF document download is pending banking/accounting export service integration."
+  },
+  {
+    "key": "statement.notice",
+    "kuVal": "Financial statement ledger is accessible to property owners and management companies in the Owner Workspace.",
+    "enVal": "Financial statement ledger is accessible to property owners and management companies in the Owner Workspace."
+  },
+  {
+    "key": "tenant.amountExceeds",
+    "kuVal": "Payment amount cannot exceed remaining rent due",
+    "enVal": "Payment amount cannot exceed remaining rent due"
+  },
+  {
+    "key": "tenant.amountPositive",
+    "kuVal": "Payment amount must be greater than zero",
+    "enVal": "Payment amount must be greater than zero"
+  },
+  {
+    "key": "tenant.enterAmountToPay",
+    "kuVal": "Enter amount to pay now",
+    "enVal": "Enter amount to pay now"
+  },
+  {
+    "key": "tenant.fullPayment",
+    "kuVal": "Full Balance",
+    "enVal": "Full Balance"
+  },
+  {
+    "key": "tenant.partialPayment",
+    "kuVal": "Custom / Partial",
+    "enVal": "Custom / Partial"
+  },
+  {
+    "key": "tenant.paymentType",
+    "kuVal": "Payment Type",
+    "enVal": "Payment Type"
+  },
+  {
+    "key": "tenant.remainingAfterPayment",
+    "kuVal": "Remaining balance after this payment:",
+    "enVal": "Remaining balance after this payment:"
+  },
+  {
+    "key": "workspace.all_roles_enrolled",
+    "kuVal": "You have already activated all available platform roles.",
+    "enVal": "You have already activated all available platform roles."
+  },
+  {
+    "key": "workspace.back_to_workspaces",
+    "kuVal": "Back to Workspaces",
+    "enVal": "Back to Workspaces"
+  },
+  {
+    "key": "workspace.enroll_failed",
+    "kuVal": "Failed to activate role.",
+    "enVal": "Failed to activate role."
+  },
+  {
+    "key": "workspace.single_workspace_hint",
+    "kuVal": "single workspace hint",
+    "enVal": "single workspace hint"
+  },
+  {
+    "key": "workspace.switch_failed",
+    "kuVal": "Failed to switch workspace.",
+    "enVal": "Failed to switch workspace."
+  }
+]

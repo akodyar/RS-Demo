@@ -1,0 +1,1252 @@
+<USER_REQUEST>
+# HomeHub — Deep Rental Management Workflow Consistency & Integrity Audit
+
+## PURPOSE
+
+Perform a deep, adversarial, end-to-end audit of the entire HomeHub RENT MANAGEMENT domain.
+
+This is an AUDIT ONLY task.
+
+Do NOT implement fixes yet.
+
+Do NOT refactor code.
+
+Do NOT change schema.
+
+Do NOT change routes.
+
+Do NOT change authorization.
+
+Do NOT change financial logic.
+
+Do NOT seed fake production data.
+
+Do NOT silently reconcile contradictions.
+
+The objective is to determine whether the CURRENT implementation is actually consistent with the intended HomeHub rental-management workflow and whether every transition is correctly enforced across:
+
+- frontend
+- API
+- authentication
+- authorization
+- repositories/services
+- Drizzle ORM
+- PostgreSQL
+- financial ledger
+- audit logs
+- state transitions
+- tenant/property/unit/lease relationships
+
+Accuracy is more important than reporting a positive result.
+
+---
+
+# 1. AUTHORITATIVE RENTAL WORKFLOW
+
+Use this as the canonical conceptual workflow for the audit:
+
+Property
+→ Unit
+→ RENT Listing
+→ Inquiry / Tenant Discovery
+→ Viewing
+→ Application
+→ Review
+→ Approval
+→ Lease
+→ Rent Schedule
+→ Rent Due
+→ Payment
+→ Confirmation
+→ Receipt / History
+→ Occupancy
+→ Maintenance
+→ Renewal / Move-out
+
+Do NOT assume every stage is implemented.
+
+For every stage, determine its actual implementation status.
+
+Classify each stage as exactly one of:
+
+- IMPLEMENTED AND VERIFIED
+- IMPLEMENTED BUT NOT VERIFIED
+- PARTIALLY IMPLEMENTED
+- INFRASTRUCTURE ONLY
+- NOT IMPLEMENTED
+- UNKNOWN
+
+Do not infer implementation merely because a table, type, UI component, or repository exists.
+
+---
+
+# 2. CORE INVARIANTS
+
+The following invariants are mandatory audit targets.
+
+## 2.1 Ownership
+
+Ownership != Management.
+
+A Company managing an Owner's property must NOT become the owner.
+
+Ownership must be determined from authoritative persisted relationships.
+
+Client-supplied ownerId must never override server-side authorization.
+
+---
+
+## 2.2 Management Authority
+
+A Company may manage an Owner's property only when a valid management relationship/agreement and required permissions authorize the action.
+
+Audit separately:
+
+- property management
+- tenant management
+- listing authority
+- financial management
+- rent collection
+- approval authority
+- spending limits
+
+Do NOT treat organization membership alone as sufficient authorization unless the implementation explicitly and correctly defines it that way.
+
+---
+
+## 2.3 Property → Unit Integrity
+
+Every rental operation must resolve through the correct:
+
+Property
+→ Unit
+
+A Unit must not belong to another Property.
+
+A Tenant must not be attached to a Unit through an unrelated Property.
+
+---
+
+## 2.4 Tenant Integrity
+
+Tenant relationships must remain consistent across:
+
+Property
+Unit
+Tenant
+Lease
+Rent Schedule
+Payment
+Maintenance
+Renewal / Move-out
+
+Test for IDOR and cross-tenant access.
+
+---
+
+## 2.5 Lease Integrity
+
+A Lease must connect the correct:
+
+- property
+- unit
+- tenant
+- owner
+- management company, if applicable
+
+Reject or prevent:
+
+- wrong property/unit combinations
+- wrong tenant
+- unauthorized company
+- invalid dates
+- invalid rent
+- invalid status transitions
+- overlapping active leases where prohibited
+
+---
+
+# 3. RENT LISTING DOMAIN SEPARATION
+
+Audit RENT vs SALE separation at every layer.
+
+Verify:
+
+- RENT listing creation
+- RENT listing retrieval
+- RENT search
+- RENT filters
+- property detail
+- company listings
+- owner listings
+- unit availability
+
+Verify that frontend filtering is NOT the only separation mechanism.
+
+Server-side queries must enforce the domain.
+
+A SALE listing must never appear in a RENT result because of frontend-only filtering.
+
+A RENT listing must never be interpreted as a SALE listing.
+
+---
+
+# 4. PROPERTY CREATION FOR RENT
+
+Audit the complete path:
+
+Owner / Authorized Company
+→ Property
+→ Unit
+→ rental configuration
+→ RENT listing
+
+Determine:
+
+- who can create a rental property;
+- who can create units;
+- who can configure rent;
+- who can publish a RENT listing;
+- whether listing authority is distinct from ownership;
+- whether Company authority is correctly scoped;
+- whether unit rent can differ where the model permits it;
+- whether availability is authoritative.
+
+Verify that no fake/default business data is silently created.
+
+---
+
+# 5. TENANT DISCOVERY / INQUIRY
+
+Search the entire repository for actual implementation of:
+
+- inquiry
+- tenant discovery
+- lead
+- prospective tenant
+- viewing request
+
+Determine whether these are:
+
+- real persisted workflows;
+- UI-only concepts;
+- incomplete infrastructure;
+- not implemented.
+
+If not implemented, explicitly say so.
+
+Do not pretend that a tenant record is equivalent to a tenant-discovery workflow.
+
+---
+
+# 6. VIEWING
+
+Audit whether a real viewing workflow exists.
+
+Check:
+
+- viewing request
+- scheduling
+- property/unit relationship
+- tenant/prospect relationship
+- authorization
+- cancellation
+- completion
+- audit history
+
+Determine whether viewing state exists in PostgreSQL or only in frontend code.
+
+---
+
+# 7. APPLICATION
+
+Audit rental application workflow.
+
+Determine whether the system supports:
+
+- application creation
+- applicant identity
+- property/unit
+- application status
+- submitted state
+- review state
+- approval/rejection
+- audit trail
+
+Verify that an applicant cannot submit an application for a unit they are not legitimately allowed to apply for.
+
+---
+
+# 8. REVIEW AND APPROVAL
+
+Audit the approval boundary separately from application submission.
+
+Determine:
+
+- who may review;
+- who may approve;
+- who may reject;
+- whether Owner and Company permissions differ;
+- whether approval state is server-authoritative;
+- whether client-supplied approval status is ignored;
+- whether approval creates or activates a Lease;
+- whether approval can happen without a valid application.
+
+Do not assume:
+
+Application → Approval → Lease
+
+unless the actual implementation enforces it.
+
+---
+
+# 9. LEASE CREATION
+
+Audit Lease creation deeply.
+
+Verify:
+
+- correct Property
+- correct Unit
+- correct Tenant
+- correct Owner
+- correct Company, if applicable
+- start date
+- end date
+- rent amount
+- payment frequency
+- deposit
+- status
+- documents
+- approval relationship
+
+Check all combinations for relational integrity.
+
+Specifically test for:
+
+### Invalid Property/Unit
+
+Property A + Unit belonging to Property B.
+
+### Invalid Tenant
+
+Tenant associated with another property/unit.
+
+### Unauthorized Company
+
+Company without management authority attempts lease creation.
+
+### Overlapping Lease
+
+Attempt to create an active lease where the Unit already has an active overlapping lease.
+
+Expected behavior must be determined from current code/schema.
+
+If overlap prevention does not exist, report it as a finding.
+
+---
+
+# 10. LEASE STATE MACHINE
+
+Map every actual Lease state.
+
+For each state identify:
+
+- who can create it;
+- who can transition into it;
+- who can transition out;
+- required conditions;
+- database column(s);
+- API endpoint(s);
+- UI action(s).
+
+Construct an actual state-transition table.
+
+Example format:
+
+| From | Action | To | Actor | Preconditions | Enforced By |
+|---|---|---|---|---|---|
+
+Do NOT invent states.
+
+Use the exact states from the current implementation.
+
+Identify illegal transitions.
+
+Test or inspect whether the backend rejects illegal transitions.
+
+---
+
+# 11. RENT SCHEDULE
+
+Audit Rent Schedule generation and persistence.
+
+Verify:
+
+- source Lease
+- Tenant
+- Property
+- Unit
+- due date
+- amount
+- frequency
+- paid amount
+- outstanding amount
+- status
+
+Determine whether schedules are:
+
+- generated from Lease;
+- manually created;
+- hard-coded;
+- frontend-only;
+- database-authoritative.
+
+Check for:
+
+- duplicate schedule rows
+- wrong tenant
+- wrong property
+- wrong unit
+- wrong lease
+- wrong due date
+- wrong rent amount
+- overlapping schedules
+
+---
+
+# 12. RENT DUE
+
+Audit the distinction between:
+
+- scheduled
+- due
+- overdue
+- partially paid
+- fully paid
+- pending
+- confirmed
+- failed
+- reversed
+
+Use actual implementation states.
+
+Do NOT merge these concepts simply because the UI displays them similarly.
+
+Determine exactly how outstanding rent is calculated.
+
+The calculation must be authoritative.
+
+Frontend arithmetic must not be the source of truth.
+
+---
+
+# 13. PAYMENT
+
+Audit payment creation.
+
+Verify:
+
+- payment belongs to correct rent schedule;
+- payment belongs to correct tenant;
+- payment belongs to correct lease;
+- payment amount > 0;
+- overpayment prevention;
+- partial payment handling;
+- multiple payment aggregation;
+- duplicate payment prevention where required;
+- authorization.
+
+Attempt to identify every path by which a payment can be created.
+
+Include:
+
+- tenant payment
+- company cash collection
+- owner/manual payment if supported
+- digital payment if configured
+
+Do not assume all payment paths have identical authorization.
+
+---
+
+# 14. CASH COLLECTION STATE MACHINE
+
+Audit the actual cash workflow:
+
+RECORDED
+→ CONFIRMED
+→ REVERSED
+
+Verify:
+
+- collectorId
+- confirmedByUserId
+- collector authorization
+- company membership
+- property authority
+- rent collection permission
+- financial-management permission
+- confirmation authorization
+- idempotency
+- concurrency protection
+- reversal authorization
+- reversal reason
+- compensating entries
+
+Critical invariant:
+
+collectorId != confirmedByUserId
+
+They are different concepts.
+
+Do not collapse them.
+
+---
+
+# 15. PAYMENT CONFIRMATION
+
+Confirmation must be tied to:
+
+CONFIRMED ACTUALLY COLLECTED RENT.
+
+Verify that:
+
+- pending payment does NOT generate commission;
+- failed payment does NOT generate commission;
+- scheduled rent does NOT generate commission;
+- merely due rent does NOT generate commission;
+- security deposit does NOT generate commission;
+- sales transactions do NOT generate commission.
+
+Only confirmed collected rent generates the 5% HomeHub commission.
+
+---
+
+# 16. 5% COMMISSION ACCOUNTING
+
+Audit the complete financial chain:
+
+Payment
+→ Confirmation
+→ Commission
+→ Journal
+→ Ledger
+→ Owner Payable
+
+Canonical policy:
+
+HomeHub commission = 5% of confirmed collected rent.
+
+Owner payable = 95%.
+
+Test conceptually and, where safe, against real database records:
+
+### Full payment
+
+1,000,000
+→ commission 50,000
+→ owner payable 950,000
+
+### Partial payment
+
+600,000
+→ commission 30,000
+→ owner payable 570,000
+→ outstanding 400,000
+
+### Multiple payments
+
+400,000 + 600,000
+→ total confirmed 1,000,000
+→ total commission 50,000
+→ owner payable 950,000
+
+Verify that commission is not calculated from scheduled rent.
+
+Verify idempotency.
+
+Verify duplicate confirmation cannot duplicate commission.
+
+---
+
+# 17. SECURITY DEPOSIT
+
+Audit security deposits as a completely separate financial concept.
+
+Verify:
+
+- deposit belongs to correct lease;
+- deposit belongs to correct tenant;
+- deposit does not generate the 5% rent-management commission;
+- deposit is not treated as rent;
+- deposit is not treated as sales proceeds;
+- deposit status/lifecycle is authoritative.
+
+Audit:
+
+- collection
+- holding
+- return
+- deduction
+- dispute, if implemented
+
+If not implemented, say so.
+
+---
+
+# 18. RECEIPT / PAYMENT HISTORY
+
+Determine whether receipt/history is:
+
+- real persisted record;
+- payment history query;
+- generated document;
+- UI-only display.
+
+Verify that payment history reflects PostgreSQL truth.
+
+A receipt must not show CONFIRMED if PostgreSQL says PENDING.
+
+A reversed payment must remain historically visible as REVERSED.
+
+Do not destroy financial history through DELETE.
+
+---
+
+# 19. OCCUPANCY
+
+Audit how occupancy is determined.
+
+Determine whether occupancy derives from:
+
+- active Lease;
+- unit status;
+- explicit occupancy state;
+- another authoritative relationship.
+
+There must be no contradiction such as:
+
+Unit = VACANT
+while active lease exists
+
+unless the model explicitly supports that state.
+
+Likewise:
+
+Unit = OCCUPIED
+without a valid active lease
+
+must be investigated.
+
+---
+
+# 20. MAINTENANCE
+
+Audit:
+
+Tenant
+→ Maintenance Request
+→ Property
+→ Unit
+
+Verify:
+
+- tenant can create requests only for legitimately leased units;
+- Company can act only with appropriate authority;
+- Owner access is correct;
+- request cannot be attached to unrelated property/unit;
+- spending limits are enforced;
+- owner approval escalation is enforced where required;
+- financial consequences are linked to authoritative records.
+
+---
+
+# 21. RENEWAL
+
+Audit Lease Renewal.
+
+Determine:
+
+- who may request renewal;
+- who may approve;
+- renewal state;
+- date changes;
+- rent changes;
+- new schedule generation;
+- duplicate/overlapping lease prevention;
+- audit trail.
+
+A renewal must not silently create two active leases for the same unit.
+
+---
+
+# 22. MOVE-OUT
+
+Audit Move-out.
+
+Determine:
+
+- who can initiate;
+- who can approve;
+- effective date;
+- lease state transition;
+- occupancy update;
+- outstanding rent handling;
+- deposit handling;
+- maintenance/inspection relationship;
+- final payment/history;
+- audit logging.
+
+Verify that move-out cannot corrupt the financial history.
+
+---
+
+# 23. OWNER VS COMPANY RENT MANAGEMENT
+
+This is a major audit area.
+
+Test both:
+
+## Owner self-management
+
+Owner
+→ Property
+→ Unit
+→ Tenant
+→ Lease
+→ Rent
+→ Collection
+
+## Company management
+
+Owner
+→ Management Agreement
+→ Company authority
+→ Property
+→ Unit
+→ Tenant
+→ Lease
+→ Rent
+→ Collection
+
+Verify that the Company does not become owner.
+
+Verify that Company financial authority is distinct from:
+
+- membership
+- property management
+- listing authority
+- tenant management
+
+---
+
+# 24. AUTHORIZATION MATRIX
+
+Build a complete matrix.
+
+At minimum include:
+
+| Operation | Owner | Company Admin | Property Manager | Financial Role | Tenant | Unauthorized User |
+|---|---|---|---|---|---|---|
+| Create Property | | | | | | |
+| Create Unit | | | | | | |
+| Create RENT Listing | | | | | | |
+| View Tenant | | | | | | |
+| Create Lease | | | | | | |
+| Approve Lease | | | | | | |
+| View Rent Schedule | | | | | | |
+| Record Cash | | | | | | |
+| Confirm Cash | | | | | | |
+| Reverse Payment | | | | | | |
+| View Financials | | | | | | |
+| Create Maintenance | | | | | | |
+| Approve Spending | | | | | | |
+| Request Renewal | | | | | | |
+| Approve Renewal | | | | | | |
+| Initiate Move-out | | | | | | |
+
+Do not fill cells from assumptions.
+
+Derive them from actual implementation.
+
+---
+
+# 25. OBJECT-LEVEL AUTHORIZATION / IDOR
+
+Perform adversarial tests for:
+
+- propertyId
+- unitId
+- tenantId
+- leaseId
+- rentScheduleId
+- paymentId
+- listingId
+- ownerId
+- companyId
+- organizationId
+- userId
+
+For every object identifier:
+
+Ask:
+
+1. Is it accepted from the client?
+2. Is it trusted?
+3. Is it validated?
+4. Is ownership/authority re-derived server-side?
+5. What happens if the ID belongs to another tenant?
+6. What happens if it belongs to another owner?
+7. What happens if it belongs to another company?
+8. What happens if it belongs to another property?
+
+Test where safely possible.
+
+---
+
+# 26. DATABASE INTEGRITY
+
+Inspect PostgreSQL constraints and application checks.
+
+Verify:
+
+- PK
+- FK
+- unique constraints
+- NOT NULL
+- enum/state constraints
+- ownership relations
+- lease/unit relationships
+- payment/schedule relationships
+
+Find cases where application logic assumes a relationship but PostgreSQL does not enforce it.
+
+Find cases where PostgreSQL permits invalid states that application code does not defend against.
+
+Report both.
+
+---
+
+# 27. TRANSACTION ATOMICITY
+
+Identify all multi-write rental operations.
+
+Examples:
+
+Lease creation
+Rent schedule generation
+Payment confirmation
+Commission posting
+Ledger posting
+Move-out
+Renewal
+
+For each determine:
+
+- transaction boundary;
+- tables affected;
+- rollback behavior;
+- partial failure risk;
+- idempotency.
+
+Do not claim atomicity merely because `db.transaction()` exists.
+
+Trace actual operations.
+
+---
+
+# 28. FRONTEND ↔ BACKEND CONSISTENCY
+
+Audit every rental UI action.
+
+For each:
+
+- UI action
+- API endpoint
+- request payload
+- authorization
+- service
+- repository
+- DB mutation
+- response
+- UI state refresh
+
+Find:
+
+- wrong endpoint
+- wrong payload field
+- stale state
+- incorrect response mapping
+- frontend-only mutation
+- fake fallback data
+- hard-coded values
+- inconsistent status names
+- incorrect currency calculations
+
+---
+
+# 29. STATE TERMINOLOGY CONSISTENCY
+
+Search the entire repository for rental status names.
+
+Build a canonical list of actual states for:
+
+- listing
+- application
+- lease
+- rent schedule
+- payment
+- security deposit
+- maintenance
+- renewal
+- move-out
+
+Identify synonyms or contradictory states.
+
+Example problem:
+
+Frontend:
+`PAID`
+
+Backend:
+`CONFIRMED`
+
+Database:
+`SETTLED`
+
+Determine whether these mean the same thing or represent different states.
+
+Do not silently merge them.
+
+---
+
+# 30. FINANCIAL CONSISTENCY
+
+Verify all rental monetary fields.
+
+Check:
+
+- rent
+- deposit
+- payment
+- paid amount
+- outstanding
+- commission
+- owner payable
+- settlement
+
+Search for:
+
+- floating-point arithmetic
+- frontend-authoritative totals
+- duplicated commission calculation
+- inconsistent rounding
+- currency mismatch
+- hard-coded IQD amounts
+- stale cached financial totals
+
+PostgreSQL/ledger must remain authoritative.
+
+---
+
+# 31. NO FAKE DATA
+
+Search rental-related frontend and backend code for:
+
+- mock tenants
+- demo properties
+- sample rent
+- fake payment history
+- hard-coded revenue
+- static charts
+- fake occupancy
+- fake upcoming rent
+- fake tenant activity
+
+Classify every hard-coded value:
+
+- legitimate static configuration
+- test fixture
+- localization
+- business constant
+- suspicious production data
+
+Do not delete anything during this audit.
+
+---
+
+# 32. PRODUCTION / DEVELOPMENT SEPARATION
+
+Verify that:
+
+- DevAuth cannot activate in production;
+- test personas cannot become production users;
+- mock data cannot silently activate in production;
+- local fixtures do not become runtime production data;
+- development-only shortcuts are environment-gated.
+
+---
+
+# 33. END-TO-END GOLDEN RENTAL SCENARIO
+
+If the current implementation supports the necessary stages, construct one disposable end-to-end scenario:
+
+Owner
+→ Property
+→ Unit
+→ RENT Listing
+→ Tenant
+→ Lease
+→ Rent Schedule
+→ Partial Payment
+→ Confirmation
+→ Commission
+→ Owner Payable
+→ Maintenance
+→ Renewal or Move-out
+
+At every stage verify PostgreSQL state.
+
+If a stage is not implemented, STOP that branch and record the exact missing stage.
+
+Do not simulate missing stages.
+
+Do not bypass missing workflows with direct SQL merely to make the scenario appear complete.
+
+Direct SQL may be used only for evidence inspection or cleanup, not to fabricate application workflow completion.
+
+---
+
+# 34. CONTRADICTION DETECTION
+
+This is one of the most important sections.
+
+Explicitly search for contradictions such as:
+
+- Owner vs Company ownership
+- Company management vs financial authority
+- RENT vs SALE
+- Lease vs Unit
+- Tenant vs Property
+- Tenant vs Lease
+- Lease vs Rent Schedule
+- Rent Schedule vs Payment
+- Payment status vs Commission
+- Payment status vs Ledger
+- Payment status vs UI
+- Security Deposit vs Rent
+- Occupancy vs Lease
+- Maintenance vs Property/Unit
+- Renewal vs active Lease
+- Move-out vs payment history
+
+For every contradiction report:
+
+1. expected invariant;
+2. actual implementation;
+3. affected files;
+4. affected API;
+5. affected database tables;
+6. severity;
+7. exploitability;
+8. recommended fix direction.
+
+Do NOT implement the fix.
+
+---
+
+# 35. SEVERITY CLASSIFICATION
+
+Classify every finding:
+
+### P0 — Critical
+Security, financial corruption, cross-tenant access, ownership corruption, duplicate money creation, unauthorized financial action.
+
+### P1 — High
+Broken core rental workflow, invalid lease relationships, incorrect rent schedule, incorrect payment state, missing mandatory authorization.
+
+### P2 — Medium
+Incorrect UI state, incomplete workflow, inconsistent status, missing audit evidence.
+
+### P3 — Low
+UX inconsistency, naming inconsistency, non-critical technical debt.
+
+---
+
+# 36. REQUIRED OUTPUTS
+
+Produce the following artifacts in the final report:
+
+## A. Rental Workflow Status Matrix
+
+| Stage | Current Implementation | Evidence | Status | Blocking Issue |
+|---|---|---|---|---|
+
+## B. State Machine Matrix
+
+For:
+
+- Lease
+- Rent Schedule
+- Payment
+- Maintenance
+- Renewal
+- Move-out
+
+## C. Authorization Matrix
+
+Owner / Company / Manager / Finance / Tenant / Unauthorized.
+
+## D. Entity Relationship Integrity Matrix
+
+Property → Unit → Tenant → Lease → Rent Schedule → Payment.
+
+## E. Financial Flow
+
+Payment
+→ Confirmation
+→ 5%
+→ 95%
+→ Journal
+→ Ledger
+→ Settlement
+
+## F. Contradiction Register
+
+| ID | Invariant | Contradiction | Severity | Evidence | Risk |
+|---|---|---|---|---|---|
+
+## G. Missing Workflow Register
+
+Explicitly list every intended workflow stage that does not currently exist.
+
+## H. Fake / Hardcoded Data Findings
+
+Every suspicious rental-related hard-coded dataset or value.
+
+## I. Security Findings
+
+All IDOR, authorization, identity, ownership, and company-scope issues.
+
+## J. Transaction / Atomicity Findings
+
+Every multi-write operation that is not safely atomic or not sufficiently verified.
+
+---
+
+# 37. EVIDENCE STANDARD
+
+Every finding MUST be labeled:
+
+- VERIFIED BY DIRECT RUNTIME EVIDENCE
+- VERIFIED BY REAL POSTGRESQL EVIDENCE
+- VERIFIED BY CODE INSPECTION
+- HISTORICAL EVIDENCE ONLY
+- NOT VERIFIED
+- UNKNOWN
+
+Never treat:
+
+- TypeScript compilation
+- route existence
+- table existence
+- UI existence
+- test fixture existence
+- old audit report
+
+as proof of current runtime behavior.
+
+Historical reports must remain historical.
+
+---
+
+# 38. NO FALSE CLOSURE
+
+Do NOT use:
+
+- "Production Ready"
+- "Fully Complete"
+- "Fully Secure"
+- "All Rental Workflows Complete"
+
+unless the evidence actually proves it.
+
+If any P0/P1 issue exists, the final verdict cannot be VERIFIED.
+
+If a core workflow stage is missing, explicitly state that.
+
+If implementation exists but runtime verification is missing, explicitly state that.
+
+---
+
+# 39. FINAL VERDICT
+
+Give exactly one:
+
+- VERIFIED
+- PARTIALLY VERIFIED
+- NOT VERIFIED
+- BLOCKED
+
+Then provide:
+
+### Release-Blocking Findings
+
+### High-Risk Findings
+
+### Missing Workflow Stages
+
+### Required Remediation Order
+
+Do not implement remediation.
+
+---
+
+# 40. REQUIRED FINAL REPORT FORMAT
+
+Return EXACTLY ONE Markdown code block and NOTHING outside it.
+
+Use exactly these top-level sections:
+
+# 1. Executive Summary
+
+# 2. Architectural & Functional Highlights
+
+# 3. Detailed Report
+
+Include all required matrices/registers inside this section.
+
+# 4. Log of Completed Actions
+
+List only actual inspections, commands, API calls, database queries, tests, and browser actions performed.
+
+Do not expose secrets.
+
+Do not claim browser verification unless a browser was actually used.
+
+Do not claim PostgreSQL runtime evidence unless PostgreSQL was actually queried.
+
+Do not use historical evidence as current evidence.
+
+Do not modify the application.
+
+This is an AUDIT ONLY task.
+
+Accuracy, skepticism, security, data integrity, and workflow correctness are more important than a positive verdict.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-04T12:49:08+03:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\zakar\Downloads\real-estate-ecosystem-platform (1)\src\pages\HomePage.tsx (LANGUAGE_TSX)
+Cursor is on line: 965
+Other open documents:
+- c:\Users\zakar\Downloads\real-estate-ecosystem-platform (1)\src\pages\OwnerWorkspace.tsx (LANGUAGE_TSX)
+- c:\Users\zakar\Downloads\real-estate-ecosystem-platform (1)\src\components\OwnerSettlementTab.tsx (LANGUAGE_TSX)
+- c:\Users\zakar\Downloads\real-estate-ecosystem-platform (1)\src\i18n\I18nProvider.tsx (LANGUAGE_TSX)
+- c:\Users\zakar\Downloads\real-estate-ecosystem-platform (1)\src\pages\HomePage.tsx (LANGUAGE_TSX)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 3.8 Flash (High) to Gemini 3.1 Pro (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

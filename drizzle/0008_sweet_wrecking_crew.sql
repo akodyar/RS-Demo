@@ -1,0 +1,2 @@
+ALTER TABLE "payment_records" ADD COLUMN "confirmed_by_user_id" text;--> statement-breakpoint
+ALTER TABLE "payment_records" ADD CONSTRAINT "payment_records_confirmed_by_user_id_users_id_fk" FOREIGN KEY ("confirmed_by_user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;

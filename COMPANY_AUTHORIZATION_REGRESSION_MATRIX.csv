@@ -1,0 +1,22 @@
+Scenario ID,Category,Description,Input Claims / Action,Expected Status,Expected Error Code / Behavior,Actual Status,Result
+CO-AUTH-01,Workspace Authority,Valid active company member access,activeRole=COMPANY_ADMIN; workspaceId=company_<orgId>,200 OK,Access Granted,200 OK,PASS
+CO-AUTH-02A,Workspace Authority,Mismatched workspaceId and orgId,activeRole=COMPANY_ADMIN; workspaceId=company_<otherOrgId>,403 Forbidden,ACTIVE_ROLE_MISMATCH,403 Forbidden,PASS
+CO-AUTH-02B,Workspace Authority,Missing workspaceId claim under company role,activeRole=COMPANY_ADMIN; workspaceId=null,403 Forbidden,ACTIVE_ROLE_MISMATCH,403 Forbidden,PASS
+CO-AUTH-03,Membership Lifecycle,Suspended company member access,activeRole=COMPANY_ADMIN; member.status=SUSPENDED,403 Forbidden,ACTIVE_ROLE_MISMATCH,403 Forbidden,PASS
+CO-AUTH-04,Membership Lifecycle,Removed company member access,activeRole=COMPANY_ADMIN; member.status=REMOVED,403 Forbidden,ACTIVE_ROLE_MISMATCH,403 Forbidden,PASS
+CO-AUTH-05,Organization Lifecycle,Member in suspended organization,activeRole=COMPANY_ADMIN; org.status=SUSPENDED,403 Forbidden,ACTIVE_ROLE_MISMATCH,403 Forbidden,PASS
+CO-AUTH-06A,Role Hierarchy,VIEWER elevating to COMPANY_ADMIN,member.role=VIEWER; activeRole=COMPANY_ADMIN,403 Forbidden,ACTIVE_ROLE_MISMATCH,403 Forbidden,PASS
+CO-AUTH-06B,Role Hierarchy,VIEWER using assigned role,member.role=VIEWER; activeRole=VIEWER,200 OK,Access Granted,200 OK,PASS
+CO-AUTH-07,Tenant Isolation,Cross-organization workspace access,Org A member requesting Org B workspace,403 Forbidden,ACTIVE_ROLE_MISMATCH,403 Forbidden,PASS
+CO-AUTH-08A,Session Revocation,Stale session after member suspension,Existing JWT token evaluated after suspension,401 Unauthorized,TOKEN_REVOKED,401 Unauthorized,PASS
+CO-AUTH-08B,Session Revocation,Atomic user tokenVersion increment,companyRepo.updateMemberStatus('SUSPENDED'),tokenVersion + 1,users.token_version incremented atomically,tokenVersion + 1,PASS
+CO-AUTH-09,Session Revocation,Stale session after member role change,Existing JWT token evaluated after role change,401 Unauthorized,TOKEN_REVOKED,401 Unauthorized,PASS
+CO-AUTH-10,Session Revocation,Stale session after member removal,Existing JWT token evaluated after removal,401 Unauthorized,TOKEN_REVOKED,401 Unauthorized,PASS
+CO-AUTH-11,Reactivation,Fresh session after member reactivation,Reactivated member re-login & fresh JWT,200 OK,Fresh Workspace Selection Success,200 OK,PASS
+CO-AUTH-12,Emergency Governance,Platform Admin cross-workspace access,User with PLATFORM_ADMIN accessing Owner domain,200 OK,Platform Admin Override Granted,200 OK,PASS
+CO-AUTH-13,Data Integrity,Transaction rollback on mutation failure,Simulated SQL constraint error inside update,Rollback,tokenVersion unchanged; state consistent,Rollback,PASS
+PW-CO-01,Browser Verification (Option C),Valid company workspace selection & entry,Admin logs in & selects company card,200 Navigation,Navigates to /owner; properties displayed,200 Navigation,PASS
+PW-CO-02,Browser Verification (Option C),Active company workspace dashboard visual,Company dashboard rendered in browser,Visible UI,Dashboard rendered with company context,Visible UI,PASS
+PW-CO-03,Browser Verification (Option C),Viewer role escalation rejection visual,Viewer attempts unassigned COMPANY_OWNER,403 Forbidden,Server rejects escalation; UI constrained,403 Forbidden,PASS
+PW-CO-04,Browser Verification (Option C),Session revoked visual after suspension,Active session invalidated in DB via suspension,401 Redirection,Browser redirects to auth gate (401),401 Redirection,PASS
+PW-CO-05,Browser Verification (Option C),Re-login and fresh workspace selection,Reactivated user logs in with new tokenVersion,200 Navigation,Re-enters company workspace successfully,200 Navigation,PASS

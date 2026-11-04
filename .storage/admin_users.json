@@ -1,0 +1,93 @@
+[
+  {
+    "id": "usr-101",
+    "name": "کاروان عەلی ڕەحیم",
+    "email": "karwan.ali@homehub.iq",
+    "phone": "+964 750 441 9900",
+    "role": "PROPERTY_OWNER",
+    "status": "suspended",
+    "statusKurdish": "چالاک",
+    "verified": true,
+    "city": "هەولێر",
+    "propertiesCount": 4,
+    "lastActive": "پێش ١٢ خولەک",
+    "createdAt": "2024-01-15",
+    "permissions": [
+      "VIEW_PROPERTY",
+      "CREATE_LISTING",
+      "MANAGE_LEASES"
+    ]
+  },
+  {
+    "id": "usr-102",
+    "name": "سۆران سەلاح محەمەد",
+    "email": "soran.s@shar-dev.iq",
+    "phone": "+964 770 123 4567",
+    "role": "COMPANY",
+    "status": "active",
+    "statusKurdish": "چالاک",
+    "verified": true,
+    "city": "سلێمانی",
+    "propertiesCount": 28,
+    "lastActive": "پێش ٥ کاتژمێر",
+    "createdAt": "2024-02-01",
+    "permissions": [
+      "VIEW_PROPERTY",
+      "MANAGE_TENANTS",
+      "MANAGE_FINANCIALS",
+      "APPROVE_ACTION"
+    ]
+  },
+  {
+    "id": "usr-103",
+    "name": "لانە کامەران",
+    "email": "lana.kamaran@gmail.com",
+    "phone": "+964 750 998 1122",
+    "role": "TENANT",
+    "status": "active",
+    "statusKurdish": "چالاک",
+    "verified": true,
+    "city": "هەولێر",
+    "propertiesCount": 1,
+    "lastActive": "دوێنێ",
+    "createdAt": "2024-03-10",
+    "permissions": [
+      "VIEW_PROPERTY",
+      "CREATE_MAINTENANCE"
+    ]
+  },
+  {
+    "id": "usr-104",
+    "name": "دکتۆر نەوزاد دۆسکی",
+    "email": "nawzad.doski@outlook.com",
+    "phone": "+964 750 882 3344",
+    "role": "BUYER",
+    "status": "pending",
+    "statusKurdish": "چاوەڕوانی",
+    "verified": false,
+    "city": "دهۆک",
+    "propertiesCount": 0,
+    "lastActive": "پێش ٣ ڕۆژ",
+    "createdAt": "2024-04-02",
+    "permissions": [
+      "VIEW_PROPERTY"
+    ]
+  },
+  {
+    "id": "usr-105",
+    "name": "سامان بەکر ئەحمەد",
+    "email": "saman.broker@erbil-re.iq",
+    "phone": "+964 750 331 7766",
+    "role": "AGENT_BROKER",
+    "status": "suspended",
+    "statusKurdish": "ڕاگیراو",
+    "verified": false,
+    "city": "هەولێر",
+    "propertiesCount": 6,
+    "lastActive": "پێش هەفتەیەک",
+    "createdAt": "2023-11-20",
+    "permissions": [
+      "VIEW_PROPERTY"
+    ]
+  }
+]

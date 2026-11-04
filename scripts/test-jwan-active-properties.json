@@ -1,0 +1,83 @@
+{
+  "APARTMENT": {
+    "propertyId": "cf50d596-a38c-42c2-a9f5-0e968c62ef0a",
+    "unitId": "09b3f3fb-2490-4ff0-8b19-9d0eaf409dc9",
+    "name": "شوقەی مۆدێرنی جوان - بەختیاری",
+    "category": "APARTMENT",
+    "city": "Erbil",
+    "rentPrice": "750",
+    "operatingModel": "DIRECT_OWNER"
+  },
+  "HOUSE": {
+    "propertyId": "1a76b2c1-3f8b-4be8-bacb-bcb0c23b44dd",
+    "unitId": "a0c4ea45-6526-43a3-845b-da5c0b9a1b9a",
+    "name": "خانووی دوو نهۆمی جوان - سەرچنار",
+    "category": "HOUSE",
+    "city": "Sulaymaniyah",
+    "rentPrice": "950",
+    "operatingModel": "AGENT_LISTED_PLATFORM_MANAGED"
+  },
+  "VILLA": {
+    "propertyId": "351200e4-4abd-4754-9b90-17414ab238e0",
+    "unitId": "cbbbceee-171f-431a-b3f0-1d995d06d7ee",
+    "name": "ڤێلای لوکس و شاهانە - زۆزک",
+    "category": "VILLA",
+    "city": "Duhok",
+    "rentPrice": "1800",
+    "operatingModel": "FULLY_MANAGED"
+  },
+  "COMMERCIAL": {
+    "propertyId": "4d432b6f-9ce1-42fc-99f5-bbf5e6a75ee5",
+    "unitId": "0cb0fdb4-9def-4190-82b5-e94d4048c1c3",
+    "name": "فرۆشگای بازرگانی گەورە - عەرەسات",
+    "category": "COMMERCIAL",
+    "city": "Baghdad",
+    "rentPrice": "2500",
+    "operatingModel": "DIRECT_OWNER"
+  },
+  "STUDIO": {
+    "propertyId": "17661d42-bea5-41f5-95f6-9a9397ecaf5c",
+    "unitId": "f080f681-f363-443f-b792-4fd9807bbbfe",
+    "name": "ستۆدیۆی تایبەت و چاککراو - ئیمپایەر",
+    "category": "STUDIO",
+    "city": "Erbil",
+    "rentPrice": "500",
+    "operatingModel": "AGENT_LISTED_PLATFORM_MANAGED"
+  },
+  "OFFICE": {
+    "propertyId": "f9cf034b-9b6f-41ae-a66a-18282b418b4c",
+    "unitId": "386cd178-41e1-4b08-ad79-2a86ba27bbc9",
+    "name": "ئۆفیسی کارگێڕی کۆمپانیا - تووی مەلیک",
+    "category": "OFFICE",
+    "city": "Sulaymaniyah",
+    "rentPrice": "1200",
+    "operatingModel": "FULLY_MANAGED"
+  },
+  "WAREHOUSE": {
+    "propertyId": "ccc55671-a915-4a4f-9bf3-dfa67563d610",
+    "unitId": "d7a3d5e4-9a71-43c0-8028-977fdd3e95c7",
+    "name": "کۆگای پیشەسازی و گەنجینە - ڕێگای مەخموور",
+    "category": "WAREHOUSE",
+    "city": "Erbil",
+    "rentPrice": "3200",
+    "operatingModel": "DIRECT_OWNER"
+  },
+  "DUPLEX": {
+    "propertyId": "9b456c6c-c671-49c1-9749-63cfd1a0045d",
+    "unitId": "11e104ba-0905-4563-9b15-831381a941ca",
+    "name": "شوقەی دۆپلێکسی دوو نهۆمی - دریم سیتی",
+    "category": "DUPLEX",
+    "city": "Erbil",
+    "rentPrice": "1400",
+    "operatingModel": "AGENT_LISTED_PLATFORM_MANAGED"
+  },
+  "RESIDENTIAL_BUILDING": {
+    "propertyId": "656a7341-b561-4447-ac69-76976890880b",
+    "unitId": "f9819654-02e0-4976-95f0-91940d2be7f6",
+    "name": "باڵەخانەی نیشتەجێبوونی تەواو - ڕۆشنبیری",
+    "category": "RESIDENTIAL_BUILDING",
+    "city": "Erbil",
+    "rentPrice": "5500",
+    "operatingModel": "FULLY_MANAGED"
+  }
+}

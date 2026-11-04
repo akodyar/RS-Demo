@@ -1,0 +1,56 @@
+[
+  {
+    "operating_model": "(NULL)",
+    "management_preference": "SELF_MANAGED",
+    "management_arrangement_status": "NOT_APPLICABLE",
+    "row_count": "634"
+  },
+  {
+    "operating_model": "FULLY_MANAGED",
+    "management_preference": "HOMEHUB_MANAGED",
+    "management_arrangement_status": "AWAITING_ONBOARDING",
+    "row_count": "601"
+  },
+  {
+    "operating_model": "AGENT_OPERATED",
+    "management_preference": "AGENT_MANAGED",
+    "management_arrangement_status": "AWAITING_AGREEMENT",
+    "row_count": "51"
+  },
+  {
+    "operating_model": "AGENT_LISTED_PLATFORM_MANAGED",
+    "management_preference": "HOMEHUB_MANAGED",
+    "management_arrangement_status": "AWAITING_ONBOARDING",
+    "row_count": "33"
+  },
+  {
+    "operating_model": "DIRECT_RENTAL",
+    "management_preference": "SELF_MANAGED",
+    "management_arrangement_status": "NOT_APPLICABLE",
+    "row_count": "21"
+  },
+  {
+    "operating_model": "SELF_MANAGED",
+    "management_preference": "SELF_MANAGED",
+    "management_arrangement_status": "NOT_APPLICABLE",
+    "row_count": "21"
+  },
+  {
+    "operating_model": "FULLY_MANAGED",
+    "management_preference": "SELF_MANAGED",
+    "management_arrangement_status": "NOT_APPLICABLE",
+    "row_count": "8"
+  },
+  {
+    "operating_model": "AGENT_LISTED_PLATFORM_MANAGED",
+    "management_preference": "SELF_MANAGED",
+    "management_arrangement_status": "NOT_APPLICABLE",
+    "row_count": "5"
+  },
+  {
+    "operating_model": "(NULL)",
+    "management_preference": "AGENT_MANAGED",
+    "management_arrangement_status": "AWAITING_AGREEMENT",
+    "row_count": "5"
+  }
+]

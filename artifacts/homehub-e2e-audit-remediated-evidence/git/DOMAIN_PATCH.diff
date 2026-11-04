@@ -1,0 +1,2897 @@
+diff --git a/src/components/admin/AdminQuickActions.tsx b/src/components/admin/AdminQuickActions.tsx
+index 1f36f53..06f18ea 100644
+--- a/src/components/admin/AdminQuickActions.tsx
++++ b/src/components/admin/AdminQuickActions.tsx
+@@ -225,6 +225,7 @@ export const AdminQuickActions: React.FC<AdminQuickActionsProps> = ({
+             <button
+               key={act.key}
+               type="button"
++              data-testid={`admin-quick-action-${act.key}`}
+               onClick={() => onSelectAction(act.key)}
+               className="bg-white hover:bg-slate-50/80 rounded-2xl p-2.5 sm:p-3 border border-slate-200/80 shadow-2xs hover:shadow-xs transition-all flex flex-col items-center justify-center gap-1.5 group cursor-pointer"
+             >
+diff --git a/src/components/admin/modules/AdminPropertiesModule.tsx b/src/components/admin/modules/AdminPropertiesModule.tsx
+index 7d548a6..a104b63 100644
+--- a/src/components/admin/modules/AdminPropertiesModule.tsx
++++ b/src/components/admin/modules/AdminPropertiesModule.tsx
+@@ -1,66 +1,315 @@
+-import React, { useState } from 'react';
++import React, { useState, useEffect, useCallback } from 'react';
+ import {
+   Home,
+-  Building2,
+   Search,
+   CheckCircle2,
+   XCircle,
+   Clock,
+-  ShieldCheck,
+-  ShieldAlert,
+   MapPin,
+-  FileCheck,
+   ArrowLeft,
+   ArrowRight,
+   Lock,
++  Edit3,
++  Percent,
++  Loader2,
++  AlertCircle,
++  RefreshCw,
++  X,
+ } from 'lucide-react';
+ import { useI18n } from '../../../i18n/I18nProvider';
+ import { AdminPropertyRecord } from '../../../types/admin';
+ import { AdminRoleType } from '../../../types';
+ 
+ interface AdminPropertiesModuleProps {
+-  properties: AdminPropertyRecord[];
++  properties?: AdminPropertyRecord[];
+   currentRole: AdminRoleType;
+   onUpdateTapuStatus: (propertyId: string, status: AdminPropertyRecord['tapuStatus'], reason: string) => void;
+   onBack: () => void;
+ }
+ 
+ export const AdminPropertiesModule: React.FC<AdminPropertiesModuleProps> = ({
+-  properties,
++  properties: initialProperties = [],
+   currentRole,
+   onUpdateTapuStatus,
+   onBack,
+ }) => {
+-  const { direction } = useI18n();
++  const { direction, t } = useI18n();
++
++  // Pagination & Filtering state
++  const [page, setPage] = useState(1);
++  const [limit] = useState(10);
+   const [searchQuery, setSearchQuery] = useState('');
+   const [cityFilter, setCityFilter] = useState('all');
+-  const [selectedProperty, setSelectedProperty] = useState<AdminPropertyRecord | null>(null);
+-  const [rejectionReason, setRejectionReason] = useState('');
++  const [operatingModelFilter, setOperatingModelFilter] = useState('all');
++  const [statusFilter, setStatusFilter] = useState('all');
++  const [verificationStatusFilter, setVerificationStatusFilter] = useState('all');
++
++  // Inspection & Decision Modal state
++  const [inspectingProperty, setInspectingProperty] = useState<AdminPropertyRecord | null>(null);
++  const [verificationHistory, setVerificationHistory] = useState<any[]>([]);
++  const [loadingHistory, setLoadingHistory] = useState(false);
++  const [rejectReason, setRejectReason] = useState('');
++  const [actionLoading, setActionLoading] = useState(false);
++  const [actionError, setActionError] = useState<string | null>(null);
++  const [actionSuccessMsg, setActionSuccessMsg] = useState<string | null>(null);
++
++  // Properties data state
++  const [propertiesList, setPropertiesList] = useState<AdminPropertyRecord[]>(initialProperties);
++  const [globalPlatformFee, setGlobalPlatformFee] = useState<number>(0.05);
++  const [totalPages, setTotalPages] = useState(1);
++  const [totalCount, setTotalCount] = useState(0);
++  const [loading, setLoading] = useState(false);
++  const [fetchError, setFetchError] = useState<string | null>(null);
++
++  // Fee Editing Modal state
++  const [editingProperty, setEditingProperty] = useState<AdminPropertyRecord | null>(null);
++  const [editRentFee, setEditRentFee] = useState<string>('');
++  const [editRentFeeUnset, setEditRentFeeUnset] = useState<boolean>(false);
++  const [editMgmtFee, setEditMgmtFee] = useState<string>('');
++  const [editMgmtFeeUnset, setEditMgmtFeeUnset] = useState<boolean>(false);
++  const [modalSaving, setModalSaving] = useState(false);
++  const [modalError, setModalError] = useState<string | null>(null);
++  const [modalSuccess, setModalSuccess] = useState(false);
+ 
+   const isReadOnly =
+     currentRole === AdminRoleType.AUDITOR || currentRole === AdminRoleType.READ_ONLY_ADMIN;
+ 
+-  const filtered = properties.filter((p) => {
+-    if (cityFilter !== 'all' && p.city !== cityFilter) return false;
+-    if (searchQuery.trim()) {
+-      const q = searchQuery.toLowerCase();
+-      return (
+-        p.title.toLowerCase().includes(q) ||
+-        p.titleKurdish.toLowerCase().includes(q) ||
+-        p.ownerName.toLowerCase().includes(q) ||
+-        p.tapuNumber.toLowerCase().includes(q)
+-      );
++  // Fetch paginated properties from authoritative server endpoint
++  const fetchProperties = useCallback(async () => {
++    setLoading(true);
++    setFetchError(null);
++    try {
++      const token =
++        import.meta.env.MODE !== 'production'
++          ? localStorage.getItem('auth_token') || 'dev-super-admin'
++          : localStorage.getItem('auth_token') || '';
++
++      const queryParams = new URLSearchParams({
++        page: String(page),
++        limit: String(limit),
++      });
++
++      if (searchQuery.trim()) queryParams.set('search', searchQuery.trim());
++      if (cityFilter !== 'all') queryParams.set('city', cityFilter);
++      if (operatingModelFilter !== 'all') queryParams.set('operatingModel', operatingModelFilter);
++      if (statusFilter !== 'all') queryParams.set('status', statusFilter);
++      if (verificationStatusFilter !== 'all') queryParams.set('verificationStatus', verificationStatusFilter);
++
++      const res = await fetch(`/api/admin/properties?${queryParams.toString()}`, {
++        headers: { Authorization: `Bearer ${token}` },
++      });
++
++      if (!res.ok) {
++        throw new Error('Failed to fetch properties from server');
++      }
++
++      const data = await res.json();
++      if (Array.isArray(data.properties)) {
++        setPropertiesList(data.properties);
++        if (data.pagination) {
++          setTotalPages(data.pagination.totalPages || 1);
++          setTotalCount(data.pagination.total || data.properties.length);
++        } else {
++          setTotalCount(data.properties.length);
++          setTotalPages(1);
++        }
++        if (data.globalPlatformFee !== undefined) {
++          setGlobalPlatformFee(data.globalPlatformFee);
++        }
++      }
++    } catch (err: any) {
++      console.error('Admin properties fetch error:', err);
++      setFetchError(err.message || 'Error loading properties');
++      // If server fetch failed and initial properties exist, fallback gracefully
++      if (initialProperties.length > 0 && propertiesList.length === 0) {
++        setPropertiesList(initialProperties);
++      }
++    } finally {
++      setLoading(false);
++    }
++  }, [page, limit, searchQuery, cityFilter, operatingModelFilter, statusFilter, verificationStatusFilter, initialProperties]);
++
++  useEffect(() => {
++    fetchProperties();
++  }, [fetchProperties]);
++
++  // Open Fee Edit Modal
++  const handleOpenEditFees = (prop: AdminPropertyRecord) => {
++    if (isReadOnly) return;
++    setEditingProperty(prop);
++    setModalError(null);
++    setModalSuccess(false);
++
++    if (prop.rentFee === null || prop.rentFee === undefined) {
++      setEditRentFeeUnset(true);
++      setEditRentFee('');
++    } else {
++      setEditRentFeeUnset(false);
++      setEditRentFee(String(prop.rentFee));
++    }
++
++    if (prop.managementFee === null || prop.managementFee === undefined) {
++      setEditMgmtFeeUnset(true);
++      setEditMgmtFee('');
++    } else {
++      setEditMgmtFeeUnset(false);
++      setEditMgmtFee(String(prop.managementFee));
++    }
++  };
++
++  // Submit Fee Updates
++  const handleSaveFees = async () => {
++    if (!editingProperty || isReadOnly) return;
++
++    setModalSaving(true);
++    setModalError(null);
++    try {
++      const token =
++        import.meta.env.MODE !== 'production'
++          ? localStorage.getItem('auth_token') || 'dev-super-admin'
++          : localStorage.getItem('auth_token') || '';
++
++      const model = editingProperty.operatingModel || 'FULLY_MANAGED';
++
++      const payload: { rentFee?: number | null; managementFee?: number | null } = {};
++
++      if (model === 'FULLY_MANAGED') {
++        payload.rentFee = editRentFeeUnset ? null : Number(editRentFee);
++        payload.managementFee = editMgmtFeeUnset ? null : Number(editMgmtFee);
++      } else if (model === 'AGENT_LISTED_PLATFORM_MANAGED') {
++        payload.managementFee = editMgmtFeeUnset ? null : Number(editMgmtFee);
++      }
++
++      const res = await fetch(`/api/admin/properties/${editingProperty.id}/fees`, {
++        method: 'PATCH',
++        headers: {
++          'Content-Type': 'application/json',
++          Authorization: `Bearer ${token}`,
++        },
++        body: JSON.stringify(payload),
++      });
++
++      if (!res.ok) {
++        const errData = await res.json().catch(() => ({}));
++        throw new Error(errData.message || errData.error || 'Failed to update property fees');
++      }
++
++      setModalSuccess(true);
++      setTimeout(() => {
++        setEditingProperty(null);
++        setModalSuccess(false);
++        fetchProperties();
++      }, 1200);
++    } catch (err: any) {
++      setModalError(err.message || 'Error updating fees');
++    } finally {
++      setModalSaving(false);
+     }
+-    return true;
+-  });
++  };
++
++  const handleOpenInspect = async (prop: AdminPropertyRecord) => {
++    setInspectingProperty(prop);
++    setRejectReason('');
++    setActionError(null);
++    setActionSuccessMsg(null);
++    setLoadingHistory(true);
++    try {
++      const token =
++        import.meta.env.MODE !== 'production'
++          ? localStorage.getItem('auth_token') || 'dev-super-admin'
++          : localStorage.getItem('auth_token') || '';
++      const res = await fetch(`/api/admin/properties/${prop.id}/verification-history`, {
++        headers: { Authorization: `Bearer ${token}` }
++      });
++      if (res.ok) {
++        const d = await res.json();
++        setVerificationHistory(d.history || []);
++      }
++    } catch (e) {
++      console.error(e);
++    } finally {
++      setLoadingHistory(false);
++    }
++  };
++
++  const handleApproveProperty = async () => {
++    if (!inspectingProperty || isReadOnly) return;
++    setActionLoading(true);
++    setActionError(null);
++    try {
++      const token =
++        import.meta.env.MODE !== 'production'
++          ? localStorage.getItem('auth_token') || 'dev-super-admin'
++          : localStorage.getItem('auth_token') || '';
++      const res = await fetch(`/api/admin/properties/${inspectingProperty.id}/approve`, {
++        method: 'POST',
++        headers: {
++          'Content-Type': 'application/json',
++          Authorization: `Bearer ${token}`
++        },
++        body: JSON.stringify({ notes: 'Approved by admin' })
++      });
++      if (!res.ok) {
++        const d = await res.json().catch(() => ({}));
++        throw new Error(d.error || 'Failed to approve property');
++      }
++      setActionSuccessMsg('موڵک بە سەرکەوتوویی پەسەندکرا (Property Approved)');
++      setTimeout(() => {
++        setInspectingProperty(null);
++        fetchProperties();
++      }, 1000);
++    } catch (e: any) {
++      setActionError(e.message);
++    } finally {
++      setActionLoading(false);
++    }
++  };
++
++  const handleRejectProperty = async () => {
++    if (!inspectingProperty || isReadOnly) return;
++    if (!rejectReason.trim()) {
++      setActionError('تکایە هۆکاری ڕەتکردنەوە بنووسە (Rejection reason is required)');
++      return;
++    }
++    setActionLoading(true);
++    setActionError(null);
++    try {
++      const token =
++        import.meta.env.MODE !== 'production'
++          ? localStorage.getItem('auth_token') || 'dev-super-admin'
++          : localStorage.getItem('auth_token') || '';
++      const res = await fetch(`/api/admin/properties/${inspectingProperty.id}/reject`, {
++        method: 'POST',
++        headers: {
++          'Content-Type': 'application/json',
++          Authorization: `Bearer ${token}`
++        },
++        body: JSON.stringify({ reason: rejectReason.trim() })
++      });
++      if (!res.ok) {
++        const d = await res.json().catch(() => ({}));
++        throw new Error(d.error || 'Failed to reject property');
++      }
++      setActionSuccessMsg('موڵک ڕەتکرایەوە (Property Rejected)');
++      setTimeout(() => {
++        setInspectingProperty(null);
++        fetchProperties();
++      }, 1000);
++    } catch (e: any) {
++      setActionError(e.message);
++    } finally {
++      setActionLoading(false);
++    }
++  };
+ 
+   return (
+-    <div className="space-y-4">
++    <div className="space-y-4" dir={direction}>
+       {/* Header */}
+       <div className="flex items-center justify-between gap-2 bg-white p-4 rounded-2xl border border-slate-200/80 shadow-2xs">
+         <div className="flex items-center gap-2">
+           <button
+             type="button"
++            data-testid="admin-properties-back-btn"
+             onClick={onBack}
+             className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer"
+             title="گەڕانەوە"
+@@ -70,156 +319,708 @@ export const AdminPropertiesModule: React.FC<AdminPropertiesModuleProps> = ({
+           <div>
+             <h2 className="text-lg font-extrabold text-slate-900 flex items-center gap-2">
+               <Home className="w-5 h-5 text-emerald-600" />
+-              <span>بەڕێوەبەرایەتی موڵک و تاپۆ (Property & Title Deed Admin)</span>
++              <span>بەڕێوەبەرایەتی موڵکەکان و کرێ (Admin Properties Dashboard)</span>
+             </h2>
+             <p className="text-xs text-slate-500">
+-              پشکنینی بەڵگەنامەی ڕەسمی تاپۆ و مافی خاوەنداریەتی لە فەرمانگەکانی تۆماری خانووبەرە
++              لیستی موڵکەکان بە جیاوازیپێدانی سێ-کرێیی (Platform, Rent, Management) و وردبینی مۆدێلی کارکردن
+             </p>
+           </div>
+         </div>
+ 
+-        {isReadOnly && (
+-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-bold">
+-            <Lock className="w-3.5 h-3.5" />
+-            <span>تەنها بینین</span>
+-          </div>
+-        )}
++        <div className="flex items-center gap-2">
++          {isReadOnly && (
++            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-bold">
++              <Lock className="w-3.5 h-3.5" />
++              <span>تەنها بینین (Read Only)</span>
++            </div>
++          )}
++          <button
++            type="button"
++            onClick={fetchProperties}
++            disabled={loading}
++            className="p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl transition-colors cursor-pointer"
++            title="نوێکردنەوە"
++          >
++            <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
++          </button>
++        </div>
+       </div>
+ 
+-      {/* Tapu Process Disclaimer */}
+-      <div className="p-3 rounded-2xl bg-amber-50/80 border border-amber-200 text-amber-900 text-xs leading-relaxed flex items-center gap-2">
+-        <span className="font-bold">تێبینی گرنگ:</span>
+-        <span>
+-          پشکنینی تاپۆ لەم سیستەمەدا بریتییە لە پێداچوونەوەی ناوخۆیی بەڵگەنامە و سەنەدی پێشکەشکراو لەلایەن خاوەن موڵکەوە، و جێگرەوەی پشکنینی ڕاستەوخۆ لە فەرمانگەی تۆماری خانووبەرە نییە (Internal Document Review - Not Direct Government Ministry Integration).
++      {/* Global Platform Fee Banner */}
++      <div className="p-3.5 rounded-2xl bg-blue-50/70 border border-blue-200 text-blue-900 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
++        <div className="flex items-center gap-2">
++          <Percent className="w-4 h-4 text-blue-700 shrink-0" />
++          <span>
++            <strong className="font-bold">ڕێژەی گشتی پلاتفۆڕم (Universal Platform Fee):</strong>{' '}
++            <span className="font-mono font-extrabold text-blue-800">
++              {(globalPlatformFee * 100).toFixed(2)}%
++            </span>{' '}
++            — لەسەر هەموو موڵکەکان کارایە و گۆڕینی تەنها لە ڕێکخستنە گشتییەکان دەکرێت.
++          </span>
++        </div>
++        <span className="text-[11px] font-semibold bg-white/80 px-2.5 py-1 rounded-lg border border-blue-100 shrink-0">
++          کۆی گشتی موڵکەکان: {totalCount}
+         </span>
+       </div>
+ 
+-      {/* Filter Bar */}
+-      <div className="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-3">
+-        <div className="relative w-full sm:w-80">
+-          <Search className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2" />
+-          <input
+-            type="text"
+-            value={searchQuery}
+-            onChange={(e) => setSearchQuery(e.target.value)}
+-            placeholder="گەڕان بەپێی موڵک، خاوەن، یان ژمارەی تاپۆ..."
+-            className="w-full pr-9 pl-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white outline-none"
+-          />
+-        </div>
++      {/* Filter & Search Bar */}
++      <div className="bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-2xs space-y-3">
++        <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
++          {/* Search Box */}
++          <div className="relative sm:col-span-2">
++            <Search className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2" />
++            <input
++              type="text"
++              data-testid="admin-properties-search-input"
++              value={searchQuery}
++              onChange={(e) => {
++                setSearchQuery(e.target.value);
++                setPage(1);
++              }}
++              placeholder="گەڕان بەپێی ناوی موڵک، خاوەن، یان ناسنامە..."
++              className="w-full pr-9 pl-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:bg-white outline-none"
++            />
++          </div>
+ 
+-        <div className="flex items-center gap-2 w-full sm:w-auto">
+-          <span className="text-xs text-slate-500 font-bold shrink-0">فلتەری شار:</span>
+-          <select
+-            value={cityFilter}
+-            onChange={(e) => setCityFilter(e.target.value)}
+-            className="text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 font-bold cursor-pointer text-slate-700"
+-          >
+-            <option value="all">هەموو شارەکان</option>
+-            <option value="هەولێر">هەولێر</option>
+-            <option value="سلێمانی">سلێمانی</option>
+-            <option value="دهۆک">دهۆک</option>
+-          </select>
++          {/* City Filter */}
++          <div>
++            <select
++              value={cityFilter}
++              onChange={(e) => {
++                setCityFilter(e.target.value);
++                setPage(1);
++              }}
++              className="w-full text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 font-bold cursor-pointer text-slate-700"
++            >
++              <option value="all">هەموو شارەکان (All Cities)</option>
++              <option value="Erbil">هەولێر (Erbil)</option>
++              <option value="Sulaymaniyah">سلێمانی (Sulaymaniyah)</option>
++              <option value="Duhok">دهۆک (Duhok)</option>
++            </select>
++          </div>
++
++          {/* Operating Model Filter */}
++          <div>
++            <select
++              data-testid="admin-properties-operating-model-filter"
++              value={operatingModelFilter}
++              onChange={(e) => {
++                setOperatingModelFilter(e.target.value);
++                setPage(1);
++              }}
++              className="w-full text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 font-bold cursor-pointer text-slate-700"
++            >
++              <option value="all">هەموو مۆدێلەکان (All Models)</option>
++              <option value="FULLY_MANAGED">FULLY_MANAGED</option>
++              <option value="AGENT_LISTED_PLATFORM_MANAGED">AGENT_LISTED_PLATFORM_MANAGED</option>
++              <option value="AGENT_OPERATED">AGENT_OPERATED</option>
++            </select>
++          </div>
++
++          {/* Verification Status Filter */}
++          <div className="sm:col-span-4 lg:col-span-1">
++            <select
++              data-testid="admin-verification-status-filter"
++              value={verificationStatusFilter}
++              onChange={(e) => {
++                setVerificationStatusFilter(e.target.value);
++                setPage(1);
++              }}
++              className="w-full text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 font-bold cursor-pointer text-slate-700"
++            >
++              <option value="all">هەموو دۆخەکانی پشکنین (All Verification)</option>
++              <option value="PENDING_VERIFICATION">چاوەڕوانی پشکنین (Pending)</option>
++              <option value="VERIFIED">پشتڕاستکراوە (Verified)</option>
++              <option value="REJECTED">ڕەتکراوە (Rejected)</option>
++            </select>
++          </div>
+         </div>
+       </div>
+ 
++      {fetchError && (
++        <div className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-bold flex items-center gap-2">
++          <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
++          <span>{fetchError}</span>
++        </div>
++      )}
++
+       {/* Properties Cards List */}
+-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+-        {filtered.map((prop) => (
+-          <div
+-            key={prop.id}
+-            className="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-2xs hover:shadow-xs transition-all space-y-3 flex flex-col justify-between"
+-          >
+-            <div className="space-y-2">
+-              <div className="flex items-start justify-between gap-2">
+-                <div>
+-                  <h4 className="font-extrabold text-sm text-slate-900 leading-tight">
+-                    {prop.titleKurdish}
+-                  </h4>
+-                  <div className="flex items-center gap-1 text-[11px] text-slate-500 mt-0.5">
+-                    <MapPin className="w-3.5 h-3.5 text-slate-400" />
+-                    <span>{prop.city}</span>
+-                    <span>•</span>
+-                    <span>{prop.type}</span>
++      {loading ? (
++        <div className="flex items-center justify-center p-12 bg-white rounded-2xl border border-slate-200/80">
++          <Loader2 className="w-8 h-8 text-slate-400 animate-spin" />
++        </div>
++      ) : propertiesList.length === 0 ? (
++        <div className="p-8 text-center bg-white rounded-2xl border border-slate-200/80 text-slate-500 text-xs">
++          هیچ موڵکێک بەپێی ئەم فلتەرە نەدۆزرایەوە (No properties found).
++        </div>
++      ) : (
++        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
++          {propertiesList.map((prop) => {
++            const model = prop.operatingModel || 'FULLY_MANAGED';
++            const rentApplies = model === 'FULLY_MANAGED';
++            const mgmtApplies = model === 'FULLY_MANAGED' || model === 'AGENT_LISTED_PLATFORM_MANAGED';
++
++            return (
++              <div
++                key={prop.id}
++                data-testid={`admin-property-card-${prop.id}`}
++                className="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-2xs hover:shadow-xs transition-all space-y-3 flex flex-col justify-between"
++              >
++                <div className="space-y-3">
++                  {/* Title & Operating Model Badge */}
++                  <div className="flex items-start justify-between gap-2">
++                    <div>
++                      <h4 className="font-extrabold text-sm text-slate-900 leading-tight">
++                        {prop.titleKurdish || prop.title}
++                      </h4>
++                      <div className="flex items-center gap-1 text-[11px] text-slate-500 mt-0.5">
++                        <MapPin className="w-3.5 h-3.5 text-slate-400" />
++                        <span>{prop.city}</span>
++                        <span>•</span>
++                        <span>{prop.type}</span>
++                        <span>•</span>
++                        <span className="font-mono text-slate-400 text-[10px]">ID: {prop.id.substring(0, 8)}</span>
++                      </div>
++                    </div>
++
++                    <div className="flex flex-col items-end gap-1">
++                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-slate-100 text-slate-800 border border-slate-200">
++                        {model}
++                      </span>
++                      {prop.verificationStatus === 'VERIFIED' ? (
++                        <span data-testid={`admin-prop-verified-badge-${prop.id}`} className="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold border border-emerald-200 flex items-center gap-1">
++                          <CheckCircle2 className="w-2.5 h-2.5" />
++                          <span>پشتڕاستکراوە (Verified)</span>
++                        </span>
++                      ) : prop.verificationStatus === 'REJECTED' ? (
++                        <span data-testid={`admin-prop-rejected-badge-${prop.id}`} className="px-2 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[10px] font-bold border border-rose-200 flex items-center gap-1">
++                          <XCircle className="w-2.5 h-2.5" />
++                          <span>ڕەتکراوە (Rejected)</span>
++                        </span>
++                      ) : (
++                        <span data-testid={`admin-prop-pending-badge-${prop.id}`} className="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[10px] font-bold border border-amber-200 flex items-center gap-1">
++                          <Clock className="w-2.5 h-2.5" />
++                          <span>چاوەڕوانی پشکنین (Pending)</span>
++                        </span>
++                      )}
++                    </div>
++                  </div>
++
++                  {prop.rejectionReason && (
++                    <div className="p-2 bg-rose-50 border border-rose-200 rounded-lg text-[11px] text-rose-850 space-y-0.5">
++                      <span className="font-bold text-rose-700">هۆکاری ڕەتکردنەوە:</span> {prop.rejectionReason}
++                    </div>
++                  )}
++
++                  {/* 3-Fee Canonical Breakdown Grid */}
++                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/90 space-y-2">
++                    <div className="flex items-center justify-between text-[11px] font-bold text-slate-700 border-b border-slate-200/50 pb-1">
++                      <span>دۆخی ٣-کرێیی (3-Fee Structure)</span>
++                      <span className="text-[10px] text-slate-400 font-normal">تەنها لەسەر کرێی کۆکراوە</span>
++                    </div>
++
++                    <div className="grid grid-cols-3 gap-2 text-center text-xs">
++                      {/* 1. Global Platform Fee */}
++                      <div className="p-2 bg-white rounded-lg border border-slate-200/80">
++                        <span className="text-[10px] text-slate-400 block font-semibold">
++                          {t('fee.platform_fee', 'پلاتفۆرم')}
++                        </span>
++                        <span className="font-mono font-bold text-blue-700 block mt-0.5">
++                          {(globalPlatformFee * 100).toFixed(2)}%
++                        </span>
++                        <span className="text-[9px] text-blue-600 bg-blue-50 px-1 py-0.2 rounded font-medium">
++                          سەرتاسەری
++                        </span>
++                      </div>
++
++                      {/* 2. Property Rent Fee */}
++                      <div className="p-2 bg-white rounded-lg border border-slate-200/80">
++                        <span className="text-[10px] text-slate-400 block font-semibold">
++                          {t('fee.rent_fee', 'کرێ')}
++                        </span>
++                        {!rentApplies ? (
++                          <span className="text-[10px] text-slate-400 font-bold block mt-1">
++                            ناگرێتەوە
++                          </span>
++                        ) : prop.rentFee === null || prop.rentFee === undefined ? (
++                          <span className="text-[10px] text-amber-700 bg-amber-50 px-1 py-0.5 rounded font-bold block mt-0.5">
++                            دیارینەکراوە
++                          </span>
++                        ) : prop.rentFee === 0 ? (
++                          <span className="font-mono font-bold text-slate-700 block mt-0.5">
++                            0.00%
++                          </span>
++                        ) : (
++                          <span className="font-mono font-bold text-emerald-700 block mt-0.5">
++                            {(Number(prop.rentFee) * 100).toFixed(2)}%
++                          </span>
++                        )}
++                        <span className="text-[9px] text-slate-400 block">
++                          {rentApplies ? 'تایبەت بە موڵک' : 'مۆدێل قەدەغەی کردووە'}
++                        </span>
++                      </div>
++
++                      {/* 3. Property Management Fee */}
++                      <div className="p-2 bg-white rounded-lg border border-slate-200/80">
++                        <span className="text-[10px] text-slate-400 block font-semibold">
++                          {t('fee.management_fee', 'بەڕێوەبردن')}
++                        </span>
++                        {!mgmtApplies ? (
++                          <span className="text-[10px] text-slate-400 font-bold block mt-1">
++                            ناگرێتەوە
++                          </span>
++                        ) : prop.managementFee === null || prop.managementFee === undefined ? (
++                          <span className="text-[10px] text-amber-700 bg-amber-50 px-1 py-0.5 rounded font-bold block mt-0.5">
++                            دیارینەکراوە
++                          </span>
++                        ) : prop.managementFee === 0 ? (
++                          <span className="font-mono font-bold text-slate-700 block mt-0.5">
++                            0.00%
++                          </span>
++                        ) : (
++                          <span className="font-mono font-bold text-purple-700 block mt-0.5">
++                            {(Number(prop.managementFee) * 100).toFixed(2)}%
++                          </span>
++                        )}
++                        <span className="text-[9px] text-slate-400 block">
++                          {mgmtApplies ? 'تایبەت بە موڵک' : 'مۆدێل قەدەغەی کردووە'}
++                        </span>
++                      </div>
++                    </div>
++                  </div>
++
++                  {/* Ownership & Agency Details */}
++                  <div className="flex items-center justify-between text-xs text-slate-600 px-1">
++                    <span>
++                      خاوەن موڵک: <strong className="text-slate-800">{prop.ownerName}</strong>
++                    </span>
++                    {prop.managingAgencyName && (
++                      <span>
++                        ئاژانس: <span className="text-blue-700 font-medium">{prop.managingAgencyName}</span>
++                      </span>
++                    )}
+                   </div>
+                 </div>
+ 
+-                {prop.tapuStatus === 'VERIFIED' && (
+-                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200 flex items-center gap-1">
+-                    <CheckCircle2 className="w-3 h-3" />
+-                    <span>تاپۆ باوەڕپێکراو</span>
+-                  </span>
+-                )}
+-                {prop.tapuStatus === 'PENDING_VERIFICATION' && (
+-                  <span className="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[11px] font-bold border border-amber-200 flex items-center gap-1">
+-                    <Clock className="w-3 h-3" />
+-                    <span>چاوەڕوانی تاپۆ</span>
+-                  </span>
+-                )}
+-                {prop.tapuStatus === 'REJECTED' && (
+-                  <span className="px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[11px] font-bold border border-rose-200 flex items-center gap-1">
+-                    <XCircle className="w-3 h-3" />
+-                    <span>ڕەتکراوە</span>
++                {/* Card Action Footer */}
++                <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
++                  <span className="text-[11px] text-slate-400 font-mono">
++                    تۆمار: {prop.dateSubmitted}
+                   </span>
+-                )}
++
++                  {!isReadOnly && (
++                    <div className="flex items-center gap-2">
++                      <button
++                        type="button"
++                        data-testid={`admin-inspect-prop-btn-${prop.id}`}
++                        onClick={() => handleOpenInspect(prop)}
++                        className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
++                      >
++                        <Search className="w-3.5 h-3.5" />
++                        <span>پشکنین و بڕیار (Inspect & Verify)</span>
++                      </button>
++
++                      <button
++                        type="button"
++                        data-testid={`admin-edit-fees-btn-${prop.id}`}
++                        onClick={() => handleOpenEditFees(prop)}
++                        className="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
++                      >
++                        <Edit3 className="w-3.5 h-3.5" />
++                        <span>کرێکان</span>
++                      </button>
++                    </div>
++                  )}
++                </div>
++              </div>
++            );
++          })}
++        </div>
++      )}
++
++      {/* Pagination Controls */}
++      <div className="flex items-center justify-between bg-white p-3.5 rounded-2xl border border-slate-200/80 shadow-2xs text-xs">
++        <span className="text-slate-500 font-medium">
++          پەڕەی <strong className="text-slate-900 font-bold">{page}</strong> لە{' '}
++          <strong className="text-slate-900 font-bold">{totalPages}</strong> (کۆی گشتی: {totalCount} موڵک)
++        </span>
++
++        <div className="flex items-center gap-2">
++          <button
++            type="button"
++            disabled={page <= 1 || loading}
++            onClick={() => setPage((p) => Math.max(1, p - 1))}
++            className="px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed font-bold cursor-pointer"
++          >
++            پێشوو
++          </button>
++          <button
++            type="button"
++            disabled={page >= totalPages || loading}
++            onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
++            className="px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed font-bold cursor-pointer"
++          >
++            دواتر
++          </button>
++        </div>
++      </div>
++
++      {/* Fee Editing Modal */}
++      {editingProperty && (
++        <div
++          data-testid="admin-fee-edit-modal"
++          className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4 z-50"
++        >
++          <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-xl border border-slate-200 space-y-4">
++            <div className="flex items-center justify-between border-b border-slate-100 pb-3">
++              <div>
++                <h3 className="font-extrabold text-base text-slate-900">
++                  دەستکاریکردنی کرێکانی موڵک
++                </h3>
++                <p className="text-xs text-slate-500">
++                  {editingProperty.titleKurdish || editingProperty.title} ({editingProperty.operatingModel})
++                </p>
++              </div>
++              <button
++                type="button"
++                data-testid="admin-fee-modal-close-btn"
++                onClick={() => setEditingProperty(null)}
++                className="p-1 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 cursor-pointer"
++              >
++                <X className="w-5 h-5" />
++              </button>
++            </div>
++
++            {modalError && (
++              <div className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-xs font-bold flex items-center gap-2">
++                <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
++                <span>{modalError}</span>
+               </div>
++            )}
+ 
+-              {/* Deed Number & Ownership info */}
+-              <div className="bg-slate-50 p-3 rounded-xl space-y-1 text-xs">
++            {modalSuccess && (
++              <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold flex items-center gap-2">
++                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
++                <span>کرێیەکان لە سێرڤەر بە سەرکەوتوویی پاشەکەوت کران!</span>
++              </div>
++            )}
++
++            <div className="space-y-4 text-xs">
++              {/* 1. Global Platform Fee Note */}
++              <div className="p-3 rounded-xl bg-blue-50/60 border border-blue-100 space-y-1">
+                 <div className="flex items-center justify-between">
+-                  <span className="text-slate-400 text-[11px]">ژمارەی تاپۆ (Deed No):</span>
+-                  <span className="font-mono font-bold text-slate-900 bg-white px-2 py-0.5 rounded-md border border-slate-200">
+-                    {prop.tapuNumber}
++                  <span className="font-bold text-blue-900">کرێی پلاتفۆڕم (Platform Fee):</span>
++                  <span className="font-mono font-bold text-blue-800">
++                    {(globalPlatformFee * 100).toFixed(2)}%
+                   </span>
+                 </div>
+-                <div className="flex items-center justify-between pt-1">
+-                  <span className="text-slate-400 text-[11px]">خاوەنی یاسایی:</span>
+-                  <strong className="text-slate-800">{prop.ownerName}</strong>
++                <p className="text-[11px] text-blue-700">
++                  ئەم ڕێژەیە سەرتاسەرییە و بۆ هەر موڵکێک بە جیا ناگۆڕدرێت. بۆ گۆڕینی، سەردانی ڕێکخستنە گشتییەکان بکە.
++                </p>
++              </div>
++
++              {/* 2. Rent Fee Control */}
++              <div className="p-3.5 rounded-xl border border-slate-200 space-y-2">
++                <div className="flex items-center justify-between">
++                  <label className="font-bold text-slate-900">کرێی بەکرێدان (Rent Fee):</label>
++                  {editingProperty.operatingModel !== 'FULLY_MANAGED' && (
++                    <span className="text-[10px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
++                      ناگرێتەوە لەم مۆدێلەدا
++                    </span>
++                  )}
+                 </div>
+-                {prop.managingAgencyName && (
+-                  <div className="flex items-center justify-between pt-0.5">
+-                    <span className="text-slate-400 text-[11px]">ئاژانسی بەڕێوەبەر:</span>
+-                    <span className="text-blue-700 font-medium">{prop.managingAgencyName}</span>
++
++                {editingProperty.operatingModel === 'FULLY_MANAGED' ? (
++                  <div className="space-y-2">
++                    <div className="flex items-center gap-2">
++                      <input
++                        type="number"
++                        step="0.001"
++                        min="0"
++                        max="0.50"
++                        disabled={editRentFeeUnset}
++                        value={editRentFee}
++                        onChange={(e) => setEditRentFee(e.target.value)}
++                        placeholder="0.04 بۆ 4%"
++                        className="w-32 p-2 rounded-xl bg-slate-50 border border-slate-200 font-mono font-bold text-sm outline-none disabled:opacity-40"
++                      />
++                      <span className="text-slate-500 font-bold">
++                        {editRentFee ? `${(Number(editRentFee) * 100).toFixed(2)}%` : 'ڕێژەی دەسیماڵ'}
++                      </span>
++                    </div>
++
++                    <div className="flex items-center gap-2 pt-1">
++                      <label className="flex items-center gap-1.5 cursor-pointer text-slate-700">
++                        <input
++                          type="checkbox"
++                          checked={editRentFeeUnset}
++                          onChange={(e) => {
++                            setEditRentFeeUnset(e.target.checked);
++                            if (e.target.checked) setEditRentFee('');
++                          }}
++                          className="w-4 h-4 accent-slate-900"
++                        />
++                        <span>دیارینەکراوە (Unset / null)</span>
++                      </label>
++                    </div>
+                   </div>
++                ) : (
++                  <p className="text-[11px] text-slate-500">
++                    ئەم موڵکە لەژێر مۆدێلی {editingProperty.operatingModel} دایە و کرێی بەکرێدانی بۆ دانانرێت.
++                  </p>
+                 )}
+-                <div className="flex items-center justify-between pt-1 border-t border-slate-200/50">
+-                  <span className="text-slate-400 text-[11px]">بەهای خەمڵێنراو:</span>
+-                  <strong className="text-emerald-700 font-mono">
+-                    ${prop.priceUsd.toLocaleString()} ({prop.priceIqd.toLocaleString()} IQD)
+-                  </strong>
++              </div>
++
++              {/* 3. Management Fee Control */}
++              <div className="p-3.5 rounded-xl border border-slate-200 space-y-2">
++                <div className="flex items-center justify-between">
++                  <label className="font-bold text-slate-900">کرێی بەڕێوەبردن (Management Fee):</label>
++                  {editingProperty.operatingModel === 'AGENT_OPERATED' && (
++                    <span className="text-[10px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
++                      ناگرێتەوە لەم مۆدێلەدا
++                    </span>
++                  )}
+                 </div>
++
++                {editingProperty.operatingModel !== 'AGENT_OPERATED' ? (
++                  <div className="space-y-2">
++                    <div className="flex items-center gap-2">
++                      <input
++                        type="number"
++                        step="0.001"
++                        min="0"
++                        max="0.50"
++                        disabled={editMgmtFeeUnset}
++                        value={editMgmtFee}
++                        onChange={(e) => setEditMgmtFee(e.target.value)}
++                        placeholder="0.06 بۆ 6%"
++                        className="w-32 p-2 rounded-xl bg-slate-50 border border-slate-200 font-mono font-bold text-sm outline-none disabled:opacity-40"
++                      />
++                      <span className="text-slate-500 font-bold">
++                        {editMgmtFee ? `${(Number(editMgmtFee) * 100).toFixed(2)}%` : 'ڕێژەی دەسیماڵ'}
++                      </span>
++                    </div>
++
++                    <div className="flex items-center gap-2 pt-1">
++                      <label className="flex items-center gap-1.5 cursor-pointer text-slate-700">
++                        <input
++                          type="checkbox"
++                          checked={editMgmtFeeUnset}
++                          onChange={(e) => {
++                            setEditMgmtFeeUnset(e.target.checked);
++                            if (e.target.checked) setEditMgmtFee('');
++                          }}
++                          className="w-4 h-4 accent-slate-900"
++                        />
++                        <span>دیارینەکراوە (Unset / null)</span>
++                      </label>
++                    </div>
++                  </div>
++                ) : (
++                  <p className="text-[11px] text-slate-500">
++                    مۆدێلی AGENT_OPERATED بە تەواوی لە کرێی بەڕێوەبردن بەخشراوە.
++                  </p>
++                )}
+               </div>
+             </div>
+ 
+-            {/* Actions */}
+-            <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+-              <span className="text-[11px] text-slate-400">تۆمار: {prop.dateSubmitted}</span>
++            {/* Modal Actions */}
++            <div className="flex items-center justify-end gap-2 pt-3 border-t border-slate-100">
++              <button
++                type="button"
++                onClick={() => setEditingProperty(null)}
++                disabled={modalSaving}
++                className="px-4 py-2 rounded-xl border border-slate-200 text-slate-700 font-bold text-xs hover:bg-slate-50 cursor-pointer"
++              >
++                پەشیمانبوونەوە
++              </button>
++              <button
++                type="button"
++                data-testid="admin-save-property-fees-btn"
++                onClick={handleSaveFees}
++                disabled={modalSaving}
++                className="px-5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center gap-1.5 cursor-pointer shadow-xs"
++              >
++                {modalSaving && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
++                <span>پاشەکەوتکردن لە سێرڤەر</span>
++              </button>
++            </div>
++          </div>
++        </div>
++      )}
++
++      {/* Property Inspection & Verification Modal */}
++      {inspectingProperty && (
++        <div
++          data-testid="admin-property-inspect-modal"
++          className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 overflow-y-auto"
++        >
++          <div className="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl space-y-4 max-h-[90vh] overflow-y-auto">
++            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
++              <div className="flex items-center gap-2">
++                <Home className="w-5 h-5 text-blue-600" />
++                <h3 className="font-black text-base text-slate-900">
++                  پشکنینی وردی موڵک (Property Verification & Decision)
++                </h3>
++              </div>
++              <button
++                type="button"
++                onClick={() => setInspectingProperty(null)}
++                className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-600 cursor-pointer"
++              >
++                <X className="w-5 h-5" />
++              </button>
++            </div>
+ 
+-              {!isReadOnly && (
+-                <div className="flex items-center gap-1.5">
+-                  {prop.tapuStatus !== 'VERIFIED' && (
++            {/* Property Summary Grid */}
++            <div className="grid grid-cols-2 gap-3 text-xs bg-slate-50 p-3 rounded-xl border border-slate-200/80">
++              <div>
++                <span className="text-slate-400 block text-[11px]">ناوی موڵک (Title):</span>
++                <span className="font-extrabold text-slate-900">{inspectingProperty.title}</span>
++              </div>
++              <div>
++                <span className="text-slate-400 block text-[11px]">خاوەن موڵک (Owner):</span>
++                <span className="font-bold text-slate-900">{inspectingProperty.ownerName} ({inspectingProperty.ownerId || 'N/A'})</span>
++              </div>
++              <div>
++                <span className="text-slate-400 block text-[11px]">شار / ناونیشان (Location):</span>
++                <span className="font-semibold text-slate-800">{inspectingProperty.city} • {(inspectingProperty.address as any)?.street || ''}</span>
++              </div>
++              <div>
++                <span className="text-slate-400 block text-[11px]">ژمارەی تاپۆ (Tapu Number):</span>
++                <span className="font-mono font-bold text-slate-800">{inspectingProperty.tapuNumber || 'TN-N/A'}</span>
++              </div>
++              <div>
++                <span className="text-slate-400 block text-[11px]">دۆخی پشکنین (Verification Status):</span>
++                <span className={`inline-block font-extrabold px-2 py-0.5 rounded text-[11px] ${
++                  inspectingProperty.verificationStatus === 'VERIFIED' ? 'bg-emerald-100 text-emerald-800' :
++                  inspectingProperty.verificationStatus === 'REJECTED' ? 'bg-rose-100 text-rose-800' :
++                  'bg-amber-100 text-amber-800'
++                }`}>
++                  {inspectingProperty.verificationStatus || 'PENDING_VERIFICATION'}
++                </span>
++              </div>
++              <div>
++                <span className="text-slate-400 block text-[11px]">تفضيل بەڕێوەبردن (Management Choice):</span>
++                <span className="font-bold text-purple-700">{inspectingProperty.managementPreference || 'SELF_MANAGED'} ({inspectingProperty.managementArrangementStatus || 'NOT_APPLICABLE'})</span>
++              </div>
++            </div>
++
++            {/* Photos & Documents */}
++            <div className="space-y-2">
++              <h4 className="font-bold text-xs text-slate-700">وێنە و بەڵگەنامە تۆمارکراوەکان (Submitted Media & Documents):</h4>
++              {inspectingProperty.photos && inspectingProperty.photos.length > 0 ? (
++                <div className="grid grid-cols-3 gap-2">
++                  {inspectingProperty.photos.map((p, idx) => (
++                    <img key={idx} src={p} alt={`Property ${idx}`} className="w-full h-24 object-cover rounded-xl border border-slate-200" />
++                  ))}
++                </div>
++              ) : (
++                <p className="text-xs text-slate-400 italic">هیچ وێنەیەکی ڕاستەوخۆ بارنەکراوە (No photos uploaded).</p>
++              )}
++            </div>
++
++            {/* Auditable Decision History */}
++            <div className="space-y-2 pt-2 border-t border-slate-100">
++              <h4 className="font-bold text-xs text-slate-700">مێژووی بڕیارەکان (Auditable Decision History):</h4>
++              {loadingHistory ? (
++                <div className="p-4 text-center text-xs text-slate-400">Loading history...</div>
++              ) : verificationHistory.length === 0 ? (
++                <p className="text-xs text-slate-400 italic">هیچ مێژوویەکی بڕیاری پێشوو تۆمار نەکراوە (No previous review records).</p>
++              ) : (
++                <div className="space-y-1.5 max-h-36 overflow-y-auto">
++                  {verificationHistory.map((h, i) => (
++                    <div key={i} className="p-2 bg-slate-50 border border-slate-200 rounded-lg text-xs space-y-0.5">
++                      <div className="flex items-center justify-between font-bold">
++                        <span className={h.status === 'VERIFIED' ? 'text-emerald-700' : h.status === 'REJECTED' ? 'text-rose-700' : 'text-amber-700'}>
++                          {h.status}
++                        </span>
++                        <span className="text-[10px] text-slate-400 font-mono">
++                          {h.createdAt ? new Date(h.createdAt).toLocaleString() : ''}
++                        </span>
++                      </div>
++                      <div className="text-[11px] text-slate-600">
++                        Reviewer: {h.reviewerFirstName || ''} {h.reviewerLastName || ''} ({h.reviewerEmail || h.reviewerId || 'Admin'})
++                      </div>
++                      {h.rejectionReason && (
++                        <div className="text-[11px] text-rose-800 font-semibold">
++                          Reason: {h.rejectionReason}
++                        </div>
++                      )}
++                    </div>
++                  ))}
++                </div>
++              )}
++            </div>
++
++            {/* Action Feedback */}
++            {actionError && (
++              <div className="p-3 bg-rose-50 border border-rose-200 text-xs text-rose-800 rounded-xl font-bold">
++                {actionError}
++              </div>
++            )}
++            {actionSuccessMsg && (
++              <div className="p-3 bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 rounded-xl font-bold">
++                {actionSuccessMsg}
++              </div>
++            )}
++
++            {/* Admin Decision Controls */}
++            {!isReadOnly && (
++              <div className="pt-3 border-t border-slate-100 space-y-3">
++                <div className="space-y-1.5">
++                  <label className="block text-xs font-bold text-slate-700">
++                    هۆکاری ڕەتکردنەوە (مەرجە بۆ ڕەتکردنەوە - Required if rejecting):
++                  </label>
++                  <textarea
++                    data-testid="admin-reject-reason-input"
++                    value={rejectReason}
++                    onChange={(e) => setRejectReason(e.target.value)}
++                    placeholder="هۆکاری ڕەتکردنەوە بنووسە بۆ خاوەن موڵک (e.g. Invalid deed document, mismatched owner details)..."
++                    rows={2}
++                    className="w-full text-xs p-2.5 rounded-xl border border-slate-200 focus:border-rose-500 outline-none"
++                  />
++                </div>
++
++                <div className="flex items-center justify-between gap-3 pt-2">
++                  <button
++                    type="button"
++                    onClick={() => setInspectingProperty(null)}
++                    className="px-4 py-2 text-xs font-bold text-slate-500 hover:text-slate-800 transition-colors cursor-pointer"
++                  >
++                    داخستن (Close)
++                  </button>
++
++                  <div className="flex items-center gap-2">
+                     <button
+                       type="button"
+-                      onClick={() => onUpdateTapuStatus(prop.id, 'VERIFIED', 'پەسەندکردنی فەرمی تاپۆ')}
+-                      className="px-3 py-1 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-2xs transition-colors cursor-pointer"
++                      data-testid="admin-reject-btn"
++                      disabled={actionLoading}
++                      onClick={handleRejectProperty}
++                      className="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer disabled:opacity-50"
+                     >
+-                      پەسەندکردنی تاپۆ
++                      <XCircle className="w-3.5 h-3.5" />
++                      <span>ڕەتکردنەوە (Reject)</span>
+                     </button>
+-                  )}
+-                  {prop.tapuStatus !== 'REJECTED' && (
++
+                     <button
+                       type="button"
+-                      onClick={() => onUpdateTapuStatus(prop.id, 'REJECTED', 'ڕەتکردنەوەی تاپۆ')}
+-                      className="px-2.5 py-1 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-bold text-xs transition-colors cursor-pointer"
++                      data-testid="admin-approve-btn"
++                      disabled={actionLoading}
++                      onClick={handleApproveProperty}
++                      className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer disabled:opacity-50"
+                     >
+-                      ڕەتکردنەوە
++                      <CheckCircle2 className="w-3.5 h-3.5" />
++                      <span>پەسەندکردن (Approve)</span>
+                     </button>
+-                  )}
++                  </div>
+                 </div>
+-              )}
+-            </div>
++              </div>
++            )}
+           </div>
+-        ))}
+-      </div>
++        </div>
++      )}
+     </div>
+   );
+ };
++export default AdminPropertiesModule;
+diff --git a/src/components/admin/modules/AdminSettingsModule.tsx b/src/components/admin/modules/AdminSettingsModule.tsx
+index 02ccbbb..9b5dc3f 100644
+--- a/src/components/admin/modules/AdminSettingsModule.tsx
++++ b/src/components/admin/modules/AdminSettingsModule.tsx
+@@ -25,9 +25,11 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+   currentRole,
+   onBack,
+ }) => {
+-  const { direction, language, setLanguage } = useI18n();
++  const { direction, language, t } = useI18n();
+   const [exchangeRateIqd, setExchangeRateIqd] = useState('1530');
+   const [platformFeeRate, setPlatformFeeRate] = useState('');
++  const [persistedPlatformFeeRate, setPersistedPlatformFeeRate] = useState<string>('');
++  const [platformFeeEffectiveFrom, setPlatformFeeEffectiveFrom] = useState<string | null>(null);
+   const [twoFactorEnforced, setTwoFactorEnforced] = useState(true);
+   const [maintenanceMode, setMaintenanceMode] = useState(false);
+   const [largeContractThresholdUsd, setLargeContractThresholdUsd] = useState('100000');
+@@ -50,12 +52,25 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+           const json = await res.json();
+           if (isMounted && json.settings) {
+             setExchangeRateIqd(String(json.settings.exchangeRateIqd || '1530'));
+-            setPlatformFeeRate(json.settings.platformFeeRate !== undefined ? String(json.settings.platformFeeRate) : '');
++            const pRate = json.settings.platformFeeRate !== undefined ? String(json.settings.platformFeeRate) : '0.03';
++            setPlatformFeeRate(pRate);
++            setPersistedPlatformFeeRate(pRate);
+             setTwoFactorEnforced(Boolean(json.settings.twoFactorEnforced));
+             setMaintenanceMode(Boolean(json.settings.maintenanceMode));
+             setLargeContractThresholdUsd(String(json.settings.largeContractThresholdUsd || '100000'));
+           }
+         }
++
++        // Also fetch detailed fee configuration
++        const feeRes = await fetch('/api/admin/fees', {
++          headers: { Authorization: `Bearer ${token}` },
++        });
++        if (feeRes.ok) {
++          const feeJson = await feeRes.json();
++          if (isMounted && feeJson.fees?.platformFee) {
++            setPlatformFeeEffectiveFrom(feeJson.fees.platformFee.effectiveFrom || null);
++          }
++        }
+       } catch (e) {
+         console.error('Failed to load settings:', e);
+       }
+@@ -66,7 +81,34 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+     };
+   }, []);
+ 
++  const getPlatformFeeValidationError = (): string | null => {
++    if (!platformFeeRate || platformFeeRate.trim() === '') {
++      return t('fee.err_required', 'Platform fee rate is required');
++    }
++    const n = Number(platformFeeRate);
++    if (isNaN(n) || !isFinite(n)) {
++      return t('fee.err_invalid_number', 'Rate must be a valid number');
++    }
++    if (n < 0) {
++      return t('fee.err_negative', 'Rate cannot be negative');
++    }
++    if (n > 0.50) {
++      return t('fee.err_max', 'Rate cannot exceed 50% (0.50)');
++    }
++    const decParts = platformFeeRate.trim().split('.');
++    if (decParts.length === 2 && decParts[1].length > 4) {
++      return t('fee.err_precision', 'Rate precision cannot exceed 4 decimal places');
++    }
++    return null;
++  };
++
+   const handleSave = async () => {
++    const valErr = getPlatformFeeValidationError();
++    if (valErr) {
++      setErrorMessage(valErr);
++      return;
++    }
++
+     setSaving(true);
+     setErrorMessage(null);
+     try {
+@@ -91,6 +133,7 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+         throw new Error(err.error || 'Failed to persist platform settings');
+       }
+ 
++      setPersistedPlatformFeeRate(platformFeeRate);
+       setSaveSuccess(true);
+       setTimeout(() => setSaveSuccess(false), 3000);
+     } catch (err: any) {
+@@ -100,13 +143,17 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+     }
+   };
+ 
++  const isRatePending = platformFeeRate !== '' && platformFeeRate !== persistedPlatformFeeRate;
++  const rateValidationErr = getPlatformFeeValidationError();
++
+   return (
+-    <div className="space-y-4">
++    <div className="space-y-4" dir={direction}>
+       {/* Header */}
+       <div className="flex items-center justify-between gap-2 bg-white p-4 rounded-2xl border border-slate-200/80 shadow-2xs">
+         <div className="flex items-center gap-2">
+           <button
+             type="button"
++            data-testid="admin-settings-back-btn"
+             onClick={onBack}
+             className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer"
+           >
+@@ -115,10 +162,10 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+           <div>
+             <h2 className="text-lg font-extrabold text-slate-900 flex items-center gap-2">
+               <Settings className="w-5 h-5 text-slate-700" />
+-              <span>ڕێکخستنە گشتییەکانی پلاتفۆڕم (Platform Settings & System Config)</span>
++              <span>{t('fee.admin_title', 'ڕێکخستنە گشتییەکانی پلاتفۆڕم و کرێیەکان')}</span>
+             </h2>
+             <p className="text-xs text-slate-500">
+-              نرخی فەرمی دۆلار، یاساکانی ئاسایش، زمانی سیستم و پاراستنی داتابەیس
++              {t('fee.admin_subtitle', 'بەڕێوەبردنی مۆدێلی ٣-کرێیی، ڕێژەی پلاتفۆرم، یاساکانی ئاسایش و داتابەیس')}
+             </p>
+           </div>
+         </div>
+@@ -126,7 +173,7 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+         {isReadOnly && (
+           <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-bold">
+             <Lock className="w-3.5 h-3.5" />
+-            <span>تەنها بینین</span>
++            <span>تەنها بینین (Read Only)</span>
+           </div>
+         )}
+       </div>
+@@ -138,45 +185,94 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+         </div>
+       )}
+ 
++      {/* Main Settings Grid */}
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+-        {/* Currency & Finance Rules */}
+-        <div className="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-2xs space-y-3">
+-          <h3 className="font-extrabold text-sm text-slate-900 flex items-center gap-2">
+-            <span>ڕێکخستنی دراو و پارەدان</span>
+-          </h3>
++        {/* Fee Management & Currency Card */}
++        <div className="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-2xs space-y-4">
++          <div className="flex items-center justify-between border-b border-slate-100 pb-2">
++            <h3 className="font-extrabold text-sm text-slate-900 flex items-center gap-2">
++              <span>{t('fee.platform_fee', 'ڕێژەی پلاتفۆڕم (Global Platform Fee)')}</span>
++            </h3>
++            <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200">
++              سەرتاسەری (Universal)
++            </span>
++          </div>
+ 
+           <div className="space-y-3 text-xs">
++            {/* Persisted Current Rate Badge */}
++            <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
++              <div>
++                <p className="text-[10px] uppercase font-bold text-slate-500">
++                  {t('fee.current_rate', 'ڕێژەی ئێستای تۆمارکراو (Persisted Current Rate)')}
++                </p>
++                <p className="text-base font-extrabold text-slate-900 mt-0.5">
++                  {(Number(persistedPlatformFeeRate || 0) * 100).toFixed(2)}%
++                  <span className="text-xs text-slate-500 font-mono ml-2 font-normal">({persistedPlatformFeeRate || '—'})</span>
++                </p>
++              </div>
++              {platformFeeEffectiveFrom && (
++                <div className="text-end">
++                  <p className="text-[10px] text-slate-400">کاتی چالاکبوون (Effective From)</p>
++                  <p className="text-[11px] font-semibold text-slate-700 font-mono">
++                    {new Date(platformFeeEffectiveFrom).toLocaleDateString()}
++                  </p>
++                </div>
++              )}
++            </div>
++
++            {/* Edit Rate Input */}
+             <div>
+-              <label className="block text-[11px] font-bold text-slate-700 mb-1">
+-                نرخی خەمڵێنراوی $1 دۆلار بە دیناری عێراقی (IQD):
+-              </label>
++              <div className="flex items-center justify-between mb-1">
++                <label className="block text-[11px] font-bold text-slate-700">
++                  ڕێژەی نوێی پلاتفۆرم (New Rate 0 - 0.50):
++                </label>
++                {isRatePending && (
++                  <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
++                    گۆڕانکاری چاوەڕوانکراو (Pending: {(Number(platformFeeRate || 0) * 100).toFixed(2)}%)
++                  </span>
++                )}
++              </div>
+               <div className="flex items-center gap-2">
+                 <input
+                   type="number"
+-                  value={exchangeRateIqd}
+-                  onChange={(e) => setExchangeRateIqd(e.target.value)}
++                  step="0.001"
++                  min="0"
++                  max="0.50"
++                  data-testid="admin-platform-fee-input"
++                  value={platformFeeRate}
++                  onChange={(e) => setPlatformFeeRate(e.target.value)}
+                   disabled={isReadOnly}
+-                  className="w-32 p-2 rounded-xl bg-slate-50 border border-slate-200 font-mono font-bold text-sm outline-none"
++                  className={`w-36 p-2 rounded-xl bg-slate-50 border ${rateValidationErr ? 'border-rose-400 bg-rose-50/50' : 'border-slate-200'} font-mono font-bold text-sm outline-none`}
+                 />
+-                <span className="text-slate-500 font-bold">دینار بۆ هەر $1 USD</span>
++                <span className="text-slate-500 font-bold text-xs">ڕێژەی دەسیماڵ (نموونە: 0.03 بۆ 3%)</span>
+               </div>
++              {rateValidationErr && (
++                <p data-testid="admin-platform-fee-error" className="text-rose-600 text-[11px] mt-1 font-semibold">{rateValidationErr}</p>
++              )}
+             </div>
+ 
+-            <div>
++            {/* Effective-Time Policy Callout */}
++            <div className="p-2.5 rounded-xl bg-blue-50/60 border border-blue-100 text-[11px] text-blue-800 flex items-start gap-2">
++              <span className="shrink-0 font-bold">ℹ️</span>
++              <p>
++                {t('fee.effective_time_notice', 'گۆڕینی ڕێژەکە دەستبەجێ لە سێرڤەر پاشەکەوت دەبێت و تەنها کار دەکاتە سەر کۆکردنەوەی داهاتووی کرێ. مێژووی دارایی و لێدجەرەکانی پێشوو گۆڕانکارییان بەسەردا نایەت.')}
++              </p>
++            </div>
++
++            {/* Exchange Rate */}
++            <div className="pt-2 border-t border-slate-100">
+               <label className="block text-[11px] font-bold text-slate-700 mb-1">
+-                رێژەی کرێی پلاتفۆرم (Platform Fee Rate):
++                نرخی خەمڵێنراوی $1 دۆلار بە دیناری عێراقی (IQD):
+               </label>
+               <div className="flex items-center gap-2">
+                 <input
+                   type="number"
+-                  step="0.001"
+-                  data-testid="admin-platform-fee-input"
+-                  value={platformFeeRate}
+-                  onChange={(e) => setPlatformFeeRate(e.target.value)}
++                  value={exchangeRateIqd}
++                  onChange={(e) => setExchangeRateIqd(e.target.value)}
+                   disabled={isReadOnly}
+                   className="w-32 p-2 rounded-xl bg-slate-50 border border-slate-200 font-mono font-bold text-sm outline-none"
+                 />
+-                <span className="text-slate-500 font-bold">نموونە: 0.02</span>
++                <span className="text-slate-500 font-bold">دینار بۆ هەر $1 USD</span>
+               </div>
+             </div>
+ 
+@@ -190,7 +286,7 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+           </div>
+         </div>
+ 
+-        {/* Security Policies */}
++        {/* Security & System Policies */}
+         <div className="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-2xs space-y-3">
+           <h3 className="font-extrabold text-sm text-slate-900 flex items-center gap-2">
+             <Shield className="w-4 h-4 text-emerald-600" />
+@@ -225,10 +321,83 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+                 className="w-4 h-4 accent-rose-600"
+               />
+             </div>
++
++            {/* Fee Tiers Status */}
++            <div className="pt-3 border-t border-slate-100">
++              <span className="font-bold text-slate-800 block mb-1">پلەکانی کرێ بەپێی پۆرتفۆلیۆ (Portfolio Fee Tiers)</span>
++              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-600">
++                <span className="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800 mb-1">
++                  پێناسەکراوە لە داتابەیس / ناچالاکە لەم وەشاندنەدا
++                </span>
++                <p className="text-[10px] text-slate-500 mt-1">
++                  خشتەی پلەکانی کرێ (pricing_tiers) لە سکیمای داتابەیس بوونی هەیە. دیاریکردنی ڕێژە و سنوورەکان پێویستی بە پەسەندکردنی بەڕێوەبەرایەتی باڵایە و بۆ ئەم فیزە چالاک نەکراوە.
++                </p>
++              </div>
++            </div>
+           </div>
+         </div>
+       </div>
+ 
++      {/* Operating Model Applicability Matrix Card */}
++      <div className="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-2xs space-y-3">
++        <div className="flex items-center justify-between border-b border-slate-100 pb-2">
++          <h3 className="font-extrabold text-sm text-slate-900 flex items-center gap-2">
++            <span>ماتریسی گونجاوی کرێیەکان بەپێی مۆدێلی کارکردن (Operating-Model Fee Applicability Matrix)</span>
++          </h3>
++          <span className="text-[10px] text-slate-500 font-semibold">بڕیاری کۆتایی لە سێرڤەر بەڕێوەدەبرێت</span>
++        </div>
++
++        <div className="overflow-x-auto">
++          <table className="w-full text-xs text-start">
++            <thead className="bg-slate-50 text-slate-700 font-bold">
++              <tr>
++                <th className="py-2.5 px-3 rounded-s-lg">مۆدێلی کارکردن (Operating Model)</th>
++                <th className="py-2.5 px-3">کرێی پلاتفۆرم (Platform Fee)</th>
++                <th className="py-2.5 px-3">کرێی بەکرێدان (Rent Fee)</th>
++                <th className="py-2.5 px-3">کرێی بەڕێوەبردن (Management Fee)</th>
++                <th className="py-2.5 px-3 rounded-e-lg">یاسای تایبەت</th>
++              </tr>
++            </thead>
++            <tbody className="divide-y divide-slate-100 text-slate-600">
++              <tr className="hover:bg-slate-50/50">
++                <td className="py-2.5 px-3 font-bold text-slate-900">
++                  FULLY_MANAGED
++                  <span className="block text-[10px] text-slate-400 font-normal">بەڕێوەبردنی تەواوەتی پلاتفۆرم</span>
++                </td>
++                <td className="py-2.5 px-3 text-emerald-700 font-bold">✓ دەگرێتەوە (Applies)</td>
++                <td className="py-2.5 px-3 text-emerald-700 font-bold">✓ دەگرێتەوە (Applies)</td>
++                <td className="py-2.5 px-3 text-emerald-700 font-bold">✓ دەگرێتەوە (Applies)</td>
++                <td className="py-2.5 px-3 text-[11px] text-slate-500">هەر سێ کرێ ڕێککەوتوو دەبێت دیاری بکرێت</td>
++              </tr>
++              <tr className="hover:bg-slate-50/50">
++                <td className="py-2.5 px-3 font-bold text-slate-900">
++                  AGENT_LISTED_PLATFORM_MANAGED
++                  <span className="block text-[10px] text-slate-400 font-normal">بریکار خستوویەتییە ڕوو، پلاتفۆرم بەڕێوەی دەبات</span>
++                </td>
++                <td className="py-2.5 px-3 text-emerald-700 font-bold">✓ دەگرێتەوە (Applies)</td>
++                <td className="py-2.5 px-3 text-slate-400 font-bold">✗ ناگرێتەوە (Does Not Apply)</td>
++                <td className="py-2.5 px-3 text-emerald-700 font-bold">✓ دەگرێتەوە (Applies)</td>
++                <td className="py-2.5 px-3 text-[11px] text-slate-500">کرێی بەکرێدان بە تەواوی هەڵگیراوە</td>
++              </tr>
++              <tr className="hover:bg-slate-50/50">
++                <td className="py-2.5 px-3 font-bold text-slate-900">
++                  AGENT_OPERATED
++                  <span className="block text-[10px] text-slate-400 font-normal">لەلایەن بریکارەوە بەڕێوەدەبرێت</span>
++                </td>
++                <td className="py-2.5 px-3 text-emerald-700 font-bold">✓ دەگرێتەوە (Applies)</td>
++                <td className="py-2.5 px-3 text-slate-400 font-bold">✗ ناگرێتەوە (Does Not Apply)</td>
++                <td className="py-2.5 px-3 text-slate-400 font-bold">✗ ناگرێتەوە (Does Not Apply)</td>
++                <td className="py-2.5 px-3 text-[11px] text-slate-500">تەنها کرێی پلاتفۆرم کۆدەکرێتەوە</td>
++              </tr>
++            </tbody>
++          </table>
++        </div>
++
++        <div className="p-2.5 rounded-xl bg-amber-50/60 border border-amber-100 text-[11px] text-amber-800">
++          <span className="font-bold">تێبینی پاراستنی دارایی:</span> کرێی بەکرێدان و بەڕێوەبردن تایبەتن بە هەریەک لە موڵکەکان و لە کاتی تۆمارکردندا بە بەتاڵی دەمێننەوە هەتاوەکو ڕێککەوتنی فەرمی دەکرێت. کرێی دیارینەکراو (Unset) هەرگیز بە هەڵە بە %0 ئەژمار ناکرێت.
++        </div>
++      </div>
++
+       {/* Save Button */}
+       {!isReadOnly && (
+         <div className="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-200/80 shadow-2xs">
+@@ -247,7 +416,7 @@ export const AdminSettingsModule: React.FC<AdminSettingsModuleProps> = ({
+             type="button"
+             data-testid="admin-save-settings-btn"
+             onClick={handleSave}
+-            disabled={saving}
++            disabled={saving || Boolean(rateValidationErr)}
+             className="px-5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-white font-bold text-xs shadow-xs cursor-pointer transition-colors flex items-center gap-2"
+           >
+             {saving && <Loader2 className="w-3.5 h-3.5 animate-spin" />}
+diff --git a/src/pages/AddPropertyPage.tsx b/src/pages/AddPropertyPage.tsx
+index 8ccd540..7785a9d 100644
+--- a/src/pages/AddPropertyPage.tsx
++++ b/src/pages/AddPropertyPage.tsx
+@@ -9,13 +9,20 @@ import {
+   UtensilsCrossed, Box, UserCheck, Shirt, Smile,
+   Utensils, ShieldAlert, VolumeX, SunMedium, Bell,
+   Lock, Heart, Check, Search, Camera, Upload, 
+-  Image as ImageIcon, Trash2, Eye, Star, Plus, Link as LinkIcon
++  Image as ImageIcon, Trash2, Eye, Star, Plus, Link as LinkIcon, Clock
+ } from 'lucide-react';
+-import { useNavigate } from 'react-router-dom';
++import { useNavigate, useSearchParams } from 'react-router-dom';
+ import { FeatureFlags } from '../utils/featureFlags';
+ import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
+ import 'leaflet/dist/leaflet.css';
+ import L from 'leaflet';
++import { 
++  IRAQ_GOVERNORATES, 
++  getGovernorateName, 
++  getCityName, 
++  findGovernorateByNameOrId, 
++  getAllIraqCities 
++} from '../data/iraqLocations';
+ 
+ // Fix Leaflet marker icon issue
+ delete (L.Icon.Default.prototype as any)._getIconUrl;
+@@ -26,11 +33,16 @@ L.Icon.Default.mergeOptions({
+ });
+ 
+ const LocationSelector = ({ lat, lng, setLocation }: { lat: number, lng: number, setLocation: (lat: number, lng: number) => void }) => {
+-  useMapEvents({
++  const map = useMapEvents({
+     click(e) {
+       setLocation(e.latlng.lat, e.latlng.lng);
+     },
+   });
++
++  React.useEffect(() => {
++    map.setView([lat, lng], map.getZoom() || 13);
++  }, [lat, lng, map]);
++
+   return <Marker position={[lat, lng]} />;
+ };
+ 
+@@ -49,28 +61,42 @@ const STEPS_KEYS = [
+ export const AddPropertyPage: React.FC = () => {
+   const { t, direction, language, setLanguage } = useI18n();
+   const navigate = useNavigate();
++  const [searchParams] = useSearchParams();
++  const propIdParam = searchParams.get('prop_id');
+   const [currentStep, setCurrentStep] = useState(0);
+   const [loading, setLoading] = useState(false);
+   const [error, setError] = useState<string | null>(null);
++  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
++  const [stepError, setStepError] = useState<{ step: number; message: string } | null>(null);
+   const [success, setSuccess] = useState(false);
+   const [pricingTierInfo, setPricingTierInfo] = useState<any>(null);
+ 
+-  React.useEffect(() => {
+-    const token = localStorage.getItem('auth_token') || 'dev-owner';
+-    fetch('/api/properties/pricing-tier', {
+-      headers: { 'Authorization': `Bearer ${token}` }
+-    })
+-    .then(res => res.json())
+-    .then(data => setPricingTierInfo(data))
+-    .catch(console.error);
+-  }, []);
+-
++  // Post-Creation Management Choice State
++  const [createdProperty, setCreatedProperty] = useState<any>(() => {
++    if (typeof window !== 'undefined' && (window as any).__TEST_CREATED_PROP__) {
++      return (window as any).__TEST_CREATED_PROP__;
++    }
++    return null;
++  });
++  const [showManagementChoice, setShowManagementChoice] = useState(() => {
++    if (typeof window !== 'undefined' && (window as any).__TEST_CREATED_PROP__) {
++      return true;
++    }
++    return Boolean(propIdParam);
++  });
++  const [selectedPreference, setSelectedPreference] = useState<'SELF_MANAGED' | 'HOMEHUB_MANAGED' | 'AGENT_MANAGED'>('SELF_MANAGED');
++  const [eligibleAgents, setEligibleAgents] = useState<{ id: string; name: string }[]>([]);
++  const [selectedAgentId, setSelectedAgentId] = useState<string>('');
++  const [savingPreference, setSavingPreference] = useState(false);
++  const [preferenceSaved, setPreferenceSaved] = useState(false);
++  const [preferenceError, setPreferenceError] = useState<string | null>(null);
+ 
+   // Form Data
+   const [formData, setFormData] = useState({
+     type: '',
+     listingType: 'FOR_RENT' as 'FOR_RENT' | 'FOR_SALE' | 'NONE',
+     price: '',
++    currency: 'IQD',
+     name: '',
+     description: '',
+     yearBuilt: '',
+@@ -94,9 +120,145 @@ export const AddPropertyPage: React.FC = () => {
+     documents: [] as { fileName: string; documentType: string; fileUrl?: string }[]
+   });
+ 
++  const generateIdempotencyKey = () => {
++    return typeof crypto !== 'undefined' && crypto.randomUUID 
++      ? crypto.randomUUID() 
++      : 'prop_' + Date.now() + '_' + Math.random().toString(36).substring(2, 10);
++  };
++
++  const [idempotencyKey, setIdempotencyKey] = useState<string>(generateIdempotencyKey);
++  const formEditedAfterAttemptRef = React.useRef<boolean>(false);
++
++  React.useEffect(() => {
++    const token = localStorage.getItem('auth_token') || 'dev-owner';
++    fetch('/api/properties/pricing-tier', {
++      headers: { 'Authorization': `Bearer ${token}` }
++    })
++    .then(res => res.json())
++    .then(data => setPricingTierInfo(data))
++    .catch(console.error);
++  }, []);
++
++  React.useEffect(() => {
++    const token = localStorage.getItem('auth_token') || 'dev-owner';
++    if (propIdParam && !createdProperty) {
++      fetch(`/api/properties/${propIdParam}`, {
++        headers: { 'Authorization': `Bearer ${token}` }
++      })
++      .then(res => res.json())
++      .then(prop => {
++        if (prop && prop.id) {
++          setCreatedProperty(prop);
++          setShowManagementChoice(true);
++          if (prop.managementPreference) {
++            setSelectedPreference(prop.managementPreference);
++          }
++          if (prop.managedByAgentId) {
++            setSelectedAgentId(prop.managedByAgentId);
++          }
++        }
++      })
++      .catch(console.error);
++    }
++
++    if (showManagementChoice) {
++      fetch('/api/properties/eligible-agents', {
++        headers: { 'Authorization': `Bearer ${token}` }
++      })
++      .then(r => r.json())
++      .then(d => {
++        if (d && Array.isArray(d.agents)) setEligibleAgents(d.agents);
++      })
++      .catch(console.error);
++    }
++  }, [propIdParam, showManagementChoice]);
++
++  React.useEffect(() => {
++    if (formEditedAfterAttemptRef.current) {
++      setIdempotencyKey(generateIdempotencyKey());
++      formEditedAfterAttemptRef.current = false;
++    }
++  }, [formData]);
++
+   const [amenityCategory, setAmenityCategory] = useState<'all' | 'utilities' | 'comfort' | 'lifestyle' | 'safety'>('all');
+   const [amenitySearch, setAmenitySearch] = useState('');
+ 
++  // Location Selector States & Handlers
++  const [isCustomCity, setIsCustomCity] = useState(false);
++
++  const kurdistanGovs = IRAQ_GOVERNORATES.filter(g => g.region === 'Kurdistan');
++  const federalGovs = IRAQ_GOVERNORATES.filter(g => g.region === 'Federal');
++
++  const activeGov = findGovernorateByNameOrId(formData.address.state) || 
++    (formData.address.city ? findGovernorateByNameOrId(formData.address.city) : undefined);
++
++  const availableCities = activeGov ? activeGov.cities : [];
++
++  const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
++    const selectedName = e.target.value;
++    const gov = findGovernorateByNameOrId(selectedName);
++    if (gov) {
++      const cityInGov = gov.cities.find(c => c.nameEn.toLowerCase() === (formData.address.city || '').toLowerCase());
++      const nextCity = cityInGov ? cityInGov.nameEn : gov.cities[0].nameEn;
++      const nextCityObj = cityInGov || gov.cities[0];
++      setFormData(prev => ({
++        ...prev,
++        address: {
++          ...prev.address,
++          state: gov.nameEn,
++          city: nextCity,
++          lat: nextCityObj.lat,
++          lng: nextCityObj.lng
++        }
++      }));
++      setIsCustomCity(false);
++    } else {
++      setFormData(prev => ({
++        ...prev,
++        address: {
++          ...prev.address,
++          state: '',
++        }
++      }));
++    }
++  };
++
++  const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
++    const val = e.target.value;
++    if (val === 'OTHER') {
++      setIsCustomCity(true);
++      return;
++    }
++    setIsCustomCity(false);
++    if (!val) {
++      setFormData(prev => ({
++        ...prev,
++        address: { ...prev.address, city: '' }
++      }));
++      return;
++    }
++    const allCities = getAllIraqCities();
++    const matched = allCities.find(c => c.nameEn === val || c.id === val);
++    if (matched) {
++      const parentGov = IRAQ_GOVERNORATES.find(g => g.id === matched.governorateId);
++      setFormData(prev => ({
++        ...prev,
++        address: {
++          ...prev.address,
++          city: matched.nameEn,
++          state: parentGov ? parentGov.nameEn : prev.address.state,
++          lat: matched.lat,
++          lng: matched.lng
++        }
++      }));
++    } else {
++      setFormData(prev => ({
++        ...prev,
++        address: { ...prev.address, city: val }
++      }));
++    }
++  };
++
+   // Photo Upload States
+   const [photoUrlInput, setPhotoUrlInput] = useState('');
+   const [photoUploadError, setPhotoUploadError] = useState<string | null>(null);
+@@ -203,32 +365,14 @@ export const AddPropertyPage: React.FC = () => {
+   const handleSubmit = async () => {
+     setLoading(true);
+     setError(null);
+-    if ((formData as any).ownerType === 'INDIVIDUAL' && !formData.ownerId) {
+-      setError(t('property.error.owner_id_required', 'Actual Owner User ID is required when selecting Individual.'));
+-      setLoading(false);
+-      return;
+-    }
+-    if ((formData as any).ownerType === 'COMPANY' && !(formData as any).companyId) {
+-      setError(t('property.error.company_id_required', 'Actual Owner Company ID is required when selecting Company.'));
+-      setLoading(false);
+-      return;
+-    }
+-    if ((formData as any).ownerType === 'INDIVIDUAL' && !formData.ownerId) {
+-      setError(t('property.error.owner_id_required', 'Actual Owner User ID is required when selecting Individual.'));
+-      setLoading(false);
+-      return;
+-    }
+-    if ((formData as any).ownerType === 'COMPANY' && !(formData as any).companyId) {
+-      setError(t('property.error.company_id_required', 'Actual Owner Company ID is required when selecting Company.'));
+-      setLoading(false);
+-      return;
+-    }
+     try {
++      formEditedAfterAttemptRef.current = true;
+       const res = await fetch('/api/properties', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+-          'Authorization': `Bearer ${localStorage.getItem('auth_token') || 'dev-owner'}`
++          'Authorization': `Bearer ${localStorage.getItem('auth_token') || 'dev-owner'}`,
++          'Idempotency-Key': idempotencyKey,
+         },
+         body: JSON.stringify({
+           name: formData.name,
+@@ -236,9 +380,11 @@ export const AddPropertyPage: React.FC = () => {
+           type: formData.type,
+           listingType: formData.listingType,
+           price: formData.price ? Number(formData.price) : (formData.listingType === 'FOR_RENT' ? 1200 : 250000),
+-          currency: 'USD',
++          currency: formData.currency || 'IQD',
+           address: {
+             ...formData.address,
++            city: formData.address.city || 'Erbil',
++            country: formData.address.country || 'Iraq',
+             photos: formData.photos,
+             imageUrl: formData.photos[0] || '',
+             amenities: formData.amenities,
+@@ -263,15 +409,70 @@ export const AddPropertyPage: React.FC = () => {
+       });
+ 
+             if (!res.ok) {
+-        throw new Error(
+-          t('property.error.create_failed_dev', 'Failed to create property in isolated development mode.')
+-        );
++        const errorData = await res.json().catch(() => ({}));
++        const rawMsg = errorData.message || errorData.error || t('property.error.create_failed', 'Failed to create property.');
++
++        // Sanitize internal errors without exposing server stacks/paths
++        let userMessage = rawMsg;
++        if (res.status === 500) {
++          userMessage = t('property.error.server_error', 'An internal server error occurred while creating the property. Please try again.');
++        } else {
++          userMessage = userMessage.replace(/^(VALIDATION_ERROR|FORBIDDEN|CONFLICT):\s*/i, '');
++        }
++
++        const lower = userMessage.toLowerCase();
++        const detectedFieldErrors: Record<string, string> = {};
++        let targetStep: number | null = null;
++
++        if (lower.includes('type') && !lower.includes('owner type')) {
++          detectedFieldErrors.type = userMessage;
++          targetStep = 0; // Type Selection
++        } else if (lower.includes('name') || lower.includes('title')) {
++          detectedFieldErrors.name = userMessage;
++          targetStep = 1; // Basic Information
++        } else if (lower.includes('rent fee') || lower.includes('rentfee')) {
++          detectedFieldErrors.rentFee = userMessage;
++          targetStep = 7; // Operating Model & Financials
++        } else if (lower.includes('management fee') || lower.includes('managementfee')) {
++          detectedFieldErrors.managementFee = userMessage;
++          targetStep = 7;
++        } else if (lower.includes('operating model') || lower.includes('operatingmodel')) {
++          detectedFieldErrors.operatingModel = userMessage;
++          targetStep = 7;
++        } else if (lower.includes('company')) {
++          detectedFieldErrors.companyId = userMessage;
++          targetStep = 6; // Ownership
++        }
++
++        setFieldErrors(detectedFieldErrors);
++        setError(userMessage);
++
++        if (targetStep !== null) {
++          setStepError({ step: targetStep, message: userMessage });
++          setCurrentStep(targetStep);
++        }
++
++        setLoading(false);
++        return;
+       }
+ 
+-      setSuccess(true);
+-      setTimeout(() => {
+-        navigate('/properties');
+-      }, 1500);
++      const created = await res.json();
++      setIdempotencyKey(generateIdempotencyKey());
++      formEditedAfterAttemptRef.current = false;
++      setCreatedProperty(created);
++      setShowManagementChoice(true);
++      setLoading(false);
++
++      // Fetch eligible verified management companies for AGENT_MANAGED choice
++      const token = localStorage.getItem('auth_token') || 'dev-owner';
++      fetch('/api/properties/eligible-agents', {
++        headers: { 'Authorization': `Bearer ${token}` }
++      })
++      .then(r => r.json())
++      .then(d => {
++        if (d && Array.isArray(d.agents)) setEligibleAgents(d.agents);
++      })
++      .catch(console.error);
+     } catch (err: any) {
+       setError(err.message);
+       setLoading(false);
+@@ -328,6 +529,361 @@ export const AddPropertyPage: React.FC = () => {
+     return matchesCategory && matchesSearch;
+   });
+ 
++  if (showManagementChoice && createdProperty) {
++    return (
++      <div dir={direction} className="max-w-3xl mx-auto p-4 sm:p-6 lg:p-8 space-y-6">
++        {/* Quick Language Toggle */}
++        <div className="flex justify-end">
++          <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
++            <button
++              type="button"
++              onClick={() => setLanguage('ku')}
++              className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
++                language === 'ku' ? 'bg-white text-blue-700 shadow-xs' : 'text-slate-600 hover:text-slate-900'
++              }`}
++            >
++              کوردی
++            </button>
++            <button
++              type="button"
++              onClick={() => setLanguage('en')}
++              className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
++                language === 'en' ? 'bg-white text-blue-700 shadow-xs' : 'text-slate-600 hover:text-slate-900'
++              }`}
++            >
++              English
++            </button>
++            <button
++              type="button"
++              onClick={() => setLanguage('ar')}
++              className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
++                language === 'ar' ? 'bg-white text-blue-700 shadow-xs' : 'text-slate-600 hover:text-slate-900'
++              }`}
++            >
++              عربي
++            </button>
++          </div>
++        </div>
++
++        {/* 1. Submission Confirmation & Admin Verification Notice Banner */}
++        <div data-testid="property-submitted-confirmation" className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-emerald-950 shadow-xs space-y-4">
++          <div className="flex items-center gap-3">
++            <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-xs">
++              <CheckCircle className="w-6 h-6" />
++            </div>
++            <div>
++              <h2 className="text-lg sm:text-xl font-black text-emerald-900">
++                {language === 'ku'
++                  ? 'موڵکەکەت بە سەرکەوتوویی تۆمارکرا!'
++                  : language === 'ar'
++                  ? 'تم تسجيل عقارك بنجاح!'
++                  : 'Property Registered Successfully!'}
++              </h2>
++              <p className="text-xs text-emerald-700 mt-0.5">
++                {createdProperty.name} • {createdProperty.address?.city || 'Erbil'} • ID: {createdProperty.id?.substring(0, 8)}
++              </p>
++            </div>
++          </div>
++
++          <div className="p-4 bg-amber-50/90 border border-amber-200 rounded-xl space-y-2 text-amber-900">
++            <div className="flex items-center gap-2">
++              <span className="px-2.5 py-1 rounded-full text-xs font-black bg-amber-200 text-amber-900 flex items-center gap-1.5">
++                <Clock className="w-3.5 h-3.5" />
++                <span>PENDING_VERIFICATION</span>
++              </span>
++              <span className="text-xs font-bold">
++                {language === 'ku'
++                  ? 'پێویستی بە پەسەندکردنی بەڕێوەبەر هەیە پێش بڵاوکردنەوەی گشتی'
++                  : language === 'ar'
++                  ? 'التحقق الإداري مطلوب قبل الإدراج العام في السوق'
++                  : 'Administrative verification required before public listing'}
++              </span>
++            </div>
++            <p className="text-xs text-amber-800 leading-relaxed">
++              {language === 'ku'
++                ? 'بەپێی یاساکانی هۆم‌هەب، هەموو موڵکێکی نوێ دەبێت لەلایەن کارگێڕی پلاتفۆرمەوە پشکنینی تاپۆ و خاوەندارێتی بۆ ئەنجام بدرێت. موڵکەکەت پارێزراوە و لە چاوەڕوانی پەسەندکردندایە و ناتوانرێت پێش پەسەندکردن لە بازاڕ دابنرێت یان بەکرێ بدرێت.'
++                : language === 'ar'
++                ? 'وفقًا لسياسات هوم هب، يجب فحص جميع العقارات الجديدة من قبل الإدارة للتأكد من سند الطابو والملكية. عقارك محفوظ وقيد المراجعة ولا يمكن إدراجه في السوق العام أو تأجيره قبل الموافقة.'
++                : 'Per HomeHub security rules, every registered property must undergo admin verification before it can be publicly listed or leased. Your property is protected and pending review.'}
++            </p>
++          </div>
++        </div>
++
++        {/* 2. Dedicated Owner Management Preference Step */}
++        <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs space-y-6">
++          <div>
++            <h3 className="text-lg font-black text-slate-900">
++              {language === 'ku'
++                ? 'شێوازی بەڕێوەبردنی موڵکەکەت هەڵبژێرە'
++                : language === 'ar'
++                ? 'اختر تفضيل إدارة عقارك'
++                : 'Select Your Management Preference'}
++            </h3>
++            <p className="text-xs text-slate-500 mt-1">
++              {language === 'ku'
++                ? 'تکایە یەکێک لەم سێ بژاردەیەی خوارەوە دیاری بکە:'
++                : language === 'ar'
++                ? 'يرجى تحديد أحد الخيارات الثلاثة التالية لإدارة عقارك:'
++                : 'Please select exactly one of the three management choices below:'}
++            </p>
++          </div>
++
++          <div className="space-y-4">
++            {/* Option A: SELF_MANAGED */}
++            <div
++              data-testid="option-self-managed"
++              onClick={() => setSelectedPreference('SELF_MANAGED')}
++              className={`p-5 rounded-2xl border-2 transition-all cursor-pointer ${
++                selectedPreference === 'SELF_MANAGED'
++                  ? 'border-blue-600 bg-blue-50/50 shadow-xs'
++                  : 'border-slate-200 hover:border-slate-300 bg-white'
++              }`}
++            >
++              <div className="flex items-start justify-between gap-3">
++                <div className="space-y-1">
++                  <div className="flex items-center gap-2">
++                    <span className="font-mono text-xs font-black px-2 py-0.5 rounded bg-blue-100 text-blue-800">A. SELF_MANAGED</span>
++                    <h4 className="font-extrabold text-sm text-slate-900">
++                      {language === 'ku' ? 'بەڕێوەبردنی خۆیی' : language === 'ar' ? 'إدارة ذاتية' : 'Self-Managed'}
++                    </h4>
++                  </div>
++                  <p className="text-xs font-bold text-slate-800 italic">
++                    “I want to list my property on HomeHub and manage it myself.”
++                  </p>
++                  <p className="text-xs text-slate-600 mt-1">
++                    {language === 'ku'
++                      ? 'دەمەوێت موڵکەکەم لە هۆم‌هەب دابنێم و خۆم بەڕێوەی ببەم. کاتێک پشکنین پەسەند کرا، خۆت ڕیکلام دەکەیت و کرێنشین بەڕێوەدەبەیت بەبێ پێویستی بە گرێبەستی بەڕێوەبردن (NOT_APPLICABLE).'
++                      : language === 'ar'
++                      ? 'أريد إدراج عقاري على هوم هب وإدارته بنفسي. بعد الموافقة على التحقق، يمكنك الإعلان وإدارة المستأجرين مباشرة دون الحاجة لاتفاقية إدارة.'
++                      : 'You retain full direct control. Once verified, you can advertise and manage tenancies directly. Arrangement status: NOT_APPLICABLE.'}
++                  </p>
++                </div>
++                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 mt-1 ${
++                  selectedPreference === 'SELF_MANAGED' ? 'border-blue-600 bg-blue-600 text-white' : 'border-slate-300'
++                }`}>
++                  {selectedPreference === 'SELF_MANAGED' && <Check className="w-3.5 h-3.5 stroke-[3]" />}
++                </div>
++              </div>
++            </div>
++
++            {/* Option B: HOMEHUB_MANAGED */}
++            <div
++              data-testid="option-homehub-managed"
++              onClick={() => setSelectedPreference('HOMEHUB_MANAGED')}
++              className={`p-5 rounded-2xl border-2 transition-all cursor-pointer ${
++                selectedPreference === 'HOMEHUB_MANAGED'
++                  ? 'border-blue-600 bg-blue-50/50 shadow-xs'
++                  : 'border-slate-200 hover:border-slate-300 bg-white'
++              }`}
++            >
++              <div className="flex items-start justify-between gap-3">
++                <div className="space-y-1">
++                  <div className="flex items-center gap-2">
++                    <span className="font-mono text-xs font-black px-2 py-0.5 rounded bg-blue-100 text-blue-800">B. HOMEHUB_MANAGED</span>
++                    <h4 className="font-extrabold text-sm text-slate-900">
++                      {language === 'ku' ? 'بەڕێوەبردن لەلایەن هۆم‌هەب' : language === 'ar' ? 'إدارة هوم هب' : 'HomeHub-Managed'}
++                    </h4>
++                  </div>
++                  <p className="text-xs font-bold text-slate-800 italic">
++                    “I want HomeHub to manage my property for me.”
++                  </p>
++                  <p className="text-xs text-slate-600 mt-1">
++                    {language === 'ku'
++                      ? 'دەمەوێت هۆم‌هەب موڵکەکەم بۆ بەڕێوەببات. تیمی ئۆپەراسیۆن دەست بە ئۆنبۆردکردن دەکات و گرێبەستی بەڕێوەبردن ئامادە دەکات (AWAITING_ONBOARDING).'
++                      : language === 'ar'
++                      ? 'أريد أن تتولى هوم هب إدارة عقاري بالكامل. سيبدأ فريق العمليات بالإعداد وتجهيز اتفاقية الإدارة المعتمدة.'
++                      : 'HomeHub operations manages your property end-to-end under the standard platform operating model. Arrangement status: AWAITING_ONBOARDING.'}
++                  </p>
++                </div>
++                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 mt-1 ${
++                  selectedPreference === 'HOMEHUB_MANAGED' ? 'border-blue-600 bg-blue-600 text-white' : 'border-slate-300'
++                }`}>
++                  {selectedPreference === 'HOMEHUB_MANAGED' && <Check className="w-3.5 h-3.5 stroke-[3]" />}
++                </div>
++              </div>
++            </div>
++
++            {/* Option C: AGENT_MANAGED */}
++            <div
++              data-testid="option-agent-managed"
++              onClick={() => setSelectedPreference('AGENT_MANAGED')}
++              className={`p-5 rounded-2xl border-2 transition-all cursor-pointer ${
++                selectedPreference === 'AGENT_MANAGED'
++                  ? 'border-blue-600 bg-blue-50/50 shadow-xs'
++                  : 'border-slate-200 hover:border-slate-300 bg-white'
++              }`}
++            >
++              <div className="flex items-start justify-between gap-3">
++                <div className="space-y-1">
++                  <div className="flex items-center gap-2">
++                    <span className="font-mono text-xs font-black px-2 py-0.5 rounded bg-blue-100 text-blue-800">C. AGENT_MANAGED</span>
++                    <h4 className="font-extrabold text-sm text-slate-900">
++                      {language === 'ku' ? 'بەڕێوەبردن لەلایەن ئاژانس / کۆمپانیا' : language === 'ar' ? 'إدارة وكيل / شركة' : 'Agent-Managed'}
++                    </h4>
++                  </div>
++                  <p className="text-xs font-bold text-slate-800 italic">
++                    “I want an agent or property management company to manage my property.”
++                  </p>
++                  <p className="text-xs text-slate-600 mt-1">
++                    {language === 'ku'
++                      ? 'دەمەوێت ئاژانس یان کۆمپانیایەکی بەڕێوەبردن موڵکەکەم بەڕێوەببات. پێویستە گرێبەستی فەرمی هەبێت پێش ئەوەی دەسەڵاتی بەڕێوەبردن پێبدرێت (AWAITING_AGREEMENT).'
++                      : language === 'ar'
++                      ? 'أريد أن يدير عقاري وكيل أو شركة إدارة عقارية معتمدة. يلزم توقيع اتفاقية إدارة رسمية قبل منح صلاحيات الإدارة.'
++                      : 'An authorized management partner will manage your property. Management access is not granted until an agreement is executed. Arrangement status: AWAITING_AGREEMENT.'}
++                  </p>
++                </div>
++                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 mt-1 ${
++                  selectedPreference === 'AGENT_MANAGED' ? 'border-blue-600 bg-blue-600 text-white' : 'border-slate-300'
++                }`}>
++                  {selectedPreference === 'AGENT_MANAGED' && <Check className="w-3.5 h-3.5 stroke-[3]" />}
++                </div>
++              </div>
++
++              {selectedPreference === 'AGENT_MANAGED' && (
++                <div className="mt-4 pt-4 border-t border-blue-200/60 space-y-3" onClick={(e) => e.stopPropagation()}>
++                  <label className="block text-xs font-bold text-slate-700">
++                    {language === 'ku'
++                      ? 'هەڵبژاردنی کۆمپانیای بەڕێوەبردن (Verified Management Company):'
++                      : language === 'ar'
++                      ? 'اختر شركة الإدارة المعتمدة:'
++                      : 'Select Verified Management Company:'}
++                  </label>
++                  {eligibleAgents.length > 0 ? (
++                    <select
++                      data-testid="agent-company-select"
++                      value={selectedAgentId}
++                      onChange={(e) => setSelectedAgentId(e.target.value)}
++                      className="w-full text-xs bg-white border border-slate-300 rounded-xl p-2.5 font-medium text-slate-800 outline-none focus:border-blue-600"
++                    >
++                      <option value="">-- {language === 'ku' ? 'کۆمپانیایەک هەڵبژێرە' : 'Select a verified company'} --</option>
++                      {eligibleAgents.map(ag => (
++                        <option key={ag.id} value={ag.id}>{ag.name} ({ag.id.substring(0, 8)})</option>
++                      ))}
++                    </select>
++                  ) : (
++                    <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 space-y-1">
++                      <p className="font-semibold text-slate-700">
++                        {language === 'ku'
++                          ? 'هیچ کۆمپانیایەکی دەرەکی باوەڕپێکراو لەم ساتەدا بەردەست نییە.'
++                          : 'No external verified management companies currently registered in this environment.'}
++                      </p>
++                      <p className="text-[11px] text-slate-500">
++                        {language === 'ku'
++                          ? 'دەتوانیت دواتر لەڕێگەی پشتگیری هۆم‌هەب داوای هاوکاری بکەیت. دۆخی ڕێککەوتنەکە بە AWAITING_AGREEMENT دەمێنێتەوە.'
++                          : 'Assistance finding a manager can be requested from HomeHub Support. Arrangement status will be recorded as AWAITING_AGREEMENT.'}
++                      </p>
++                    </div>
++                  )}
++
++                  <div className="p-2.5 rounded-xl bg-amber-50/80 border border-amber-200 text-amber-900 text-[11px] flex items-center gap-2">
++                    <Shield className="w-4 h-4 text-amber-700 shrink-0" />
++                    <span>
++                      {language === 'ku'
++                        ? 'ئاگاداری: دیاریکردنی بەڕێوەبەر بە خۆکاری دەسەڵاتی چوونەژوورەوەی پێنابەخشێت. دەبێت گرێبەستی بەڕێوەبردن لە نێوانتان واژۆ بکرێت.'
++                        : 'Selecting a manager does not automatically grant property access. A formal signed management agreement is mandatory.'}
++                    </span>
++                  </div>
++                </div>
++              )}
++            </div>
++          </div>
++
++          {preferenceError && (
++            <div data-testid="preference-error-banner" className="p-3 bg-red-50 border border-red-200 text-xs text-red-700 rounded-xl">
++              {preferenceError}
++            </div>
++          )}
++
++          {preferenceSaved ? (
++            <div data-testid="preference-saved-banner" className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-3">
++              <div className="flex items-center gap-2 text-emerald-800 font-bold text-sm">
++                <CheckCircle className="w-4 h-4 text-emerald-600" />
++                <span>
++                  {language === 'ku'
++                    ? `شێوازی بەڕێوەبردن (${selectedPreference}) بە سەرکەوتوویی پاشەکەوتکرا!`
++                    : language === 'ar'
++                    ? `تم حفظ تفضيل الإدارة (${selectedPreference}) بنجاح!`
++                    : `Management preference (${selectedPreference}) saved successfully!`}
++                </span>
++              </div>
++              <div className="text-xs text-emerald-900 space-y-1">
++                <p>
++                  <strong>{language === 'ku' ? 'هەنگاوی داهاتوو:' : 'Next Action:'}</strong>{' '}
++                  {selectedPreference === 'SELF_MANAGED'
++                    ? (language === 'ku' ? 'چاوەڕوانی پەسەندکردنی تاپۆ/خاوەندارێتی لەلایەن بەڕێوەبەر. دوای پەسەندکردن دەتوانیت ڕیکلام دابنێیت.' : 'Awaiting admin verification. Once verified, you can advertise and manage directly.')
++                    : selectedPreference === 'HOMEHUB_MANAGED'
++                    ? (language === 'ku' ? 'تیمی ئۆپەراسیۆن پەیوەندیت پێوە دەکەن بۆ تەواوکردنی ئۆنبۆردکردن و گرێبەستی بەڕێوەبردن.' : 'HomeHub operations team will contact you to complete onboarding and execute the agreement.')
++                    : (language === 'ku' ? 'ئاژانسی هەڵبژێردراو پێویستە گرێبەستی بەڕێوەبردن پێشکەش بکات پێش دەستپێکردن.' : 'The selected agent must submit and execute the management agreement before access is granted.')}
++                </p>
++              </div>
++              <button
++                type="button"
++                data-testid="go-to-portfolio-btn"
++                onClick={() => navigate('/properties')}
++                className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs transition-colors cursor-pointer shadow-xs mt-2"
++              >
++                {language === 'ku' ? 'بڕۆ بۆ لیستی موڵکەکانم (Go to Portfolio)' : 'Go to My Portfolio'}
++              </button>
++            </div>
++          ) : (
++            <div className="flex items-center justify-between gap-3 pt-3 border-t border-slate-100">
++              <button
++                type="button"
++                onClick={() => navigate('/properties')}
++                className="px-4 py-2 text-xs font-bold text-slate-500 hover:text-slate-800 transition-colors cursor-pointer"
++              >
++                {language === 'ku' ? 'دوایی بڕیار دەدەم (Decide Later)' : 'Decide Later'}
++              </button>
++
++              <button
++                type="button"
++                data-testid="save-management-preference-btn"
++                disabled={savingPreference}
++                onClick={async () => {
++                  setSavingPreference(true);
++                  setPreferenceError(null);
++                  try {
++                    const token = localStorage.getItem('auth_token') || 'dev-owner';
++                    const res = await fetch(`/api/properties/${createdProperty.id}/management-preference`, {
++                      method: 'POST',
++                      headers: {
++                        'Content-Type': 'application/json',
++                        'Authorization': `Bearer ${token}`
++                      },
++                      body: JSON.stringify({
++                        managementPreference: selectedPreference,
++                        agentCompanyId: selectedPreference === 'AGENT_MANAGED' && selectedAgentId ? selectedAgentId : undefined
++                      })
++                    });
++                    if (!res.ok) {
++                      const errData = await res.json().catch(() => ({}));
++                      throw new Error(errData.message || errData.error || 'Failed to save management preference');
++                    }
++                    setPreferenceSaved(true);
++                  } catch (err: any) {
++                    setPreferenceError(err.message);
++                  } finally {
++                    setSavingPreference(false);
++                  }
++                }}
++                className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs transition-colors cursor-pointer flex items-center gap-2 shadow-xs"
++              >
++                {savingPreference ? (
++                  <span>{language === 'ku' ? 'پاشەکەوت دەکرێت...' : 'Saving...'}</span>
++                ) : (
++                  <>
++                    <span>{language === 'ku' ? 'پاشەکەوتکردنی هەڵبژاردن' : language === 'ar' ? 'حفظ التفضيل' : 'Save Preference'}</span>
++                    <Check className="w-4 h-4" />
++                  </>
++                )}
++              </button>
++            </div>
++          )}
++        </div>
++      </div>
++    );
++  }
++
+   return (
+     <div dir={direction} className="max-w-3xl mx-auto p-4 sm:p-6 lg:p-8">
+       {/* Header with Language Switcher */}
+@@ -392,12 +948,14 @@ export const AddPropertyPage: React.FC = () => {
+               className="flex flex-col items-center gap-2 cursor-pointer transition-transform hover:scale-105 group"
+             >
+               <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all ${
++                stepError?.step === idx ? 'bg-red-100 text-red-700 border-2 border-red-500 ring-2 ring-red-200' :
+                 idx < currentStep ? 'bg-blue-600 text-white' : 
+                 idx === currentStep ? 'bg-blue-600 text-white ring-4 ring-blue-100 scale-110 shadow-xs' : 'bg-slate-200 text-slate-500 group-hover:bg-slate-300'
+               }`}>
+-                {idx < currentStep ? <CheckCircle className="w-5 h-5" /> : idx + 1}
++                {stepError?.step === idx ? '!' : idx < currentStep ? <CheckCircle className="w-5 h-5" /> : idx + 1}
+               </div>
+               <span className={`text-[11px] font-semibold hidden sm:block transition-colors ${
++                stepError?.step === idx ? 'text-red-600 font-bold' :
+                 idx <= currentStep ? 'text-slate-900 font-bold' : 'text-slate-400 group-hover:text-slate-600'
+               }`}>
+                 {t(stepKey, stepKey)}
+@@ -525,6 +1083,16 @@ export const AddPropertyPage: React.FC = () => {
+                   <span className="text-sm">📁 {t('property.purpose_portfolio', 'تەنها پۆرتفۆلیۆ (Private)')}</span>
+                   <span className="text-[11px] text-slate-500 font-normal">{t('property.purpose_portfolio_desc', 'Manage in portfolio without publishing to market')}</span>
+                 </button>
++
++                <button
++                  type="button"
++                  disabled
++                  data-testid="purpose-sale-disabled"
++                  className="p-3.5 rounded-xl border-2 border-slate-200 bg-slate-100 text-slate-400 cursor-not-allowed flex flex-col gap-1 opacity-60 text-start font-bold text-xs"
++                >
++                  <span className="text-sm">🏷️ {t('property.purpose_sale', 'بۆ فرۆشتن (For Sale)')}</span>
++                  <span className="text-[11px] text-slate-400 font-normal">{t('property.purpose_sale_disabled', 'ناچالاکە لە وەشانی ئێستا (Rental-only)')}</span>
++                </button>
+               </div>
+             </div>
+ 
+@@ -536,6 +1104,20 @@ export const AddPropertyPage: React.FC = () => {
+                     ? t('property.rent_price_label', 'نرخی کرێی مانگانە بە دۆلار (Monthly Rent USD)') 
+                     : t('property.sale_price_label', 'نرخی فرۆشتن بە دۆلار (Sale Price USD)')}
+                 </label>
++                <div className="mb-2 max-w-sm">
++                  <label className="block text-xs font-bold text-slate-600 mb-1">
++                    {t('property.currency_label', 'دراوی مامەڵە (Currency)')}
++                  </label>
++                  <select
++                    data-testid="property-currency"
++                    value={formData.currency}
++                    onChange={e => setFormData({ ...formData, currency: e.target.value })}
++                    className="w-full px-3 py-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-bold text-slate-800 bg-white"
++                  >
++                    <option value="IQD">IQD — دیناری عێراقی (Iraqi Dinar)</option>
++                    <option value="USD">USD — دۆلاری ئەمریکی (US Dollar)</option>
++                  </select>
++                </div>
+                 <div className="relative max-w-sm">
+                   <input 
+                     type="number" 
+@@ -549,7 +1131,7 @@ export const AddPropertyPage: React.FC = () => {
+                   <span className={`absolute top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400 ${
+                     direction === 'rtl' ? 'left-3' : 'right-3'
+                   }`}>
+-                    {formData.listingType === 'FOR_RENT' ? 'USD / mo' : 'USD'}
++                    {formData.listingType === 'FOR_RENT' ? `${formData.currency} / mo` : formData.currency}
+                   </span>
+                 </div>
+               </div>
+@@ -578,31 +1160,102 @@ export const AddPropertyPage: React.FC = () => {
+                 />
+               </div>
+               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
++                {/* City Dropdown */}
+                 <div>
+-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+-                    {t('common.city', 'City')}
++                  <label className="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
++                    <span>{t('common.city', 'City')}</span>
++                    {availableCities.length > 0 && (
++                      <span className="text-[10px] font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-md">
++                        {availableCities.length} {language === 'ku' ? 'شار/قەزا' : language === 'ar' ? 'مدينة/قضاء' : 'cities'}
++                      </span>
++                    )}
+                   </label>
+-                  <input 
+-                    type="text" 
+-                    placeholder={t('property.ph_city', 'City (e.g. Erbil, Sulaymaniyah, Duhok)')}
+-                    value={formData.address.city}
+-                    onChange={e => setFormData({ ...formData, address: { ...formData.address, city: e.target.value }})}
+-                    className="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium"
+-                  />
++                  <select 
++                    data-testid="property-address-city-select"
++                    value={isCustomCity ? 'OTHER' : (formData.address.city || '')}
++                    onChange={handleCityChange}
++                    className="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium bg-white text-slate-800 cursor-pointer transition-all"
++                  >
++                    <option value="">{t('property.select_city', language === 'ku' ? 'شارێک هەڵبژێرە...' : language === 'ar' ? 'اختر المدينة...' : 'Select City...')}</option>
++                    {activeGov ? (
++                      activeGov.cities.map(city => (
++                        <option key={city.id} value={city.nameEn}>
++                          {getCityName(city, language)}
++                        </option>
++                      ))
++                    ) : (
++                      <>
++                        <optgroup label={language === 'ku' ? 'هەرێمی کوردستان (Kurdistan Region)' : language === 'ar' ? 'إقليم كوردستان (Kurdistan Region)' : 'Kurdistan Region (هەرێمی کوردستان)'}>
++                          {kurdistanGovs.flatMap(g => g.cities).map(city => (
++                            <option key={city.id} value={city.nameEn}>
++                              {getCityName(city, language)}
++                            </option>
++                          ))}
++                        </optgroup>
++                        <optgroup label={language === 'ku' ? 'عێراقی فیدراڵ (Federal Iraq)' : language === 'ar' ? 'العراق الاتحادي (Federal Iraq)' : 'Federal Iraq (عێراقی فیدراڵ)'}>
++                          {federalGovs.flatMap(g => g.cities).map(city => (
++                            <option key={city.id} value={city.nameEn}>
++                              {getCityName(city, language)}
++                            </option>
++                          ))}
++                        </optgroup>
++                      </>
++                    )}
++                    <option value="OTHER">
++                      {language === 'ku' ? '✍️ شار یان ناوچەیەکی تر (دەستنووس)...' : language === 'ar' ? '✍️ مدينة أو منطقة أخرى (يدوي)...' : '✍️ Other / Custom City or Area...'}
++                    </option>
++                  </select>
+                 </div>
++
++                {/* State / Province Dropdown */}
+                 <div>
+-                  <label className="block text-xs font-bold text-slate-700 mb-1">
+-                    {t('common.state', 'State / Province')}
++                  <label className="block text-xs font-bold text-slate-700 mb-1 flex items-center justify-between">
++                    <span>{t('common.state', 'State / Province')}</span>
++                    <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">
++                      19 {language === 'ku' ? 'پارێزگا' : language === 'ar' ? 'محافظة' : 'provinces'}
++                    </span>
+                   </label>
+-                  <input 
+-                    type="text" 
+-                    placeholder={t('property.ph_state', 'State / Province (e.g. Kurdistan Region)')}
+-                    value={formData.address.state}
+-                    onChange={e => setFormData({ ...formData, address: { ...formData.address, state: e.target.value }})}
+-                    className="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium"
+-                  />
+-           </div>
++                  <select 
++                    data-testid="property-address-state-select"
++                    value={activeGov ? activeGov.nameEn : (formData.address.state || '')}
++                    onChange={handleStateChange}
++                    className="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium bg-white text-slate-800 cursor-pointer transition-all"
++                  >
++                    <option value="">{t('property.select_state', language === 'ku' ? 'پارێزگا / هەرێمێک هەڵبژێرە...' : language === 'ar' ? 'اختر المحافظة / الإقليم...' : 'Select State / Province...')}</option>
++                    <optgroup label={language === 'ku' ? 'هەرێمی کوردستان (Kurdistan Region)' : language === 'ar' ? 'إقليم كوردستان (Kurdistan Region)' : 'Kurdistan Region (هەرێمی کوردستان)'}>
++                      {kurdistanGovs.map(gov => (
++                        <option key={gov.id} value={gov.nameEn}>
++                          {getGovernorateName(gov, language)}
++                        </option>
++                      ))}
++                    </optgroup>
++                    <optgroup label={language === 'ku' ? 'عێراقی فیدراڵ (Federal Iraq)' : language === 'ar' ? 'العراق الاتحادي (Federal Iraq)' : 'Federal Iraq (عێراقی فیدراڵ)'}>
++                      {federalGovs.map(gov => (
++                        <option key={gov.id} value={gov.nameEn}>
++                          {getGovernorateName(gov, language)}
++                        </option>
++                      ))}
++                    </optgroup>
++                  </select>
++                </div>
+               </div>
++
++              {/* Custom City Input when OTHER is selected */}
++              {isCustomCity && (
++                <div className="animate-in fade-in duration-200 p-3 bg-blue-50/60 border border-blue-200 rounded-xl">
++                  <label className="block text-xs font-bold text-blue-900 mb-1">
++                    {language === 'ku' ? 'ناوی شار یان ناوچەی تر بنووسە:' : language === 'ar' ? 'اكتب اسم المدينة أو المنطقة الأخرى:' : 'Enter Custom City / District Name:'}
++                  </label>
++                  <input
++                    type="text"
++                    value={formData.address.city}
++                    onChange={e => setFormData(prev => ({ ...prev, address: { ...prev.address, city: e.target.value } }))}
++                    placeholder={language === 'ku' ? 'بۆ نموونە: کەسنەزان، بەحرکە، دارەتوو...' : language === 'ar' ? 'مثال: كسنزان، بحركة، دارتو...' : 'e.g. Kasnazan, Baharka, Shawes...'}
++                    className="w-full px-4 py-2 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 text-sm font-medium bg-white"
++                    autoFocus
++                  />
++                </div>
++              )}
+               
+               {/* Map Section */}
+               <div className="mt-4">
+@@ -745,18 +1398,89 @@ export const AddPropertyPage: React.FC = () => {
+                     {t('pricing.tier', 'Pricing Tier')}: {pricingTierInfo.tier ? pricingTierInfo.tier.name : t('pricing.standard', 'Standard Tier')}
+                   </span>
+                   <span className="text-xs text-blue-700 font-semibold" data-testid="verified-property-count">
+-                    {t('pricing.prop_count', 'Verified Properties')}: {pricingTierInfo.propertyCount}
++                    {t('pricing.prop_count', 'Verified Properties')}: <span dir="ltr">{pricingTierInfo.propertyCount}</span>
+                   </span>
+                 </div>
+                 {pricingTierInfo.tier && (
+                   <p className="text-[11px] text-blue-600 mt-1" data-testid="tier-rates-info">
+-                    {t('pricing.rec_rates', 'Recommended rates')}: 
+-                    Rent {pricingTierInfo.tier.rentFeeRate ? `${(parseFloat(pricingTierInfo.tier.rentFeeRate) * 100).toFixed(1)}%` : 'Standard'}, 
+-                    Management {pricingTierInfo.tier.managementFeeRate ? `${(parseFloat(pricingTierInfo.tier.managementFeeRate) * 100).toFixed(1)}%` : 'Standard'}
++                    {t('pricing.rec_rates', 'Recommended rates')}: {' '}
++                    {t('pricing.rent', 'Rent')} <span dir="ltr">{pricingTierInfo.tier.rentFeeRate ? `${(parseFloat(pricingTierInfo.tier.rentFeeRate) * 100).toFixed(1)}%` : t('pricing.standard_rate', 'Standard')}</span>, {' '}
++                    {t('pricing.management', 'Management')} <span dir="ltr">{pricingTierInfo.tier.managementFeeRate ? `${(parseFloat(pricingTierInfo.tier.managementFeeRate) * 100).toFixed(1)}%` : t('pricing.standard_rate', 'Standard')}</span>
+                   </p>
+                 )}
+               </div>
+             )}
++
++            {/* Operating Model & Agreed Fees */}
++            <div className="pt-4 border-t border-slate-200 space-y-3">
++              <label className="block text-sm font-bold text-slate-700">
++                {t('property.operating_model', 'Operating Model')}
++              </label>
++              <select
++                data-testid="property-operating-model"
++                value={formData.operatingModel}
++                onChange={e => setFormData({ ...formData, operatingModel: e.target.value as any })}
++                className="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium bg-white"
++              >
++                <option value="FULLY_MANAGED">{t('property.model.fully_managed', 'Fully Managed')}</option>
++                <option value="AGENT_LISTED_PLATFORM_MANAGED">{t('property.model.agent_listed', 'Agent-Listed, Platform-Managed')}</option>
++                <option value="AGENT_OPERATED">{t('property.model.agent_operated', 'Agent-Operated')}</option>
++              </select>
++
++              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
++                <div>
++                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
++                    {t('property.rent_fee_agreed', 'Agreed Rent Fee Rate')}
++                  </label>
++                  <input
++                    type="number"
++                    step="0.01"
++                    data-testid="property-rent-fee"
++                    placeholder="0.00"
++                    value={formData.rentFee}
++                    onChange={e => {
++                      setFormData({ ...formData, rentFee: e.target.value });
++                      if (fieldErrors.rentFee) setFieldErrors(prev => ({ ...prev, rentFee: '' }));
++                    }}
++                    className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium ${
++                      fieldErrors.rentFee ? 'border-red-500 bg-red-50/50' : 'border-slate-300'
++                    }`}
++                    dir="ltr"
++                  />
++                  {fieldErrors.rentFee && (
++                    <p data-testid="field-error-rent-fee" className="text-red-600 text-xs mt-1 font-bold">
++                      {fieldErrors.rentFee}
++                    </p>
++                  )}
++                </div>
++
++                <div>
++                  <label className="block text-xs font-bold text-slate-700 mb-1.5">
++                    {t('property.mgmt_fee_agreed', 'Agreed Management Fee Rate')}
++                  </label>
++                  <input
++                    type="number"
++                    step="0.01"
++                    data-testid="property-management-fee"
++                    placeholder="0.00"
++                    value={formData.managementFee}
++                    onChange={e => {
++                      setFormData({ ...formData, managementFee: e.target.value });
++                      if (fieldErrors.managementFee) setFieldErrors(prev => ({ ...prev, managementFee: '' }));
++                    }}
++                    className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium ${
++                      fieldErrors.managementFee ? 'border-red-500 bg-red-50/50' : 'border-slate-300'
++                    }`}
++                    dir="ltr"
++                  />
++                  {fieldErrors.managementFee && (
++                    <p data-testid="field-error-mgmt-fee" className="text-red-600 text-xs mt-1 font-bold">
++                      {fieldErrors.managementFee}
++                    </p>
++                  )}
++                </div>
++              </div>
++            </div>
+           </div>
+         )}
+ 
+@@ -1248,6 +1972,7 @@ export const AddPropertyPage: React.FC = () => {
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+               <button
+                 type="button"
++                data-testid="op-model-fully-managed"
+                 onClick={() => {
+                   setFormData({ 
+                     ...formData, 
+@@ -1276,6 +2001,7 @@ export const AddPropertyPage: React.FC = () => {
+ 
+               <button
+                 type="button"
++                data-testid="op-model-agent-listed"
+                 onClick={() => {
+                   setFormData({ 
+                     ...formData, 
+@@ -1303,6 +2029,7 @@ export const AddPropertyPage: React.FC = () => {
+ 
+               <button
+                 type="button"
++                data-testid="op-model-agent-operated"
+                 onClick={() => {
+                   setFormData({ 
+                     ...formData, 
+@@ -1362,35 +2089,59 @@ export const AddPropertyPage: React.FC = () => {
+                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-slate-200 pt-5">
+                     <div>
+                       <label className="block text-xs font-bold text-slate-700 mb-2">
+-                        {t('property.mgmt_fee_agreed', 'Agreed Management Fee Rate')} <span className="text-red-500">*</span>
++                        {t('property.mgmt_fee_agreed', 'Agreed Management Fee Rate')} <span className="text-red-500 ms-1">*</span>
+                       </label>
+                       <div className="relative">
+                         <input 
+                           type="number" 
+                           step="0.01"
++                          data-testid="agreed-mgmt-fee-input"
+                           placeholder="0.00"
+                           value={formData.managementFee}
+-                          onChange={e => setFormData({ ...formData, managementFee: e.target.value })}
+-                          className="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium"
++                          onChange={e => {
++                            setFormData({ ...formData, managementFee: e.target.value });
++                            if (fieldErrors.managementFee) setFieldErrors(prev => ({ ...prev, managementFee: '' }));
++                          }}
++                          className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium ${
++                            fieldErrors.managementFee ? 'border-red-500 bg-red-50/50' : 'border-slate-300'
++                          }`}
++                          dir="ltr"
+                         />
+                       </div>
+-                      <p className="text-[10px] text-slate-500 mt-1">Property-specific fee for day-to-day operations.</p>
++                      {fieldErrors.managementFee && (
++                        <p data-testid="field-error-mgmt-fee" className="text-red-600 text-xs mt-1 font-bold">
++                          {fieldErrors.managementFee}
++                        </p>
++                      )}
++                      <p className="text-[10px] text-slate-500 mt-1">{t('property.mgmt_fee_desc', 'Property-specific fee for day-to-day operations.')}</p>
+                     </div>
+                     
+                     {formData.operatingModel === 'FULLY_MANAGED' && (
+                       <div>
+                         <label className="block text-xs font-bold text-slate-700 mb-2">
+-                          {t('property.rent_fee_agreed', 'Agreed Rent Fee Rate')} <span className="text-red-500">*</span>
++                          {t('property.rent_fee_agreed', 'Agreed Rent Fee Rate')} <span className="text-red-500 ms-1">*</span>
+                         </label>
+                         <input 
+                           type="number" 
+                           step="0.01"
++                          data-testid="agreed-rent-fee-input"
+                           placeholder="0.00"
+                           value={formData.rentFee}
+-                          onChange={e => setFormData({ ...formData, rentFee: e.target.value })}
+-                          className="w-full px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium"
++                          onChange={e => {
++                            setFormData({ ...formData, rentFee: e.target.value });
++                            if (fieldErrors.rentFee) setFieldErrors(prev => ({ ...prev, rentFee: '' }));
++                          }}
++                          className={`w-full px-4 py-2.5 border rounded-xl focus:ring-2 focus:ring-blue-500 text-sm font-medium ${
++                            fieldErrors.rentFee ? 'border-red-500 bg-red-50/50' : 'border-slate-300'
++                          }`}
++                          dir="ltr"
+                         />
+-                        <p className="text-[10px] text-slate-500 mt-1">Property-specific fee for tenant leasing.</p>
++                        {fieldErrors.rentFee && (
++                          <p data-testid="field-error-rent-fee" className="text-red-600 text-xs mt-1 font-bold">
++                            {fieldErrors.rentFee}
++                          </p>
++                        )}
++                        <p className="text-[10px] text-slate-500 mt-1">{t('property.rent_fee_desc', 'Property-specific fee for tenant leasing.')}</p>
+                       </div>
+                     )}
+                   </div>
+@@ -1525,7 +2276,7 @@ export const AddPropertyPage: React.FC = () => {
+                       {t('property.rent_fee', 'Rent Fee')}
+                     </span>
+                     <span className="font-bold text-slate-900">
+-                      {formData.rentFee ? `${(parseFloat(formData.rentFee) * 100).toFixed(1)}%` : t('common.not_specified', 'Not specified')}
++                      {formData.rentFee ? <span dir="ltr">{(parseFloat(formData.rentFee) * 100).toFixed(1)}%</span> : t('common.not_specified', 'Not specified')}
+                     </span>
+                   </div>
+                 )}
+@@ -1535,7 +2286,7 @@ export const AddPropertyPage: React.FC = () => {
+                       {t('property.mgmt_fee', 'Management Fee')}
+                     </span>
+                     <span className="font-bold text-slate-900">
+-                      {formData.managementFee ? `${(parseFloat(formData.managementFee) * 100).toFixed(1)}%` : t('common.not_specified', 'Not specified')}
++                      {formData.managementFee ? <span dir="ltr">{(parseFloat(formData.managementFee) * 100).toFixed(1)}%</span> : t('common.not_specified', 'Not specified')}
+                     </span>
+                   </div>
+                 )}
+@@ -1543,7 +2294,7 @@ export const AddPropertyPage: React.FC = () => {
+                   <span className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
+                     {t('property.ownership', 'Ownership')}
+                   </span>
+-                  <span className="font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-md inline-block">
++                  <span className="font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-md inline-block" dir="ltr">
+                     {formData.ownershipPercentage}%
+                   </span>
+                 </div>
+diff --git a/src/pages/PlatformAdminWorkspace.tsx b/src/pages/PlatformAdminWorkspace.tsx
+index 58b49df..4dd2c3a 100644
+--- a/src/pages/PlatformAdminWorkspace.tsx
++++ b/src/pages/PlatformAdminWorkspace.tsx
+@@ -49,7 +49,7 @@ import {
+ 
+ export const PlatformAdminWorkspacePage: React.FC = () => {
+   const { showToast } = useToast();
+-  const { direction } = useI18n();
++  const { direction, t } = useI18n();
+   const { user, logout, token } = useAuth();
+   const navigate = useNavigate();
+ 
+@@ -530,6 +530,7 @@ export const PlatformAdminWorkspacePage: React.FC = () => {
+       className={`min-h-screen bg-slate-100 text-slate-900 pb-20 ${
+         direction === 'rtl' ? 'font-arabic' : 'font-sans'
+       }`}
++      dir={direction}
+     >
+       {/* 1. Header with HomeHub logo, language switcher, notification bell, and RBAC switcher */}
+       <AdminHeader
+@@ -646,10 +647,15 @@ export const PlatformAdminWorkspacePage: React.FC = () => {
+         )}
+ 
+         {activeModule === 'pricing' && (
+-          <div className="p-4">
++          <div className="p-4" dir={direction}>
+             <div className="mb-4">
+-              <button onClick={() => setActiveModule(null)} className="text-blue-500 hover:underline">
+-                &larr; Back to Dashboard
++              <button
++                data-testid="admin-pricing-back-btn"
++                onClick={() => setActiveModule(null)}
++                className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 font-medium transition-colors cursor-pointer"
++              >
++                <span>{direction === 'rtl' ? '→' : '←'}</span>
++                <span>{t('pricing.back_to_dashboard', 'Back to Dashboard')}</span>
+               </button>
+             </div>
+             <AdminPricingModule />
+diff --git a/src/server/routes/properties.ts b/src/server/routes/properties.ts
+index 4b017cf..6ae7ec0 100644
+--- a/src/server/routes/properties.ts
++++ b/src/server/routes/properties.ts
+@@ -4,7 +4,7 @@ import { Permission, Property, UserRole } from '../../types/index.js';
+ import { propertyRepository } from '../repositories/properties.js';
+ import { auditService } from '../services/audit.js';
+ import { db } from '../../db/index.js';
+-import { leases, leaseTenants, users, rentSchedules } from '../../db/schema.js';
++import { leases, leaseTenants, users, rentSchedules, organizations } from '../../db/schema.js';
+ import { eq } from 'drizzle-orm';
+ import { requireDatabase } from '../middleware/dbGuard.js';
+ 
+@@ -22,7 +22,16 @@ router.get('/pricing-tier', requireAuth, checkDbConfig, async (req, res) => {
+   }
+ });
+ 
+-router.post('/', requireAuth, requireRole([
++router.get('/eligible-agents', requireAuth, checkDbConfig, async (req, res) => {
++  try {
++    const agents = await propertyRepository.getEligibleAgents();
++    res.json({ status: 'ok', agents });
++  } catch (error: any) {
++    res.status(500).json({ error: error.message });
++  }
++});
++
++router.post('/', requireAuth, checkDbConfig, requireRole([
+   UserRole.PROPERTY_OWNER, 
+   UserRole.COMPANY, 
+   UserRole.COMPANY_MEMBER, 
+@@ -33,19 +42,50 @@ router.post('/', requireAuth, requireRole([
+   'AGENT'
+ ]), async (req, res) => {
+   try {
+-    const property = await propertyRepository.createProperty(req.user!.id, req.user!.roles, req.body);
+-    await auditService.logAction({
+-      actorUserId: req.user!.id,
+-      actorRole: req.user!.roles[0] as string,
+-      action: 'CREATE_PROPERTY',
+-      resourceType: 'Property',
+-      resourceId: property.id as string,
+-      changes: req.body,
+-      ipAddress: (req.ip || "") as string
++    const rawKey = req.headers['idempotency-key'] ?? req.body?.idempotencyKey;
++    const idempotencyKey = typeof rawKey === 'string' ? rawKey : (rawKey ? String(rawKey) : null);
++
++    const property = await propertyRepository.createProperty(req.user!.id, req.user!.roles, req.body, {
++      idempotencyKey,
++      scope: 'POST:/api/properties'
+     });
++
++    if (!(property as any).__isReplay) {
++      await auditService.logAction({
++        actorUserId: req.user!.id,
++        actorRole: req.user!.roles[0] as string,
++        action: 'CREATE_PROPERTY',
++        resourceType: 'Property',
++        resourceId: property.id as string,
++        changes: req.body,
++        ipAddress: (req.ip || "") as string
++      });
++    }
+     res.status(201).json(property);
+   } catch (error: any) {
+-    res.status(400).json({ error: error.message });
++    const msg = error.message || 'Failed to create property';
++    if (msg.startsWith('FORBIDDEN:') || msg.includes('FORBIDDEN')) {
++      return res.status(403).json({ error: 'FORBIDDEN', message: msg });
++    }
++    if (msg.startsWith('NOT_FOUND:')) {
++      return res.status(404).json({ error: 'NOT_FOUND', message: msg });
++    }
++    if (msg.startsWith('CONFLICT:')) {
++      return res.status(409).json({ error: 'CONFLICT', message: msg });
++    }
++    if (
++      msg.startsWith('VALIDATION_ERROR:') || 
++      msg.startsWith('INVALID_') || 
++      msg.includes('required') || 
++      msg.includes('Invalid operating model')
++    ) {
++      return res.status(400).json({ error: 'VALIDATION_ERROR', message: msg });
++    }
++    console.error('[PROPERTIES_ROUTE] Unexpected error in createProperty:', error);
++    return res.status(500).json({
++      error: 'INTERNAL_SERVER_ERROR',
++      message: 'An unexpected internal server error occurred while processing the property.'
++    });
+   }
+ });
+ 
+@@ -68,12 +108,96 @@ router.get('/:id', requireAuth, checkDbConfig, requirePropertyPermission(Permiss
+   }
+ });
+ 
++router.post('/:id/management-preference', requireAuth, checkDbConfig, async (req, res) => {
++  try {
++    const managementPreference = req.body.managementPreference || req.body.preference;
++    const agentCompanyId = req.body.agentCompanyId || req.body.managingAgentId || req.body.agentId;
++    if (!managementPreference) {
++      return res.status(400).json({ error: 'VALIDATION_ERROR', message: 'managementPreference is required.' });
++    }
++
++    const updated = await propertyRepository.setManagementPreference(
++      req.user!.id,
++      req.user!.roles,
++      req.user!.organizationId,
++      req.params.id as string,
++      managementPreference,
++      agentCompanyId
++    );
++
++    res.json({ status: 'ok', property: updated });
++  } catch (error: any) {
++    const msg = error.message || 'Failed to update management preference';
++    if (msg.startsWith('FORBIDDEN:') || msg.includes('FORBIDDEN')) {
++      return res.status(403).json({ error: 'FORBIDDEN', message: msg });
++    }
++    if (msg.startsWith('NOT_FOUND:')) {
++      return res.status(404).json({ error: 'NOT_FOUND', message: msg });
++    }
++    if (msg.startsWith('CONFLICT:')) {
++      return res.status(409).json({ error: 'CONFLICT', message: msg });
++    }
++    if (msg.startsWith('VALIDATION_ERROR:') || msg.startsWith('INVALID_')) {
++      return res.status(400).json({ error: 'VALIDATION_ERROR', message: msg });
++    }
++    console.error('[PROPERTIES_ROUTE] Error setting management preference:', error);
++    res.status(500).json({ error: 'INTERNAL_SERVER_ERROR', message: msg });
++  }
++});
++
++router.post('/:id/resubmit', requireAuth, checkDbConfig, async (req, res) => {
++  try {
++    const updated = await propertyRepository.resubmitProperty(
++      req.user!.id,
++      req.user!.roles,
++      req.params.id as string
++    );
++    res.json({ status: 'ok', property: updated });
++  } catch (error: any) {
++    const msg = error.message || 'Failed to resubmit property';
++    if (msg.startsWith('FORBIDDEN:')) return res.status(403).json({ error: 'FORBIDDEN', message: msg });
++    if (msg.startsWith('NOT_FOUND:')) return res.status(404).json({ error: 'NOT_FOUND', message: msg });
++    res.status(500).json({ error: 'INTERNAL_SERVER_ERROR', message: msg });
++  }
++});
++
++router.patch('/:id/material-update', requireAuth, checkDbConfig, async (req, res) => {
++  try {
++    const result = await propertyRepository.handleMaterialPropertyUpdate(
++      req.user!.id,
++      req.user!.roles,
++      req.params.id as string,
++      req.body
++    );
++    res.json({ status: 'ok', requiresReReview: result.reReviewTriggered, ...result });
++  } catch (error: any) {
++    const msg = error.message || 'Failed to update property';
++    if (msg.startsWith('FORBIDDEN:')) return res.status(403).json({ error: 'FORBIDDEN', message: msg });
++    if (msg.startsWith('NOT_FOUND:')) return res.status(404).json({ error: 'NOT_FOUND', message: msg });
++    res.status(500).json({ error: 'INTERNAL_SERVER_ERROR', message: msg });
++  }
++});
++
+ router.post('/:id/units', requireAuth, checkDbConfig, requirePropertyPermission(Permission.EDIT_PROPERTY), async (req, res) => {
+   try {
+     const unit = await propertyRepository.addUnit(req.params.id as string, req.body);
+     res.status(201).json(unit);
+   } catch (error: any) {
+-    res.status(400).json({ error: error.message });
++    const msg = error.message || 'Failed to create unit';
++    if (msg.startsWith('CONFLICT:')) {
++      return res.status(409).json({ error: 'CONFLICT', message: msg });
++    }
++    if (msg.startsWith('NOT_FOUND:')) {
++      return res.status(404).json({ error: 'NOT_FOUND', message: msg });
++    }
++    if (msg.startsWith('VALIDATION_ERROR:') || msg.startsWith('INVALID_')) {
++      return res.status(400).json({ error: 'VALIDATION_ERROR', message: msg });
++    }
++    console.error('[PROPERTIES_ROUTE] Unexpected error in addUnit:', error);
++    return res.status(500).json({
++      error: 'INTERNAL_SERVER_ERROR',
++      message: 'An unexpected internal server error occurred while creating the unit.'
++    });
+   }
+ });
+ 
+@@ -96,4 +220,20 @@ router.get('/:id/leases', requireAuth, checkDbConfig, requirePropertyPermission(
+   }
+ });
+ 
++// Authoritative financial summary for PropertyCommandCenter
++router.get('/:id/financial-summary', requireAuth, checkDbConfig, requirePropertyPermission(Permission.VIEW_FINANCIALS), async (req, res) => {
++  try {
++    const summary = await propertyRepository.getAuthoritativeFinancialSummary(
++      req.params.id as string,
++      req.query.scheduleId as string | undefined
++    );
++    res.json(summary);
++  } catch (error: any) {
++    if (error.message === "Property not found") {
++      return res.status(404).json({ error: "Property not found" });
++    }
++    res.status(500).json({ error: error.message });
++  }
++});
++
+ export default router;

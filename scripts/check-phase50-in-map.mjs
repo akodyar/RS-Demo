@@ -1,0 +1,87 @@
+import fs from 'fs';
+
+const map = JSON.parse(fs.readFileSync('tests/new-translations-map.json', 'utf8'));
+const mapKeys = new Map(map.map(x => [x.key, x]));
+
+const phase50 = [
+  'login.error.invalid_email',
+  'login.error.enter_email_for_reset',
+  'login.forgot_notice',
+  'social.apple.notice',
+  'social.google.notice',
+  'social.fb.notice',
+  'deposit.collect_success',
+  'deposit.release_success',
+  'inspection.create_success',
+  'inspection.error.area_component_required',
+  'inspection.item_added',
+  'inspection.completed',
+  'deduction.error.amount_desc_required',
+  'deduction.proposed_success',
+  'deduction.error.company_delegation_gap',
+  'deduction.approved',
+  'deduction.error.reason_required',
+  'deduction.rejected',
+  'deposit.modal_title',
+  'deposit.tab_deposit',
+  'deposit.tab_inspections',
+  'deposit.tab_deductions',
+  'deposit.no_record_notice',
+  'deposit.collect_heading',
+  'deposit.already_held',
+  'deposit.collect_desc',
+  'deposit.confirm_collect',
+  'deposit.release_heading',
+  'deposit.release_desc',
+  'deposit.confirm_release',
+  'inspection.list_title',
+  'inspection.new_inspection',
+  'deduction.list_title',
+  'deduction.propose_btn',
+  'dispute.error.window_expired',
+  'dispute.error.reason_required',
+  'dispute.success',
+  'dispute.title',
+  'dispute.subtitle',
+  'dispute.window_expired_warning',
+  'dispute.reason_label',
+  'dispute.reason_ph',
+  'dispute.evidence_label',
+  'common.submitting',
+  'dispute.submit_btn',
+  'tenant.depositEscrowTitle',
+  'tenant.depositEscrowDesc',
+  'tenant.depositRecorded',
+  'tenant.depositStatus',
+  'tenant.inspectionsHeading',
+  'tenant.noInspections',
+  'common.pending',
+  'tenant.baselineLinked',
+  'tenant.noBaseline',
+  'tenant.deductionsHeading',
+  'tenant.noDeductions',
+  'tenant.evidenceAttached',
+  'tenant.disputeWindowNotice',
+  'tenant.windowClosedBadge',
+  'tenant.disputeActive',
+  'tenant.disputeAction',
+  'tenant.disputeWindowExpired',
+  'tenant.utility_paid_success',
+  'tenant.utility_payment_failed',
+  'tenant.utility_network_error',
+  'tenant.no_utility_bills',
+  'property.error.create_failed',
+  'property.error.server_error',
+  'admin.password_required',
+  'property.deposit_inspections',
+];
+
+let inMap = 0;
+for (const k of phase50) {
+  if (mapKeys.has(k)) {
+    inMap++;
+  } else {
+    console.log('Missing from new-translations-map.json:', k);
+  }
+}
+console.log(`Found ${inMap} of ${phase50.length} in new-translations-map.json`);

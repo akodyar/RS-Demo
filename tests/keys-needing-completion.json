@@ -1,0 +1,5601 @@
+[
+  {
+    "key": "agent.market_insights",
+    "en": "Market Insights",
+    "ar": null,
+    "ku": "شیکاریی بازاڕ"
+  },
+  {
+    "key": "action.add",
+    "en": null,
+    "ar": "إضافة",
+    "ku": null
+  },
+  {
+    "key": "action.confirm",
+    "en": null,
+    "ar": "تأكيد",
+    "ku": null
+  },
+  {
+    "key": "analytics.active_units",
+    "en": null,
+    "ar": "الوحدات النشطة",
+    "ku": null
+  },
+  {
+    "key": "analytics.ai_disclaimer",
+    "en": null,
+    "ar": "التوصيات الذكية لا تنفذ الإجراءات بشكل مستقل.",
+    "ku": null
+  },
+  {
+    "key": "analytics.annual_yield",
+    "en": null,
+    "ar": "العائد السنوي",
+    "ku": null
+  },
+  {
+    "key": "analytics.overview",
+    "en": null,
+    "ar": "نظرة عامة على المحفظة",
+    "ku": null
+  },
+  {
+    "key": "analytics.overview_desc",
+    "en": null,
+    "ar": "أداء الأصول وملخص الاستثمار",
+    "ku": null
+  },
+  {
+    "key": "analytics.require_attention",
+    "en": null,
+    "ar": "تحتاج انتباه",
+    "ku": null
+  },
+  {
+    "key": "analytics.revenue_vs_expenses",
+    "en": null,
+    "ar": "الإيرادات مقابل المصاريف (من بداية السنة)",
+    "ku": null
+  },
+  {
+    "key": "analytics.total_value",
+    "en": null,
+    "ar": "إجمالي القيمة",
+    "ku": null
+  },
+  {
+    "key": "analytics.trailing_12m",
+    "en": null,
+    "ar": "آخر 12 شهراً",
+    "ku": null
+  },
+  {
+    "key": "analytics.units_leased",
+    "en": null,
+    "ar": "وحدات مؤجرة",
+    "ku": null
+  },
+  {
+    "key": "analytics.vacancy_rate",
+    "en": null,
+    "ar": "معدل الشغور",
+    "ku": null
+  },
+  {
+    "key": "analytics.yoy",
+    "en": null,
+    "ar": "↑ سنوياً",
+    "ku": null
+  },
+  {
+    "key": "auth.login",
+    "en": null,
+    "ar": "تسجيل الدخول",
+    "ku": null
+  },
+  {
+    "key": "auth.register",
+    "en": null,
+    "ar": "تسجيل حساب",
+    "ku": null
+  },
+  {
+    "key": "auth.sign_out",
+    "en": null,
+    "ar": "تسجيل الخروج",
+    "ku": null
+  },
+  {
+    "key": "company.management",
+    "en": null,
+    "ar": "إدارة الشركة",
+    "ku": null
+  },
+  {
+    "key": "core.history",
+    "en": null,
+    "ar": "السجل",
+    "ku": null
+  },
+  {
+    "key": "core.notes",
+    "en": null,
+    "ar": "ملاحظات",
+    "ku": null
+  },
+  {
+    "key": "currency.iqd",
+    "en": null,
+    "ar": "دينار عراقي",
+    "ku": null,
+    "defaultValue": "IQD"
+  },
+  {
+    "key": "integration.capability_label",
+    "en": null,
+    "ar": "القدرة:",
+    "ku": null
+  },
+  {
+    "key": "integration.configure_keys",
+    "en": null,
+    "ar": "تهيئة المفاتيح",
+    "ku": null,
+    "defaultValue": "Configure Keys"
+  },
+  {
+    "key": "integration.configured",
+    "en": null,
+    "ar": "مهيأ",
+    "ku": null,
+    "defaultValue": "CONFIGURED"
+  },
+  {
+    "key": "integration.email_notif",
+    "en": null,
+    "ar": "إشعارات البريد الإلكتروني",
+    "ku": null,
+    "defaultValue": "EMAIL NOTIFICATIONS"
+  },
+  {
+    "key": "integration.esignature",
+    "en": null,
+    "ar": "التوقيع الإلكتروني",
+    "ku": null,
+    "defaultValue": "E-SIGNATURE"
+  },
+  {
+    "key": "integration.manage_settings",
+    "en": null,
+    "ar": "إدارة الإعدادات",
+    "ku": null,
+    "defaultValue": "Manage Settings"
+  },
+  {
+    "key": "integration.providers",
+    "en": null,
+    "ar": "مقدمو الخدمات",
+    "ku": null,
+    "defaultValue": "Providers"
+  },
+  {
+    "key": "integration.safe_paused_long",
+    "en": null,
+    "ar": "تم إيقاف العمليات المعتمدة على هذا المزود بشكل آمن. لم يتم فقدان أي بيانات.",
+    "ku": null
+  },
+  {
+    "key": "integration.sms_provider",
+    "en": null,
+    "ar": "مزود الرسائل القصيرة",
+    "ku": null,
+    "defaultValue": "SMS PROVIDER"
+  },
+  {
+    "key": "integration.subtitle",
+    "en": null,
+    "ar": "البنية التحتية ومقدمو الخدمات الخارجيون",
+    "ku": null,
+    "defaultValue": "Real-World Infrastructure & External APIs"
+  },
+  {
+    "key": "maintenance.active_wos",
+    "en": null,
+    "ar": "أوامر العمل النشطة",
+    "ku": null,
+    "defaultValue": "Active Work Orders"
+  },
+  {
+    "key": "maintenance.approve_wo",
+    "en": null,
+    "ar": "الموافقة وإنشاء أمر العمل",
+    "ku": null
+  },
+  {
+    "key": "maintenance.assigned_vendor",
+    "en": null,
+    "ar": "الفني المعين:",
+    "ku": null,
+    "defaultValue": "Assigned Vendor:"
+  },
+  {
+    "key": "maintenance.cancel_request",
+    "en": null,
+    "ar": "إلغاء الطلب",
+    "ku": null
+  },
+  {
+    "key": "maintenance.control_center",
+    "en": null,
+    "ar": "مركز تحكم الصيانة",
+    "ku": null,
+    "defaultValue": "Maintenance Control Center"
+  },
+  {
+    "key": "maintenance.details_actions",
+    "en": null,
+    "ar": "التفاصيل والإجراءات",
+    "ku": null,
+    "defaultValue": "Request Details & Actions"
+  },
+  {
+    "key": "maintenance.error.approve",
+    "en": null,
+    "ar": "تعذر الموافقة على عرض السعر",
+    "ku": null,
+    "defaultValue": "Failed to approve quote"
+  },
+  {
+    "key": "maintenance.error.fetch",
+    "en": null,
+    "ar": "تعذر جلب قائمة الانتظار",
+    "ku": null,
+    "defaultValue": "Failed to fetch queue"
+  },
+  {
+    "key": "maintenance.manage_schedule",
+    "en": null,
+    "ar": "إدارة الجدول الزمني",
+    "ku": null
+  },
+  {
+    "key": "maintenance.no_requests",
+    "en": null,
+    "ar": "لا توجد طلبات صيانة نشطة حالياً.",
+    "ku": null,
+    "defaultValue": "There are no active maintenance requests at this time."
+  },
+  {
+    "key": "maintenance.pending_quotes",
+    "en": null,
+    "ar": "عروض الأسعار المعلقة",
+    "ku": null,
+    "defaultValue": "Pending Quotes"
+  },
+  {
+    "key": "maintenance.queue_empty",
+    "en": null,
+    "ar": "قائمة الانتظار فارغة",
+    "ku": null,
+    "defaultValue": "Queue is empty"
+  },
+  {
+    "key": "maintenance.review_quote",
+    "en": null,
+    "ar": "مراجعة عرض السعر",
+    "ku": null
+  },
+  {
+    "key": "maintenance.subtitle",
+    "en": null,
+    "ar": "إدارة أوامر العمل وفرز الطلبات ومراجعة عروض الأسعار",
+    "ku": null,
+    "defaultValue": "Manage work orders, triage requests, and review quotes"
+  },
+  {
+    "key": "maintenance.triage",
+    "en": null,
+    "ar": "فرز / تحديد الأولويات",
+    "ku": null
+  },
+  {
+    "key": "maintenance.view_work_order",
+    "en": null,
+    "ar": "عرض أمر العمل",
+    "ku": null
+  },
+  {
+    "key": "maintenance.wo",
+    "en": null,
+    "ar": "أمر العمل:",
+    "ku": null,
+    "defaultValue": "WO:"
+  },
+  {
+    "key": "nav.portfolio",
+    "en": null,
+    "ar": "المحفظة",
+    "ku": null
+  },
+  {
+    "key": "owner.portfolio_properties",
+    "en": null,
+    "ar": "عقارات المحفظة",
+    "ku": null
+  },
+  {
+    "key": "property.health",
+    "en": null,
+    "ar": "صحة العقار",
+    "ku": null
+  },
+  {
+    "key": "property.status.active",
+    "en": null,
+    "ar": "نشط",
+    "ku": null
+  },
+  {
+    "key": "property.status.occupied",
+    "en": null,
+    "ar": "مشغول",
+    "ku": null
+  },
+  {
+    "key": "property.status.pending",
+    "en": null,
+    "ar": "قيد الانتظار",
+    "ku": null
+  },
+  {
+    "key": "property.status.vacant",
+    "en": null,
+    "ar": "شاغر",
+    "ku": null
+  },
+  {
+    "key": "property.type.apartment_short",
+    "en": null,
+    "ar": "شقة",
+    "ku": null
+  },
+  {
+    "key": "property.type.commercial_short",
+    "en": null,
+    "ar": "تجاري",
+    "ku": null
+  },
+  {
+    "key": "property.type.industrial_short",
+    "en": null,
+    "ar": "صناعي",
+    "ku": null
+  },
+  {
+    "key": "property.type.label",
+    "en": null,
+    "ar": "نوع العقار",
+    "ku": null
+  },
+  {
+    "key": "property.type.villa_short",
+    "en": null,
+    "ar": "فيلا",
+    "ku": null
+  },
+  {
+    "key": "status.completed_text",
+    "en": null,
+    "ar": "مكتمل",
+    "ku": null
+  },
+  {
+    "key": "status.critical_text",
+    "en": null,
+    "ar": "حرج",
+    "ku": null
+  },
+  {
+    "key": "status.high_text",
+    "en": null,
+    "ar": "عالي",
+    "ku": null
+  },
+  {
+    "key": "status.low_text",
+    "en": null,
+    "ar": "منخفض",
+    "ku": null
+  },
+  {
+    "key": "status.medium_text",
+    "en": null,
+    "ar": "متوسط",
+    "ku": null
+  },
+  {
+    "key": "status.new_request",
+    "en": null,
+    "ar": "طلب جديد",
+    "ku": null,
+    "defaultValue": "NEW REQUEST"
+  },
+  {
+    "key": "status.quote_ready",
+    "en": null,
+    "ar": "عرض السعر جاهز",
+    "ku": null,
+    "defaultValue": "QUOTE READY"
+  },
+  {
+    "key": "status.triaged",
+    "en": null,
+    "ar": "تم الفرز",
+    "ku": null,
+    "defaultValue": "TRIAGED"
+  },
+  {
+    "key": "status.triaged_text",
+    "en": null,
+    "ar": "تم الفرز",
+    "ku": null
+  },
+  {
+    "key": "status.work_order",
+    "en": null,
+    "ar": "أمر العمل",
+    "ku": null,
+    "defaultValue": "WORK ORDER"
+  },
+  {
+    "key": "status.work_order_created",
+    "en": null,
+    "ar": "تم إنشاء أمر عمل",
+    "ku": null
+  },
+  {
+    "key": "tenant.action_required",
+    "en": null,
+    "ar": "مطلوب إجراء لدورة الدفع الحالية",
+    "ku": null
+  },
+  {
+    "key": "tenant.due",
+    "en": null,
+    "ar": "المستحق:",
+    "ku": null,
+    "defaultValue": "Due"
+  },
+  {
+    "key": "tenant.error.lease",
+    "en": null,
+    "ar": "تعذر الحصول على تفاصيل العقد",
+    "ku": null
+  },
+  {
+    "key": "tenant.mock.paid",
+    "en": null,
+    "ar": "تم الدفع",
+    "ku": null
+  },
+  {
+    "key": "tenant.mock.rent",
+    "en": null,
+    "ar": "إيجار هذا الشهر",
+    "ku": null
+  },
+  {
+    "key": "tenant.next_cycle",
+    "en": null,
+    "ar": "الدورة القادمة",
+    "ku": null
+  },
+  {
+    "key": "tenant.no_lease",
+    "en": null,
+    "ar": "ليس لديك عقد نشط حالياً.",
+    "ku": null
+  },
+  {
+    "key": "time.aug",
+    "en": null,
+    "ar": "أغسطس",
+    "ku": null
+  },
+  {
+    "key": "time.jul",
+    "en": null,
+    "ar": "يوليو",
+    "ku": null
+  },
+  {
+    "key": "time.jun",
+    "en": null,
+    "ar": "يونيو",
+    "ku": null
+  },
+  {
+    "key": "time.may",
+    "en": null,
+    "ar": "مايو",
+    "ku": null
+  },
+  {
+    "key": "time.oct",
+    "en": null,
+    "ar": "أكتوبر",
+    "ku": null
+  },
+  {
+    "key": "time.sep",
+    "en": null,
+    "ar": "سبتمبر",
+    "ku": null
+  },
+  {
+    "key": "vendor.all_caught_up",
+    "en": null,
+    "ar": "لا توجد أوامر عمل جديدة",
+    "ku": null
+  },
+  {
+    "key": "vendor.assigned_title",
+    "en": null,
+    "ar": "أوامر العمل المعينة",
+    "ku": null
+  },
+  {
+    "key": "vendor.duration_placeholder",
+    "en": null,
+    "ar": "مثال: يومين",
+    "ku": null
+  },
+  {
+    "key": "vendor.error.fetch",
+    "en": null,
+    "ar": "تعذر الحصول على الطلبات المحددة",
+    "ku": null
+  },
+  {
+    "key": "vendor.failed_quote",
+    "en": null,
+    "ar": "فشل في تقديم عرض السعر",
+    "ku": null
+  },
+  {
+    "key": "vendor.fees",
+    "en": null,
+    "ar": "رسوم إضافية",
+    "ku": null
+  },
+  {
+    "key": "vendor.id",
+    "en": null,
+    "ar": "رقم الفني:",
+    "ku": null,
+    "defaultValue": "Vendor ID:"
+  },
+  {
+    "key": "vendor.loading_assignments",
+    "en": null,
+    "ar": "جاري تحميل أوامر العمل...",
+    "ku": null
+  },
+  {
+    "key": "vendor.mark_completed",
+    "en": null,
+    "ar": "وضع علامة مكتمل",
+    "ku": null
+  },
+  {
+    "key": "vendor.material_cost",
+    "en": null,
+    "ar": "تكلفة المواد",
+    "ku": null
+  },
+  {
+    "key": "vendor.no_assignments",
+    "en": null,
+    "ar": "لا توجد مهام معينة",
+    "ku": null
+  },
+  {
+    "key": "vendor.no_requests",
+    "en": null,
+    "ar": "ليس لديك طلبات صيانة نشطة حالياً.",
+    "ku": null
+  },
+  {
+    "key": "vendor.notes_placeholder",
+    "en": null,
+    "ar": "تفاصيل إضافية...",
+    "ku": null
+  },
+  {
+    "key": "vendor.refresh",
+    "en": null,
+    "ar": "تحديث",
+    "ku": null
+  },
+  {
+    "key": "vendor.submit_quote",
+    "en": null,
+    "ar": "تقديم عرض سعر",
+    "ku": null
+  },
+  {
+    "key": "vendor.total",
+    "en": null,
+    "ar": "إجمالي العرض",
+    "ku": null
+  },
+  {
+    "key": "workspace.context",
+    "en": null,
+    "ar": "مساحات العمل",
+    "ku": null,
+    "defaultValue": "Workspaces"
+  },
+  {
+    "key": "Marketplace",
+    "en": null,
+    "ar": "السوق",
+    "ku": "بازاڕ"
+  },
+  {
+    "key": "Workspace Context",
+    "en": null,
+    "ar": "مساحات العمل",
+    "ku": null
+  },
+  {
+    "key": "Buyer",
+    "en": null,
+    "ar": "مشتري",
+    "ku": "کڕیار"
+  },
+  {
+    "key": "Accountant",
+    "en": null,
+    "ar": "محاسب",
+    "ku": "ژمێریار"
+  },
+  {
+    "key": "Maintenance",
+    "en": null,
+    "ar": "الصيانة",
+    "ku": "چاکسازی"
+  },
+  {
+    "key": "Portfolio",
+    "en": null,
+    "ar": "المحفظة",
+    "ku": "پۆرتفۆلیۆ"
+  },
+  {
+    "key": "Platform Admin",
+    "en": null,
+    "ar": "مدير المنصة",
+    "ku": "بەڕێوەبەری پلاتفۆرم"
+  },
+  {
+    "key": "Integrations",
+    "en": null,
+    "ar": "التكاملات",
+    "ku": "بەستەرەکان"
+  },
+  {
+    "key": "AI Autopilot",
+    "en": null,
+    "ar": "الطيار الآلي الذكي",
+    "ku": "خۆفڕی ژیری دەستکرد"
+  },
+  {
+    "key": "Total Asset Value",
+    "en": null,
+    "ar": "إجمالي قيمة الأصول",
+    "ku": "کۆی بەهای سامانەکان"
+  },
+  {
+    "key": "Annual Yield",
+    "en": null,
+    "ar": "العائد السنوي",
+    "ku": "داهاتی ساڵانە"
+  },
+  {
+    "key": "Active Units",
+    "en": null,
+    "ar": "الوحدات النشطة",
+    "ku": "یەکە چالاکەکان"
+  },
+  {
+    "key": "Vacancy Rate",
+    "en": null,
+    "ar": "معدل الشغور",
+    "ku": "ڕێژەی بەتاڵی"
+  },
+  {
+    "key": "Portfolio Analytics",
+    "en": null,
+    "ar": "تحليلات المحفظة",
+    "ku": "شیکارییەکانی پۆرتفۆلیۆ"
+  },
+  {
+    "key": "Asset performance and investment overview",
+    "en": null,
+    "ar": "أداء الأصول ونظرة عامة على الاستثمار",
+    "ku": "ئەدای سامانەکان و پوختەی وەبەرهێنان"
+  },
+  {
+    "key": "Analytics Dashboard rendering foundation",
+    "en": null,
+    "ar": "أساسيات عرض لوحة تحليلات المحفظة",
+    "ku": "ناوەندی شیکارییەکان و بەڕێوەبردنی پۆرتفۆلیۆ"
+  },
+  {
+    "key": "IQD",
+    "en": null,
+    "ar": "د.ع",
+    "ku": "د.ع"
+  },
+  {
+    "key": "View Details",
+    "en": null,
+    "ar": "عرض التفاصيل",
+    "ku": "بینینی وردەکارییەکان"
+  },
+  {
+    "key": "Today, 10:00 AM",
+    "en": null,
+    "ar": "اليوم، ١٠:٠٠ ص",
+    "ku": "ئەمڕۆ، ١٠:٠٠ بەیانی"
+  },
+  {
+    "key": "Maintenance requested by Company Admin",
+    "en": null,
+    "ar": "طلب صيانة مقدم من مدير الشركة",
+    "ku": "داواکاری چاکسازی لەلایەن بەڕێوەبەری کۆمپانیاوە نێردرا",
+    "defaultValue": "Maintenance requested by Company Admin"
+  },
+  {
+    "key": "Oct 12, 2023",
+    "en": null,
+    "ar": "١٢ أكتوبر ٢٠٢٣",
+    "ku": "١٢ی تشرینی یەکەمی ٢٠٢٣"
+  },
+  {
+    "key": "Management Agreement Active",
+    "en": null,
+    "ar": "اتفاقية الإدارة نشطة",
+    "ku": "ڕێککەوتنی بەڕێوەبردن چالاکە",
+    "defaultValue": "Management Agreement Active"
+  },
+  {
+    "key": "Title Deed (Verified)",
+    "en": null,
+    "ar": "سند الملكية (موثق)",
+    "ku": "تاپۆ (پشتڕاستکراوەتەوە)"
+  },
+  {
+    "key": "Floor Plan PDF",
+    "en": null,
+    "ar": "مخطط الطابق PDF",
+    "ku": "نەخشەی نهۆم"
+  },
+  {
+    "key": "Previous Lease (Expired)",
+    "en": null,
+    "ar": "عقد الإيجار السابق (منتهي)",
+    "ku": "گرێبەستی پێشوو (بەسەرچووە)"
+  },
+  {
+    "key": "Vacant",
+    "en": null,
+    "ar": "شاغر",
+    "ku": "بەتاڵ"
+  },
+  {
+    "key": "No active maintenance requests.",
+    "en": null,
+    "ar": "لا توجد طلبات صيانة نشطة.",
+    "ku": "هیچ داواکارییەکی چاکسازی چالاک نییە."
+  },
+  {
+    "key": "Real-World Infrastructure & External APIs",
+    "en": null,
+    "ar": "البنية التحتية الحقيقية والواجهات البرمجية الخارجية",
+    "ku": "ژێرخانی ژینگەی کار و بەستەرە دەرەکییەکان"
+  },
+  {
+    "key": "Providers",
+    "en": null,
+    "ar": "مقدمو الخدمات",
+    "ku": "دابینکەرەکان"
+  },
+  {
+    "key": "Recent Webhook Events",
+    "en": null,
+    "ar": "أحداث الويب هوك الأخيرة",
+    "ku": "دوایین ڕووداوەکانی وێبهووک",
+    "defaultValue": "Recent Webhook Events"
+  },
+  {
+    "key": "Configure Keys",
+    "en": null,
+    "ar": "تهيئة المفاتيح",
+    "ku": "ڕێکخستنی کلیلەکان"
+  },
+  {
+    "key": "Manage Settings",
+    "en": null,
+    "ar": "إدارة الإعدادات",
+    "ku": "بەڕێوەبردنی ڕێکخستنەکان"
+  },
+  {
+    "key": "EMAIL NOTIFICATIONS",
+    "en": null,
+    "ar": "إشعارات البريد الإلكتروني",
+    "ku": "ئاگادارکردنەوەکانی ئیمەیڵ"
+  },
+  {
+    "key": "SMS PROVIDER",
+    "en": null,
+    "ar": "مزود الرسائل النصية القصيرة",
+    "ku": "دابینکەری کورتەنامە (SMS)"
+  },
+  {
+    "key": "E-SIGNATURE",
+    "en": null,
+    "ar": "التوقيع الإلكتروني",
+    "ku": "واژۆی ئەلیکترۆنی"
+  },
+  {
+    "key": "CONFIGURED",
+    "en": null,
+    "ar": "مهيأ",
+    "ku": "ڕێکخراوە"
+  },
+  {
+    "key": "Signature Validation Active",
+    "en": null,
+    "ar": "التحقق من التوقيع نشط",
+    "ku": "پشکنینی واژۆ چالاکە",
+    "defaultValue": "Signature Validation Active"
+  },
+  {
+    "key": "Provider",
+    "en": null,
+    "ar": "المزود",
+    "ku": "دابینکەر",
+    "defaultValue": "Provider"
+  },
+  {
+    "key": "Event Type",
+    "en": null,
+    "ar": "نوع الحدث",
+    "ku": "جۆری ڕووداو",
+    "defaultValue": "Event Type"
+  },
+  {
+    "key": "Event ID",
+    "en": null,
+    "ar": "معرف الحدث",
+    "ku": "ناسنامەی ڕووداو",
+    "defaultValue": "Event ID"
+  },
+  {
+    "key": "Timestamp",
+    "en": null,
+    "ar": "الطابع الزمني",
+    "ku": "کاتی ڕووداو",
+    "defaultValue": "Timestamp"
+  },
+  {
+    "key": "INVALID_SIGNATURE",
+    "en": null,
+    "ar": "توقيع غير صالح",
+    "ku": "واژۆی نادروست",
+    "defaultValue": "INVALID_SIGNATURE"
+  },
+  {
+    "key": "PROCESSED",
+    "en": null,
+    "ar": "تمت المعالجة",
+    "ku": "جێبەجێکراوە",
+    "defaultValue": "PROCESSED"
+  },
+  {
+    "key": "Isolated Development Mode",
+    "en": null,
+    "ar": "وضع التطوير المنعزل",
+    "ku": "دۆخی تاقیکردنەوەی ناوخۆیی",
+    "defaultValue": "Isolated Development Mode"
+  },
+  {
+    "key": "Authentication is not configured. Select a test persona to view the UI.",
+    "en": null,
+    "ar": "المصادقة غير مهيأة. اختر شخصية اختبار لعرض واجهة المستخدم.",
+    "ku": "چوونەژوورەوەی ڕاستەقینە دیاری نەکراوە. کەسایەتییەکی تاقیکاری هەڵبژێرە بۆ گەڕان لە بەشەکانی پلاتفۆرمدا.",
+    "defaultValue": "Authentication is not configured. Select a test persona to view the UI."
+  },
+  {
+    "key": "Maintenance Vendor",
+    "en": null,
+    "ar": "مقاول صيانة",
+    "ku": "خزمەتگوزار (وەستا / دابینکەر)"
+  },
+  {
+    "key": "Role:",
+    "en": null,
+    "ar": "الدور:",
+    "ku": "ڕۆڵ:"
+  },
+  {
+    "key": "Capability:",
+    "en": null,
+    "ar": "القدرة:",
+    "ku": "توانست:"
+  },
+  {
+    "key": "Operations dependent on this provider have been safely paused. No data has been lost or fabricated.",
+    "en": null,
+    "ar": "تم إيقاف العمليات المعتمدة على هذا المزود بأمان. لم تفقد أي بيانات.",
+    "ku": "کردارەکانی پەیوەست بەم دابینکەرە بە پارێزراوی ڕاگیراون. هیچ زانیارییەک لەدەست نەچووە."
+  },
+  {
+    "key": "Plumbing",
+    "en": null,
+    "ar": "السباكة",
+    "ku": "بۆڕیکاری و ئاوەڕۆ"
+  },
+  {
+    "key": "Electrical",
+    "en": null,
+    "ar": "الكهرباء",
+    "ku": "کارەبا"
+  },
+  {
+    "key": "HVAC",
+    "en": null,
+    "ar": "التكييف والتهوية",
+    "ku": "گەرمکەرەوە و فێنککەرەوە"
+  },
+  {
+    "key": "Appliances",
+    "en": null,
+    "ar": "الأجهزة المنزلية",
+    "ku": "ئامێرە کارەباییەکان"
+  },
+  {
+    "key": "Structural",
+    "en": null,
+    "ar": "الأبواب والنوافذ والجدران",
+    "ku": "دەرگا، پەنجەرە، دیوارەکان"
+  },
+  {
+    "key": "Pest Control",
+    "en": null,
+    "ar": "مكافحة الحشرات",
+    "ku": "قڕکەر و مێروو"
+  },
+  {
+    "key": "Other",
+    "en": null,
+    "ar": "أخرى",
+    "ku": "هیتر"
+  },
+  {
+    "key": "Low",
+    "en": null,
+    "ar": "منخفض",
+    "ku": "نزم"
+  },
+  {
+    "key": "Medium",
+    "en": null,
+    "ar": "متوسط",
+    "ku": "مامناوەند"
+  },
+  {
+    "key": "High",
+    "en": null,
+    "ar": "مرتفع",
+    "ku": "بەرز"
+  },
+  {
+    "key": "Emergency",
+    "en": null,
+    "ar": "طوارئ",
+    "ku": "فریاگوزاری"
+  },
+  {
+    "key": "Submit Request",
+    "en": null,
+    "ar": "إرسال الطلب",
+    "ku": "ناردنی داواکاری"
+  },
+  {
+    "key": "Total Revenue",
+    "en": null,
+    "ar": "إجمالي الإيرادات",
+    "ku": "کۆی داهات"
+  },
+  {
+    "key": "Total Expenses",
+    "en": null,
+    "ar": "إجمالي المصروفات",
+    "ku": "کۆی خەرجییەکان"
+  },
+  {
+    "key": "Pending Invoices",
+    "en": null,
+    "ar": "الفواتير المعلقة",
+    "ku": "پسوڵە هەڵپەسێردراوەکان"
+  },
+  {
+    "key": "Reconciliation Status",
+    "en": null,
+    "ar": "حالة المطابقة",
+    "ku": "پێداچوونەوە و هاوسەنگی"
+  },
+  {
+    "key": "Reference No.",
+    "en": null,
+    "ar": "الرقم المرجعي",
+    "ku": "ژمارەی ئاماژە"
+  },
+  {
+    "key": "Account",
+    "en": null,
+    "ar": "الحساب",
+    "ku": "هەژمار"
+  },
+  {
+    "key": "Debit",
+    "en": null,
+    "ar": "مدين",
+    "ku": "قەرزدار (مەدین)"
+  },
+  {
+    "key": "Credit",
+    "en": null,
+    "ar": "دائن",
+    "ku": "قەرزدەر (دائین)"
+  },
+  {
+    "key": "Post New Journal Entry",
+    "en": null,
+    "ar": "ترحيل قيد يومية جديد",
+    "ku": "تۆمارکردنی قەیدی ژمێریاری"
+  },
+  {
+    "key": "Vendor Dashboard",
+    "en": null,
+    "ar": null,
+    "ku": "داشبۆردی دابینکەری خزمەتگوزاری"
+  },
+  {
+    "key": "Manage service requests, quotes, and work orders.",
+    "en": null,
+    "ar": null,
+    "ku": "بەڕێوەبردنی داواکارییەکانی خزمەتگوزاری، نرخدان و فەرمانەکانی کار."
+  },
+  {
+    "key": "Property Owner",
+    "en": null,
+    "ar": null,
+    "ku": "خاوەنی موڵک"
+  },
+  {
+    "key": "Real Estate Company",
+    "en": null,
+    "ar": null,
+    "ku": "کۆمپانیای موڵک"
+  },
+  {
+    "key": "Tenant",
+    "en": null,
+    "ar": null,
+    "ku": "کرێچی"
+  },
+  {
+    "key": "Buyer Workspace",
+    "en": null,
+    "ar": null,
+    "ku": "پێگەی کاری کڕیار"
+  },
+  {
+    "key": "This feature is currently unavailable or pending integration.",
+    "en": null,
+    "ar": null,
+    "ku": "ئەم تایبەتمەندییە لە ئێستادا بەردەست نییە یان چاوەڕوانی یەکخستنە."
+  },
+  {
+    "key": "No Data Available",
+    "en": null,
+    "ar": null,
+    "ku": "هیچ زانیارییەک لەم کاتەدا بەردەست نییە"
+  },
+  {
+    "key": "This module has not been fully configured with real data sources yet.",
+    "en": null,
+    "ar": null,
+    "ku": "ئەم بەشە هێشتا بە تەواوی دانەمەزراوە لەگەڵ داتابەیسی سەرەکی."
+  },
+  {
+    "key": "Cancel",
+    "en": null,
+    "ar": null,
+    "ku": "هەڵوەشاندنەوە"
+  },
+  {
+    "key": "Back",
+    "en": null,
+    "ar": null,
+    "ku": "گەڕانەوە"
+  },
+  {
+    "key": "Next",
+    "en": null,
+    "ar": null,
+    "ku": "دواتر"
+  },
+  {
+    "key": "Submit",
+    "en": null,
+    "ar": null,
+    "ku": "ناردن"
+  },
+  {
+    "key": "Save",
+    "en": null,
+    "ar": null,
+    "ku": "پاشەکەوتکردن"
+  },
+  {
+    "key": "Continue",
+    "en": null,
+    "ar": null,
+    "ku": "بەردەوامبە"
+  },
+  {
+    "key": "Loading...",
+    "en": null,
+    "ar": null,
+    "ku": "باردەکرێت..."
+  },
+  {
+    "key": "Refresh",
+    "en": null,
+    "ar": null,
+    "ku": "نوێکردنەوە"
+  },
+  {
+    "key": "Type",
+    "en": null,
+    "ar": null,
+    "ku": "جۆری موڵک"
+  },
+  {
+    "key": "Name",
+    "en": null,
+    "ar": null,
+    "ku": "ناو"
+  },
+  {
+    "key": "Address",
+    "en": null,
+    "ar": null,
+    "ku": "ناونیشان"
+  },
+  {
+    "key": "City",
+    "en": null,
+    "ar": null,
+    "ku": "شار"
+  },
+  {
+    "key": "Status",
+    "en": null,
+    "ar": null,
+    "ku": "دۆخ"
+  },
+  {
+    "key": "Date",
+    "en": null,
+    "ar": null,
+    "ku": "بەروار"
+  },
+  {
+    "key": "Reference",
+    "en": null,
+    "ar": null,
+    "ku": "ژمارەی ئاماژە"
+  },
+  {
+    "key": "Notes",
+    "en": null,
+    "ar": null,
+    "ku": "تێبینییەکان"
+  },
+  {
+    "key": "Total",
+    "en": null,
+    "ar": null,
+    "ku": "کۆی گشتی"
+  },
+  {
+    "key": "Size",
+    "en": null,
+    "ar": null,
+    "ku": "ڕووبەر"
+  },
+  {
+    "key": "Health",
+    "en": null,
+    "ar": null,
+    "ku": "تەندروستی"
+  },
+  {
+    "key": "Units",
+    "en": null,
+    "ar": null,
+    "ku": "یەکەکان"
+  },
+  {
+    "key": "Active",
+    "en": null,
+    "ar": null,
+    "ku": "چالاک"
+  },
+  {
+    "key": "Draft",
+    "en": null,
+    "ar": null,
+    "ku": "ڕەشنووس"
+  },
+  {
+    "key": "DRAFT",
+    "en": null,
+    "ar": null,
+    "ku": "ڕەشنووس"
+  },
+  {
+    "key": "ACTIVE",
+    "en": null,
+    "ar": null,
+    "ku": "چالاک"
+  },
+  {
+    "key": "VACANT",
+    "en": null,
+    "ar": null,
+    "ku": "بەتاڵ"
+  },
+  {
+    "key": "UNKNOWN",
+    "en": null,
+    "ar": null,
+    "ku": "نەزانراو"
+  },
+  {
+    "key": "Unknown",
+    "en": null,
+    "ar": null,
+    "ku": "نەزانراو"
+  },
+  {
+    "key": "USD",
+    "en": null,
+    "ar": null,
+    "ku": "$"
+  },
+  {
+    "key": "Sign Out",
+    "en": null,
+    "ar": null,
+    "ku": "چوونەدەرەوە"
+  },
+  {
+    "key": "Log Out",
+    "en": null,
+    "ar": null,
+    "ku": "دەرچوون"
+  },
+  {
+    "key": "Loading properties...",
+    "en": null,
+    "ar": null,
+    "ku": "موڵکەکان باردەکرێن..."
+  },
+  {
+    "key": "No properties found in your portfolio.",
+    "en": null,
+    "ar": null,
+    "ku": "هیچ موڵکێک لە پۆرتفۆلیۆکەتدا نەدۆزرایەوە."
+  },
+  {
+    "key": "No AI insights available at this time.",
+    "en": null,
+    "ar": null,
+    "ku": "لە ئێستادا هیچ تێڕوانینێکی ژیری دەستکرد بەردەست نییە."
+  },
+  {
+    "key": "AI insights do not execute actions automatically.",
+    "en": null,
+    "ar": null,
+    "ku": "تێڕوانینەکانی ژیری دەستکرد کرداری خۆکار ئەنجام نادەن بەبێ پەسەندکردنی تۆ."
+  },
+  {
+    "key": "Trust & Compliance",
+    "en": null,
+    "ar": null,
+    "ku": "متمانە و پابەندبوون"
+  },
+  {
+    "key": "Business Intelligence",
+    "en": null,
+    "ar": null,
+    "ku": "زیرەکی کار و بازرگانی"
+  },
+  {
+    "key": "CRM & Marketplace",
+    "en": null,
+    "ar": null,
+    "ku": "بەڕێوەبردنی پەیوەندی کڕیاران و بازاڕ"
+  },
+  {
+    "key": "Property Passport",
+    "en": null,
+    "ar": null,
+    "ku": "پاسپۆرتی موڵک"
+  },
+  {
+    "key": "Command Center",
+    "en": null,
+    "ar": null,
+    "ku": "ناوەندی کۆنترۆڵ"
+  },
+  {
+    "key": "Overview",
+    "en": null,
+    "ar": null,
+    "ku": "پوختە"
+  },
+  {
+    "key": "Tasks",
+    "en": null,
+    "ar": null,
+    "ku": "ئەرکەکان"
+  },
+  {
+    "key": "Documents",
+    "en": null,
+    "ar": null,
+    "ku": "بەڵگەنامەکان"
+  },
+  {
+    "key": "Timeline",
+    "en": null,
+    "ar": null,
+    "ku": "مێژووی ڕووداوەکان"
+  },
+  {
+    "key": "Verified",
+    "en": null,
+    "ar": null,
+    "ku": "پشتڕاستکراوەتەوە"
+  },
+  {
+    "key": "Pending",
+    "en": null,
+    "ar": null,
+    "ku": "چاوەڕوانکراو"
+  },
+  {
+    "key": "Completed",
+    "en": null,
+    "ar": null,
+    "ku": "تەواوکراوە"
+  },
+  {
+    "key": "Cancelled",
+    "en": null,
+    "ar": null,
+    "ku": "هەڵوەشێنراوەتەوە"
+  },
+  {
+    "key": "English",
+    "en": null,
+    "ar": null,
+    "ku": "English (ئینگلیزی)"
+  },
+  {
+    "key": "pricing.err_name_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Tier name is required"
+  },
+  {
+    "key": "pricing.err_min_invalid",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Min properties must be 0 or greater"
+  },
+  {
+    "key": "pricing.err_max_invalid",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Max properties must be a valid number"
+  },
+  {
+    "key": "pricing.err_max_less_min",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Max properties cannot be less than min properties"
+  },
+  {
+    "key": "pricing.err_rent_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rent fee rate must be between 0 and 1 (or 0% to 100%)"
+  },
+  {
+    "key": "pricing.err_mgmt_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Management fee rate must be between 0 and 1 (or 0% to 100%)"
+  },
+  {
+    "key": "pricing.err_prio",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Priority must be an integer"
+  },
+  {
+    "key": "pricing.create_success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Pricing tier created successfully!"
+  },
+  {
+    "key": "pricing.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Tiered Pricing Configuration"
+  },
+  {
+    "key": "pricing.subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Manage platform fee tiers, property boundaries, and priority rankings."
+  },
+  {
+    "key": "pricing.create_tier",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Create New Tier"
+  },
+  {
+    "key": "pricing.no_tiers",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No pricing tiers configured."
+  },
+  {
+    "key": "pricing.no_tiers_hint",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Click \"Create New Tier\" to define the first pricing bracket."
+  },
+  {
+    "key": "pricing.priority",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Priority"
+  },
+  {
+    "key": "pricing.property_range",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property Range:"
+  },
+  {
+    "key": "pricing.rent_fee_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rent Fee Rate:"
+  },
+  {
+    "key": "pricing.mgmt_fee_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Management Fee Rate:"
+  },
+  {
+    "key": "pricing.modal_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Create New Pricing Tier"
+  },
+  {
+    "key": "pricing.tier_name",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Tier Name"
+  },
+  {
+    "key": "pricing.min_props",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Min Properties"
+  },
+  {
+    "key": "pricing.max_props",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Max Properties"
+  },
+  {
+    "key": "pricing.max_props_hint",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "(Optional)"
+  },
+  {
+    "key": "pricing.cancel",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Cancel"
+  },
+  {
+    "key": "pricing.saving",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Creating..."
+  },
+  {
+    "key": "pricing.save_tier",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Save Tier"
+  },
+  {
+    "key": "fee.platform_fee",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پلاتفۆرم"
+  },
+  {
+    "key": "fee.rent_fee",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کرێ"
+  },
+  {
+    "key": "fee.management_fee",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بەڕێوەبردن"
+  },
+  {
+    "key": "fee.err_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Platform fee rate is required"
+  },
+  {
+    "key": "fee.err_invalid_number",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rate must be a valid number"
+  },
+  {
+    "key": "fee.err_negative",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rate cannot be negative"
+  },
+  {
+    "key": "fee.err_max",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rate cannot exceed 50% (0.50)"
+  },
+  {
+    "key": "fee.err_precision",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rate precision cannot exceed 4 decimal places"
+  },
+  {
+    "key": "fee.admin_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕێکخستنە گشتییەکانی پلاتفۆڕم و کرێیەکان"
+  },
+  {
+    "key": "fee.admin_subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بەڕێوەبردنی مۆدێلی ٣-کرێیی، ڕێژەی پلاتفۆرم، یاساکانی ئاسایش و داتابەیس"
+  },
+  {
+    "key": "fee.current_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕێژەی ئێستای تۆمارکراو (Persisted Current Rate)"
+  },
+  {
+    "key": "fee.effective_time_notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "گۆڕینی ڕێژەکە دەستبەجێ لە سێرڤەر پاشەکەوت دەبێت و تەنها کار دەکاتە سەر کۆکردنەوەی داهاتووی کرێ. مێژووی دارایی و لێدجەرەکانی پێشوو گۆڕانکارییان بەسەردا نایەت."
+  },
+  {
+    "key": "workspace.switch_failed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Failed to switch workspace."
+  },
+  {
+    "key": "workspace.enroll_success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕۆڵ بە سەرکەوتوویی چالاککرا! دەستپێکردنی گواستنەوە..."
+  },
+  {
+    "key": "workspace.enroll_failed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Failed to activate role."
+  },
+  {
+    "key": "workspace.role_owner",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "خاوەن موڵک"
+  },
+  {
+    "key": "workspace.role_owner_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "موڵکەکانت بۆ کرێ دابنێ، گرێبەستەکان بەڕێوەببە، و چاودێری پارەدانە داراییەکان بکە."
+  },
+  {
+    "key": "workspace.role_tenant",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کرێنشین"
+  },
+  {
+    "key": "workspace.role_tenant_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کرێ بدە، داواکاریی چاککردنەوە پێشکەش بکە، و بەڵگەنامەکانی کرێداری بەڕێوەببە."
+  },
+  {
+    "key": "workspace.role_vendor",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "وەستا / دابینکەری خزمەتگوزاری"
+  },
+  {
+    "key": "workspace.role_vendor_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "فەرمانی چاککردنەوە وەربگرە، نرخی چاککردنەوە بنێرە، و کارە تەواوکراوەکان تۆمار بکە."
+  },
+  {
+    "key": "workspace.vendor_next_step",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پێویستی بە پشتڕاستکردنەوەی کارامەییە بۆ وەرگرتنی فەرمانی چاککردنەوە."
+  },
+  {
+    "key": "workspace.role_agent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئەگێنت / دەڵاڵ"
+  },
+  {
+    "key": "workspace.role_agent_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕیکلامی کرێ بەڕێوەببە، پێشاندانی موڵک ڕێکبخە، و هاوکاریی خاوەن موڵکەکان بکە."
+  },
+  {
+    "key": "workspace.agent_next_step",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پشتڕاستکردنەوەی دەڵاڵی جێبەجێ دەبێت پێش ئەنجامدانی کار لەسەر موڵکەکان."
+  },
+  {
+    "key": "workspace.select.badge",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "شوێنی کارەکان"
+  },
+  {
+    "key": "workspace.select.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "شوێنی کارەکەت هەڵبژێرە"
+  },
+  {
+    "key": "workspace.select.subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئەم هەژمارە زیاتر لە یەک ڕۆڵی فەرمی هەیە. تکایە دیاریبکە دەتەوێت بە کام شێواز دەست پێ بکەیت."
+  },
+  {
+    "key": "common.close",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Close"
+  },
+  {
+    "key": "workspace.status.active",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چالاک"
+  },
+  {
+    "key": "workspace.status.pending",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "لە چاوەڕوانی"
+  },
+  {
+    "key": "workspace.badge.company",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کۆمپانیا"
+  },
+  {
+    "key": "workspace.action.enter",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هەڵبژاردن"
+  },
+  {
+    "key": "workspace.enroll_button",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "+ زیادکردنی ڕۆڵێکی نوێ"
+  },
+  {
+    "key": "workspace.all_roles_enrolled",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "You have already activated all available platform roles."
+  },
+  {
+    "key": "workspace.action.signout",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Sign Out"
+  },
+  {
+    "key": "workspace.back_to_workspaces",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Back to Workspaces"
+  },
+  {
+    "key": "workspace.enroll_badge",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕۆڵی نوێ"
+  },
+  {
+    "key": "workspace.enroll_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چالاککردنی ڕۆڵێکی نوێ"
+  },
+  {
+    "key": "workspace.enroll_subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تواناکانی هەژماری هۆم‌هەب فراوان بکە لەڕێگەی کاراکردنی ڕۆڵێکی زیادە."
+  },
+  {
+    "key": "workspace.already_enrolled",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "لەم هەژمارەدا چالاکە"
+  },
+  {
+    "key": "common.selected",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دیاریکراو"
+  },
+  {
+    "key": "workspace.entity_type",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "جۆری هەژمار"
+  },
+  {
+    "key": "workspace.entity_individual",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "خاوەن موڵکی سەربەخۆ"
+  },
+  {
+    "key": "workspace.entity_company",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کۆمپانیای خانووبەرە"
+  },
+  {
+    "key": "workspace.company_name",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ناوی کۆمپانیا"
+  },
+  {
+    "key": "workspace.company_name_placeholder",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بۆ نموونە: کۆمپانیای ئەربیل هۆرایزن"
+  },
+  {
+    "key": "workspace.agent_individual",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئەگێنتی سەربەخۆ"
+  },
+  {
+    "key": "workspace.agent_company",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کۆمپانیای دەڵاڵی / ئاژانس"
+  },
+  {
+    "key": "workspace.agent_company_name_placeholder",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بۆ نموونە: ئاژانسی بەغداد بۆ خانووبەرە"
+  },
+  {
+    "key": "workspace.cancel",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پاشگەزبوونەوە"
+  },
+  {
+    "key": "workspace.enrolling",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چالاککردنی ڕۆڵ..."
+  },
+  {
+    "key": "workspace.confirm_enroll",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پشتڕاستکردنەوە و چالاککردن"
+  },
+  {
+    "key": "company.notifications",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Notifications"
+  },
+  {
+    "key": "company.unnamed_company",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "HomeHub Real Estate Agency"
+  },
+  {
+    "key": "status.verified",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Verified"
+  },
+  {
+    "key": "company.no_recent_activity",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No recent activity recorded"
+  },
+  {
+    "key": "company.activity_will_appear",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Operational events, lease updates, and ledger transactions will appear here."
+  },
+  {
+    "key": "company.welcome_back_generic",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Welcome back!"
+  },
+  {
+    "key": "settlements.missingRef",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "External confirmation reference is mandatory for COMPLETED payouts (Internal Finance Record only)."
+  },
+  {
+    "key": "settlements.financeQueue",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Payout Requests Queue"
+  },
+  {
+    "key": "settlements.financeQueueDesc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Manage owner payouts. External API transfers disabled; manual internal recording only."
+  },
+  {
+    "key": "common.search",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Search..."
+  },
+  {
+    "key": "settlements.id",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ID"
+  },
+  {
+    "key": "settlements.amount",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Amount (IQD)"
+  },
+  {
+    "key": "settlements.emptyQueue",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No payout requests found."
+  },
+  {
+    "key": "settlements.refPlaceholder",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Bank Ref # (Required)"
+  },
+  {
+    "key": "settlements.markComplete",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Mark Completed"
+  },
+  {
+    "key": "common.reject",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Reject"
+  },
+  {
+    "key": "settlements.ref",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Ref"
+  },
+  {
+    "key": "admin.trust_disputes",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Trust & Disputes"
+  },
+  {
+    "key": "auth.reg.password_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کەمتر لە ٦ پیت نەبێت"
+  },
+  {
+    "key": "auth.reg.consent_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "من مەرج و ڕێنماییەکان پەسەند دەکەم"
+  },
+  {
+    "key": "auth.reg.consent_subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بە دروستکردنی هەژمار، تۆ مەرج و ڕێنماییەکان و سیاسەتی تایبەتەمەندی پەسەند دەکەیت."
+  },
+  {
+    "key": "auth.reg.error.email_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تکایە ئیمەیڵەکەت بنووسە"
+  },
+  {
+    "key": "auth.reg.error.invalid_email",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئیمەیڵەکە دروست نییە"
+  },
+  {
+    "key": "auth.reg.error.password_min",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "وشەی نهێنی دەبێت لانیکەم ٦ پیت بێت"
+  },
+  {
+    "key": "auth.reg.error.password_mismatch",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "وشەی نهێنی هاوتا نییە"
+  },
+  {
+    "key": "auth.reg.error.consent_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تکایە مەرج و ڕێنماییەکان پەسەند بکە"
+  },
+  {
+    "key": "auth.reg.error.generic",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هەڵەیەک ڕوویدا لە کاتی تۆمارکردن"
+  },
+  {
+    "key": "auth.reg.fullName_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بۆ نموونە: ئاریان محەمەد"
+  },
+  {
+    "key": "auth.reg.company_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بۆ نموونە: کۆمپانیای داهاتوو"
+  },
+  {
+    "key": "auth.reg.confirmPassword_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "وشەی نهێنیت دووبارە بنووسە"
+  },
+  {
+    "key": "auth.reg.submit_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هەژمار دروست بکە"
+  },
+  {
+    "key": "auth.reg.or_social",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "یان لەڕێگەی"
+  },
+  {
+    "key": "auth.reg.social_apple",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چوونەژوورەوە بە Apple لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە."
+  },
+  {
+    "key": "auth.reg.social_google",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چوونەژوورەوە بە Google لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە."
+  },
+  {
+    "key": "auth.reg.social_facebook",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چوونەژوورەوە بە Facebook لە ژینگەی ناوخۆی پلاتفۆڕم ئامادەکراوە."
+  },
+  {
+    "key": "auth.reg.already_account",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هەژماری پێشتری هەیە؟"
+  },
+  {
+    "key": "auth.reg.login_link",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چوونەژوورەوە"
+  },
+  {
+    "key": "onboarding.validation.otp_incomplete",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تکایە هەموو ٦ خانەکە پڕبکەرەوە."
+  },
+  {
+    "key": "onboard.otp.invalid_code",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کۆدی پشتڕاستکردنەوە هەڵەیە. تکایە دووبارە هەوڵبدەرەوە."
+  },
+  {
+    "key": "onboard.otp.expired_code",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کاتی کۆدی پشتڕاستکردنەوە بەسەرچووە. تکایە داوای کۆدی نوێ بکە."
+  },
+  {
+    "key": "onboarding.step_4_of_4",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "قۆناغی ٤ لە ٤"
+  },
+  {
+    "key": "onboard.otp.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کۆدی پشتڕاستکردنەوە"
+  },
+  {
+    "key": "onboard.otp.sent_to",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کۆدی ٦ ژمارەییەکان ناردووە بۆ:"
+  },
+  {
+    "key": "onboard.otp.prompt",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تکایە کۆدەکە لە خانەکانی خوارەوە بنووسە."
+  },
+  {
+    "key": "onboard.otp.resent_success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کۆدی نوێی پشتڕاستکردنەوە بە سەرکەوتوویی نێردرا."
+  },
+  {
+    "key": "onboard.otp.resend_in",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دووبارە ناردنی کۆد لە"
+  },
+  {
+    "key": "onboard.otp.resend",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دووبارە ناردنی کۆد"
+  },
+  {
+    "key": "onboard.otp.verify_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دڵنیابوون و بەردەوامبوون"
+  },
+  {
+    "key": "onboard.otp.wrong_number",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "زانیاری پەیوەندی هەڵەیە؟"
+  },
+  {
+    "key": "onboard.otp.change_number",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "گۆڕینی زانیاری"
+  },
+  {
+    "key": "onboarding.step_5_of_6",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "قۆناغی ٥ لە ٦"
+  },
+  {
+    "key": "role.confirm.badge",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دڵنیابوونەوە لە ڕۆڵ"
+  },
+  {
+    "key": "role.confirm.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕۆڵەکەت هەڵبژێرە"
+  },
+  {
+    "key": "role.confirm.desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تکایە ئەو ڕۆڵە هەڵبژێرە کە باشترین پێوەندی بە پێداویستیەکانی تۆ هەیە."
+  },
+  {
+    "key": "common.continue",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بەردەوام بە"
+  },
+  {
+    "key": "common.skip_later",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دواتر ئەنجام دەدەم"
+  },
+  {
+    "key": "onboard.step1",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هەڵبژێرە"
+  },
+  {
+    "key": "onboard.step2",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هەژمار"
+  },
+  {
+    "key": "onboard.step3",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پرۆفایل"
+  },
+  {
+    "key": "profile.setup.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پڕۆفایلی خۆت تەواو بکە"
+  },
+  {
+    "key": "profile.setup.subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئەم زانیاریانە یارمەتیت دەدەن باشتر بتوانین خزمەتەکانمان پێشکەش بکەین."
+  },
+  {
+    "key": "profile.avatar.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "وێنەی پرۆفایل"
+  },
+  {
+    "key": "profile.avatar.desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "وێنەی خۆت زیاد بکە (هەڵبژاردەیی)"
+  },
+  {
+    "key": "onboarding.name.label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ناوی تەواو"
+  },
+  {
+    "key": "onboarding.name.placeholder",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بۆ نموونە: کاوان سابیر"
+  },
+  {
+    "key": "onboarding.email.label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئیمەیڵ"
+  },
+  {
+    "key": "onboarding.phone.label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ژمارەی مۆبایل"
+  },
+  {
+    "key": "profile.city.label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "شوێن (شار / ناوچە)"
+  },
+  {
+    "key": "profile.language.label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "زمانی پەسەندکراو"
+  },
+  {
+    "key": "profile.currency.label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دراوی پەسەندکراو"
+  },
+  {
+    "key": "onboarding.consent.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "من مەرج و ڕێنمایەکان پەسەند دەکەم"
+  },
+  {
+    "key": "onboarding.consent.terms_link",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بینینی مەرج و ڕێنمایەکان"
+  },
+  {
+    "key": "onboarding.step_6_of_6",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "قۆناغی ٦ لە ٦"
+  },
+  {
+    "key": "profile.review.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پێداچوونەوە بە زانیارییەکانت"
+  },
+  {
+    "key": "profile.review.subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تکایە پێداچوونەوە بە زانیارییەکانت بکە پێش چوونە ناو پلاتفۆڕم."
+  },
+  {
+    "key": "profile.review.selected_role",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕۆڵ هەڵبژێردراو"
+  },
+  {
+    "key": "role.owner.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "خاوەنی موڵک"
+  },
+  {
+    "key": "common.edit",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "گۆڕانکاری"
+  },
+  {
+    "key": "profile.review.personal_info",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "زانیارییەکانی کەسی"
+  },
+  {
+    "key": "profile.review.preferences",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "زمان، دراو و ئاگادارییەکان"
+  },
+  {
+    "key": "profile.language.platform",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "زمانی پلاتفۆرم"
+  },
+  {
+    "key": "profile.currency.primary",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دراوی سەرەکی"
+  },
+  {
+    "key": "profile.review.notifications",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئاگادارکردنەوەکان"
+  },
+  {
+    "key": "profile.review.finish_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تەواوکردن و چوونەژوورەوە"
+  },
+  {
+    "key": "login.error.invalid_email",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تکایە ئیمەیڵێکی دروست بنووسە"
+  },
+  {
+    "key": "login.error.enter_email_for_reset",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تکایە سەرەتا ئیمەیڵەکەت بنووسە بۆ ناردنی بەستەری نوێکردنەوەی وشەی نهێنی."
+  },
+  {
+    "key": "login.forgot_notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئەگەر ئەم ئیمەیڵە تۆمارکراو بێت لە سیستەم، بەستەری نوێکردنەوە دەنێردرێت."
+  },
+  {
+    "key": "social.apple.notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چوونەژوورەوە بە Apple بەردەست دەبێت لە ئەپی مۆبایل."
+  },
+  {
+    "key": "social.google.notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چوونەژوورەوە بە Google پەیوەست دەکرێت لە وەشانەکانی داهاتوو."
+  },
+  {
+    "key": "social.fb.notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چوونەژوورەوە بە Facebook لەژێر ئامادەکردندایە."
+  },
+  {
+    "key": "deposit.collect_success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Security deposit marked as collected successfully!"
+  },
+  {
+    "key": "deposit.release_success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Security deposit released successfully!"
+  },
+  {
+    "key": "inspection.create_success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Move-out inspection initiated successfully!"
+  },
+  {
+    "key": "inspection.error.area_component_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Area and Component are required"
+  },
+  {
+    "key": "inspection.item_added",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Inspection item recorded!"
+  },
+  {
+    "key": "inspection.completed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Inspection completed! You can now propose deductions."
+  },
+  {
+    "key": "deduction.error.amount_desc_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Amount and description are required"
+  },
+  {
+    "key": "deduction.proposed_success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Deduction proposal created successfully!"
+  },
+  {
+    "key": "deduction.error.company_delegation_gap",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Company managers lack explicit deduction approval authority (Decision P02). Only verified property owners may approve."
+  },
+  {
+    "key": "deduction.approved",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Deduction approved successfully!"
+  },
+  {
+    "key": "deduction.error.reason_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rejection reason is required"
+  },
+  {
+    "key": "deduction.rejected",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Deduction rejected successfully!"
+  },
+  {
+    "key": "deposit.modal_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Security Deposit & Move-Out Management"
+  },
+  {
+    "key": "deposit.tab_deposit",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Deposit Balance & Escrow"
+  },
+  {
+    "key": "deposit.tab_inspections",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Move-Out Inspections"
+  },
+  {
+    "key": "deposit.tab_deductions",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Security Deductions"
+  },
+  {
+    "key": "deposit.no_record_notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No security deposit has been initialized for this lease yet."
+  },
+  {
+    "key": "deposit.required_deposit",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Required Deposit"
+  },
+  {
+    "key": "deposit.fixed_custodial_req",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Fixed custodial requirement"
+  },
+  {
+    "key": "deposit.escrow_recorded",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Recorded in Escrow"
+  },
+  {
+    "key": "deposit.held_no_fees",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Held without fees (0% 3-Fee Model)"
+  },
+  {
+    "key": "deposit.active_reserved",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Active Reserved"
+  },
+  {
+    "key": "deposit.deductions_held_note",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Deductions & disputes held"
+  },
+  {
+    "key": "deposit.unreserved_available",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Unreserved Available"
+  },
+  {
+    "key": "deposit.eligible_return_note",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Eligible for return / release"
+  },
+  {
+    "key": "deposit.collect_heading",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Collect / Record Security Deposit"
+  },
+  {
+    "key": "deposit.already_held",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "This deposit is currently HELD in custodial escrow."
+  },
+  {
+    "key": "deposit.collect_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Confirm tenant payment of the required deposit. Moves status from PENDING to HELD."
+  },
+  {
+    "key": "deposit.amount_to_collect",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Amount to Collect"
+  },
+  {
+    "key": "deposit.confirm_collect",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Confirm Custodial Collection"
+  },
+  {
+    "key": "deposit.release_heading",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Release / Refund Security Deposit"
+  },
+  {
+    "key": "deposit.active_reservations_warn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Active reservations ({amount}) must be resolved or settled before full release."
+  },
+  {
+    "key": "deposit.release_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Release held custodial funds back to tenant at end of lease."
+  },
+  {
+    "key": "deposit.amount_to_release",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Amount to Release"
+  },
+  {
+    "key": "deposit.confirm_release",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Release Unreserved Custodial Funds"
+  },
+  {
+    "key": "inspection.list_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Move-Out Inspection Records"
+  },
+  {
+    "key": "inspection.records_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Document property condition, record damages, and upload verified evidence."
+  },
+  {
+    "key": "inspection.new_inspection",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Start New Inspection"
+  },
+  {
+    "key": "inspection.initiate_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Initiate Move-Out Inspection"
+  },
+  {
+    "key": "inspection.baseline_exists",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Move-In Baseline Exists (Never fabricate)"
+  },
+  {
+    "key": "inspection.tenant_present",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Tenant Present During Walkthrough"
+  },
+  {
+    "key": "inspection.baseline_ref",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Move-In Baseline Reference"
+  },
+  {
+    "key": "inspection.general_notes",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "General Notes"
+  },
+  {
+    "key": "inspection.general_notes_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Walkthrough observations, keys returned, meter readings..."
+  },
+  {
+    "key": "inspection.confirm_start",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Confirm & Start Inspection"
+  },
+  {
+    "key": "inspection.no_records",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No move-out inspections recorded for this lease."
+  },
+  {
+    "key": "inspection.add_item",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Add Damage Item"
+  },
+  {
+    "key": "inspection.complete_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Complete Inspection"
+  },
+  {
+    "key": "inspection.record_item_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Record Damage / Inspection Item"
+  },
+  {
+    "key": "inspection.area",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Area"
+  },
+  {
+    "key": "inspection.component",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Component"
+  },
+  {
+    "key": "inspection.condition",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Condition"
+  },
+  {
+    "key": "inspection.estimated_cost",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Estimated Cost"
+  },
+  {
+    "key": "inspection.evidence_ref",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Evidence Ref (Storage Key)"
+  },
+  {
+    "key": "inspection.save_item",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Save Item"
+  },
+  {
+    "key": "inspection.itemized_findings",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Itemized Inspection Findings"
+  },
+  {
+    "key": "inspection.evidence_count",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "📷 {count} Evidence file(s)"
+  },
+  {
+    "key": "deduction.list_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Security Deposit Deductions"
+  },
+  {
+    "key": "deduction.subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Propose repair deductions against held funds. Subject to verified owner approval."
+  },
+  {
+    "key": "deduction.propose_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Propose Deduction"
+  },
+  {
+    "key": "deduction.propose_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Propose Deposit Deduction"
+  },
+  {
+    "key": "deduction.category",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Category"
+  },
+  {
+    "key": "deduction.link_item",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Link Damage Item"
+  },
+  {
+    "key": "deduction.none_general",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "None (General deduction)"
+  },
+  {
+    "key": "deduction.desc_evidence",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Deduction Description & Repair Evidence"
+  },
+  {
+    "key": "deduction.desc_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Explain rationale, repair estimates, or contractor invoice details..."
+  },
+  {
+    "key": "deduction.evidence_ref",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Evidence Reference (Path)"
+  },
+  {
+    "key": "deduction.notify_tenant",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Dispatch formal notice to tenant"
+  },
+  {
+    "key": "deduction.submit_proposal",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Submit Deduction Proposal"
+  },
+  {
+    "key": "deduction.no_records",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No security deposit deductions proposed for this lease."
+  },
+  {
+    "key": "deduction.approve_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Approve"
+  },
+  {
+    "key": "deduction.owner_req",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Owner Approval Required"
+  },
+  {
+    "key": "deduction.reject_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Reject"
+  },
+  {
+    "key": "deduction.tenant_dispute_active",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Tenant Dispute Active"
+  },
+  {
+    "key": "deduction.reason_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Reason: {reason}"
+  },
+  {
+    "key": "deduction.rejection_reason_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rejection Reason: {reason}"
+  },
+  {
+    "key": "deduction.notice_status",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Notice: {status}"
+  },
+  {
+    "key": "tenant.disputeWindowNotice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Contestation Window Closes:"
+  },
+  {
+    "key": "deduction.window_unstarted",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Dispute window unstarted (awaiting delivery)"
+  },
+  {
+    "key": "deduction.reject_proposal_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Reject Deduction Proposal"
+  },
+  {
+    "key": "deduction.reject_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "State why this deduction was rejected..."
+  },
+  {
+    "key": "deduction.confirm_rejection",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Confirm Rejection"
+  },
+  {
+    "key": "deposit.escrow_standard_footer",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "HomeHub Custodial Escrow Standard • 0% Platform / Rent / Management Fees"
+  },
+  {
+    "key": "dispute.error.window_expired",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "The statutory 30-day contestation window has expired. Formal disputes can no longer be submitted."
+  },
+  {
+    "key": "dispute.error.reason_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Dispute reason is required."
+  },
+  {
+    "key": "dispute.success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Your formal dispute has been submitted and recorded."
+  },
+  {
+    "key": "dispute.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Dispute Security Deposit Deduction"
+  },
+  {
+    "key": "dispute.subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Submit formal contestation within the statutory 30-day notice window."
+  },
+  {
+    "key": "tenant.windowClosedBadge",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Closed"
+  },
+  {
+    "key": "dispute.window_expired_warning",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "The statutory 30-day contestation window has expired. Formal disputes can no longer be submitted."
+  },
+  {
+    "key": "dispute.reason_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Contestation & Evidence Rationale *"
+  },
+  {
+    "key": "dispute.reason_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Explain why this deduction is unwarranted (e.g. pre-existing wear, move-in baseline note, landlord responsibility)..."
+  },
+  {
+    "key": "dispute.evidence_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Evidence Reference / Move-In Photo Key (Optional)"
+  },
+  {
+    "key": "common.submitting",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Submitting..."
+  },
+  {
+    "key": "dispute.submit_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Submit Formal Dispute"
+  },
+  {
+    "key": "tenant.depositRequired",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Required"
+  },
+  {
+    "key": "tenant.depositCollected",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Collected"
+  },
+  {
+    "key": "tenant.depositHeld",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Held (Escrow)"
+  },
+  {
+    "key": "tenant.depositReleased",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Released"
+  },
+  {
+    "key": "tenant.role",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Account Role"
+  },
+  {
+    "key": "tenant.pendingSignature",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Awaiting Your Acceptance"
+  },
+  {
+    "key": "tenant.expired",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Expired"
+  },
+  {
+    "key": "tenant.acceptLease",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Accept Lease"
+  },
+  {
+    "key": "tenant.depositEscrowTitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Security Deposit Escrow & Inspections"
+  },
+  {
+    "key": "tenant.depositEscrowDesc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Authoritative held escrow, move-out condition records, and deduction contestations."
+  },
+  {
+    "key": "common.refresh",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Refresh"
+  },
+  {
+    "key": "tenant.depositRecorded",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Total Recorded"
+  },
+  {
+    "key": "tenant.depositStatus",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Escrow Status"
+  },
+  {
+    "key": "tenant.inspectionsHeading",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Move-In & Move-Out Inspections"
+  },
+  {
+    "key": "tenant.noInspections",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No inspections recorded for this lease yet."
+  },
+  {
+    "key": "common.pending",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Pending"
+  },
+  {
+    "key": "tenant.baselineLinked",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Linked Baseline ID:"
+  },
+  {
+    "key": "tenant.noBaseline",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Explicitly recorded: No move-in baseline on file."
+  },
+  {
+    "key": "tenant.deductionsHeading",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Proposed Deductions & Contestation"
+  },
+  {
+    "key": "tenant.noDeductions",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No security deposit deductions proposed. Full deposit eligible for return upon lease exit."
+  },
+  {
+    "key": "tenant.evidenceAttached",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Evidence records attached ({count})"
+  },
+  {
+    "key": "tenant.disputeActive",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Active Formal Dispute"
+  },
+  {
+    "key": "tenant.disputeAction",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Dispute Deduction"
+  },
+  {
+    "key": "tenant.disputeWindowExpired",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Dispute Window Expired"
+  },
+  {
+    "key": "reviews.propertyRatingHeading",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property Rating & Resident Experience"
+  },
+  {
+    "key": "reviews.propertyRatingSub",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Verified resident feedback on maintenance, amenities, and living conditions."
+  },
+  {
+    "key": "reviews.reviewsCount",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "reviews"
+  },
+  {
+    "key": "reviews.noReviewsYet",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No resident reviews yet"
+  },
+  {
+    "key": "reviews.yourReview",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Your Submitted Review"
+  },
+  {
+    "key": "reviews.editReview",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Edit Review"
+  },
+  {
+    "key": "reviews.managementResponse",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Response from Property Management"
+  },
+  {
+    "key": "reviews.shareYourThoughts",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "How is your living experience at this property?"
+  },
+  {
+    "key": "reviews.helpCommunity",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Your honest review helps future residents and helps management improve building services."
+  },
+  {
+    "key": "reviews.writeReview",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Write a Review"
+  },
+  {
+    "key": "tenant.amountPositive",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Payment amount must be greater than zero"
+  },
+  {
+    "key": "tenant.amountExceeds",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Payment amount cannot exceed remaining rent due"
+  },
+  {
+    "key": "tenant.paymentType",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Payment Type"
+  },
+  {
+    "key": "tenant.fullPayment",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Full Balance"
+  },
+  {
+    "key": "tenant.partialPayment",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Custom / Partial"
+  },
+  {
+    "key": "tenant.enterAmountToPay",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Enter amount to pay now"
+  },
+  {
+    "key": "tenant.remainingAfterPayment",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Remaining balance after this payment:"
+  },
+  {
+    "key": "tenant.paymentStatus",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Status:"
+  },
+  {
+    "key": "crm.allCaughtUp",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "All caught up!"
+  },
+  {
+    "key": "crm.allCaughtUpDesc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No unread notifications at this time."
+  },
+  {
+    "key": "payment.status.reversed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Reversed"
+  },
+  {
+    "key": "payment.status.recorded",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Recorded"
+  },
+  {
+    "key": "payment.status.refunded",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Refunded"
+  },
+  {
+    "key": "payment.status.unknown",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Unknown"
+  },
+  {
+    "key": "tenant.utilityBills",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Utility Bills"
+  },
+  {
+    "key": "reviews.invalidRating",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Please select an overall rating between 1 and 5 stars."
+  },
+  {
+    "key": "reviews.commentMinLength",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Review comment must be at least 5 characters long."
+  },
+  {
+    "key": "reviews.commentMaxLength",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Review comment cannot exceed 2000 characters."
+  },
+  {
+    "key": "reviews.updateSuccess",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Your review has been updated."
+  },
+  {
+    "key": "reviews.submitSuccess",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Thank you! Your review has been published."
+  },
+  {
+    "key": "reviews.editTitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Edit Your Review"
+  },
+  {
+    "key": "reviews.newTitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rate & Review Property"
+  },
+  {
+    "key": "reviews.overallRating",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Overall Rating"
+  },
+  {
+    "key": "reviews.aspectRatings",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Aspect Ratings (Optional)"
+  },
+  {
+    "key": "reviews.cleanliness",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Cleanliness & Upkeep"
+  },
+  {
+    "key": "reviews.maintenance",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Maintenance Responsiveness"
+  },
+  {
+    "key": "reviews.communication",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Landlord / Management Communication"
+  },
+  {
+    "key": "reviews.location",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Location & Neighborhood"
+  },
+  {
+    "key": "reviews.headline",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Review Headline"
+  },
+  {
+    "key": "common.optional",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Optional"
+  },
+  {
+    "key": "reviews.headlinePlaceholder",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "e.g. Quiet neighborhood, excellent management"
+  },
+  {
+    "key": "reviews.feedback",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Your Honest Experience"
+  },
+  {
+    "key": "reviews.feedbackPlaceholder",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Share details about the property condition, building amenities, utilities, noise levels, and overall living experience..."
+  },
+  {
+    "key": "reviews.privacyNotice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "HomeHub enforces verified reviews. Your review will be published as a Verified Resident with your name abbreviated to protect your privacy."
+  },
+  {
+    "key": "common.saving",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Saving..."
+  },
+  {
+    "key": "reviews.updateReviewBtn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Update Review"
+  },
+  {
+    "key": "reviews.publishReviewBtn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Publish Review"
+  },
+  {
+    "key": "tenant.utility_payment_failed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Payment failed. Please verify your balance and try again."
+  },
+  {
+    "key": "tenant.utility_network_error",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Network error connecting to utility billing service."
+  },
+  {
+    "key": "workspace.switch_button_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "گۆڕینی شوێنی کار"
+  },
+  {
+    "key": "workspace.switch_button",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "گۆڕینی شوێنی کار"
+  },
+  {
+    "key": "vendor.language_selector",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Localization Navigator"
+  },
+  {
+    "key": "common.language",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Language"
+  },
+  {
+    "key": "vendor.localization_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕێکخستنی زمان و ناوچە / Localization & Regional Preferences"
+  },
+  {
+    "key": "vendor.localization_sub",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select your preferred operational language and layout direction"
+  },
+  {
+    "key": "property.validation.name_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property name is required and cannot be empty."
+  },
+  {
+    "key": "property.error.create_failed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Failed to create property."
+  },
+  {
+    "key": "property.error.server_error",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "An internal server error occurred while creating the property. Please try again."
+  },
+  {
+    "key": "property.form_name",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property Name"
+  },
+  {
+    "key": "property.map_location",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select on Map"
+  },
+  {
+    "key": "property.map_hint",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Click on the map to pin the exact location of the property."
+  },
+  {
+    "key": "pricing.rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rent"
+  },
+  {
+    "key": "pricing.standard_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Standard"
+  },
+  {
+    "key": "pricing.management",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Management"
+  },
+  {
+    "key": "property.model.fully_managed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Fully Managed"
+  },
+  {
+    "key": "property.model.agent_listed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Agent-Listed, Platform-Managed"
+  },
+  {
+    "key": "property.model.agent_operated",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Agent-Operated"
+  },
+  {
+    "key": "property.rent_fee_agreed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Agreed Rent Fee Rate"
+  },
+  {
+    "key": "property.mgmt_fee_agreed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Agreed Management Fee Rate"
+  },
+  {
+    "key": "property.mgmt_fee_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property-specific fee for day-to-day operations."
+  },
+  {
+    "key": "property.rent_fee_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property-specific fee for tenant leasing."
+  },
+  {
+    "key": "admin.email_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Please enter official admin email"
+  },
+  {
+    "key": "admin.password_required",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Please enter administrative password"
+  },
+  {
+    "key": "admin.footer_note",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "HomeHub Real Estate Enterprise Platform • Kurdistan • Admin Management Portal"
+  },
+  {
+    "key": "agent.tabs.portfolio",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Assigned Portfolio"
+  },
+  {
+    "key": "agent.tabs.listings",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Listings"
+  },
+  {
+    "key": "agent.tabs.leads",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Leads CRM"
+  },
+  {
+    "key": "agent.tabs.viewings",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Viewings"
+  },
+  {
+    "key": "agent.tabs.offers",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Offers"
+  },
+  {
+    "key": "agent.tabs.commissions",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Commissions"
+  },
+  {
+    "key": "owner.all_cities",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "All Cities"
+  },
+  {
+    "key": "owner.all_status",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "All Status"
+  },
+  {
+    "key": "agent.table.property",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "PROPERTY"
+  },
+  {
+    "key": "agent.table.address",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "LOCATION"
+  },
+  {
+    "key": "agent.table.status",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "STATUS"
+  },
+  {
+    "key": "agent.table.leads_offers",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "AGENCY ASSIGNMENT"
+  },
+  {
+    "key": "agent.table.price_rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "PRICE / RENT"
+  },
+  {
+    "key": "agent.table.actions",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ACTIONS"
+  },
+  {
+    "key": "crm.proposalSuccess",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پێشنیازەکە بۆ خاوەن موڵک نێردرا."
+  },
+  {
+    "key": "company.status_loading",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "لە پشکنینی هاوسەنگیدایە... (Verifying Reconciliation...)"
+  },
+  {
+    "key": "company.status_error",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "داتای هاوسەنگی بەردەست نییە (Reconciliation Unavailable)"
+  },
+  {
+    "key": "company.ledger_balanced",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دەفتەری دارایی هاوسەنگ (Double-Entry Balanced)"
+  },
+  {
+    "key": "company.status_pending",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "لە چاوەڕوانی تۆمارکردنی دەفتەردایە (Pending Ledger Posting)"
+  },
+  {
+    "key": "company.status_unreconciled",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ناهەوسەنگی لە دەفتەردا هەیە (Reconciliation Discrepancy)"
+  },
+  {
+    "key": "company.status_no_data",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هیچ چالاکییەکی دارایی نییە (No Financial Activity)"
+  },
+  {
+    "key": "company.financial_overview",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کورتەی دارایی پۆرتفۆلیۆ (Financial Overview)"
+  },
+  {
+    "key": "company.ledger_source_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "داتاکان بە شێوەیەکی فەرمی لە دەفتەری دارایی دوولایەنەی PostgreSQL وەرگیراون بەپێی تۆمارە پشتڕاستکراوەکان."
+  },
+  {
+    "key": "company.collected_rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کۆی کرێی کۆکراوە (Collected Rent)"
+  },
+  {
+    "key": "company.confirmed_status",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پشتڕاستکراوە"
+  },
+  {
+    "key": "company.pending_rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کرێی لە چاوەڕوانیدا (Pending Rent)"
+  },
+  {
+    "key": "company.awaiting_collection",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "لە چاوەڕوانی وەرگرتندا"
+  },
+  {
+    "key": "company.platform_fee",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "عمولەی پلاتفۆرم (HomeHub Platform Fee)"
+  },
+  {
+    "key": "company.canonical_policy",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تەنها لە کرێی کۆکراوە (Only on collected rent)"
+  },
+  {
+    "key": "company.rent_fee",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "عمولەی کرێ (HomeHub Rent Fee)"
+  },
+  {
+    "key": "company.fully_managed_only",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تەنها لە مۆدێلی بەڕێوەبردنی تەواو (Fully Managed only)"
+  },
+  {
+    "key": "company.commission_earned",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "عمولەی بەڕێوەبردنی کۆمپانیا (Company Management Fee)"
+  },
+  {
+    "key": "company.per_agreement",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بەپێی ڕێککەوتننامەی بەڕێوەبردن"
+  },
+  {
+    "key": "company.expenses_approved",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "خەرجی پەسەندکراوی چاککردنەوە (Maintenance Expenses)"
+  },
+  {
+    "key": "company.paid_to_contractors",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تەرخانکراو بۆ وەستاکان"
+  },
+  {
+    "key": "company.owner_payable",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "شایستەی ماوەی خاوەن موڵک (Net Owner Settlement Payable)"
+  },
+  {
+    "key": "company.post_commission_balance",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پاش لێدەرکردنی عمولە و خەرجی پەسەندکراو"
+  },
+  {
+    "key": "company.settlement_policy_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕێسای فەرمی یەکلاکردنەوەی دارایی (Financial Settlement Invariants):"
+  },
+  {
+    "key": "company.settlement_rule_1",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "عمولەی پلاتفۆرم و بەڕێوەبردن تەنها لە کرێی پشتڕاستکراوە کە بە تەواوی وەرگیراوە دەبڕدرێت (0% لەسەر کرێی وەرنەگیراو یان خەرجی چاککردنەوە)."
+  },
+  {
+    "key": "company.settlement_rule_2",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هیچ بارگرانییەکی زیادە (Surcharge) ناخرێتە سەر کرێچی."
+  },
+  {
+    "key": "company.settlement_rule_3",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پارەپێدانی کۆتایی بە خاوەن موڵک دەستبەجێ بەستراوەتەوە بە پشتڕاستکردنەوەی ڕەسەنی بانکی یان دەستی."
+  },
+  {
+    "key": "company.invite_member_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بانگهێشتکردنی ئەندام"
+  },
+  {
+    "key": "company.loading_members",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بارکردنی ئەندامانی تیم..."
+  },
+  {
+    "key": "company.suspend",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕاگرتن"
+  },
+  {
+    "key": "company.activate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "چالاککردن"
+  },
+  {
+    "key": "company.no_extra_members",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هیچ ئەندامێکی تر هێشتا بانگهێشت نەکراوە. دەتوانیت لە ڕێگەی دوگمەی سەرەوە ئەندامانی تیم بانگهێشت بکەیت."
+  },
+  {
+    "key": "company.authoritative_reports",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕاپۆرتە بەڵگەدارەکان (Authoritative Reports)"
+  },
+  {
+    "key": "company.historical_notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بەپێی یاسای سیستەم: داتاکان تەنها لە تۆماری پشتڕاستکراوی پۆرتفۆلیۆ هەژمار دەکرێن، و لە کاتی نەبوونی داتا \"N/A\" نیشان دەدرێت."
+  },
+  {
+    "key": "company.occupancy_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕێژەی پڕبوون (Occupancy Rate)"
+  },
+  {
+    "key": "company.occupancy_calc_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کرێچی چالاک بەرامبەر موڵکە بەڕێوەبراوەکان"
+  },
+  {
+    "key": "company.collection_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕێژەی کۆکردنەوەی کرێ (Collection Rate)"
+  },
+  {
+    "key": "company.collection_calc_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کرێی کۆکراوە بەرامبەر کۆی چاوەڕوانکراو"
+  },
+  {
+    "key": "company.from_confirmed_ledger",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "لە دەفتەری پشتڕاستکراوە"
+  },
+  {
+    "key": "company.maintenance_load",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بارگرانی چاککردنەوە (Maintenance Load)"
+  },
+  {
+    "key": "company.maintenance_load_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "داواکارییە کراوەکان بەرامبەر خەرجی پەسەندکراو"
+  },
+  {
+    "key": "company.open_tickets",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "کراوە"
+  },
+  {
+    "key": "company.ai_insights_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕێنمایی و شیکاری ژیری دەستکرد (AI Advisory & Insights)"
+  },
+  {
+    "key": "action.view",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "View Property"
+  },
+  {
+    "key": "owner.search_property_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Search property..."
+  },
+  {
+    "key": "owner.type_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Type:"
+  },
+  {
+    "key": "owner.management_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Management:"
+  },
+  {
+    "key": "owner.leases.col_property",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property"
+  },
+  {
+    "key": "owner.leases.col_tenant",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Tenant Name"
+  },
+  {
+    "key": "owner.leases.col_dates",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Term Dates"
+  },
+  {
+    "key": "owner.leases.col_rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Monthly Rent"
+  },
+  {
+    "key": "owner.leases.col_deposit",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Deposit (0% fee)"
+  },
+  {
+    "key": "owner.leases.col_status",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Payment Status"
+  },
+  {
+    "key": "owner.leases.col_actions",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Actions"
+  },
+  {
+    "key": "owner.policy.tenant",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Tenant"
+  },
+  {
+    "key": "owner.policy.fee",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "HomeHub Fee"
+  },
+  {
+    "key": "owner.policy.net",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Owner Net"
+  },
+  {
+    "key": "owner.companies.assigned_prop",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Assigned Property:"
+  },
+  {
+    "key": "owner.companies.granted_perms",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Granted Permissions:"
+  },
+  {
+    "key": "owner.companies.valid_through",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Agreement valid through 2027"
+  },
+  {
+    "key": "owner.companies.self_managed_props",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Self-Managed Properties:"
+  },
+  {
+    "key": "owner.companies.delegated_company",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Delegated Company:"
+  },
+  {
+    "key": "owner.companies.owner_direct",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "None (Owner Direct)"
+  },
+  {
+    "key": "owner.companies.approval_threshold",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Owner Approval Threshold:"
+  },
+  {
+    "key": "owner.companies.direct_signoff",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "100% Direct Sign-off"
+  },
+  {
+    "key": "owner.companies.zero_delegation",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Zero management delegation"
+  },
+  {
+    "key": "owner.analytics.subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Comprehensive yield metrics, vacancy rates, and historical collection trends"
+  },
+  {
+    "key": "owner.analytics.gross_yield",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Gross Rental Yield"
+  },
+  {
+    "key": "owner.analytics.calculated_verified",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Calculated on verified properties"
+  },
+  {
+    "key": "owner.analytics.no_registered_props",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No registered properties"
+  },
+  {
+    "key": "owner.analytics.noi",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Net Operating Income (NOI)"
+  },
+  {
+    "key": "owner.analytics.based_confirmed_rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Based on confirmed rent"
+  },
+  {
+    "key": "owner.analytics.no_operational_revenue",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No operational revenue"
+  },
+  {
+    "key": "owner.analytics.collection_rate",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Collection Rate"
+  },
+  {
+    "key": "owner.analytics.confirmed_collections",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Confirmed Collections"
+  },
+  {
+    "key": "owner.analytics.no_active_leases",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No active leases"
+  },
+  {
+    "key": "owner.analytics.avg_lease_duration",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Average Lease Duration"
+  },
+  {
+    "key": "owner.analytics.months",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "mos"
+  },
+  {
+    "key": "owner.leases.select_property",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select Property"
+  },
+  {
+    "key": "owner.leases.choose_property_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Choose property..."
+  },
+  {
+    "key": "owner.leases.tenant_name_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Full legal name"
+  },
+  {
+    "key": "owner.leases.monthly_rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Monthly Rent (IQD)"
+  },
+  {
+    "key": "owner.leases.security_deposit",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Security Deposit (IQD)"
+  },
+  {
+    "key": "owner.leases.start_date",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Start Date"
+  },
+  {
+    "key": "owner.leases.end_date",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "End Date"
+  },
+  {
+    "key": "owner.leases.fee_notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Note: HomeHub fee applies solely to confirmed monthly rent. Security deposits incur 0% commission."
+  },
+  {
+    "key": "owner.leases.creating",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Creating..."
+  },
+  {
+    "key": "owner.leases.create_and_send",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Create & Send Lease"
+  },
+  {
+    "key": "owner.maintenance.select_property",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select Property"
+  },
+  {
+    "key": "owner.maintenance.select_property_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select a property..."
+  },
+  {
+    "key": "owner.maintenance.issue_category",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Issue Category"
+  },
+  {
+    "key": "category.plumbing",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Plumbing"
+  },
+  {
+    "key": "category.electrical",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Electrical"
+  },
+  {
+    "key": "category.hvac",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "HVAC & Cooling"
+  },
+  {
+    "key": "category.structural",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Carpentry & Structural"
+  },
+  {
+    "key": "owner.maintenance.title_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Title"
+  },
+  {
+    "key": "owner.maintenance.title_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "e.g. Water leak in kitchen pipe"
+  },
+  {
+    "key": "owner.maintenance.desc_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Issue Description"
+  },
+  {
+    "key": "owner.maintenance.desc_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Describe the problem in detail..."
+  },
+  {
+    "key": "owner.maintenance.submitting",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Submitting..."
+  },
+  {
+    "key": "owner.maintenance.submit_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Submit Request"
+  },
+  {
+    "key": "owner.companies.select_prop_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select property to delegate..."
+  },
+  {
+    "key": "owner.companies.name_or_license",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Company Name or License"
+  },
+  {
+    "key": "owner.companies.name_or_license_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "e.g. Al-Nomou Real Estate Co."
+  },
+  {
+    "key": "owner.companies.spending_limit_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Approved Spending Limit (IQD)"
+  },
+  {
+    "key": "owner.companies.spending_limit_hint",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Quotes exceeding this amount require explicit Owner approval before contractor dispatch."
+  },
+  {
+    "key": "owner.companies.sending",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Sending..."
+  },
+  {
+    "key": "owner.companies.send_invitation",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Send Invitation"
+  },
+  {
+    "key": "owner.documents.doc_type",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Document Type"
+  },
+  {
+    "key": "owner.documents.tapu_option",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Official Title Deed (Tapu)"
+  },
+  {
+    "key": "owner.documents.lease_option",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Lease Agreement"
+  },
+  {
+    "key": "owner.documents.management_option",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Management Agreement"
+  },
+  {
+    "key": "owner.documents.inspection_option",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Inspection Report"
+  },
+  {
+    "key": "owner.documents.doc_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Document Title"
+  },
+  {
+    "key": "owner.documents.doc_title_ph",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "e.g. Official Deed ERB-2024-9981"
+  },
+  {
+    "key": "owner.documents.select_file",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select Document File"
+  },
+  {
+    "key": "owner.documents.uploading",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Uploading..."
+  },
+  {
+    "key": "owner.documents.upload_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Upload Document"
+  },
+  {
+    "key": "pricing.back_to_dashboard",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Back to Dashboard"
+  },
+  {
+    "key": "analytics.forbidden",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Forbidden: Your role does not have permission to view portfolio analytics."
+  },
+  {
+    "key": "analytics.load_error",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Failed to load portfolio analytics data."
+  },
+  {
+    "key": "analytics.export_notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕاپۆرتی پۆرتفۆلیۆ (${format}) بە سەرکەوتوویی ئامادەکرا."
+  },
+  {
+    "key": "core.error",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هەڵە لە بارکردنی داتا"
+  },
+  {
+    "key": "property.error.access_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property Management Command Center"
+  },
+  {
+    "key": "property.error.auth_restricted",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Access to internal property analytics and financial operations requires an authorized Owner or Property Manager session."
+  },
+  {
+    "key": "property.action.view_public_listing",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "View Public Rental Listing"
+  },
+  {
+    "key": "property.action.sign_in_owner",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Sign In as Owner"
+  },
+  {
+    "key": "property.rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rent"
+  },
+  {
+    "key": "property.rent_breakdown",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rent Collection & Payout"
+  },
+  {
+    "key": "property.no_active_lease",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No Active Lease"
+  },
+  {
+    "key": "property.no_schedule",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No Schedule"
+  },
+  {
+    "key": "payment.status.confirmed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Collected"
+  },
+  {
+    "key": "payment.status.partially_paid",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Partially Collected"
+  },
+  {
+    "key": "payment.status.overdue",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Overdue"
+  },
+  {
+    "key": "payment.status.upcoming",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Upcoming"
+  },
+  {
+    "key": "statement.notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Financial statement ledger is accessible to property owners and management companies in the Owner Workspace."
+  },
+  {
+    "key": "receipt.notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Payment receipt record verified (${rcpNum}). Formal PDF document download is pending banking/accounting export service integration."
+  },
+  {
+    "key": "receipt.none",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No confirmed payment receipt is available for this period."
+  },
+  {
+    "key": "lease.tenant",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Tenant"
+  },
+  {
+    "key": "property.active_lease",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Active Lease"
+  },
+  {
+    "key": "property.vacant",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Vacant / No Active Lease"
+  },
+  {
+    "key": "property.financial_error",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Authoritative financial records are temporarily unavailable. Data is not fabricated."
+  },
+  {
+    "key": "property.rent_amount",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rent Amount"
+  },
+  {
+    "key": "property.due_date",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Due Date"
+  },
+  {
+    "key": "property.paid_date",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Paid Date"
+  },
+  {
+    "key": "property.collection_breakdown",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Collection Breakdown"
+  },
+  {
+    "key": "property.total_collected",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Total Rent Collected (Confirmed)"
+  },
+  {
+    "key": "fee.not_configured",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "(Not Configured)"
+  },
+  {
+    "key": "fee.not_applicable",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "(Not Applicable)"
+  },
+  {
+    "key": "property.total_fees",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Total Applicable Fees"
+  },
+  {
+    "key": "property.owner_net",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Owner Receives (Net)"
+  },
+  {
+    "key": "payout.entitlement_recorded",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "net owner entitlement recorded"
+  },
+  {
+    "key": "payout.gateway_notice",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Disbursement gateway in pre-integration. Settlement payouts are managed via Owner Finances."
+  },
+  {
+    "key": "payout.view_settlements",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "View Settlements →"
+  },
+  {
+    "key": "payout.none_awaiting",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No Confirmed Collections Awaiting Payout"
+  },
+  {
+    "key": "payout.no_active_lease",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No Active Lease Recorded"
+  },
+  {
+    "key": "payout.collections_appear",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rent collections will appear here once confirmed in the system."
+  },
+  {
+    "key": "payout.assign_lease",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Assign or activate a lease to track scheduled rent and owner payouts."
+  },
+  {
+    "key": "payout.view_finances",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "View Finances →"
+  },
+  {
+    "key": "property.view_statement",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "View Full Statement"
+  },
+  {
+    "key": "property.download_receipt",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Download Receipt"
+  },
+  {
+    "key": "property.deposit_inspections",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Deposit & Move-Out"
+  },
+  {
+    "key": "marketplace.insights.schools",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Schools"
+  },
+  {
+    "key": "marketplace.insights.safety",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Safety"
+  },
+  {
+    "key": "marketplace.insights.transport",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Transport"
+  },
+  {
+    "key": "marketplace.insights.shopping",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Shopping"
+  },
+  {
+    "key": "marketplace.insights.quietness",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Quietness"
+  },
+  {
+    "key": "marketplace.ai_search.placeholder",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Try '3-bedroom villa in Erbil under $1500'"
+  },
+  {
+    "key": "marketplace.ai_search.toggle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Toggle AI Search"
+  },
+  {
+    "key": "marketplace.action.view_details",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "View Details"
+  },
+  {
+    "key": "marketplace.comparison.compare_property",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Compare Property"
+  },
+  {
+    "key": "marketplace.social.viewing",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "people viewing this"
+  },
+  {
+    "key": "marketplace.social_proof.rare_find",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rare Find! Highly Demanded"
+  },
+  {
+    "key": "marketplace.social_proof.viewing",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "people are viewing this right now. Listed"
+  },
+  {
+    "key": "marketplace.social_proof.hours_ago",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "hours ago."
+  },
+  {
+    "key": "marketplace.insights.neighborhood",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Neighborhood Insights"
+  },
+  {
+    "key": "marketplace.scheduler.select_datetime",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select Date & Time"
+  },
+  {
+    "key": "marketplace.scheduler.available_days",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Available Days"
+  },
+  {
+    "key": "marketplace.scheduler.available_times",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Available Times"
+  },
+  {
+    "key": "marketplace.scheduler.success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Viewing scheduled for ${selectedDate} at ${selectedTime}. The agent will confirm shortly."
+  },
+  {
+    "key": "marketplace.scheduler.confirm_viewing",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Confirm Viewing"
+  },
+  {
+    "key": "marketplace.scheduler.schedule_viewing",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Schedule Viewing"
+  },
+  {
+    "key": "marketplace.actions.apply_success",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Rental application submitted successfully! Check your tenant workspace."
+  },
+  {
+    "key": "marketplace.actions.apply_for_rent",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Apply for Rent"
+  },
+  {
+    "key": "marketplace.comparison.selected",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Selected"
+  },
+  {
+    "key": "marketplace.comparison.max",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Select up to 3 properties to compare"
+  },
+  {
+    "key": "marketplace.comparison.clear_all",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Clear all"
+  },
+  {
+    "key": "marketplace.comparison.compare_now",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Compare Now"
+  },
+  {
+    "key": "marketplace.comparison.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Property Comparison"
+  },
+  {
+    "key": "marketplace.comparison.features",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Features"
+  },
+  {
+    "key": "marketplace.comparison.price",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Price"
+  },
+  {
+    "key": "marketplace.comparison.location",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Location"
+  },
+  {
+    "key": "marketplace.filters.property_type",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Type"
+  },
+  {
+    "key": "marketplace.modal.area_label",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "Area"
+  },
+  {
+    "key": "marketplace.comparison.more",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "more"
+  },
+  {
+    "key": "marketplace.comparison.empty",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "No properties selected for comparison."
+  },
+  {
+    "key": "tenant.onboarding.title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ڕێکخستنی پڕۆفایلی کرێچی | Tenant Profile Setup"
+  },
+  {
+    "key": "tenant.onboarding.subtitle",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پڕۆفایلەکەت تەواو بکە بۆ داواکردنی موڵک یان بەڕێوەبردنی گرێبەستی کرێداریت."
+  },
+  {
+    "key": "tenant.onboarding.welcome_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بەخێربێن بۆ پۆڕتاڵی کرێچی"
+  },
+  {
+    "key": "tenant.onboarding.welcome_desc",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ئێمە یارمەتیت دەدەین لە ڕێکخستنی خێرای هەژمارەکەت تا بتوانیت داواکاری کرێداری بنێریت، کرێ بە ئۆنلاین بدەیت، و داواکاری چاککردنەوە تۆمار بکەیت."
+  },
+  {
+    "key": "tenant.onboarding.personal_profile",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "زانیاری کەسیی کرێچی"
+  },
+  {
+    "key": "tenant.onboarding.first_name",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ناوی یەکەم"
+  },
+  {
+    "key": "tenant.onboarding.last_name",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ناوی دووەم و نازناو"
+  },
+  {
+    "key": "tenant.onboarding.phone",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ژمارەی مۆبایل"
+  },
+  {
+    "key": "tenant.onboarding.preferences_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "هەڵبژاردنی تایبەتمەندی و شوێن"
+  },
+  {
+    "key": "tenant.onboarding.desired_bedrooms",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ژمارەی ژووری خەوتن"
+  },
+  {
+    "key": "tenant.onboarding.opt_studio",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ستۆدیۆ / یەک ژوور"
+  },
+  {
+    "key": "tenant.onboarding.opt_1bed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "١ ژووری خەوتن"
+  },
+  {
+    "key": "tenant.onboarding.opt_2bed",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "٢ ژووری خەوتن"
+  },
+  {
+    "key": "tenant.onboarding.opt_3bed_plus",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "٣+ ژووری خەوتن"
+  },
+  {
+    "key": "tenant.onboarding.preferred_location",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "شوێنی دڵخواز (گەڕەک یان پڕۆژە)"
+  },
+  {
+    "key": "tenant.onboarding.location_placeholder",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بۆ نموونە: ئیمپایەر، دریم ستی، بەختیاری"
+  },
+  {
+    "key": "tenant.onboarding.documents_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "بەڵگەنامە و پێناسە پێویستەکان"
+  },
+  {
+    "key": "tenant.onboarding.docs_note_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تێبینی دەربارەی بارکردنی دۆکیومێنت:"
+  },
+  {
+    "key": "tenant.onboarding.docs_note_body",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دەتوانیت لەم قۆناغەدا بارکردنی پەڕگەکان تێپەڕێنیت و ڕاستەوخۆ لە کاتی واژووکردنی گرێبەست لەگەڵ خاوەن موڵک یان بریکار پێشکەشی بکەیت."
+  },
+  {
+    "key": "tenant.onboarding.review_title",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "پێداچوونەوەی کۆتایی و تۆمارکردن"
+  },
+  {
+    "key": "tenant.onboarding.name",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ناو"
+  },
+  {
+    "key": "common.not_provided",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دیاری نەکراوە"
+  },
+  {
+    "key": "tenant.onboarding.target_bedrooms",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "ژمارەی ژوور"
+  },
+  {
+    "key": "common.back",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "گەڕانەوە"
+  },
+  {
+    "key": "common.next",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "دواتر"
+  },
+  {
+    "key": "tenant.onboarding.complete_btn",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "تەواوکردنی پڕۆفایل"
+  },
+  {
+    "key": "tenant.dashboard.my_applications",
+    "en": null,
+    "ar": null,
+    "ku": null,
+    "defaultValue": "My Rental Applications"
+  }
+]

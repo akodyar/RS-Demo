@@ -1,0 +1,730 @@
+[
+  {
+    "timestamp": "2026-10-20T08:33:32.760Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:32.765Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:45.917Z",
+    "method": "POST",
+    "url": "http://localhost:3048/api/auth/register",
+    "status": 201,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:49.756Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:49.757Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:49.870Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:49.932Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:53.102Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:53.130Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:56.673Z",
+    "method": "POST",
+    "url": "http://localhost:3048/api/auth/login",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:56.874Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:56.875Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:56.876Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:56.876Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:59.722Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:59.724Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:59.724Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:59.725Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:59.789Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/properties/pricing-tier",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:33:59.791Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/properties/pricing-tier",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:21.095Z",
+    "method": "POST",
+    "url": "http://localhost:3048/api/properties",
+    "status": 201,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:24.803Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:24.976Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:24.976Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:25.019Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:25.020Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:25.148Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:25.626Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:25.628Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:29.235Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:29.579Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:29.580Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:29.582Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:29.897Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:29.897Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:29.899Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:29.899Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:33.098Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/marketplace/listings/search",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:33.100Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:33.101Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:33.101Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/marketplace/listings/search",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:33.102Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:33.103Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:37.403Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:37.427Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:37.427Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:37.428Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:37.708Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/marketplace/listings/search",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:37.850Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/marketplace/listings/search",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.346Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/properties/60061892-861f-41ca-9a18-14ada57b7370",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.346Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/analytics/properties/60061892-861f-41ca-9a18-14ada57b7370",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.357Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/analytics/properties/60061892-861f-41ca-9a18-14ada57b7370/valuations",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.360Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/analytics/properties/60061892-861f-41ca-9a18-14ada57b7370/valuations",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.476Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.534Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.537Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/properties/60061892-861f-41ca-9a18-14ada57b7370",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.612Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/analytics/properties/60061892-861f-41ca-9a18-14ada57b7370",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.651Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/maintenance/property/60061892-861f-41ca-9a18-14ada57b7370",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.716Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.735Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.737Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/properties/60061892-861f-41ca-9a18-14ada57b7370/leases",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.747Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/maintenance/property/60061892-861f-41ca-9a18-14ada57b7370",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.787Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/properties/60061892-861f-41ca-9a18-14ada57b7370/financial-summary",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.789Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/properties/60061892-861f-41ca-9a18-14ada57b7370/leases",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:40.866Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/properties/60061892-861f-41ca-9a18-14ada57b7370/financial-summary",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:42.123Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:42.123Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:52.509Z",
+    "method": "POST",
+    "url": "http://localhost:3048/api/auth/register",
+    "status": 201,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:55.457Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/tenant/dashboard",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:55.466Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/tenant/dashboard",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:58.355Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:58.356Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:58.392Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/tenant/dashboard",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:58.394Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/tenant/dashboard",
+    "status": 403,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:58.492Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:34:58.493Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:00.591Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:00.592Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:00.594Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:00.594Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:00.709Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/tenant/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:00.835Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/tenant/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:04.327Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:04.437Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:04.438Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:04.438Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:04.441Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/tenant/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:04.557Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/tenant/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:11.108Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:11.120Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:11.121Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:11.121Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:11.122Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:11.337Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:11.835Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:11.991Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:17.092Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:17.097Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:17.098Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:17.098Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:17.098Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/properties/health",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:17.098Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/owner/dashboard",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:17.099Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/auth/me",
+    "status": 200,
+    "durationMs": 0
+  },
+  {
+    "timestamp": "2026-10-20T08:35:17.101Z",
+    "method": "GET",
+    "url": "http://localhost:3048/api/health",
+    "status": 200,
+    "durationMs": 0
+  }
+]

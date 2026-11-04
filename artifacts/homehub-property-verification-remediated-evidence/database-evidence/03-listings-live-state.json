@@ -1,0 +1,102 @@
+[
+  {
+    "id": "afb6d871-7700-48b2-8dde-fd214f5989a1",
+    "property_id": "baa19ffd-c5c2-4734-855a-2c728fba4b43",
+    "type": "FOR_RENT",
+    "status": "PENDING_REVIEW",
+    "price": "1500",
+    "currency": "USD",
+    "created_at": "2026-10-21T15:21:19.588Z",
+    "updated_at": "2026-10-21T15:21:19.588Z"
+  },
+  {
+    "id": "8f7d9a2b-08ea-4b0b-8eab-64200bb45b5b",
+    "property_id": "0f86711b-1672-4348-bade-709ff241751c",
+    "type": "FOR_RENT",
+    "status": "PUBLISHED",
+    "price": "1200",
+    "currency": "USD",
+    "created_at": "2026-10-21T15:21:04.584Z",
+    "updated_at": "2026-10-21T12:21:04.923Z"
+  },
+  {
+    "id": "31961387-b51d-422b-a0e8-55408b7ddd64",
+    "property_id": "34d4a5c5-be5b-405a-9bea-37116b24119d",
+    "type": "FOR_RENT",
+    "status": "PENDING_REVIEW",
+    "price": "1500",
+    "currency": "USD",
+    "created_at": "2026-10-21T15:02:50.953Z",
+    "updated_at": "2026-10-21T15:02:50.953Z"
+  },
+  {
+    "id": "61088d27-e69d-449b-96aa-ab0bc4c74de0",
+    "property_id": "adc0fb62-3e60-42a5-a78c-2181ddd76923",
+    "type": "FOR_RENT",
+    "status": "PUBLISHED",
+    "price": "1200",
+    "currency": "USD",
+    "created_at": "2026-10-21T15:02:07.587Z",
+    "updated_at": "2026-10-21T12:02:09.690Z"
+  },
+  {
+    "id": "c51cb086-d9d3-45dd-af0f-576bae23e49b",
+    "property_id": "49640344-192d-4dec-8bf4-c24de7ee7d33",
+    "type": "FOR_RENT",
+    "status": "PENDING_REVIEW",
+    "price": "1500",
+    "currency": "USD",
+    "created_at": "2026-10-21T14:37:19.584Z",
+    "updated_at": "2026-10-21T14:37:19.584Z"
+  },
+  {
+    "id": "fdd8c964-44f2-4709-a002-7de70d0de0bb",
+    "property_id": "5cafff55-bb27-49d3-b0da-872247d745a4",
+    "type": "FOR_RENT",
+    "status": "PUBLISHED",
+    "price": "1200",
+    "currency": "USD",
+    "created_at": "2026-10-21T14:36:24.307Z",
+    "updated_at": "2026-10-21T11:36:27.236Z"
+  },
+  {
+    "id": "5a0a939c-9722-4ecd-8e56-a4c07a172b00",
+    "property_id": "c40e35fb-9721-4cba-adfa-fffca17f49f7",
+    "type": "FOR_RENT",
+    "status": "PENDING_REVIEW",
+    "price": "1500",
+    "currency": "USD",
+    "created_at": "2026-10-21T14:29:28.509Z",
+    "updated_at": "2026-10-21T14:29:28.509Z"
+  },
+  {
+    "id": "ca37c309-6e2b-4727-934e-8c42476d8982",
+    "property_id": "14f2e9b1-52a3-4966-9463-30b4fd4ddde9",
+    "type": "FOR_RENT",
+    "status": "PUBLISHED",
+    "price": "1200",
+    "currency": "USD",
+    "created_at": "2026-10-21T14:28:18.151Z",
+    "updated_at": "2026-10-21T11:28:20.071Z"
+  },
+  {
+    "id": "cea220e6-bb87-4f5b-9c72-3b466235298a",
+    "property_id": "7a4b0cb7-195f-4e9b-9fbb-56c79234fabe",
+    "type": "FOR_RENT",
+    "status": "PUBLISHED",
+    "price": "1200",
+    "currency": "USD",
+    "created_at": "2026-10-21T14:25:12.139Z",
+    "updated_at": "2026-10-21T11:25:14.261Z"
+  },
+  {
+    "id": "53296f49-5f2f-4680-8d98-54a95f6f3562",
+    "property_id": "d87c4efb-6f21-4563-9029-a892904cb489",
+    "type": "FOR_RENT",
+    "status": "PENDING_REVIEW",
+    "price": "1500",
+    "currency": "USD",
+    "created_at": "2026-10-21T13:55:12.045Z",
+    "updated_at": "2026-10-21T13:55:12.045Z"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "dsp-1001",
+    "ticketNumber": "DSP-2024-001",
+    "subject": "ناکۆکی لەسەر گەڕاندنەوەی بڕی بارمتەی کرێ (Security Deposit)",
+    "partyA": "لانە کامەران (کرێچی)",
+    "partyB": "کاروان عەلی (خاوەن موڵک)",
+    "relatedProperty": "شوقە لە گوندی ئیتاڵی ۲",
+    "status": "RESOLVED",
+    "createdAt": "2024-03-12",
+    "lastUpdated": "پێش ٤ کاتژمێر",
+    "resolution": "Internal platform mediation resolved"
+  }
+]

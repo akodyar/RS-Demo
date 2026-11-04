@@ -1,0 +1,13 @@
+# Scoped Domain Diffstat (Tracked Modifications + New Deliverables)
+# Tracked Modifications:
+drizzle/meta/_journal.json            |   91 ++
+ src/db/schema.ts                      |  201 ++++-
+ src/server/repositories/properties.ts | 1469 ++++++++++++++++++++++++++++++---
+ src/server/routes/properties.ts       |  165 +++-
+ 4 files changed, 1752 insertions(+), 174 deletions(-)
+
+# New Deliverables Created for this Domain:
+drizzle/0028_property_management_preference_alignment.sql              |   43 ++++++++++++++++++++
+ tests/property-verification-and-owner-management-choice.test.ts        |  778 ++++++++++++++++++++
+ tests/property-creation-validation.test.ts                             |  470 ++++++++++++++++++++
+ tests/property-creation-idempotency.test.ts                            |  807 ++++++++++++++++++++

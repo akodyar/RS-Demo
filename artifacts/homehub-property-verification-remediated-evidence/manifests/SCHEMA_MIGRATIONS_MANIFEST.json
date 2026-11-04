@@ -1,0 +1,116 @@
+{
+  "migrationsApplied": [
+    {
+      "migrationFile": "drizzle/0027_property_verification_and_management_choice.sql",
+      "appliedAt": "2026-10-21T11:45:00Z",
+      "targetDatabase": "homehub_test (PostgreSQL 17 on 127.0.0.1:5432)",
+      "executionDurationMs": 297,
+      "columnsAdded": [
+        {
+          "table": "properties",
+          "column": "verification_status",
+          "type": "text",
+          "default": "'PENDING_VERIFICATION'",
+          "nullable": false
+        },
+        {
+          "table": "properties",
+          "column": "rejection_reason",
+          "type": "text",
+          "nullable": true
+        },
+        {
+          "table": "properties",
+          "column": "verified_at",
+          "type": "timestamp",
+          "nullable": true
+        },
+        {
+          "table": "properties",
+          "column": "verified_by",
+          "type": "text",
+          "references": "users(id)",
+          "nullable": true
+        },
+        {
+          "table": "properties",
+          "column": "management_preference",
+          "type": "text",
+          "nullable": true,
+          "note": "Initial addition; aligned to NOT NULL with DEFAULT in migration 0028"
+        },
+        {
+          "table": "properties",
+          "column": "management_arrangement_status",
+          "type": "text",
+          "default": "'NOT_APPLICABLE'",
+          "nullable": false
+        }
+      ],
+      "indexesCreated": [
+        "idx_properties_verification_status ON properties(verification_status)",
+        "idx_properties_management_preference ON properties(management_preference)",
+        "idx_properties_management_arrangement_status ON properties(management_arrangement_status)"
+      ]
+    },
+    {
+      "migrationFile": "drizzle/0028_property_management_preference_alignment.sql",
+      "appliedAt": "2026-10-21T13:34:36Z",
+      "targetDatabase": "homehub_test (PostgreSQL 17 on 127.0.0.1:5432)",
+      "executionDurationMs": 2028,
+      "actions": [
+        {
+          "type": "DATA_BACKFILL",
+          "description": "Safe domain-aware backfill across all 1,294 pre-migration properties in homehub_test based on operating_model",
+          "backfillBranches": [
+            {
+              "branch": "FULLY_MANAGED and AGENT_LISTED_PLATFORM_MANAGED",
+              "criteria": "operating_model IN ('FULLY_MANAGED', 'AGENT_LISTED_PLATFORM_MANAGED')",
+              "rowsUpdated": 620,
+              "appliedPreference": "HOMEHUB_MANAGED",
+              "appliedArrangementStatus": "AWAITING_ONBOARDING"
+            },
+            {
+              "branch": "AGENT_OPERATED",
+              "criteria": "operating_model = 'AGENT_OPERATED'",
+              "rowsUpdated": 48,
+              "appliedPreference": "AGENT_MANAGED",
+              "appliedArrangementStatus": "AWAITING_AGREEMENT"
+            },
+            {
+              "branch": "Unmanaged / Legacy Operating Models",
+              "criteria": "All remaining NULL management_preference rows (null operating_model: 584, SELF_MANAGED: 21, DIRECT_RENTAL: 21)",
+              "rowsUpdated": 626,
+              "appliedPreference": "SELF_MANAGED",
+              "appliedArrangementStatus": "NOT_APPLICABLE"
+            }
+          ],
+          "totalRowsBackfilled": 1294,
+          "postMigrationTestRowsCreated": 71,
+          "currentTotalProperties": 1365,
+          "discrepancyNote": "Reconciled the legacy 1,283 figure: forensic analysis of task-1472.log proves it originated by summing the non-agent-operated query rows (613 null + 595 FULLY_MANAGED + 33 ALPM + 21 SELF_MANAGED + 21 DIRECT_RENTAL = 1,283), which omitted the 48 AGENT_OPERATED properties (1,283 + 48 = 1,331). A prior report incorrectly claimed 1,283 resulted from 620 + 626 (which actually equals 1,246). The verified migration arithmetic is Branch 1 (620) + Branch 2 (48) + Branch 3 (626) = 1,294. Reconciled the 1,349 vs 1,365 (16 rows) mystery: an intermediate snapshot captured 1,349 rows (1,294 + 55 test rows) and was mistaken for the baseline; live PostgreSQL timestamp verification proves 1,294 pre-migration rows and subsequent test-created rows (from SUITE-01, SUITE-02, and test harnesses). Zero NULLs remain across all properties."
+        },
+        {
+          "type": "ALTER_COLUMN_SET_DEFAULT",
+          "table": "properties",
+          "column": "management_preference",
+          "default": "'SELF_MANAGED'::text"
+        },
+        {
+          "type": "ALTER_COLUMN_SET_NOT_NULL",
+          "table": "properties",
+          "column": "management_preference",
+          "nullable": false
+        },
+        {
+          "type": "ADD_CONSTRAINT",
+          "table": "properties",
+          "constraint": "properties_management_preference_check",
+          "definition": "CHECK (management_preference IN ('SELF_MANAGED', 'HOMEHUB_MANAGED', 'AGENT_MANAGED'))"
+        }
+      ]
+    }
+  ],
+  "catalogAgreement": "100% verified. properties.management_preference is is_nullable: NO, column_default: SELF_MANAGED::text, total properties: 1365, null count: 0",
+  "productionSafety": "Zero migrations run against homehub_production"
+}

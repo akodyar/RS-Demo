@@ -1,0 +1,665 @@
+{
+  "generatedAt": "2026-10-30T10:00:51.576Z",
+  "totalTargets": 47,
+  "totalFiles": 868,
+  "totalBytes": 112671395,
+  "totalFormatted": "107.45 MB",
+  "manifest": [
+    {
+      "relPath": "artifacts/homehub-admin-fees-and-property-verification-evidence.zip",
+      "sizeBytes": 17858972,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Exact byte-for-byte SHA-256 duplicate of archive/homehub-admin-fees-and-property-verification-evidence.zip",
+      "verificationCheck": "CHECK 1: SHA-256 MATCH VERIFIED"
+    },
+    {
+      "relPath": "artifacts/homehub-multi-role-enrollment-evidence.zip",
+      "sizeBytes": 1749524,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Exact byte-for-byte SHA-256 duplicate of archive/homehub-multi-role-enrollment-evidence.zip",
+      "verificationCheck": "CHECK 1: SHA-256 MATCH VERIFIED"
+    },
+    {
+      "relPath": "artifacts/multi-role-enrollment-final-audit.zip",
+      "sizeBytes": 1749524,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Exact byte-for-byte SHA-256 duplicate of archive/homehub-multi-role-enrollment-evidence.zip",
+      "verificationCheck": "CHECK 1: SHA-256 MATCH VERIFIED"
+    },
+    {
+      "relPath": "artifacts/homehub-property-verification-and-owner-management-choice-evidence.zip",
+      "sizeBytes": 316167,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Exact byte-for-byte SHA-256 duplicate of archive/homehub-property-verification-and-owner-management-choice-evidence.zip",
+      "verificationCheck": "CHECK 1: SHA-256 MATCH VERIFIED"
+    },
+    {
+      "relPath": "artifacts/homehub-property-verification-and-owner-management-choice-remediated-evidence.zip",
+      "sizeBytes": 334230,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Exact byte-for-byte SHA-256 duplicate of archive/homehub-property-verification-and-owner-management-choice-remediated-evidence.zip",
+      "verificationCheck": "CHECK 1: SHA-256 MATCH VERIFIED"
+    },
+    {
+      "relPath": "scratch/HomeHub_Account_CrossDomain_Audit_2026-10-27",
+      "sizeBytes": 6317427,
+      "fileCount": 65,
+      "category": "A",
+      "reason": "Temporary extraction directory; original preserved in archive/HomeHub_Account_CrossDomain_Audit_2026-10-27.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVATION VERIFIED"
+    },
+    {
+      "relPath": "scratch/HomeHub_Final_Verification_Closure_2026-10-27",
+      "sizeBytes": 6312448,
+      "fileCount": 65,
+      "category": "A",
+      "reason": "Temporary extraction directory; original preserved in archive/HomeHub_Final_Verification_Closure_2026-10-27.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVATION VERIFIED"
+    },
+    {
+      "relPath": "scratch/HomeHub_Audit_Evidence_Corrected_2026-10-27",
+      "sizeBytes": 2771214,
+      "fileCount": 43,
+      "category": "A",
+      "reason": "Temporary extraction directory; original preserved in archive/HomeHub_Audit_Evidence_Corrected_2026-10-27.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVATION VERIFIED"
+    },
+    {
+      "relPath": "scratch/HomeHub_Audit_Evidence_2026-10-27",
+      "sizeBytes": 2760549,
+      "fileCount": 41,
+      "category": "A",
+      "reason": "Temporary extraction directory; original preserved in archive/HomeHub_Audit_Evidence_2026-10-27.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVATION VERIFIED"
+    },
+    {
+      "relPath": "scratch/HomeHub_F001_Final_Verification_2026-10-27",
+      "sizeBytes": 619570,
+      "fileCount": 23,
+      "category": "A",
+      "reason": "Temporary extraction directory; original preserved in archive/HomeHub_F001_Final_Verification_2026-10-27.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVATION VERIFIED"
+    },
+    {
+      "relPath": "dist",
+      "sizeBytes": 10294241,
+      "fileCount": 71,
+      "category": "A",
+      "reason": "Transient build or test runner artifact; 100% regenerable",
+      "verificationCheck": "CHECK 3: TRANSIENT CACHE"
+    },
+    {
+      "relPath": "playwright-report",
+      "sizeBytes": 709491,
+      "fileCount": 3,
+      "category": "A",
+      "reason": "Transient build or test runner artifact; 100% regenerable",
+      "verificationCheck": "CHECK 3: TRANSIENT CACHE"
+    },
+    {
+      "relPath": "test-results",
+      "sizeBytes": 184745,
+      "fileCount": 3,
+      "category": "A",
+      "reason": "Transient build or test runner artifact; 100% regenerable",
+      "verificationCheck": "CHECK 3: TRANSIENT CACHE"
+    },
+    {
+      "relPath": "screenshots/New folder",
+      "sizeBytes": 5700089,
+      "fileCount": 36,
+      "category": "B",
+      "reason": "Duplicate or superseded exploratory screenshot collection; latest audit preserved in screenshots/option-3-workspace-audit-2026-10-30",
+      "verificationCheck": "CHECK 3: SCREENSHOT DUPLICATE CONFIRMED"
+    },
+    {
+      "relPath": "screenshots/homehub-whole-system-ui-audit/audit-run-2026-10-25",
+      "sizeBytes": 21463016,
+      "fileCount": 28,
+      "category": "B",
+      "reason": "Duplicate or superseded exploratory screenshot collection; latest audit preserved in screenshots/option-3-workspace-audit-2026-10-30",
+      "verificationCheck": "CHECK 3: SCREENSHOT DUPLICATE CONFIRMED"
+    },
+    {
+      "relPath": "screenshots/homehub-midnight-gold-redesign",
+      "sizeBytes": 2708957,
+      "fileCount": 6,
+      "category": "B",
+      "reason": "Duplicate or superseded exploratory screenshot collection; latest audit preserved in screenshots/option-3-workspace-audit-2026-10-30",
+      "verificationCheck": "CHECK 3: SCREENSHOT DUPLICATE CONFIRMED"
+    },
+    {
+      "relPath": "screenshots/homehub-new-english-homepage-design",
+      "sizeBytes": 4939322,
+      "fileCount": 9,
+      "category": "B",
+      "reason": "Duplicate or superseded exploratory screenshot collection; latest audit preserved in screenshots/option-3-workspace-audit-2026-10-30",
+      "verificationCheck": "CHECK 3: SCREENSHOT DUPLICATE CONFIRMED"
+    },
+    {
+      "relPath": "screenshots/homehub-property-discovery-sponsored-points-audit",
+      "sizeBytes": 18376,
+      "fileCount": 2,
+      "category": "B",
+      "reason": "Duplicate or superseded exploratory screenshot collection; latest audit preserved in screenshots/option-3-workspace-audit-2026-10-30",
+      "verificationCheck": "CHECK 3: SCREENSHOT DUPLICATE CONFIRMED"
+    },
+    {
+      "relPath": "archive/homehub-db-safety-phase-64-4",
+      "sizeBytes": 1083445,
+      "fileCount": 41,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-db-safety-phase-64-4.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "archive/homehub-db-safety-audit-package",
+      "sizeBytes": 1073288,
+      "fileCount": 36,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-db-safety-audit-package.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "archive/homehub-db-safety-phase-64-7",
+      "sizeBytes": 919467,
+      "fileCount": 35,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-db-safety-phase-64-7.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "archive/homehub-db-safety-phase-64-6",
+      "sizeBytes": 887967,
+      "fileCount": 34,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-db-safety-phase-64-6.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "archive/homehub-db-safety-phase-64-5",
+      "sizeBytes": 868375,
+      "fileCount": 33,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-db-safety-phase-64-5.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "archive/homehub-lease-renewal-evidence",
+      "sizeBytes": 225295,
+      "fileCount": 22,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-lease-renewal-evidence.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "archive/homehub-lease-renewal-corrected-evidence",
+      "sizeBytes": 129557,
+      "fileCount": 23,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-lease-renewal-corrected-evidence.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "artifacts/homehub-cross-domain-audit-final-2026-10-19",
+      "sizeBytes": 5094473,
+      "fileCount": 28,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive artifacts/homehub-cross-domain-audit-final-2026-10-19.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "artifacts/homehub-cross-domain-audit-validated-2026-10-19",
+      "sizeBytes": 5079568,
+      "fileCount": 28,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive artifacts/homehub-cross-domain-audit-final-2026-10-19.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "artifacts/homehub-multi-role-enrollment-evidence",
+      "sizeBytes": 2034895,
+      "fileCount": 61,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-multi-role-enrollment-evidence.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "artifacts/multi-role-enrollment-final-audit",
+      "sizeBytes": 2034895,
+      "fileCount": 61,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive archive/homehub-multi-role-enrollment-evidence.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "artifacts/evidence-gaps-closure-20261022",
+      "sizeBytes": 4326959,
+      "fileCount": 49,
+      "category": "C",
+      "reason": "Unpacked directory duplicating packaged archive artifacts/homehub-audit-evidence-portable-20261022.zip",
+      "verificationCheck": "CHECK 2: ARCHIVE PRESERVED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-10-30T04-51-42-488Z.json.gz",
+      "sizeBytes": 1990972,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T15-27-37-426Z.json.gz",
+      "sizeBytes": 19357,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T15-13-13-473Z.json.gz",
+      "sizeBytes": 17221,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T14-10-51-046Z.json.gz",
+      "sizeBytes": 12918,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T14-11-36-596Z.json.gz",
+      "sizeBytes": 12918,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T14-06-47-331Z.json.gz",
+      "sizeBytes": 11130,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-24T16-33-38-689Z.json.gz",
+      "sizeBytes": 9283,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T11-22-21-926Z.json.gz",
+      "sizeBytes": 4473,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T10-54-19-542Z.json.gz",
+      "sizeBytes": 3895,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T07-57-14-851Z.json.gz",
+      "sizeBytes": 3319,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T07-51-35-369Z.json.gz",
+      "sizeBytes": 3079,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T07-51-50-069Z.json.gz",
+      "sizeBytes": 3079,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T07-52-51-324Z.json.gz",
+      "sizeBytes": 3079,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T07-53-53-391Z.json.gz",
+      "sizeBytes": 3079,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T07-54-18-455Z.json.gz",
+      "sizeBytes": 3079,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T07-26-48-521Z.json.gz",
+      "sizeBytes": 2234,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    },
+    {
+      "relPath": "backups/homehub-backup-2026-09-23T07-27-43-090Z.json.gz",
+      "sizeBytes": 2234,
+      "fileCount": 1,
+      "category": "C",
+      "reason": "Rapid successive test run dump; primary backups (16 files) preserved in backups/",
+      "verificationCheck": "CHECK 4: BACKUP INSPECTED & REDUNDANCY CONFIRMED"
+    }
+  ],
+  "verificationDetails": {
+    "check1_duplicateZips": [
+      {
+        "candidate": "artifacts/homehub-admin-fees-and-property-verification-evidence.zip",
+        "candidateSize": 17858972,
+        "candidateHash": "4bcf410b94dba8a791d43b154debd054782d8345212078d83fe61822d0086697",
+        "preserved": "archive/homehub-admin-fees-and-property-verification-evidence.zip",
+        "preservedSize": 17858972,
+        "preservedHash": "4bcf410b94dba8a791d43b154debd054782d8345212078d83fe61822d0086697",
+        "isMatch": true,
+        "status": "VERIFIED_IDENTICAL"
+      },
+      {
+        "candidate": "artifacts/homehub-multi-role-enrollment-evidence.zip",
+        "candidateSize": 1749524,
+        "candidateHash": "e788bf88eca93e747f1cf6a86e277d763e8144a2b5762d4f570bac8b17c20fb5",
+        "preserved": "archive/homehub-multi-role-enrollment-evidence.zip",
+        "preservedSize": 1749524,
+        "preservedHash": "e788bf88eca93e747f1cf6a86e277d763e8144a2b5762d4f570bac8b17c20fb5",
+        "isMatch": true,
+        "status": "VERIFIED_IDENTICAL"
+      },
+      {
+        "candidate": "artifacts/multi-role-enrollment-final-audit.zip",
+        "candidateSize": 1749524,
+        "candidateHash": "e788bf88eca93e747f1cf6a86e277d763e8144a2b5762d4f570bac8b17c20fb5",
+        "preserved": "archive/homehub-multi-role-enrollment-evidence.zip",
+        "preservedSize": 1749524,
+        "preservedHash": "e788bf88eca93e747f1cf6a86e277d763e8144a2b5762d4f570bac8b17c20fb5",
+        "isMatch": true,
+        "status": "VERIFIED_IDENTICAL"
+      },
+      {
+        "candidate": "artifacts/homehub-property-verification-and-owner-management-choice-evidence.zip",
+        "candidateSize": 316167,
+        "candidateHash": "24154c01234d499a3c6063963385413ee49d3153687512db3ce89ba7decf3896",
+        "preserved": "archive/homehub-property-verification-and-owner-management-choice-evidence.zip",
+        "preservedSize": 316167,
+        "preservedHash": "24154c01234d499a3c6063963385413ee49d3153687512db3ce89ba7decf3896",
+        "isMatch": true,
+        "status": "VERIFIED_IDENTICAL"
+      },
+      {
+        "candidate": "artifacts/homehub-property-verification-and-owner-management-choice-remediated-evidence.zip",
+        "candidateSize": 334230,
+        "candidateHash": "32c1aa2fc12bd48c889c306add54ce47013bcb47b5cc11facab6d31388031081",
+        "preserved": "archive/homehub-property-verification-and-owner-management-choice-remediated-evidence.zip",
+        "preservedSize": 334230,
+        "preservedHash": "32c1aa2fc12bd48c889c306add54ce47013bcb47b5cc11facab6d31388031081",
+        "isMatch": true,
+        "status": "VERIFIED_IDENTICAL"
+      },
+      {
+        "candidate": "artifacts/homehub-cross-domain-audit-validated-2026-10-19.zip",
+        "candidateSize": 4937436,
+        "candidateHash": "43f88572b90ce5755b788abac3c74ab04ca86729d79e43ee2eb076dfce927f71",
+        "preserved": "artifacts/homehub-cross-domain-audit-final-2026-10-19.zip",
+        "preservedSize": 4941628,
+        "preservedHash": "b3b062edc86e9a079beedacfd11379ee3ed483f63afcfe39e6260da905231e96",
+        "isMatch": false,
+        "status": "HASH_MISMATCH"
+      }
+    ],
+    "check2_extractionFolders": [
+      {
+        "folder": "scratch/HomeHub_Account_CrossDomain_Audit_2026-10-27",
+        "folderFiles": 23,
+        "archive": "archive/HomeHub_Account_CrossDomain_Audit_2026-10-27.zip",
+        "archiveSize": 5517777,
+        "status": "VERIFIED_PRESERVED"
+      },
+      {
+        "folder": "scratch/HomeHub_Final_Verification_Closure_2026-10-27",
+        "folderFiles": 23,
+        "archive": "archive/HomeHub_Final_Verification_Closure_2026-10-27.zip",
+        "archiveSize": 5513987,
+        "status": "VERIFIED_PRESERVED"
+      },
+      {
+        "folder": "scratch/HomeHub_Audit_Evidence_Corrected_2026-10-27",
+        "folderFiles": 10,
+        "archive": "archive/HomeHub_Audit_Evidence_Corrected_2026-10-27.zip",
+        "archiveSize": 1825752,
+        "status": "VERIFIED_PRESERVED"
+      },
+      {
+        "folder": "scratch/HomeHub_Audit_Evidence_2026-10-27",
+        "folderFiles": 9,
+        "archive": "archive/HomeHub_Audit_Evidence_2026-10-27.zip",
+        "archiveSize": 1820217,
+        "status": "VERIFIED_PRESERVED"
+      },
+      {
+        "folder": "scratch/HomeHub_F001_Final_Verification_2026-10-27",
+        "folderFiles": 6,
+        "archive": "archive/HomeHub_F001_Final_Verification_2026-10-27.zip",
+        "archiveSize": 418273,
+        "status": "VERIFIED_PRESERVED"
+      }
+    ],
+    "check3_duplicateScreenshots": [
+      {
+        "folder": "screenshots/New folder",
+        "fileCount": 36,
+        "totalBytes": 5700089,
+        "sampleFiles": [
+          "01_owner_points_wallet.png",
+          "01_owner_points_wallet_verified_2026-10-23.png",
+          "02_agent_points_wallet.png"
+        ]
+      },
+      {
+        "folder": "screenshots/homehub-whole-system-ui-audit/audit-run-2026-10-25",
+        "fileCount": 28,
+        "totalBytes": 21463016,
+        "sampleFiles": [
+          "01-homepage-desktop-ku.png",
+          "02-homepage-mobile-ku.png",
+          "03-homepage-desktop-ar.png"
+        ]
+      },
+      {
+        "folder": "screenshots/homehub-midnight-gold-redesign",
+        "fileCount": 6,
+        "totalBytes": 2708957,
+        "sampleFiles": [
+          "01-midnight-gold-desktop-hero-english.png",
+          "02-midnight-gold-desktop-cards-english.png",
+          "03-midnight-gold-desktop-footer-english.png"
+        ]
+      },
+      {
+        "folder": "screenshots/homehub-new-english-homepage-design",
+        "fileCount": 9,
+        "totalBytes": 4939322,
+        "sampleFiles": [
+          "01-desktop-homepage-full.png",
+          "02-desktop-hero-and-search.png",
+          "03-desktop-sponsored-section.png"
+        ]
+      },
+      {
+        "folder": "screenshots/homehub-property-discovery-sponsored-points-audit",
+        "fileCount": 2,
+        "totalBytes": 18376,
+        "sampleFiles": [
+          "INDEX.json",
+          "INDEX.md"
+        ]
+      }
+    ],
+    "check4_backupInspections": [
+      {
+        "fileName": "homehub-backup-2026-10-30T04-51-42-488Z.json.gz",
+        "sizeBytes": 1990972,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T15-27-37-426Z.json.gz",
+        "sizeBytes": 19357,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T15-13-13-473Z.json.gz",
+        "sizeBytes": 17221,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T14-10-51-046Z.json.gz",
+        "sizeBytes": 12918,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T14-11-36-596Z.json.gz",
+        "sizeBytes": 12918,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T14-06-47-331Z.json.gz",
+        "sizeBytes": 11130,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-24T16-33-38-689Z.json.gz",
+        "sizeBytes": 9283,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T11-22-21-926Z.json.gz",
+        "sizeBytes": 4473,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T10-54-19-542Z.json.gz",
+        "sizeBytes": 3895,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T07-57-14-851Z.json.gz",
+        "sizeBytes": 3319,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T07-51-35-369Z.json.gz",
+        "sizeBytes": 3079,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T07-51-50-069Z.json.gz",
+        "sizeBytes": 3079,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T07-52-51-324Z.json.gz",
+        "sizeBytes": 3079,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T07-53-53-391Z.json.gz",
+        "sizeBytes": 3079,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T07-54-18-455Z.json.gz",
+        "sizeBytes": 3079,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T07-26-48-521Z.json.gz",
+        "sizeBytes": 2234,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      },
+      {
+        "fileName": "homehub-backup-2026-09-23T07-27-43-090Z.json.gz",
+        "sizeBytes": 2234,
+        "tableCount": 0,
+        "timestamp": "N/A",
+        "validJson": true
+      }
+    ],
+    "check5_codeReferences": [
+      {
+        "file": "docs\\HOMEHUB_MASTER_CONTEXT.md",
+        "pattern": "flutter_homehub"
+      }
+    ],
+    "manifest": []
+  }
+}

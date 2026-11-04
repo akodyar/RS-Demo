@@ -1,0 +1,52 @@
+{
+  "ownerIndiv": {
+    "email": "jwan_owner_indiv_1793499747334@homehub.iq",
+    "fullName": "ڕەوەند عوسمان (خاوەن موڵکی تاک)",
+    "phone": "07701112233",
+    "role": "PROPERTY_OWNER",
+    "entityType": "INDIVIDUAL",
+    "password": "password123"
+  },
+  "ownerComp": {
+    "email": "jwan_owner_comp_1793499747334@homehub.iq",
+    "fullName": "شەرمین عەزیز (بەڕێوەبەری کۆمپانیا)",
+    "companyName": "کۆمپانیای شاهانە بۆ وەبەرهێنان",
+    "phone": "07702223344",
+    "role": "PROPERTY_OWNER",
+    "entityType": "COMPANY",
+    "password": "password123"
+  },
+  "agentIndiv": {
+    "email": "jwan_agent_indiv_1793499747334@homehub.iq",
+    "fullName": "سۆران ئەحمەد (برۆکەری سەربەخۆ)",
+    "phone": "07703334455",
+    "role": "AGENT_BROKER",
+    "entityType": "INDIVIDUAL",
+    "password": "password123"
+  },
+  "agentComp": {
+    "email": "jwan_agent_comp_1793499747334@homehub.iq",
+    "fullName": "کاروان مەحموود (نوسینگەی لوتکە)",
+    "companyName": "نووسینگەی لوتکە بۆ خانووبەرە",
+    "phone": "07704445566",
+    "role": "AGENT_BROKER",
+    "entityType": "COMPANY",
+    "password": "password123"
+  },
+  "tenant": {
+    "email": "jwan_tenant_1793499747334@homehub.iq",
+    "fullName": "هێمن جەمال (کرێچی)",
+    "phone": "07705556677",
+    "role": "TENANT",
+    "entityType": "INDIVIDUAL",
+    "password": "password123"
+  },
+  "vendor": {
+    "email": "jwan_vendor_1793499747334@homehub.iq",
+    "fullName": "ئەحمەد چاکساز (وەستای گشتی)",
+    "phone": "07706667788",
+    "role": "VENDOR",
+    "entityType": "INDIVIDUAL",
+    "password": "password123"
+  }
+}

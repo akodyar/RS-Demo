@@ -1,0 +1,2022 @@
+
+================== CATEGORY: agent (1) ==================
+KEY: "agent.market_insights"
+  EN: "Market Insights"
+  AR: null
+  KU: "شیکاریی بازاڕ"
+  DEF: undefined
+
+================== CATEGORY: action (3) ==================
+KEY: "action.add"
+  EN: null
+  AR: "إضافة"
+  KU: null
+  DEF: undefined
+KEY: "action.confirm"
+  EN: null
+  AR: "تأكيد"
+  KU: null
+  DEF: undefined
+KEY: "action.view"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "View Property"
+
+================== CATEGORY: analytics (17) ==================
+KEY: "analytics.active_units"
+  EN: null
+  AR: "الوحدات النشطة"
+  KU: null
+  DEF: undefined
+KEY: "analytics.ai_disclaimer"
+  EN: null
+  AR: "التوصيات الذكية لا تنفذ الإجراءات بشكل مستقل."
+  KU: null
+  DEF: undefined
+KEY: "analytics.annual_yield"
+  EN: null
+  AR: "العائد السنوي"
+  KU: null
+  DEF: undefined
+KEY: "analytics.overview"
+  EN: null
+  AR: "نظرة عامة على المحفظة"
+  KU: null
+  DEF: undefined
+KEY: "analytics.overview_desc"
+  EN: null
+  AR: "أداء الأصول وملخص الاستثمار"
+  KU: null
+  DEF: undefined
+KEY: "analytics.require_attention"
+  EN: null
+  AR: "تحتاج انتباه"
+  KU: null
+  DEF: undefined
+KEY: "analytics.revenue_vs_expenses"
+  EN: null
+  AR: "الإيرادات مقابل المصاريف (من بداية السنة)"
+  KU: null
+  DEF: undefined
+KEY: "analytics.total_value"
+  EN: null
+  AR: "إجمالي القيمة"
+  KU: null
+  DEF: undefined
+KEY: "analytics.trailing_12m"
+  EN: null
+  AR: "آخر 12 شهراً"
+  KU: null
+  DEF: undefined
+KEY: "analytics.units_leased"
+  EN: null
+  AR: "وحدات مؤجرة"
+  KU: null
+  DEF: undefined
+KEY: "analytics.vacancy_rate"
+  EN: null
+  AR: "معدل الشغور"
+  KU: null
+  DEF: undefined
+KEY: "analytics.yoy"
+  EN: null
+  AR: "↑ سنوياً"
+  KU: null
+  DEF: undefined
+KEY: "analytics.db_not_configured_title"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Authoritative Database Not Configured (503)"
+KEY: "analytics.db_not_configured_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "The PostgreSQL authoritative datastore is currently disconnected. AI Autopilot strictly enforces fail-closed operations. Mock data generation is prohibited."
+KEY: "analytics.forbidden"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Forbidden: Your role does not have permission to view portfolio analytics."
+KEY: "analytics.load_error"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Failed to load portfolio analytics data."
+KEY: "analytics.export_notice"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ڕاپۆرتی پۆرتفۆلیۆ (${format}) بە سەرکەوتوویی ئامادەکرا."
+
+================== CATEGORY: auth (3) ==================
+KEY: "auth.login"
+  EN: null
+  AR: "تسجيل الدخول"
+  KU: null
+  DEF: undefined
+KEY: "auth.register"
+  EN: null
+  AR: "تسجيل حساب"
+  KU: null
+  DEF: undefined
+KEY: "auth.sign_out"
+  EN: null
+  AR: "تسجيل الخروج"
+  KU: null
+  DEF: undefined
+
+================== CATEGORY: company (41) ==================
+KEY: "company.management"
+  EN: null
+  AR: "إدارة الشركة"
+  KU: null
+  DEF: undefined
+KEY: "company.unnamed_company"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "HomeHub Real Estate Agency"
+KEY: "company.no_recent_activity"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "No recent activity recorded"
+KEY: "company.activity_will_appear"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Operational events, lease updates, and ledger transactions will appear here."
+KEY: "company.notifications"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Notifications"
+KEY: "company.welcome_back_generic"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Welcome back!"
+KEY: "company.financial_overview"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "کورتەی دارایی پۆرتفۆلیۆ (Financial Overview)"
+KEY: "company.ledger_balanced"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "دەفتەری هاوسەنگ (Double-Entry Balanced)"
+KEY: "company.ledger_source_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "داتاکان بە شێوەیەکی فەرمی لە دەفتەری دارایی دوولایەنەی PostgreSQL وەرگیراون بەپێی تۆمارە پشتڕاستکراوەکان."
+KEY: "company.collected_rent"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "کۆی کرێی کۆکراوە (Collected Rent)"
+KEY: "company.confirmed_status"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "پشتڕاستکراوە"
+KEY: "company.pending_rent"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "کرێی لە چاوەڕوانیدا (Pending Rent)"
+KEY: "company.awaiting_collection"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "لە چاوەڕوانی وەرگرتندا"
+KEY: "company.platform_fee"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "عمولەی پلاتفۆرم (HomeHub Platform Fee)"
+KEY: "company.canonical_policy"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "تەنها لە کرێی کۆکراوە (Only on collected rent)"
+KEY: "company.commission_earned"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "عمولەی بەڕێوەبردنی کۆمپانیا (Company Management Fee)"
+KEY: "company.per_agreement"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "بەپێی ڕێککەوتننامەی بەڕێوەبردن"
+KEY: "company.expenses_approved"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "خەرجی پەسەندکراوی چاککردنەوە (Maintenance Expenses)"
+KEY: "company.paid_to_contractors"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "تەرخانکراو بۆ وەستاکان"
+KEY: "company.owner_payable"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "شایستەی ماوەی خاوەن موڵک (Net Owner Settlement Payable)"
+KEY: "company.post_commission_balance"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "پاش لێدەرکردنی عمولە و خەرجی پەسەندکراو"
+KEY: "company.settlement_policy_title"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ڕێسای فەرمی یەکلاکردنەوەی دارایی (Financial Settlement Invariants):"
+KEY: "company.settlement_rule_1"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "عمولەی پلاتفۆرم و بەڕێوەبردن تەنها لە کرێی پشتڕاستکراوە کە بە تەواوی وەرگیراوە دەبڕدرێت (0% لەسەر کرێی وەرنەگیراو یان خەرجی چاککردنەوە)."
+KEY: "company.settlement_rule_2"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "هیچ بارگرانییەکی زیادە (Surcharge) ناخرێتە سەر کرێچی."
+KEY: "company.settlement_rule_3"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "پارەپێدانی کۆتایی بە خاوەن موڵک دەستبەجێ بەستراوەتەوە بە پشتڕاستکردنەوەی ڕەسەنی بانکی یان دەستی."
+KEY: "company.invite_member_btn"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "بانگهێشتکردنی ئەندام"
+KEY: "company.loading_members"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "بارکردنی ئەندامانی تیم..."
+KEY: "company.suspend"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ڕاگرتن"
+KEY: "company.activate"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "چالاککردن"
+KEY: "company.no_extra_members"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "هیچ ئەندامێکی تر هێشتا بانگهێشت نەکراوە. دەتوانیت لە ڕێگەی دوگمەی سەرەوە ئەندامانی تیم بانگهێشت بکەیت."
+KEY: "company.authoritative_reports"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ڕاپۆرتە بەڵگەدارەکان (Authoritative Reports)"
+KEY: "company.historical_notice"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "بەپێی یاسای سیستەم: داتاکان تەنها لە تۆماری پشتڕاستکراوی پۆرتفۆلیۆ هەژمار دەکرێن، و لە کاتی نەبوونی داتا \"N/A\" نیشان دەدرێت."
+KEY: "company.occupancy_rate"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ڕێژەی پڕبوون (Occupancy Rate)"
+KEY: "company.occupancy_calc_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "کرێچی چالاک بەرامبەر موڵکە بەڕێوەبراوەکان"
+KEY: "company.collection_rate"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ڕێژەی کۆکردنەوەی کرێ (Collection Rate)"
+KEY: "company.collection_calc_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "کرێی کۆکراوە بەرامبەر کۆی چاوەڕوانکراو"
+KEY: "company.from_confirmed_ledger"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "لە دەفتەری پشتڕاستکراوە"
+KEY: "company.maintenance_load"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "بارگرانی چاککردنەوە (Maintenance Load)"
+KEY: "company.maintenance_load_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "داواکارییە کراوەکان بەرامبەر خەرجی پەسەندکراو"
+KEY: "company.open_tickets"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "کراوە"
+KEY: "company.ai_insights_title"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ڕێنمایی و شیکاری ژیری دەستکرد (AI Advisory & Insights)"
+
+================== CATEGORY: core (3) ==================
+KEY: "core.history"
+  EN: null
+  AR: "السجل"
+  KU: null
+  DEF: undefined
+KEY: "core.notes"
+  EN: null
+  AR: "ملاحظات"
+  KU: null
+  DEF: undefined
+KEY: "core.error"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "هەڵە لە بارکردنی داتا"
+
+================== CATEGORY: currency (1) ==================
+KEY: "currency.iqd"
+  EN: null
+  AR: "دينار عراقي"
+  KU: null
+  DEF: "IQD"
+
+================== CATEGORY: integration (10) ==================
+KEY: "integration.capability_label"
+  EN: null
+  AR: "القدرة:"
+  KU: null
+  DEF: undefined
+KEY: "integration.configure_keys"
+  EN: null
+  AR: "تهيئة المفاتيح"
+  KU: null
+  DEF: "Configure Keys"
+KEY: "integration.configured"
+  EN: null
+  AR: "مهيأ"
+  KU: null
+  DEF: "CONFIGURED"
+KEY: "integration.email_notif"
+  EN: null
+  AR: "إشعارات البريد الإلكتروني"
+  KU: null
+  DEF: "EMAIL NOTIFICATIONS"
+KEY: "integration.esignature"
+  EN: null
+  AR: "التوقيع الإلكتروني"
+  KU: null
+  DEF: "E-SIGNATURE"
+KEY: "integration.manage_settings"
+  EN: null
+  AR: "إدارة الإعدادات"
+  KU: null
+  DEF: "Manage Settings"
+KEY: "integration.providers"
+  EN: null
+  AR: "مقدمو الخدمات"
+  KU: null
+  DEF: "Providers"
+KEY: "integration.safe_paused_long"
+  EN: null
+  AR: "تم إيقاف العمليات المعتمدة على هذا المزود بشكل آمن. لم يتم فقدان أي بيانات."
+  KU: null
+  DEF: undefined
+KEY: "integration.sms_provider"
+  EN: null
+  AR: "مزود الرسائل القصيرة"
+  KU: null
+  DEF: "SMS PROVIDER"
+KEY: "integration.subtitle"
+  EN: null
+  AR: "البنية التحتية ومقدمو الخدمات الخارجيون"
+  KU: null
+  DEF: "Real-World Infrastructure & External APIs"
+
+================== CATEGORY: maintenance (17) ==================
+KEY: "maintenance.active_wos"
+  EN: null
+  AR: "أوامر العمل النشطة"
+  KU: null
+  DEF: "Active Work Orders"
+KEY: "maintenance.approve_wo"
+  EN: null
+  AR: "الموافقة وإنشاء أمر العمل"
+  KU: null
+  DEF: undefined
+KEY: "maintenance.assigned_vendor"
+  EN: null
+  AR: "الفني المعين:"
+  KU: null
+  DEF: "Assigned Vendor:"
+KEY: "maintenance.cancel_request"
+  EN: null
+  AR: "إلغاء الطلب"
+  KU: null
+  DEF: undefined
+KEY: "maintenance.control_center"
+  EN: null
+  AR: "مركز تحكم الصيانة"
+  KU: null
+  DEF: "Maintenance Control Center"
+KEY: "maintenance.details_actions"
+  EN: null
+  AR: "التفاصيل والإجراءات"
+  KU: null
+  DEF: "Request Details & Actions"
+KEY: "maintenance.error.approve"
+  EN: null
+  AR: "تعذر الموافقة على عرض السعر"
+  KU: null
+  DEF: "Failed to approve quote"
+KEY: "maintenance.error.fetch"
+  EN: null
+  AR: "تعذر جلب قائمة الانتظار"
+  KU: null
+  DEF: "Failed to fetch queue"
+KEY: "maintenance.manage_schedule"
+  EN: null
+  AR: "إدارة الجدول الزمني"
+  KU: null
+  DEF: undefined
+KEY: "maintenance.no_requests"
+  EN: null
+  AR: "لا توجد طلبات صيانة نشطة حالياً."
+  KU: null
+  DEF: "There are no active maintenance requests at this time."
+KEY: "maintenance.pending_quotes"
+  EN: null
+  AR: "عروض الأسعار المعلقة"
+  KU: null
+  DEF: "Pending Quotes"
+KEY: "maintenance.queue_empty"
+  EN: null
+  AR: "قائمة الانتظار فارغة"
+  KU: null
+  DEF: "Queue is empty"
+KEY: "maintenance.review_quote"
+  EN: null
+  AR: "مراجعة عرض السعر"
+  KU: null
+  DEF: undefined
+KEY: "maintenance.subtitle"
+  EN: null
+  AR: "إدارة أوامر العمل وفرز الطلبات ومراجعة عروض الأسعار"
+  KU: null
+  DEF: "Manage work orders, triage requests, and review quotes"
+KEY: "maintenance.triage"
+  EN: null
+  AR: "فرز / تحديد الأولويات"
+  KU: null
+  DEF: undefined
+KEY: "maintenance.view_work_order"
+  EN: null
+  AR: "عرض أمر العمل"
+  KU: null
+  DEF: undefined
+KEY: "maintenance.wo"
+  EN: null
+  AR: "أمر العمل:"
+  KU: null
+  DEF: "WO:"
+
+================== CATEGORY: nav (1) ==================
+KEY: "nav.portfolio"
+  EN: null
+  AR: "المحفظة"
+  KU: null
+  DEF: undefined
+
+================== CATEGORY: owner (1) ==================
+KEY: "owner.portfolio_properties"
+  EN: null
+  AR: "عقارات المحفظة"
+  KU: null
+  DEF: undefined
+
+================== CATEGORY: property (15) ==================
+KEY: "property.health"
+  EN: null
+  AR: "صحة العقار"
+  KU: null
+  DEF: undefined
+KEY: "property.status.active"
+  EN: null
+  AR: "نشط"
+  KU: null
+  DEF: undefined
+KEY: "property.status.occupied"
+  EN: null
+  AR: "مشغول"
+  KU: null
+  DEF: undefined
+KEY: "property.status.pending"
+  EN: null
+  AR: "قيد الانتظار"
+  KU: null
+  DEF: undefined
+KEY: "property.status.vacant"
+  EN: null
+  AR: "شاغر"
+  KU: null
+  DEF: undefined
+KEY: "property.type.apartment_short"
+  EN: null
+  AR: "شقة"
+  KU: null
+  DEF: undefined
+KEY: "property.type.commercial_short"
+  EN: null
+  AR: "تجاري"
+  KU: null
+  DEF: undefined
+KEY: "property.type.industrial_short"
+  EN: null
+  AR: "صناعي"
+  KU: null
+  DEF: undefined
+KEY: "property.type.label"
+  EN: null
+  AR: "نوع العقار"
+  KU: null
+  DEF: undefined
+KEY: "property.type.villa_short"
+  EN: null
+  AR: "فيلا"
+  KU: null
+  DEF: undefined
+KEY: "property.error.owner_id_required"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Actual Owner User ID is required when selecting Individual."
+KEY: "property.error.company_id_required"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Actual Owner Company ID is required when selecting Company."
+KEY: "property.currency_label"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "دراوی مامەڵە (Currency)"
+KEY: "property.map_location"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Select on Map"
+KEY: "property.map_hint"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Click on the map to pin the exact location of the property."
+
+================== CATEGORY: status (12) ==================
+KEY: "status.completed_text"
+  EN: null
+  AR: "مكتمل"
+  KU: null
+  DEF: undefined
+KEY: "status.critical_text"
+  EN: null
+  AR: "حرج"
+  KU: null
+  DEF: undefined
+KEY: "status.high_text"
+  EN: null
+  AR: "عالي"
+  KU: null
+  DEF: undefined
+KEY: "status.low_text"
+  EN: null
+  AR: "منخفض"
+  KU: null
+  DEF: undefined
+KEY: "status.medium_text"
+  EN: null
+  AR: "متوسط"
+  KU: null
+  DEF: undefined
+KEY: "status.new_request"
+  EN: null
+  AR: "طلب جديد"
+  KU: null
+  DEF: "NEW REQUEST"
+KEY: "status.quote_ready"
+  EN: null
+  AR: "عرض السعر جاهز"
+  KU: null
+  DEF: "QUOTE READY"
+KEY: "status.triaged"
+  EN: null
+  AR: "تم الفرز"
+  KU: null
+  DEF: "TRIAGED"
+KEY: "status.triaged_text"
+  EN: null
+  AR: "تم الفرز"
+  KU: null
+  DEF: undefined
+KEY: "status.work_order"
+  EN: null
+  AR: "أمر العمل"
+  KU: null
+  DEF: "WORK ORDER"
+KEY: "status.work_order_created"
+  EN: null
+  AR: "تم إنشاء أمر عمل"
+  KU: null
+  DEF: undefined
+KEY: "status.verified"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Verified"
+
+================== CATEGORY: tenant (18) ==================
+KEY: "tenant.action_required"
+  EN: null
+  AR: "مطلوب إجراء لدورة الدفع الحالية"
+  KU: null
+  DEF: undefined
+KEY: "tenant.due"
+  EN: null
+  AR: "المستحق:"
+  KU: null
+  DEF: undefined
+KEY: "tenant.error.lease"
+  EN: null
+  AR: "تعذر الحصول على تفاصيل العقد"
+  KU: null
+  DEF: undefined
+KEY: "tenant.mock.paid"
+  EN: null
+  AR: "تم الدفع"
+  KU: null
+  DEF: undefined
+KEY: "tenant.mock.rent"
+  EN: null
+  AR: "إيجار هذا الشهر"
+  KU: null
+  DEF: undefined
+KEY: "tenant.next_cycle"
+  EN: null
+  AR: "الدورة القادمة"
+  KU: null
+  DEF: undefined
+KEY: "tenant.no_lease"
+  EN: null
+  AR: "ليس لديك عقد نشط حالياً."
+  KU: null
+  DEF: undefined
+KEY: "tenant.depositRequired"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Required"
+KEY: "tenant.depositCollected"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Collected"
+KEY: "tenant.depositHeld"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Held (Escrow)"
+KEY: "tenant.depositReleased"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Released"
+KEY: "tenant.role"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Account Role"
+KEY: "tenant.pendingSignature"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Awaiting Your Acceptance"
+KEY: "tenant.expired"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Expired"
+KEY: "tenant.acceptLease"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Accept Lease"
+KEY: "tenant.paymentStatus"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Status:"
+KEY: "tenant.utilityBills"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Utility Bills"
+KEY: "tenant.dashboard.my_applications"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "My Rental Applications"
+
+================== CATEGORY: time (6) ==================
+KEY: "time.aug"
+  EN: null
+  AR: "أغسطس"
+  KU: null
+  DEF: undefined
+KEY: "time.jul"
+  EN: null
+  AR: "يوليو"
+  KU: null
+  DEF: undefined
+KEY: "time.jun"
+  EN: null
+  AR: "يونيو"
+  KU: null
+  DEF: undefined
+KEY: "time.may"
+  EN: null
+  AR: "مايو"
+  KU: null
+  DEF: undefined
+KEY: "time.oct"
+  EN: null
+  AR: "أكتوبر"
+  KU: null
+  DEF: undefined
+KEY: "time.sep"
+  EN: null
+  AR: "سبتمبر"
+  KU: null
+  DEF: undefined
+
+================== CATEGORY: vendor (19) ==================
+KEY: "vendor.all_caught_up"
+  EN: null
+  AR: "لا توجد أوامر عمل جديدة"
+  KU: null
+  DEF: undefined
+KEY: "vendor.assigned_title"
+  EN: null
+  AR: "أوامر العمل المعينة"
+  KU: null
+  DEF: undefined
+KEY: "vendor.duration_placeholder"
+  EN: null
+  AR: "مثال: يومين"
+  KU: null
+  DEF: undefined
+KEY: "vendor.error.fetch"
+  EN: null
+  AR: "تعذر الحصول على الطلبات المحددة"
+  KU: null
+  DEF: undefined
+KEY: "vendor.failed_quote"
+  EN: null
+  AR: "فشل في تقديم عرض السعر"
+  KU: null
+  DEF: undefined
+KEY: "vendor.fees"
+  EN: null
+  AR: "رسوم إضافية"
+  KU: null
+  DEF: undefined
+KEY: "vendor.id"
+  EN: null
+  AR: "رقم الفني:"
+  KU: null
+  DEF: "Vendor ID:"
+KEY: "vendor.loading_assignments"
+  EN: null
+  AR: "جاري تحميل أوامر العمل..."
+  KU: null
+  DEF: undefined
+KEY: "vendor.mark_completed"
+  EN: null
+  AR: "وضع علامة مكتمل"
+  KU: null
+  DEF: undefined
+KEY: "vendor.material_cost"
+  EN: null
+  AR: "تكلفة المواد"
+  KU: null
+  DEF: undefined
+KEY: "vendor.no_assignments"
+  EN: null
+  AR: "لا توجد مهام معينة"
+  KU: null
+  DEF: undefined
+KEY: "vendor.no_requests"
+  EN: null
+  AR: "ليس لديك طلبات صيانة نشطة حالياً."
+  KU: null
+  DEF: undefined
+KEY: "vendor.notes_placeholder"
+  EN: null
+  AR: "تفاصيل إضافية..."
+  KU: null
+  DEF: undefined
+KEY: "vendor.refresh"
+  EN: null
+  AR: "تحديث"
+  KU: null
+  DEF: undefined
+KEY: "vendor.submit_quote"
+  EN: null
+  AR: "تقديم عرض سعر"
+  KU: null
+  DEF: undefined
+KEY: "vendor.total"
+  EN: null
+  AR: "إجمالي العرض"
+  KU: null
+  DEF: undefined
+KEY: "vendor.language_selector"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Localization Navigator"
+KEY: "vendor.localization_title"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ڕێکخستنی زمان و ناوچە / Localization & Regional Preferences"
+KEY: "vendor.localization_sub"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Select your preferred operational language and layout direction"
+
+================== CATEGORY: workspace (1) ==================
+KEY: "workspace.context"
+  EN: null
+  AR: "مساحات العمل"
+  KU: null
+  DEF: "Workspaces"
+
+================== CATEGORY: phrases (115) ==================
+KEY: "Marketplace"
+  EN: null
+  AR: "السوق"
+  KU: "بازاڕ"
+  DEF: undefined
+KEY: "Workspace Context"
+  EN: null
+  AR: "مساحات العمل"
+  KU: null
+  DEF: undefined
+KEY: "Buyer"
+  EN: null
+  AR: "مشتري"
+  KU: "کڕیار"
+  DEF: undefined
+KEY: "Accountant"
+  EN: null
+  AR: "محاسب"
+  KU: "ژمێریار"
+  DEF: undefined
+KEY: "Maintenance"
+  EN: null
+  AR: "الصيانة"
+  KU: "چاکسازی"
+  DEF: undefined
+KEY: "Portfolio"
+  EN: null
+  AR: "المحفظة"
+  KU: "پۆرتفۆلیۆ"
+  DEF: undefined
+KEY: "Platform Admin"
+  EN: null
+  AR: "مدير المنصة"
+  KU: "بەڕێوەبەری پلاتفۆرم"
+  DEF: undefined
+KEY: "Integrations"
+  EN: null
+  AR: "التكاملات"
+  KU: "بەستەرەکان"
+  DEF: undefined
+KEY: "AI Autopilot"
+  EN: null
+  AR: "الطيار الآلي الذكي"
+  KU: "خۆفڕی ژیری دەستکرد"
+  DEF: undefined
+KEY: "Total Asset Value"
+  EN: null
+  AR: "إجمالي قيمة الأصول"
+  KU: "کۆی بەهای سامانەکان"
+  DEF: undefined
+KEY: "Annual Yield"
+  EN: null
+  AR: "العائد السنوي"
+  KU: "داهاتی ساڵانە"
+  DEF: undefined
+KEY: "Active Units"
+  EN: null
+  AR: "الوحدات النشطة"
+  KU: "یەکە چالاکەکان"
+  DEF: undefined
+KEY: "Vacancy Rate"
+  EN: null
+  AR: "معدل الشغور"
+  KU: "ڕێژەی بەتاڵی"
+  DEF: undefined
+KEY: "Portfolio Analytics"
+  EN: null
+  AR: "تحليلات المحفظة"
+  KU: "شیکارییەکانی پۆرتفۆلیۆ"
+  DEF: undefined
+KEY: "Asset performance and investment overview"
+  EN: null
+  AR: "أداء الأصول ونظرة عامة على الاستثمار"
+  KU: "ئەدای سامانەکان و پوختەی وەبەرهێنان"
+  DEF: undefined
+KEY: "Analytics Dashboard rendering foundation"
+  EN: null
+  AR: "أساسيات عرض لوحة تحليلات المحفظة"
+  KU: "ناوەندی شیکارییەکان و بەڕێوەبردنی پۆرتفۆلیۆ"
+  DEF: undefined
+KEY: "IQD"
+  EN: null
+  AR: "د.ع"
+  KU: "د.ع"
+  DEF: undefined
+KEY: "View Details"
+  EN: null
+  AR: "عرض التفاصيل"
+  KU: "بینینی وردەکارییەکان"
+  DEF: undefined
+KEY: "Today, 10:00 AM"
+  EN: null
+  AR: "اليوم، ١٠:٠٠ ص"
+  KU: "ئەمڕۆ، ١٠:٠٠ بەیانی"
+  DEF: undefined
+KEY: "Maintenance requested by Company Admin"
+  EN: null
+  AR: "طلب صيانة مقدم من مدير الشركة"
+  KU: "داواکاری چاکسازی لەلایەن بەڕێوەبەری کۆمپانیاوە نێردرا"
+  DEF: "Maintenance requested by Company Admin"
+KEY: "Oct 12, 2023"
+  EN: null
+  AR: "١٢ أكتوبر ٢٠٢٣"
+  KU: "١٢ی تشرینی یەکەمی ٢٠٢٣"
+  DEF: undefined
+KEY: "Management Agreement Active"
+  EN: null
+  AR: "اتفاقية الإدارة نشطة"
+  KU: "ڕێککەوتنی بەڕێوەبردن چالاکە"
+  DEF: "Management Agreement Active"
+KEY: "Title Deed (Verified)"
+  EN: null
+  AR: "سند الملكية (موثق)"
+  KU: "تاپۆ (پشتڕاستکراوەتەوە)"
+  DEF: undefined
+KEY: "Floor Plan PDF"
+  EN: null
+  AR: "مخطط الطابق PDF"
+  KU: "نەخشەی نهۆم"
+  DEF: undefined
+KEY: "Previous Lease (Expired)"
+  EN: null
+  AR: "عقد الإيجار السابق (منتهي)"
+  KU: "گرێبەستی پێشوو (بەسەرچووە)"
+  DEF: undefined
+KEY: "Vacant"
+  EN: null
+  AR: "شاغر"
+  KU: "بەتاڵ"
+  DEF: undefined
+KEY: "Real-World Infrastructure & External APIs"
+  EN: null
+  AR: "البنية التحتية الحقيقية والواجهات البرمجية الخارجية"
+  KU: "ژێرخانی ژینگەی کار و بەستەرە دەرەکییەکان"
+  DEF: undefined
+KEY: "Providers"
+  EN: null
+  AR: "مقدمو الخدمات"
+  KU: "دابینکەرەکان"
+  DEF: undefined
+KEY: "Recent Webhook Events"
+  EN: null
+  AR: "أحداث الويب هوك الأخيرة"
+  KU: "دوایین ڕووداوەکانی وێبهووک"
+  DEF: "Recent Webhook Events"
+KEY: "Configure Keys"
+  EN: null
+  AR: "تهيئة المفاتيح"
+  KU: "ڕێکخستنی کلیلەکان"
+  DEF: undefined
+KEY: "Manage Settings"
+  EN: null
+  AR: "إدارة الإعدادات"
+  KU: "بەڕێوەبردنی ڕێکخستنەکان"
+  DEF: undefined
+KEY: "EMAIL NOTIFICATIONS"
+  EN: null
+  AR: "إشعارات البريد الإلكتروني"
+  KU: "ئاگادارکردنەوەکانی ئیمەیڵ"
+  DEF: undefined
+KEY: "SMS PROVIDER"
+  EN: null
+  AR: "مزود الرسائل النصية القصيرة"
+  KU: "دابینکەری کورتەنامە (SMS)"
+  DEF: undefined
+KEY: "E-SIGNATURE"
+  EN: null
+  AR: "التوقيع الإلكتروني"
+  KU: "واژۆی ئەلیکترۆنی"
+  DEF: undefined
+KEY: "CONFIGURED"
+  EN: null
+  AR: "مهيأ"
+  KU: "ڕێکخراوە"
+  DEF: undefined
+KEY: "Signature Validation Active"
+  EN: null
+  AR: "التحقق من التوقيع نشط"
+  KU: "پشکنینی واژۆ چالاکە"
+  DEF: "Signature Validation Active"
+KEY: "Provider"
+  EN: null
+  AR: "المزود"
+  KU: "دابینکەر"
+  DEF: "Provider"
+KEY: "Event Type"
+  EN: null
+  AR: "نوع الحدث"
+  KU: "جۆری ڕووداو"
+  DEF: "Event Type"
+KEY: "Event ID"
+  EN: null
+  AR: "معرف الحدث"
+  KU: "ناسنامەی ڕووداو"
+  DEF: "Event ID"
+KEY: "Timestamp"
+  EN: null
+  AR: "الطابع الزمني"
+  KU: "کاتی ڕووداو"
+  DEF: "Timestamp"
+KEY: "INVALID_SIGNATURE"
+  EN: null
+  AR: "توقيع غير صالح"
+  KU: "واژۆی نادروست"
+  DEF: "INVALID_SIGNATURE"
+KEY: "PROCESSED"
+  EN: null
+  AR: "تمت المعالجة"
+  KU: "جێبەجێکراوە"
+  DEF: "PROCESSED"
+KEY: "Isolated Development Mode"
+  EN: null
+  AR: "وضع التطوير المنعزل"
+  KU: "دۆخی تاقیکردنەوەی ناوخۆیی"
+  DEF: "Isolated Development Mode"
+KEY: "Maintenance Vendor"
+  EN: null
+  AR: "مقاول صيانة"
+  KU: "خزمەتگوزار (وەستا / دابینکەر)"
+  DEF: undefined
+KEY: "Role:"
+  EN: null
+  AR: "الدور:"
+  KU: "ڕۆڵ:"
+  DEF: undefined
+KEY: "Capability:"
+  EN: null
+  AR: "القدرة:"
+  KU: "توانست:"
+  DEF: undefined
+KEY: "Plumbing"
+  EN: null
+  AR: "السباكة"
+  KU: "بۆڕیکاری و ئاوەڕۆ"
+  DEF: undefined
+KEY: "Electrical"
+  EN: null
+  AR: "الكهرباء"
+  KU: "کارەبا"
+  DEF: undefined
+KEY: "HVAC"
+  EN: null
+  AR: "التكييف والتهوية"
+  KU: "گەرمکەرەوە و فێنککەرەوە"
+  DEF: undefined
+KEY: "Appliances"
+  EN: null
+  AR: "الأجهزة المنزلية"
+  KU: "ئامێرە کارەباییەکان"
+  DEF: undefined
+KEY: "Structural"
+  EN: null
+  AR: "الأبواب والنوافذ والجدران"
+  KU: "دەرگا، پەنجەرە، دیوارەکان"
+  DEF: undefined
+KEY: "Pest Control"
+  EN: null
+  AR: "مكافحة الحشرات"
+  KU: "قڕکەر و مێروو"
+  DEF: undefined
+KEY: "Other"
+  EN: null
+  AR: "أخرى"
+  KU: "هیتر"
+  DEF: undefined
+KEY: "Low"
+  EN: null
+  AR: "منخفض"
+  KU: "نزم"
+  DEF: undefined
+KEY: "Medium"
+  EN: null
+  AR: "متوسط"
+  KU: "مامناوەند"
+  DEF: undefined
+KEY: "High"
+  EN: null
+  AR: "مرتفع"
+  KU: "بەرز"
+  DEF: undefined
+KEY: "Emergency"
+  EN: null
+  AR: "طوارئ"
+  KU: "فریاگوزاری"
+  DEF: undefined
+KEY: "Submit Request"
+  EN: null
+  AR: "إرسال الطلب"
+  KU: "ناردنی داواکاری"
+  DEF: undefined
+KEY: "Total Revenue"
+  EN: null
+  AR: "إجمالي الإيرادات"
+  KU: "کۆی داهات"
+  DEF: undefined
+KEY: "Total Expenses"
+  EN: null
+  AR: "إجمالي المصروفات"
+  KU: "کۆی خەرجییەکان"
+  DEF: undefined
+KEY: "Pending Invoices"
+  EN: null
+  AR: "الفواتير المعلقة"
+  KU: "پسوڵە هەڵپەسێردراوەکان"
+  DEF: undefined
+KEY: "Reconciliation Status"
+  EN: null
+  AR: "حالة المطابقة"
+  KU: "پێداچوونەوە و هاوسەنگی"
+  DEF: undefined
+KEY: "Account"
+  EN: null
+  AR: "الحساب"
+  KU: "هەژمار"
+  DEF: undefined
+KEY: "Debit"
+  EN: null
+  AR: "مدين"
+  KU: "قەرزدار (مەدین)"
+  DEF: undefined
+KEY: "Credit"
+  EN: null
+  AR: "دائن"
+  KU: "قەرزدەر (دائین)"
+  DEF: undefined
+KEY: "Post New Journal Entry"
+  EN: null
+  AR: "ترحيل قيد يومية جديد"
+  KU: "تۆمارکردنی قەیدی ژمێریاری"
+  DEF: undefined
+KEY: "Vendor Dashboard"
+  EN: null
+  AR: null
+  KU: "داشبۆردی دابینکەری خزمەتگوزاری"
+  DEF: undefined
+KEY: "Property Owner"
+  EN: null
+  AR: null
+  KU: "خاوەنی موڵک"
+  DEF: undefined
+KEY: "Real Estate Company"
+  EN: null
+  AR: null
+  KU: "کۆمپانیای موڵک"
+  DEF: undefined
+KEY: "Tenant"
+  EN: null
+  AR: null
+  KU: "کرێچی"
+  DEF: undefined
+KEY: "Buyer Workspace"
+  EN: null
+  AR: null
+  KU: "پێگەی کاری کڕیار"
+  DEF: undefined
+KEY: "No Data Available"
+  EN: null
+  AR: null
+  KU: "هیچ زانیارییەک لەم کاتەدا بەردەست نییە"
+  DEF: undefined
+KEY: "Cancel"
+  EN: null
+  AR: null
+  KU: "هەڵوەشاندنەوە"
+  DEF: undefined
+KEY: "Back"
+  EN: null
+  AR: null
+  KU: "گەڕانەوە"
+  DEF: undefined
+KEY: "Next"
+  EN: null
+  AR: null
+  KU: "دواتر"
+  DEF: undefined
+KEY: "Submit"
+  EN: null
+  AR: null
+  KU: "ناردن"
+  DEF: undefined
+KEY: "Save"
+  EN: null
+  AR: null
+  KU: "پاشەکەوتکردن"
+  DEF: undefined
+KEY: "Continue"
+  EN: null
+  AR: null
+  KU: "بەردەوامبە"
+  DEF: undefined
+KEY: "Refresh"
+  EN: null
+  AR: null
+  KU: "نوێکردنەوە"
+  DEF: undefined
+KEY: "Type"
+  EN: null
+  AR: null
+  KU: "جۆری موڵک"
+  DEF: undefined
+KEY: "Name"
+  EN: null
+  AR: null
+  KU: "ناو"
+  DEF: undefined
+KEY: "Address"
+  EN: null
+  AR: null
+  KU: "ناونیشان"
+  DEF: undefined
+KEY: "City"
+  EN: null
+  AR: null
+  KU: "شار"
+  DEF: undefined
+KEY: "Status"
+  EN: null
+  AR: null
+  KU: "دۆخ"
+  DEF: undefined
+KEY: "Date"
+  EN: null
+  AR: null
+  KU: "بەروار"
+  DEF: undefined
+KEY: "Reference"
+  EN: null
+  AR: null
+  KU: "ژمارەی ئاماژە"
+  DEF: undefined
+KEY: "Notes"
+  EN: null
+  AR: null
+  KU: "تێبینییەکان"
+  DEF: undefined
+KEY: "Total"
+  EN: null
+  AR: null
+  KU: "کۆی گشتی"
+  DEF: undefined
+KEY: "Size"
+  EN: null
+  AR: null
+  KU: "ڕووبەر"
+  DEF: undefined
+KEY: "Health"
+  EN: null
+  AR: null
+  KU: "تەندروستی"
+  DEF: undefined
+KEY: "Units"
+  EN: null
+  AR: null
+  KU: "یەکەکان"
+  DEF: undefined
+KEY: "Active"
+  EN: null
+  AR: null
+  KU: "چالاک"
+  DEF: undefined
+KEY: "Draft"
+  EN: null
+  AR: null
+  KU: "ڕەشنووس"
+  DEF: undefined
+KEY: "DRAFT"
+  EN: null
+  AR: null
+  KU: "ڕەشنووس"
+  DEF: undefined
+KEY: "ACTIVE"
+  EN: null
+  AR: null
+  KU: "چالاک"
+  DEF: undefined
+KEY: "VACANT"
+  EN: null
+  AR: null
+  KU: "بەتاڵ"
+  DEF: undefined
+KEY: "UNKNOWN"
+  EN: null
+  AR: null
+  KU: "نەزانراو"
+  DEF: undefined
+KEY: "Unknown"
+  EN: null
+  AR: null
+  KU: "نەزانراو"
+  DEF: undefined
+KEY: "USD"
+  EN: null
+  AR: null
+  KU: "$"
+  DEF: undefined
+KEY: "Sign Out"
+  EN: null
+  AR: null
+  KU: "چوونەدەرەوە"
+  DEF: undefined
+KEY: "Log Out"
+  EN: null
+  AR: null
+  KU: "دەرچوون"
+  DEF: undefined
+KEY: "Trust & Compliance"
+  EN: null
+  AR: null
+  KU: "متمانە و پابەندبوون"
+  DEF: undefined
+KEY: "Business Intelligence"
+  EN: null
+  AR: null
+  KU: "زیرەکی کار و بازرگانی"
+  DEF: undefined
+KEY: "CRM & Marketplace"
+  EN: null
+  AR: null
+  KU: "بەڕێوەبردنی پەیوەندی کڕیاران و بازاڕ"
+  DEF: undefined
+KEY: "Property Passport"
+  EN: null
+  AR: null
+  KU: "پاسپۆرتی موڵک"
+  DEF: undefined
+KEY: "Command Center"
+  EN: null
+  AR: null
+  KU: "ناوەندی کۆنترۆڵ"
+  DEF: undefined
+KEY: "Overview"
+  EN: null
+  AR: null
+  KU: "پوختە"
+  DEF: undefined
+KEY: "Tasks"
+  EN: null
+  AR: null
+  KU: "ئەرکەکان"
+  DEF: undefined
+KEY: "Documents"
+  EN: null
+  AR: null
+  KU: "بەڵگەنامەکان"
+  DEF: undefined
+KEY: "Timeline"
+  EN: null
+  AR: null
+  KU: "مێژووی ڕووداوەکان"
+  DEF: undefined
+KEY: "Verified"
+  EN: null
+  AR: null
+  KU: "پشتڕاستکراوەتەوە"
+  DEF: undefined
+KEY: "Pending"
+  EN: null
+  AR: null
+  KU: "چاوەڕوانکراو"
+  DEF: undefined
+KEY: "Completed"
+  EN: null
+  AR: null
+  KU: "تەواوکراوە"
+  DEF: undefined
+KEY: "Cancelled"
+  EN: null
+  AR: null
+  KU: "هەڵوەشێنراوەتەوە"
+  DEF: undefined
+KEY: "English"
+  EN: null
+  AR: null
+  KU: "English (ئینگلیزی)"
+  DEF: undefined
+
+================== CATEGORY: No active maintenance requests (1) ==================
+KEY: "No active maintenance requests."
+  EN: null
+  AR: "لا توجد طلبات صيانة نشطة."
+  KU: "هیچ داواکارییەکی چاکسازی چالاک نییە."
+  DEF: undefined
+
+================== CATEGORY: Authentication is not configured (1) ==================
+KEY: "Authentication is not configured. Select a test persona to view the UI."
+  EN: null
+  AR: "المصادقة غير مهيأة. اختر شخصية اختبار لعرض واجهة المستخدم."
+  KU: "چوونەژوورەوەی ڕاستەقینە دیاری نەکراوە. کەسایەتییەکی تاقیکاری هەڵبژێرە بۆ گەڕان لە بەشەکانی پلاتفۆرمدا."
+  DEF: "Authentication is not configured. Select a test persona to view the UI."
+
+================== CATEGORY: Operations dependent on this provider have been safely paused (1) ==================
+KEY: "Operations dependent on this provider have been safely paused. No data has been lost or fabricated."
+  EN: null
+  AR: "تم إيقاف العمليات المعتمدة على هذا المزود بأمان. لم تفقد أي بيانات."
+  KU: "کردارەکانی پەیوەست بەم دابینکەرە بە پارێزراوی ڕاگیراون. هیچ زانیارییەک لەدەست نەچووە."
+  DEF: undefined
+
+================== CATEGORY: Reference No (1) ==================
+KEY: "Reference No."
+  EN: null
+  AR: "الرقم المرجعي"
+  KU: "ژمارەی ئاماژە"
+  DEF: undefined
+
+================== CATEGORY: Manage service requests, quotes, and work orders (1) ==================
+KEY: "Manage service requests, quotes, and work orders."
+  EN: null
+  AR: null
+  KU: "بەڕێوەبردنی داواکارییەکانی خزمەتگوزاری، نرخدان و فەرمانەکانی کار."
+  DEF: undefined
+
+================== CATEGORY: This feature is currently unavailable or pending integration (1) ==================
+KEY: "This feature is currently unavailable or pending integration."
+  EN: null
+  AR: null
+  KU: "ئەم تایبەتمەندییە لە ئێستادا بەردەست نییە یان چاوەڕوانی یەکخستنە."
+  DEF: undefined
+
+================== CATEGORY: This module has not been fully configured with real data sources yet (1) ==================
+KEY: "This module has not been fully configured with real data sources yet."
+  EN: null
+  AR: null
+  KU: "ئەم بەشە هێشتا بە تەواوی دانەمەزراوە لەگەڵ داتابەیسی سەرەکی."
+  DEF: undefined
+
+================== CATEGORY: Loading (1) ==================
+KEY: "Loading..."
+  EN: null
+  AR: null
+  KU: "باردەکرێت..."
+  DEF: undefined
+
+================== CATEGORY: Loading properties (1) ==================
+KEY: "Loading properties..."
+  EN: null
+  AR: null
+  KU: "موڵکەکان باردەکرێن..."
+  DEF: undefined
+
+================== CATEGORY: No properties found in your portfolio (1) ==================
+KEY: "No properties found in your portfolio."
+  EN: null
+  AR: null
+  KU: "هیچ موڵکێک لە پۆرتفۆلیۆکەتدا نەدۆزرایەوە."
+  DEF: undefined
+
+================== CATEGORY: No AI insights available at this time (1) ==================
+KEY: "No AI insights available at this time."
+  EN: null
+  AR: null
+  KU: "لە ئێستادا هیچ تێڕوانینێکی ژیری دەستکرد بەردەست نییە."
+  DEF: undefined
+
+================== CATEGORY: AI insights do not execute actions automatically (1) ==================
+KEY: "AI insights do not execute actions automatically."
+  EN: null
+  AR: null
+  KU: "تێڕوانینەکانی ژیری دەستکرد کرداری خۆکار ئەنجام نادەن بەبێ پەسەندکردنی تۆ."
+  DEF: undefined
+
+================== CATEGORY: settlements (9) ==================
+KEY: "settlements.missingRef"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "External confirmation reference is mandatory for COMPLETED payouts (Internal Finance Record only)."
+KEY: "settlements.financeQueue"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Payout Requests Queue"
+KEY: "settlements.financeQueueDesc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Manage owner payouts. External API transfers disabled; manual internal recording only."
+KEY: "settlements.id"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "ID"
+KEY: "settlements.amount"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Amount (IQD)"
+KEY: "settlements.emptyQueue"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "No payout requests found."
+KEY: "settlements.refPlaceholder"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Bank Ref # (Required)"
+KEY: "settlements.markComplete"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Mark Completed"
+KEY: "settlements.ref"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Ref"
+
+================== CATEGORY: common (10) ==================
+KEY: "common.search"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Search..."
+KEY: "common.reject"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Reject"
+KEY: "common.close"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Close"
+KEY: "common.language"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Language"
+KEY: "common.refresh"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Refresh"
+KEY: "common.date"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Timestamp"
+KEY: "common.status"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Status"
+KEY: "common.fee"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Fee"
+KEY: "common.net"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Net"
+KEY: "common.error"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "An error occurred"
+
+================== CATEGORY: admin (1) ==================
+KEY: "admin.email_required"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Please enter official admin email"
+
+================== CATEGORY: autopilot (39) ==================
+KEY: "autopilot.approved_success"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Action proposal approved successfully."
+KEY: "autopilot.rejected_success"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Action proposal rejected."
+KEY: "autopilot.executed_success"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Action successfully executed and verified."
+KEY: "autopilot.run_auto_eligible"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Execute Auto-Eligible"
+KEY: "autopilot.active_automations"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Active Automations"
+KEY: "autopilot.advisory_signals"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Advisory Signals"
+KEY: "autopilot.total_actions"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Execution History"
+KEY: "autopilot.tab_approvals"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Pending Approvals"
+KEY: "autopilot.tab_automations"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Automations & Ready"
+KEY: "autopilot.tab_advisory"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Advisory Recommendations"
+KEY: "autopilot.tab_history"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Execution History & Audit"
+KEY: "autopilot.tab_policies"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Policy & Ceilings"
+KEY: "autopilot.no_pending"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "No Pending Approvals"
+KEY: "autopilot.no_pending_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "All operational actions have either been reviewed or executed under current policy boundaries."
+KEY: "autopilot.inspect"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Review Payload"
+KEY: "autopilot.approve_action"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Sign & Approve"
+KEY: "autopilot.no_automations"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "No Automations Currently Queued"
+KEY: "autopilot.no_automations_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Autonomous low-risk tasks will appear here when triggered by operational schedules and policy checks."
+KEY: "autopilot.execute_now"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Execute Now"
+KEY: "autopilot.no_advisory"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "No Advisory Insights"
+KEY: "autopilot.no_advisory_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Advisory recommendations (Class A) will be generated as portfolio intelligence and market data are refreshed."
+KEY: "autopilot.action_type"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Action Type"
+KEY: "autopilot.class"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Class"
+KEY: "autopilot.reference"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Execution Ref"
+KEY: "autopilot.details"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Details"
+KEY: "autopilot.no_history"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "No completed or historical action executions found."
+KEY: "autopilot.policy_title"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Server-Enforced Autonomy Policy"
+KEY: "autopilot.policy_desc"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Autonomous Class B execution is strictly constrained by server-side policy thresholds, quiet hours, and category gating."
+KEY: "autopilot.spending_ceiling"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Financial Execution Limit"
+KEY: "autopilot.quiet_hours"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Quiet Hours Window"
+KEY: "autopilot.autonomy_status"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Autonomous Engine State"
+KEY: "autopilot.governance_version"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Active Policy Version"
+KEY: "autopilot.confirm_approval"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Confirm Human Sign-off"
+KEY: "autopilot.inspect_action"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Action Specification & Payload"
+KEY: "autopilot.recommendation"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Recommendation"
+KEY: "autopilot.rationale"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Operational Rationale"
+KEY: "autopilot.payload"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Proposed Action Payload (Immutable)"
+KEY: "autopilot.confirm_sign"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "I Authorize & Sign"
+KEY: "autopilot.proceed_to_approve"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Proceed to Sign"
+
+================== CATEGORY: lease (1) ==================
+KEY: "lease.tenant"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Tenant"
+
+================== CATEGORY: marketplace (34) ==================
+KEY: "marketplace.insights.schools"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Schools"
+KEY: "marketplace.insights.safety"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Safety"
+KEY: "marketplace.insights.transport"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Transport"
+KEY: "marketplace.insights.shopping"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Shopping"
+KEY: "marketplace.insights.quietness"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Quietness"
+KEY: "marketplace.ai_search.placeholder"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Try '3-bedroom villa in Erbil under $1500'"
+KEY: "marketplace.ai_search.toggle"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Toggle AI Search"
+KEY: "marketplace.action.view_details"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "View Details"
+KEY: "marketplace.comparison.compare_property"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Compare Property"
+KEY: "marketplace.social.viewing"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "people viewing this"
+KEY: "marketplace.social_proof.rare_find"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Rare Find! Highly Demanded"
+KEY: "marketplace.social_proof.viewing"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "people are viewing this right now. Listed"
+KEY: "marketplace.social_proof.hours_ago"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "hours ago."
+KEY: "marketplace.insights.neighborhood"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Neighborhood Insights"
+KEY: "marketplace.scheduler.select_datetime"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Select Date & Time"
+KEY: "marketplace.scheduler.available_days"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Available Days"
+KEY: "marketplace.scheduler.available_times"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Available Times"
+KEY: "marketplace.scheduler.success"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Viewing scheduled for ${selectedDate} at ${selectedTime}. The agent will confirm shortly."
+KEY: "marketplace.scheduler.confirm_viewing"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Confirm Viewing"
+KEY: "marketplace.scheduler.schedule_viewing"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Schedule Viewing"
+KEY: "marketplace.actions.apply_demo_success"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "[DEMO] Mock application submitted! Real applications require a full form."
+KEY: "marketplace.actions.apply_for_rent"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Apply for Rent"
+KEY: "marketplace.comparison.selected"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Selected"
+KEY: "marketplace.comparison.max"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Select up to 3 properties to compare"
+KEY: "marketplace.comparison.clear_all"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Clear all"
+KEY: "marketplace.comparison.compare_now"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Compare Now"
+KEY: "marketplace.comparison.title"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Property Comparison"
+KEY: "marketplace.comparison.features"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Features"
+KEY: "marketplace.comparison.price"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Price"
+KEY: "marketplace.comparison.location"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Location"
+KEY: "marketplace.filters.property_type"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Type"
+KEY: "marketplace.modal.area_label"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "Area"
+KEY: "marketplace.comparison.more"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "more"
+KEY: "marketplace.comparison.empty"
+  EN: null
+  AR: null
+  KU: null
+  DEF: "No properties selected for comparison."

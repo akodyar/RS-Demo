@@ -1,0 +1,32 @@
+[
+  {
+    "id": "appr-01",
+    "ownerId": "user_owner_01",
+    "propertyId": "prop-owner-102",
+    "requesterName": "گروپی ئیمپایەر بۆ خانووبەرە",
+    "requesterRole": "کۆمپانیای بەڕێوەبردن",
+    "action": "تەرخانکردنی بودجەی چاکسازی لە سپلیت",
+    "actionKurdish": "چاکسازی سیستەمی ساردکەرەوە",
+    "relatedEntity": "Villa - Ankawa",
+    "amountIqd": 350000,
+    "riskLevel": "MEDIUM",
+    "reason": "پلەی گەرمای هاوین و کێشەی کۆمپرێسەری ژووری سەرەکی",
+    "createdAt": "پێش ٢ کاتژمێر",
+    "status": "APPROVED"
+  },
+  {
+    "id": "appr-02",
+    "ownerId": "user_owner_01",
+    "propertyId": "prop-owner-103",
+    "requesterName": "کۆمپانیای شار بۆ گەشەپێدان",
+    "requesterRole": "کۆمپانیای بەڕێوەبردن",
+    "action": "بڵاوکردنەوەی گرێبەستی نوێی بەکرێدان",
+    "actionKurdish": "پەسەندکردنی گرێبەستی کرێچی نوێ",
+    "relatedEntity": "Commercial Space - 100m²",
+    "amountIqd": 1800000,
+    "riskLevel": "LOW",
+    "reason": "پێشنیاری بەکرێدانی یەک ساڵە لەلایەن کۆمپانیای تەکنەلۆژی",
+    "createdAt": "دوێنێ",
+    "status": "PENDING"
+  }
+]

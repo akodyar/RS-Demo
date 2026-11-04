@@ -1,0 +1,332 @@
+[
+  {
+    "path": "checklists/CONTROL_TEST_CHECKLIST.md",
+    "sizeBytes": 10958,
+    "sha256": "3a0192a9b015f1b3ac934ea34d8280bb8e189d8eb356b8cc20881724ed30e110"
+  },
+  {
+    "path": "checklists/SCREENSHOT_INDEX.md",
+    "sizeBytes": 6138,
+    "sha256": "f2f0642c09e5bf525c2f6762fb3b7d87f9712111e6b7e06d146dac44a3d0121d"
+  },
+  {
+    "path": "database/DB_FEE_OPERATING_MODEL_INVARIANTS.md",
+    "sizeBytes": 2589,
+    "sha256": "3e16b3c146e1836408e164879bea172471b16b9d75ce3ccf7fc87a9320b0eded"
+  },
+  {
+    "path": "defects/DEFECT_LOG.md",
+    "sizeBytes": 2922,
+    "sha256": "e0c18a1a6805ee9da0c18e1d2c80d5a3bd78ce554536a5668622165940c92a70"
+  },
+  {
+    "path": "EXECUTIVE_SUMMARY.md",
+    "sizeBytes": 2889,
+    "sha256": "dfcacd98291aea456eead7162b9bae264a7725b535c9fdf45c9404ad52190e15"
+  },
+  {
+    "path": "git/DOMAIN_PATCH.diff",
+    "sizeBytes": 151655,
+    "sha256": "7912d96bf11755c8b249354cdbf6d4ca266aa42a6249519b4fa1c8312c4749a5"
+  },
+  {
+    "path": "git/GIT_HEAD.txt",
+    "sizeBytes": 40,
+    "sha256": "a5d9928f7abffb084eac6a1170a73182949f66ab5eac099376da91f4155a966d"
+  },
+  {
+    "path": "git/GIT_STATUS.txt",
+    "sizeBytes": 32534,
+    "sha256": "abe80841fbd5f0cb688d2e7a6d849c174331f1431589f4d2a989a1d6799eab61"
+  },
+  {
+    "path": "logs/BROWSER_CONSOLE_NETWORK.md",
+    "sizeBytes": 1439,
+    "sha256": "a1bafdb1774007e1927bfa14b606696e6f327dc731591a92761bd2a5b16cca90"
+  },
+  {
+    "path": "logs/TEST_LOGS.md",
+    "sizeBytes": 1873,
+    "sha256": "f75b9447335cf180dc8d0268704ab3c816f80448248b0fbb35ddec5ef651fff3"
+  },
+  {
+    "path": "screenshots/admin-fees/01-admin-dashboard-hero.png",
+    "sizeBytes": 452911,
+    "sha256": "beba042ab4d78eba615838406ef2c8b4f8cfd3ce194475e3f46e48d0c61039f2"
+  },
+  {
+    "path": "screenshots/admin-fees/02-admin-settings-overview.png",
+    "sizeBytes": 177306,
+    "sha256": "5595e9a6955aa60df88f4c09a44654484013d4b87d8a3794ba68ebdeb032f3fa"
+  },
+  {
+    "path": "screenshots/admin-fees/03-platform-fee-negative-validation.png",
+    "sizeBytes": 133322,
+    "sha256": "9d709245adaf04837f40b48458c95041ed16b7c4dc60c99dd7134780ce20644e"
+  },
+  {
+    "path": "screenshots/admin-fees/04-platform-fee-exceeds-max-validation.png",
+    "sizeBytes": 134285,
+    "sha256": "ad1194196a7ff94abc3fe0fa98a5065967ccb33d33bc9b4a02b0a98d6c7cfe81"
+  },
+  {
+    "path": "screenshots/admin-fees/05-platform-fee-overprecision-validation.png",
+    "sizeBytes": 134849,
+    "sha256": "f94ae562e5523d36c7f5a1f87d7613c1bcdc90440b05e4094630a9dca6767bb4"
+  },
+  {
+    "path": "screenshots/admin-fees/06-platform-fee-empty-validation.png",
+    "sizeBytes": 130250,
+    "sha256": "7b266dd4fa8d6549cd73b9528bf76d669ca600920aae4e9baa970e111415ee2f"
+  },
+  {
+    "path": "screenshots/admin-fees/07-platform-fee-pending-mutation.png",
+    "sizeBytes": 133181,
+    "sha256": "b3f36ea1e222e2ce8c99110ab7ac4587d8d5f569ecd7adf4265967fad66c02a5"
+  },
+  {
+    "path": "screenshots/admin-fees/08-platform-fee-save-success.png",
+    "sizeBytes": 117135,
+    "sha256": "c2c0974b414ccde0182833f510279f01fdb2d1200b36233387806f7711687930"
+  },
+  {
+    "path": "screenshots/admin-fees/09-platform-fee-persisted-after-reload.png",
+    "sizeBytes": 122315,
+    "sha256": "607663a341c2520332edd0db9b6e023b5d72f4eee633e7d6d386257a6fd259d4"
+  },
+  {
+    "path": "screenshots/admin-fees/10-admin-settings-toggles.png",
+    "sizeBytes": 120993,
+    "sha256": "3ee085536198f6773bada281c258c8c01d0fbac39218e985c6b7468e86520ae9"
+  },
+  {
+    "path": "screenshots/admin-fees/11-fee-applicability-matrix.png",
+    "sizeBytes": 184903,
+    "sha256": "dd71c21557bd9bea16e0f9cb9448af5fb43a0964267dc6c630b0f970292dea0d"
+  },
+  {
+    "path": "screenshots/admin-fees/12-pricing-tiers-overview.png",
+    "sizeBytes": 51758,
+    "sha256": "a08584e915b09c86b6804346e946af72c686beae18182298035924d0996e73c6"
+  },
+  {
+    "path": "screenshots/admin-fees/13-pricing-tier-modal-empty.png",
+    "sizeBytes": 86731,
+    "sha256": "a44284e19238975afe20ac09a9f1387481d445d469e9b985cec3db7741806a42"
+  },
+  {
+    "path": "screenshots/admin-fees/14-pricing-tier-validation-errors.png",
+    "sizeBytes": 93869,
+    "sha256": "cb8ec38c6ed4672a515b8c77a8919711480a25b445353542b48a546050dacdbf"
+  },
+  {
+    "path": "screenshots/admin-fees/15-pricing-tier-filled-valid.png",
+    "sizeBytes": 94113,
+    "sha256": "7e658d2b9a5bfa803fecef19c5235b2fc8ed127fd54df57cb0b632ce890e5c20"
+  },
+  {
+    "path": "screenshots/admin-fees/15b-pricing-tier-modal-dismissed-on-cancel.png",
+    "sizeBytes": 51794,
+    "sha256": "c4302183e05b3c89f270d5622579351977d4d61066b44ef5bd009f938e9b5789"
+  },
+  {
+    "path": "screenshots/admin-fees/16-pricing-tier-created-success.png",
+    "sizeBytes": 103154,
+    "sha256": "3839c19078f1d84f748ad2e826dfceffbf010869d246b00717f7efcf548d9bb5"
+  },
+  {
+    "path": "screenshots/admin-fees/17-pricing-tier-grid-updated.png",
+    "sizeBytes": 58857,
+    "sha256": "333be711554381daf7d4fc519f001b029b97e434d951cd0ffd564168d8851f26"
+  },
+  {
+    "path": "screenshots/admin-fees/18-admin-properties-fee-breakdowns.png",
+    "sizeBytes": 84676,
+    "sha256": "39952997365c7fdf04c93bcc9be537e5f272457937cddc877614c6b28df94530"
+  },
+  {
+    "path": "screenshots/admin-fees/19-property-fee-modal-open.png",
+    "sizeBytes": 149356,
+    "sha256": "5335c0b3e8ebd424898d88b9b3323610509aa6bb2eeb0a37d288be730d8dff12"
+  },
+  {
+    "path": "screenshots/admin-fees/20-property-fee-saved-success.png",
+    "sizeBytes": 154212,
+    "sha256": "75df5ba27b234914ab3ae59a676767090142275b33a17a26b888dc0c57b3da9f"
+  },
+  {
+    "path": "screenshots/financial-regression/01-model-a-fully-managed-fees.png",
+    "sizeBytes": 133853,
+    "sha256": "5c60782f514ba3417eb6ed705e58bbceb32a3fa805ae27778f4d35809fc394f3"
+  },
+  {
+    "path": "screenshots/financial-regression/02-model-b-alpm-null-rent-fee.png",
+    "sizeBytes": 140981,
+    "sha256": "b6fa262c60932ad6212d52ce2ceac54e9d8875668f02d9285152d22239aaa56f"
+  },
+  {
+    "path": "screenshots/financial-regression/03-model-c-agent-operated-platform-only.png",
+    "sizeBytes": 146021,
+    "sha256": "01d586571832ddf523cffdb05b0df2302b3788a08662f2247cf1201bb5c549ea"
+  },
+  {
+    "path": "screenshots/management-choice/01-submission-confirmation-banner.png",
+    "sizeBytes": 34437,
+    "sha256": "92bc4a7411f6f6b00a508d1017f46d3704ddc7e0799f065732c5dfd62a287c66"
+  },
+  {
+    "path": "screenshots/management-choice/02-three-management-options.png",
+    "sizeBytes": 99369,
+    "sha256": "319518412545cd86b87c6d605ddb87a4f8fec4296408d1302a091f6831400211"
+  },
+  {
+    "path": "screenshots/management-choice/03-agent-managed-selected-with-dropdown.png",
+    "sizeBytes": 102329,
+    "sha256": "574f6fc41c171c2acc0dda60fbf961d0bb16c3c3c98b439702288ce548a95767"
+  },
+  {
+    "path": "screenshots/management-choice/04-homehub-managed-selected.png",
+    "sizeBytes": 93239,
+    "sha256": "2eeec3deabd5dc3f30bcf5459517e4b2af66fdf04ecdeda3575a805209bc198f"
+  },
+  {
+    "path": "screenshots/management-choice/05-self-managed-selected.png",
+    "sizeBytes": 93526,
+    "sha256": "38819046347e6e2ba5e0041ed7e6f95d8e61dce3de7d9bb6daa3825d88a4cd28"
+  },
+  {
+    "path": "screenshots/management-choice/05a-self-managed-persisted-after-reload.png",
+    "sizeBytes": 132388,
+    "sha256": "b2fbf4dbc9c976aba5d12f8fa336b0b7a9c85d91a70d3974043195164021fb19"
+  },
+  {
+    "path": "screenshots/management-choice/05b-homehub-managed-persisted-after-reload.png",
+    "sizeBytes": 99847,
+    "sha256": "8e833c4fa9f0b1bd3bc6f944340bcea551bff0eca8b4e053e38eccfd46c98576"
+  },
+  {
+    "path": "screenshots/management-choice/05c-agent-managed-persisted-after-reload.png",
+    "sizeBytes": 99453,
+    "sha256": "cb8dd6e35db39a191a509636c1744ee0f73751351e5c52f4ec795cf9186047b5"
+  },
+  {
+    "path": "screenshots/management-choice/06-preference-saved-success.png",
+    "sizeBytes": 104337,
+    "sha256": "d5d3a65d5d45add0f9f0d1edaaac0c99a8fe046a666a2827187f94f9e24e1d62"
+  },
+  {
+    "path": "screenshots/management-choice/07-owner-portfolio-pending-card.png",
+    "sizeBytes": 11158301,
+    "sha256": "9905ffb969aae7fcaca2cc4c087fa0ff64190a4d0255cb086f36a29f88638791"
+  },
+  {
+    "path": "screenshots/management-choice/08-active-agreement-conflict.png",
+    "sizeBytes": 96526,
+    "sha256": "cf43633674e265c516c9daee87f1afd1eac7eb3a9975182a6aaade0e9f110e1c"
+  },
+  {
+    "path": "screenshots/property-verification/01-add-property-step0-type.png",
+    "sizeBytes": 53790,
+    "sha256": "3f0217a961db1e192c1ed882cce9d42f3b4dfe4c47de35e2c0f8ed48f00ab1cf"
+  },
+  {
+    "path": "screenshots/property-verification/02-add-property-step1-basic-info.png",
+    "sizeBytes": 69416,
+    "sha256": "70eb36d85319be15626ac2954d6f213ddd2bd3a8106f51257adfc0f1faff4c93"
+  },
+  {
+    "path": "screenshots/property-verification/03-add-property-step2-location.png",
+    "sizeBytes": 43533,
+    "sha256": "7a3bcd7bb590351c46c2b8e812465b3ba987c451db255aecd519b9747f38d6cf"
+  },
+  {
+    "path": "screenshots/property-verification/04-add-property-step3-specifications.png",
+    "sizeBytes": 51369,
+    "sha256": "9f50ed374097245002667924ed422615e91bab9c67ce8fda6e0bbbcfc1de7e8d"
+  },
+  {
+    "path": "screenshots/property-verification/05-add-property-step4-amenities.png",
+    "sizeBytes": 118081,
+    "sha256": "369cd83808a76cc7ee7288a81be279cd3faa1008c5c02976d1605e6fcbb0c193"
+  },
+  {
+    "path": "screenshots/property-verification/06-add-property-step5-photos.png",
+    "sizeBytes": 60996,
+    "sha256": "4ced55c6510ff8f9afde07606767e2bef31c7aad2900a37aba4c27490e75f34d"
+  },
+  {
+    "path": "screenshots/property-verification/07-add-property-step6-ownership.png",
+    "sizeBytes": 55125,
+    "sha256": "281e977ab495a6569bef008afdeee78eed170122cc58edb9f9551035d24c1d47"
+  },
+  {
+    "path": "screenshots/property-verification/08-add-property-step7-management.png",
+    "sizeBytes": 84117,
+    "sha256": "b5c5f4c07f8613546e79f22e355228e1faf59b58cd042355f7b3a764fc058adf"
+  },
+  {
+    "path": "screenshots/property-verification/09-add-property-step8-review.png",
+    "sizeBytes": 70795,
+    "sha256": "7d756c783566c10f0cbc23fa37ae39e4d8a94eb52550784175711f62c75d6ea2"
+  },
+  {
+    "path": "screenshots/property-verification/10-admin-filter-pending.png",
+    "sizeBytes": 274853,
+    "sha256": "d352c449bed0253d019fc421d753e7b43962dca551beb4d725ef2e40d3995ab3"
+  },
+  {
+    "path": "screenshots/property-verification/11-inspect-modal-pending.png",
+    "sizeBytes": 178756,
+    "sha256": "f25cc2fda4f232758f8ae2db1ddd9c87258e7157a24bc87b837e355e41bd6b1f"
+  },
+  {
+    "path": "screenshots/property-verification/12-reject-missing-reason-error.png",
+    "sizeBytes": 179051,
+    "sha256": "a8d9208a998717f78b7ff88109130c3a79323d35af09fdab4e18e06c0552a9b8"
+  },
+  {
+    "path": "screenshots/property-verification/13-reject-reason-entered.png",
+    "sizeBytes": 177036,
+    "sha256": "83d566de9d8cf2a5693f2ba29e8560c0822483e596eaf4a2a62f8c220ab3dd19"
+  },
+  {
+    "path": "screenshots/property-verification/14-reject-success-feedback.png",
+    "sizeBytes": 175502,
+    "sha256": "0da208cbdcd9bc62e6467fa08411782ec3e69db332dd7faadc3685786bc3126b"
+  },
+  {
+    "path": "screenshots/property-verification/15-admin-filter-rejected.png",
+    "sizeBytes": 106501,
+    "sha256": "a3797d1e3ed546e4330d258aca91042b72bcc8ab7dbb4005c6d1ff9fabce5f87"
+  },
+  {
+    "path": "screenshots/property-verification/16-owner-workspace-rejected-banner.png",
+    "sizeBytes": 78946,
+    "sha256": "ff08a3309d6860395c944d08a56ec4e9e67b4bed358d7c320a939e6703c037a3"
+  },
+  {
+    "path": "screenshots/property-verification/17-owner-workspace-resubmitted-pending.png",
+    "sizeBytes": 263428,
+    "sha256": "66f03780c37d2672a2d391ffac719acebc3dab2b5f4ff6323cddc82565afa05b"
+  },
+  {
+    "path": "screenshots/property-verification/18-inspect-modal-audit-history.png",
+    "sizeBytes": 155626,
+    "sha256": "0969c125e4733a04b3284e7fed362520aa68a40c33fb338beeaa418efa200ae4"
+  },
+  {
+    "path": "screenshots/property-verification/19-approve-success-feedback.png",
+    "sizeBytes": 174834,
+    "sha256": "69e476634a5733434a7d94ca4af4449c6cb587b1e21fc84d44ff91233fccbf5f"
+  },
+  {
+    "path": "screenshots/property-verification/20-admin-filter-verified.png",
+    "sizeBytes": 309337,
+    "sha256": "3397e4d6b650e072d853c3cfaa956e8d9b0813a9d4d360ccdcee9f6e695e0dbb"
+  },
+  {
+    "path": "screenshots/property-verification/21-owner-workspace-verified-property.png",
+    "sizeBytes": 212911,
+    "sha256": "ca04627aeea7d69b1952eb43dfabbc5f98f7ff0ca03b534bfb47eb29165b9e5d"
+  }
+]

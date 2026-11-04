@@ -1,0 +1,127 @@
+# ==============================================================================
+# HOMEHUB PLATFORM — DOCKER COMPOSE INFRASTRUCTURE STACK
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  # ----------------------------------------------------------------------------
+  # 1. Authoritative PostgreSQL Database
+  # ----------------------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    container_name: homehub-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${SQL_USER:-homehub_app}
+      POSTGRES_PASSWORD: ${SQL_PASSWORD:-homehub_secure_dev_pass_change_me}
+      POSTGRES_DB: ${SQL_DB_NAME:-homehub_db}
+      TZ: Asia/Baghdad
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - homehub_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${SQL_USER:-homehub_app} -d ${SQL_DB_NAME:-homehub_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # ----------------------------------------------------------------------------
+  # 2. Redis Cache & BullMQ Background Queue Store
+  # ----------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: homehub-redis
+    restart: unless-stopped
+    command: >
+      redis-server
+      --requirepass ${REDIS_PASSWORD:-redis_secure_dev_pass_change_me}
+      --appendonly yes
+      --maxmemory 512mb
+      --maxmemory-policy noeviction
+    volumes:
+      - redis_data:/data
+    networks:
+      - homehub_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD:-redis_secure_dev_pass_change_me}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  # ----------------------------------------------------------------------------
+  # 3. Database Migration Runner (Pre-flight Gatekeeper)
+  # ----------------------------------------------------------------------------
+  migrator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: homehub-migrator
+    command: ["node", "--loader", "tsx", "scripts/migrate.ts"]
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      SQL_HOST: postgres
+      SQL_PORT: 5432
+      SQL_USER: ${SQL_USER:-homehub_app}
+      SQL_PASSWORD: ${SQL_PASSWORD:-homehub_secure_dev_pass_change_me}
+      SQL_DB_NAME: ${SQL_DB_NAME:-homehub_db}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - homehub_network
+
+  # ----------------------------------------------------------------------------
+  # 4. HomeHub Web Application & API Service
+  # ----------------------------------------------------------------------------
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: homehub-app
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: 3000
+      APP_URL: ${APP_URL:-http://localhost:3000}
+      ALLOWED_ORIGIN: ${ALLOWED_ORIGIN:-http://localhost:3000}
+      SQL_HOST: postgres
+      SQL_PORT: 5432
+      SQL_USER: ${SQL_USER:-homehub_app}
+      SQL_PASSWORD: ${SQL_PASSWORD:-homehub_secure_dev_pass_change_me}
+      SQL_DB_NAME: ${SQL_DB_NAME:-homehub_db}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-redis_secure_dev_pass_change_me}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrator:
+        condition: service_completed_successfully
+    networks:
+      - homehub_network
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+networks:
+  homehub_network:
+    driver: bridge
+    name: homehub_network
+
+volumes:
+  postgres_data:
+    name: homehub_postgres_data
+  redis_data:
+    name: homehub_redis_data

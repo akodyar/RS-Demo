@@ -1,0 +1,2 @@
+ALTER TABLE "commissions" ADD CONSTRAINT "commissions_payment_record_id_unique" UNIQUE("payment_record_id");--> statement-breakpoint
+ALTER TABLE "ownership_records" ADD CONSTRAINT "ownership_entity_check" CHECK ("ownership_records"."owner_id" IS NOT NULL OR "ownership_records"."company_id" IS NOT NULL);
